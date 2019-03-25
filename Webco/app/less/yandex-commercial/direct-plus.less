@@ -1,0 +1,81 @@
+@import "../common/vars";
+
+.direct-plus{
+	padding-bottom: 20px;
+	
+	.wrap-title{
+		width: 40%;
+		text-align: left;
+	}
+
+	.wrap-blue-items-circle{
+		flex-wrap: wrap;
+
+		.item{
+			text-align: center;
+			width: auto;
+			width: calc(100% / 3);
+			margin-bottom: 50px;
+			text-align: left;
+
+			.wrap-icon{
+				margin-right: auto;
+				margin-right: 20px;
+			}
+
+			&-title{
+				margin-bottom: 12px;
+			}
+
+			.text{
+				font-size: 16px;
+				line-height: 22px;
+				color: @textGray-2;
+			}
+		}
+	}
+}
+
+
+
+@media (max-width: 1400px) {
+	.direct-plus .wrap-title{
+		width: 70%;
+	}
+}
+
+
+@media (max-width: 1200px) {
+	.direct-plus .wrap-blue-items-circle .item{
+		margin-bottom: 35px;
+	}
+}
+
+
+@media (max-width: 992px) {
+
+}
+
+
+@media (max-width: 768px) {
+	.direct-plus .wrap-blue-items-circle .item{
+		width: 50%;
+	}
+
+	.direct-plus .wrap-title{
+		
+	}
+}
+
+
+@media (max-width: 576px) {
+	.direct-plus .wrap-blue-items-circle .item, .direct-plus .wrap-title{
+		width: 100%;
+		padding: 0;
+	}
+}
+
+
+
+
+

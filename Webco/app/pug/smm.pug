@@ -1,0 +1,27 @@
+extends templates/page.pug
+
+block title
+	| SMM
+
+block content
+	+modal-windows
+		include modules/modal-parts/modal-callback
+		include modules/modal-parts/modal-testimonials
+		include modules/modal-parts/modal-other	
+
+	.page
+		include modules/header.pug
+
+		include smm/smm-banner.pug
+		include smm/text-under-banner.pug
+		include smm/smm-plus.pug
+		include smm/why-we.pug
+		include smm/our-cases.pug
+		include smm/scope-works.pug
+		include smm/profit.pug
+		include smm/rates.pug
+		include smm/our-clients.pug
+		include modules/sec-testimonials.pug
+		include modules/sec-have-projects.pug 
+
+		include modules/footer.pug

@@ -1,0 +1,135 @@
+@import "../common/vars";
+
+.sec-macbook-2{
+	background-color: @bgGray;
+
+	&-content{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-ms-align-items: stretch;
+		align-items: stretch;
+	}
+
+	.wrap-img{
+		width: 100%;
+		max-width: 760px;
+	}
+
+	.wrap-text{
+		margin-left: 30px;
+		margin-top: 60px;
+
+		ul{
+			li{
+				margin-bottom: 7px;
+			}
+		}
+	}
+
+}
+
+@media (max-width: 1339px) {
+	.wrap-title-mac>span{
+		br{
+			display: none;
+		}
+	}
+}
+
+
+@media (max-width: 1200px) {
+	.sec-macbook-2{
+		.wrap-img{
+			max-width: 600px;
+		}
+
+		.wrap-text{
+			margin-left: 0;
+			margin-bottom: 0;
+			margin-top: 35px;
+		}
+	}
+}
+
+
+@media (max-width: 992px) {
+	.sec-macbook-2{
+		padding: 35px 0 50px;
+
+		.wrap-img{
+			max-width: 435px;
+			padding-right: 20px;
+		}
+
+		.wrap-text{
+			padding: 0;
+			margin-top: 20px;
+
+			ul{
+				li{
+					margin-bottom: 1px;
+				}
+			}
+		}
+
+	}
+}
+
+
+@media (max-width: 768px) {
+	.sec-macbook-2{
+		padding-bottom: 45px;
+
+		.wrap-img{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			-ms-align-items: center;
+			align-items: center;
+		}
+
+		.wrap-text{
+			margin: 0;
+
+			ul{
+				li{
+					font-size: 13px;
+					line-height: 18px;
+					margin-bottom: 2px;
+				}
+			}
+		}
+
+	}
+}
+
+
+@media (max-width: 576px) {
+	.sec-macbook-2{
+		padding: 30px 0;
+
+		&-content{
+			display: block;
+			max-width: 450px;
+			margin-left: auto;
+			margin-right: auto;			
+		}
+
+		.wrap-img{
+			margin-bottom: 20px;
+			margin-right: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+
+
+
+
+

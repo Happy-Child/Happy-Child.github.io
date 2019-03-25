@@ -1,0 +1,171 @@
+@import "../common/vars";
+
+.sec-mackbook-1{
+	padding-top: 0;
+
+	&-content{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-ms-align-items: stretch;
+		align-items: stretch;
+		justify-content: space-between;
+
+		> div {
+			width: 100%;
+		}
+	}
+
+	.wrap-img{
+		max-width: 760px;
+	}
+
+	.wrap-title{
+		text-align: left;
+		-ms-align-self: center;
+		align-self: center;
+		max-width: calc(100% - 760px);
+
+		.title{
+			margin-top: 20px;
+			padding-bottom: 28px;
+			margin-bottom: 26px;
+			position: relative;
+			&:after{
+				content: "";
+				position: absolute;
+				bottom: 0px;
+				left: 0;
+				width: 32px;
+				height: 3px;
+				background-color: @yellow;
+			}
+		}
+		.subtext{
+			color: @textGray;
+			line-height: 24px;
+		}
+	}
+
+}
+
+
+@media (max-width: 1400px) {
+	.sec-mackbook-1{
+		.wrap-img{
+			max-width: 675px;
+		}
+
+		.wrap-title{
+			max-width: calc(100% - 675px);
+		}
+	}
+}
+
+
+@media (max-width: 1200px) {
+	.sec-mackbook-1{
+		.wrap-img{
+			max-width: 58%;
+		}
+
+		.wrap-title{
+			max-width: 42%;
+		}
+	}
+}
+
+
+@media (max-width: 992px) {
+	.sec-mackbook-1{
+		padding-top: 0;
+
+		.wrap-title{
+			.title{
+				margin-top: 10px;
+				padding-bottom: 18px;
+				margin-bottom: 14px;
+			}
+
+			.subtext{
+				font-size: 14px;
+				line-height: 22px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+	.sec-mackbook-1{
+		.wrap-img{
+			max-width: 55%;
+		}
+
+		.wrap-title{
+			.title{
+				font-size: 19px;
+				line-height: 23px;
+			}
+
+			.subtext{
+				font-size: 12px;
+				line-height: 19px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 576px) {
+	.sec-mackbook-1{
+		padding-top: 0;
+
+		.wrap-img, .wrap-title{
+			max-width: 380px;
+		}
+
+		.wrap-title{
+			text-align: center;
+			margin-bottom: 0;
+			
+			.title{
+				font-size: 22px;
+				line-height: 26px;
+				padding: 0;
+				margin-bottom: 10px;
+				&::after{
+					display: none;
+				}
+			}
+
+			.subtext{
+				font-size: 14px;
+				line-height: 22px;
+			}
+		}
+
+		&-content{
+			display: block;
+
+			> div {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+	
+	}
+}
+
+@media (max-width: 420px) {
+	.sec-mackbook-1{
+		.wrap-title{
+			text-align: center;
+		}
+	}
+}
+
+

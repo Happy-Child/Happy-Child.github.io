@@ -1,0 +1,155 @@
+@import "../common/vars";
+
+.mobile-version-plus{
+	padding: 65px 0 20px;
+
+	.wrap-title-group{
+		width: 40%;
+	
+		span{
+			display: block;
+			color: #fff;
+		}
+
+		.title{
+			font-weight: 700;
+			font-size: 30px;
+			line-height: 38px;
+			margin-bottom: 15px;
+		}
+
+		.subtitle{
+			font-size: 20px;
+			line-height: 22px;
+		}
+	}
+
+	
+
+	.wrap-plus-items{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+		margin-top: 40px;
+
+		.plus-item{
+			width: 50%;
+			padding: 0 10px;
+			margin-bottom: 50px;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+
+			.wrap-icon{
+				min-width: 90px;
+				max-width: 90px;
+				height: 90px;
+				border: 2px solid @yellow;
+				border-radius: 50%;
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				-ms-align-items: center;
+				align-items: center;
+				justify-content: center;
+				margin-right: 20px;
+			}
+
+			p{
+				font-size: 16px;
+				line-height: 22px;
+				color: #fff;
+			}
+		}
+	}
+
+}
+
+@media (max-width: 1400px) {
+	.mobile-version-plus .wrap-title-group{
+		width: 100%;
+	}
+}
+
+
+@media (max-width: 1200px) {
+
+}
+
+
+@media (max-width: 992px) {
+	.mobile-version-plus{
+		.wrap-plus-items{
+			display: block;
+
+			.plus-item{
+				width: 100%;
+				-ms-align-items: center;
+				align-items: center;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+	.mobile-version-plus{
+		padding: 50px 0 20px;
+	}
+
+	.mobile-version-plus .wrap-title-group{
+		.title{
+			font-size: 25px;
+	    line-height: 32px;
+		}
+
+		.subtitle{
+			font-size: 18px;
+			line-height: 17px;
+		}
+	}
+}
+
+
+@media (max-width: 576px) {
+	.mobile-version-plus .wrap-plus-items{
+		.plus-item{
+			display: block;
+			margin-bottom: 35px;
+
+			.wrap-icon{
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	.mobile-version-plus{
+		padding: 40px 0 20px;
+	}
+
+
+	.mobile-version-plus .wrap-title-group{
+		.title{
+			font-size: 22px;
+			margin-bottom: 9px;
+	    line-height: 26px;
+		}
+
+		.subtitle{
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}	
+}
+
+
+
+

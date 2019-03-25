@@ -1,0 +1,84 @@
+@import "../common/vars";
+
+.wrap-tags{
+	background-color: #F1F2F6;
+	padding: 20px 18px 5px 18px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	a{
+		padding: 5px 15px;
+		border-radius: 25px;
+		background-color: #fff;
+		-webkit-transition: .4s all ease;
+		-o-transition: .4s all ease;
+		transition: .4s all ease;
+		line-height: 16px;
+		font-size: 13px;
+		color: #959CB0;
+		margin: 0 7.5px 15px 7.5px;
+		&:hover{
+			box-shadow: 0px 0px 8px rgba(31, 47, 87, 0.1);
+		}
+	}
+	.cur-tag{
+		color: @accent;
+	}
+}
+
+
+@media (max-width: 1400px) {
+
+}
+
+
+@media (max-width: 1200px) {
+	.wrap-tags{
+		padding: 17px 13px 5px 13px;
+
+		a{
+			padding: 5px 13px;
+			margin: 0 5.5px 12px 5.5px;
+		}
+	}
+}
+
+
+@media (max-width: 992px) {
+	.wrap-tags{
+		padding: 17px 13px 5px 13px;
+
+		a{
+			padding: 5px 15px;
+			margin: 0 7.5px 13px;
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+	
+}
+
+
+@media (max-width: 576px) {
+	.wrap-tags{
+		margin: 0 -15px;
+
+		a{
+			padding: 5px 12px;
+			margin: 0 6px 12px;
+			font-size: 12px;
+			line-height: 13px;
+		}
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,69 @@
+.modal-window.modal-other
+	span.close-modal
+		img.lazyload(data-src="img/icon-close.svg", alt="")
+
+	.modal-content
+		span.title Что Вас интересует?
+
+		form.form
+			.wrap-select.error
+				select(placeholder="Выбирите услуги").select
+					option(value="") 
+					option(value="exa5") Мойка
+					option(value="exa6") Уборка
+					option(value="exa7") Демократия
+				.wrap-error
+					span.msg-status Заполните поле
+
+			.wrap-field
+				input(type="text", placeholder="Ваше имя *").field-name.field
+				.wrap-success
+					span.icon.icon-success
+						img.lazyload(data-src="img/icon-success.svg", alt="")
+				.wrap-error
+					span.icon.icon-error 
+						img.lazyload(data-src="img/icon-error.svg", alt="")
+					span.msg-status Заполните поле
+
+			.wrap-field.success
+				input(type="tel", placeholder="Номер телефона *").field-phone.field
+				.wrap-success
+					span.icon.icon-success
+						img.lazyload(data-src="img/icon-success.svg", alt="")
+				.wrap-error
+					span.icon.icon-error 
+						img.lazyload(data-src="img/icon-error.svg", alt="")
+					span.msg-status Заполните поле
+
+			.wrap-field.error
+				input(type="text", placeholder="Email *").field
+				.wrap-success
+					span.icon.icon-success
+						img.lazyload(data-src="img/icon-success.svg", alt="")
+				.wrap-error
+					span.icon.icon-error 
+						img.lazyload(data-src="img/icon-error.svg", alt="")
+					span.msg-status Заполните поле
+
+			.wrap-field.file-upload.error
+				label.field-file(for="field-file")
+					input(type="file", id="field-file", accept=".doc,.pdf,.jpg").field-file
+					
+					span.file-name
+						span.text
+
+					span.field.placeholder 
+						span.text + Прикрепить файл (doc, pdf, jpg)
+
+					span.icon-remove
+						img.lazyload(data-src="img/icon-error.svg", alt="")
+
+
+				.wrap-error
+					span.msg-status Заполните поле
+
+			.wrap-area
+				textarea(placeholder="Сообщение…")
+
+			.wrap-btn.wrap-btn-blue
+				button.btn Отправить	

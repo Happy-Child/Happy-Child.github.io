@@ -1,0 +1,17 @@
+extends templates/page.pug
+
+block title
+	| Поддержка
+
+block content
+	include modules/modal-windows-default.pug
+
+	.page
+		include modules/header.pug
+						
+		include support/support-banner.pug
+		include support/support-items.pug
+		include modules/sec-have-projects.pug
+		include support/text-bottom-page.pug
+
+		include modules/footer.pug

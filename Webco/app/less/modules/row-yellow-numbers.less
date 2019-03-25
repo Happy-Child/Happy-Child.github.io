@@ -1,0 +1,178 @@
+@import "../common/vars";
+
+.row-yellow-numbers{
+	padding-bottom: 0 !important;
+
+	&-content{
+
+		.wrap-items{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			-ms-align-items: center;
+			align-items: center;
+			flex: 1;
+			justify-content: space-between;
+			padding: 0 30px;
+		}
+
+		.item{
+			text-align: center;
+			span{
+				display: block;
+			}
+
+			.number{
+				font-size: 70px;
+				line-height: 60px;
+				color: @yellow;
+				font-weight: 600;
+				margin-bottom: 8px
+			}
+
+			&-title{
+				font-size: 18px;
+				line-height: 22px;
+				font-weight: 600;
+				margin-bottom: 2px;
+			}
+
+			&-text{
+				color: @textGray-2;
+			}
+		}
+	}
+
+}
+
+@media (max-width: 1399px) {
+
+}
+
+
+@media (max-width: 1199px) {
+	.row-yellow-numbers-content{
+		.item{
+			.number{
+				font-size: 55px;
+				line-height: 55px;
+			}
+
+			&-title{
+				font-size: 17px;
+    		line-height: 22px;
+			}
+
+			&-text{
+				font-size: 15px;
+				line-height: 20px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 991px) {
+	.row-yellow-numbers-content{
+		.wrap-items{
+			padding: 0;
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+
+		.item{
+			padding: 0 15px;
+
+			.number{
+				font-size: 50px;
+				line-height: 50px;
+			}
+
+			&-title{
+				font-size: 16px;
+    		line-height: 20px;
+			}
+
+			&-text{
+				font-size: 14px;
+				line-height: 18px;
+			}
+
+		}
+	}
+}
+
+
+@media (max-width: 767px) {
+	.row-yellow-numbers{
+
+		&-content{
+
+			.wrap-items{
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				-webkit-flex-wrap: wrap;
+				-moz-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+				-o-flex-wrap: wrap;
+				flex-wrap: wrap;
+				justify-content: center;
+				margin-bottom: -30px;
+			}
+
+			.item{
+				width: 50%;
+				margin-bottom: 30px
+			}
+
+		}
+
+	}
+}
+
+
+@media (max-width: 575px) {
+	.row-yellow-numbers{
+		
+		.wrap-title{
+			padding: 0;
+		}
+
+	}
+}
+
+
+
+@media (max-width: 480px) {
+	.row-yellow-numbers{
+
+		.wrap-title{
+			text-align: left;
+			margin-bottom: 10px;
+		}
+
+		&-content{
+
+
+			.wrap-items{
+				justify-content: flex-start;
+				margin: 0 -10px -20px;
+				-ms-align-items: stretch;
+				align-items: stretch;
+			}
+
+		}
+
+		.item{
+			text-align: left;
+			margin-bottom: 20px;
+			padding: 0 10px;
+		}
+	
+	}
+}

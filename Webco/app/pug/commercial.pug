@@ -1,0 +1,27 @@
+extends templates/page.pug
+
+block title
+	| Реклама
+
+block content
+	+modal-windows
+		include modules/modal-parts/modal-callback
+		include modules/modal-parts/modal-other
+		include modules/modal-parts/modal-testimonials
+
+	.page
+		include modules/header.pug
+
+		include commercial/commercial-banner.pug
+		include commercial/commercial-plus.pug
+		include commercial/our-approach.pug
+		include commercial/solve-problems.pug
+		include commercial/cases-our-works.pug
+		include modules/sec-have-projects.pug
+		include commercial/prices-commercial.pug
+		include modules/team-diagram.pug
+		include commercial/our-clients.pug
+		include modules/sec-testimonials.pug
+		include modules/sec-have-projects.pug
+		
+		include modules/footer.pug

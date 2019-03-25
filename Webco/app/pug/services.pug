@@ -1,0 +1,19 @@
+extends templates/page.pug
+
+block title
+	| Услуги
+
+
+block content
+	include modules/modal-windows-default.pug
+
+	.page
+		include modules/header.pug
+		
+		.container
+			include services/top-page-line.pug
+			include services/services-list.pug
+					
+		include modules/sec-scroll.pug
+
+		include modules/footer.pug

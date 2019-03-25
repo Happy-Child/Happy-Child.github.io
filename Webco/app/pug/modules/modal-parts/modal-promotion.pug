@@ -1,0 +1,49 @@
+.modal-window.modal-site-promotion
+	span.close-modal
+		img.lazyload(data-src="img/icon-close.svg", alt="")
+	.modal-content
+		span.title Заявка на продвижение сайта
+
+		form.form
+			.wrap-field.success
+				input(type="text", placeholder="Ваше имя *").field-name.field
+				.wrap-success
+					span.icon.icon-success
+						img.lazyload(data-src="img/icon-success.svg", alt="")
+				.wrap-error
+					span.icon.icon-error 
+						img.lazyload(data-src="img/icon-error.svg", alt="")
+					span.msg-status Заполните поле
+
+			.wrap-field.error
+				input(type="tel", placeholder="Номер телефона *").field-phone.field
+				.wrap-success
+					span.icon.icon-success
+						img.lazyload(data-src="img/icon-success.svg", alt="")
+				.wrap-error
+					span.icon.icon-error 
+						img.lazyload(data-src="img/icon-error.svg", alt="")
+					span.msg-status Заполните поле
+
+			.wrap-field
+				input(type="text", placeholder="Email *").field
+				.wrap-success
+					span.icon.icon-success
+						img.lazyload(data-src="img/icon-success.svg", alt="")
+				.wrap-error
+					span.icon.icon-error 
+						img.lazyload(data-src="img/icon-error.svg", alt="")
+					span.msg-status Заполните поле
+
+			.wrap-field
+				input(type="text", placeholder="Название сайта").field
+				.wrap-success
+					span.icon.icon-success
+						img.lazyload(data-src="img/icon-success.svg", alt="")
+				.wrap-error
+					span.icon.icon-error 
+						img.lazyload(data-src="img/icon-error.svg", alt="")
+					span.msg-status Заполните поле
+
+			.wrap-btn.wrap-btn-blue
+				button.btn Отправить

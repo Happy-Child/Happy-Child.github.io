@@ -1,0 +1,97 @@
+@import "../common/vars";
+
+.wrap-top-page-line{
+	padding-top: 25px;
+	width: 100%;
+
+	.nav-tablet{
+		display: none;
+	}
+}
+
+@media (max-width: 1400px) {
+
+}
+
+
+@media (max-width: 1200px) {
+
+}
+
+
+@media (max-width: 992px) {
+	.wrap-top-page-line{
+
+		.nav-tablet{
+			display: block;
+			margin-top: 20px;
+			margin-bottom: -3px;
+
+			ul{
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				-ms-align-items: center;
+				align-items: center;
+				-webkit-flex-wrap: wrap;
+				-moz-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+				-o-flex-wrap: wrap;
+				flex-wrap: wrap;
+			}
+
+			li{
+				margin-right: 35px;
+				margin-bottom: 3px;
+			}
+
+			.cur-page{
+				a{
+					color: @accent;
+				}
+			}
+
+			a{
+				font-size: 16px;
+				line-height: 24px;
+				font-weight: 700;
+				color: @textGray-2;
+			}
+		}
+
+	}
+}
+
+
+@media (max-width: 768px) {
+
+}
+
+
+@media (max-width: 576px) {
+	.wrap-top-page-line{
+
+		.nav-tablet{
+			margin-top: 10px;
+			margin-bottom: 0;
+
+			li{
+				margin-right: 20px;
+				margin-bottom: 0px;
+			}
+	
+			a{
+				font-size: 14px;
+				line-height: 16px;
+			}
+		}
+
+	}
+}
+
+
+
+
+

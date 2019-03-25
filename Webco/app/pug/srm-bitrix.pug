@@ -1,0 +1,22 @@
+extends templates/page.pug
+
+block title
+	| CRM Bitrix
+
+block content
+	+modal-windows
+		include modules/modal-parts/modal-callback
+		include modules/modal-parts/modal-other	
+
+	.page
+		include modules/header.pug
+						
+		include srm-bitrix/srm-bitrix-banner.pug
+		include srm-bitrix/srm-bitrix-plus.pug
+		include srm-bitrix/bitrix-tasks.pug
+		include srm-bitrix/bitrix-price-table.pug
+		include srm-bitrix/bitrix-price-realisation.pug
+		include srm-bitrix/text-column.pug
+		include modules/sec-have-projects.pug
+
+		include modules/footer.pug

@@ -1,0 +1,52 @@
+.modal-window.modal-callback
+	span.close-modal
+		img.lazyload(data-src="img/icon-close.svg", alt="")
+	.modal-content
+		span.title Заказать звонок
+
+		form.form
+			.wrap-field.success
+				input(type="text", placeholder="Сергей").field-name.field
+				.wrap-success
+					span.icon.icon-success
+						img.lazyload(data-src="img/icon-success.svg", alt="")
+				.wrap-error
+					span.icon.icon-error 
+						img.lazyload(data-src="img/icon-error.svg", alt="")
+					span.msg-status Заполните поле
+
+			.wrap-field.error
+				input(type="tel", placeholder="Номер телефона *").field-phone.field.field-phone
+				.wrap-success
+					span.icon.icon-success
+						img.lazyload(data-src="img/icon-success.svg", alt="")
+				.wrap-error
+					span.icon.icon-error
+						img.lazyload(data-src="img/icon-error.svg", alt="")
+					span.msg-status Заполните поле
+
+			.wrap-select.error
+				select(placeholder="Время звонка").select
+					option(value="") 
+					option(value="ex5") 8:00-10:00
+					option(value="ex6") 8:00-10:00
+					option(value="ex7") 8:00-10:00
+					option(value="ex8") 8:00-10:00
+				.wrap-error
+					span.msg-status Заполните поле
+
+			.wrap-select
+				select(placeholder="Тема звонка").select
+					option(value="")
+					option(value="ex1") Margin или padding
+					option(value="ex2") Курица или яйцо?
+					option(value="ex3") Таблица умножения
+					option(value="ex4") Webcompany
+				.wrap-error
+					span.msg-status Заполните поле
+
+			.wrap-area
+				textarea(placeholder="Сообщение…")
+
+			.wrap-btn.wrap-btn-blue
+				button.btn Отправить

@@ -1,0 +1,146 @@
+@import "../common/vars";
+
+.wrap-posts-articles{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: stretch;
+	align-items: stretch;
+	margin-left: -10px;
+	margin-right: -10px;
+	flex-wrap: wrap;
+	margin-top: 25px;
+
+	.post{
+		padding: 0 10px 30px 10px;
+		width: calc(100% / 3);
+		&:hover{
+			.wrap-img{
+				img{
+					-webkit-transform: scale(1.1);
+					-ms-transform: scale(1.1);
+					-o-transform: scale(1.1);
+					transform: scale(1.1);
+				}
+			}
+			.post-title{
+				color: @btnYellowHover;
+			}
+		}
+
+		.wrap-img{
+			width: 100%;
+			overflow: hidden;
+			img{
+				-webkit-transition:  .8s all ease-in-out;
+				-o-transition:  .8s all ease-in-out;
+				-webkit-backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				backface-visibility: hidden;
+			}
+		}
+		.wrap-text{
+			padding-top: 11px;
+		}
+		.post-title{
+			font-weight: 600;
+			font-size: 18px;
+			margin-bottom: 6px;
+			line-height: 22px;
+			display: block;
+			-webkit-transition: .3s all ease-in-out;
+			-o-transition: .3s all ease-in-out;
+			transition: .3s all ease-in-out;
+		}
+		.subtext{
+			line-height: 22px;
+			color: @textGray;
+		}
+	}
+}
+
+
+
+@media (max-width: 1400px) {
+
+}
+
+
+@media (max-width: 1200px) {
+	.wrap-posts-articles{
+
+		.post{
+			width: 50%;
+			display: none;
+
+			&:nth-child(-n + 8){
+				display: block;
+			}
+		}
+
+	}
+}
+
+
+@media (max-width: 992px) {
+
+}
+
+
+@media (max-width: 768px) {
+	.wrap-posts-articles{
+		margin-left: -7px;
+		margin-right: -7px;
+		padding-bottom: 10px;
+
+		.post{
+			padding: 0 7px 20px;
+
+			.post-title{
+				font-size: 16px;
+				line-height: 20px;
+			}
+
+			.subtext{
+				font-size: 15px;
+				line-height: 19px;
+			}	
+		}
+	}
+}
+
+
+@media (max-width: 576px) {
+	.wrap-posts-articles{
+		padding-bottom: 0;
+		margin: 20px 0 0;
+
+		.post{
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+
+			.post-title{
+				line-height: 19px;
+			}
+
+			.subtext{
+				font-size: 14px;
+				line-height: 18px;
+			}
+		}
+
+		.view-more{
+			width: 100%;
+			margin-top: 5px;
+			padding-top: 30px;
+			border-top: 1px solid #E6E8F0;
+		}
+	}
+}
+
+
+

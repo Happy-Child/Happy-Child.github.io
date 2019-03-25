@@ -1,0 +1,15 @@
+extends templates/page.pug
+
+block title
+	| Портфолио
+
+block content
+	include modules/modal-windows-default.pug
+
+	.page
+		include modules/header.pug
+
+		include portfolio-full/portfolio-items.pug
+		include modules/sec-scroll.pug
+
+		include modules/footer.pug

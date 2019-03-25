@@ -1,0 +1,104 @@
+@import "../common/vars";
+
+a{
+	transition: .3s all ease;
+	&:before{
+		transition: inherit;
+	}
+}
+
+.link-accent{
+	color: @accent;
+	&:hover{
+		color: @btnYellowHover;
+	}
+}
+
+.link-dark{
+	color: @textGray;
+	&:hover{
+		color: @accent;
+	}
+}
+
+.link-border-dotted{
+	color: @accent;
+	border-bottom: 2px dotted @accent;
+	&:hover{
+		color: @btnYellowHover;
+		border-color: @btnYellowHover;
+	}
+}
+
+.link-accent-line, .link-dark-line{
+	position: relative;
+	&:before{
+		content: "";
+		position: absolute;
+		bottom: -1px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		height: 1px;
+		width: 102%;
+	}
+	&:hover{
+		&:before{
+			width: 0%;
+		}
+	}
+}
+
+.link-accent-line{
+	color: @accent;
+	&:before{
+		background-color: @accent;
+	}
+	&:hover{
+		color: @btnYellowHover;
+		&:before{
+			background-color: @btnYellowHover;
+		}
+	}
+}
+
+.link-dark-line{
+	color: @textDark;
+	&:before{
+		background-color: @textDark;
+	}
+	&:hover{
+		color: @accent;
+		&:before{
+			background-color: @accent;
+		}
+	}
+}
+
+.view-more{
+	display: none;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	width: 100%;
+
+	.btn{
+		line-height: 18px;
+	}	
+}
+
+
+@media (max-width: 768px) {
+	.view-more{
+		display: -webkit-inline-flex;
+		display: -moz-inline-flex;
+		display: -ms-inline-flex;
+		display: -o-inline-flex;
+		display: inline-flex;
+
+		.btn{
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+

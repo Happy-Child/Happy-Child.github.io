@@ -1,0 +1,29 @@
+extends templates/page.pug
+
+block title
+	| SEO
+
+block content
+	+modal-windows
+		include modules/modal-parts/modal-callback
+		include modules/modal-parts/modal-other
+		include modules/modal-parts/modal-testimonials
+		include modules/modal-parts/modal-promotion
+
+	.page
+		include modules/header.pug
+						
+		include seo/seo-banner.pug
+		include seo/seo-plus.pug
+		include seo/count-sites.pug
+		include modules/cases-our-works.pug
+		include seo/table-causes.pug
+		include modules/sec-have-projects.pug
+		include seo/table-prices-promotion.pug
+		include modules/team-diagram.pug
+		include modules/list-good-works.pug
+		include seo/our-clients.pug
+		include modules/sec-testimonials.pug
+		include modules/sec-have-projects.pug
+
+		include modules/footer.pug

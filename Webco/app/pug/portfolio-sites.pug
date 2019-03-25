@@ -1,0 +1,16 @@
+extends templates/page.pug
+
+block title
+	| Портфолио разработка сайтов
+
+block content
+	include modules/modal-windows-default.pug
+
+	.page
+		include modules/header.pug
+
+		include portfolio-sites/banner.pug
+		include modules/sec-our-works.pug
+		include modules/sec-have-projects.pug
+
+		include modules/footer.pug

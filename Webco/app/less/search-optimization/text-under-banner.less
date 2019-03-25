@@ -1,0 +1,185 @@
+@import "../common/vars";
+
+.text-under-banner-search-optimization{
+	padding: 60px 0;
+
+	&-content{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex: 1;
+	}
+
+	.content-left, .content-right-content {
+		> span {
+			display: block;
+		}
+	}
+
+	.content-left{
+		> span{
+			font-weight: 700;
+			font-size: 30px;
+			line-height: 34px;
+			margin-bottom: 20px;
+		}
+
+		p{
+			margin-bottom: 48px;
+		}
+	}
+
+	.content-right{
+		&-content{
+			padding: 45px 30px 35px;
+			background: #FFFFFF;
+			box-shadow: 0px 0px 30px rgba(31, 47, 87, 0.1);
+			width: 530px;
+			> span{
+				font-size: 26px;
+				line-height: 30px;
+				font-weight: 600;
+				margin-bottom: 14px;
+
+				&:first-child + ul {
+					margin-bottom: 30px;
+					padding-bottom: 25px;
+					border-bottom: 1px solid @bgGray;
+				}
+			}
+		}
+
+		ul{
+			padding-right: 20px;
+
+			li{
+				font-size: 16px;
+				line-height: 20px;
+				color: @textGray;
+				margin-bottom: 7px;
+			}
+		}
+	}
+
+}
+
+@media (max-width: 1399px) {
+
+}
+
+
+@media (max-width: 1199px) {
+	.text-under-banner-search-optimization{
+		padding: 50px 0;
+
+		.content-left{
+			> span{
+				font-weight: 700;
+				font-size: 26px;
+				line-height: 30px;
+				margin-bottom: 10px;
+			}
+
+			p{
+				margin-bottom: 40px;
+			}
+		}
+
+		.content-right{
+			&-content{
+				width: 500px;
+				> span{
+					font-size: 23px;
+					line-height: 27px;
+					margin-bottom: 12px;
+
+				}
+			}
+
+			ul{
+				li{
+					font-size: 15px;
+					line-height: 20px;
+				}
+			}
+		}
+
+	}
+}
+
+
+@media (max-width: 991px) {
+	.text-under-banner-search-optimization{
+		&-content{
+			display: block;
+
+			.content-left{
+				margin-bottom: 50px;
+			}
+
+			.content-right{
+				&-content{
+					margin: 0 auto 20px;
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 767px) {
+
+}
+
+
+@media (max-width: 575px) {
+	.text-under-banner-search-optimization{
+		padding: 40px 0;
+
+		.content-left{
+			padding-right: 0;
+
+			> span {
+				font-size: 23px;
+				line-height: 30px;
+				margin-bottom: 8px;
+			}
+
+			p{
+				margin-bottom: 30px;
+			}
+		}
+
+		.content-right{
+
+			ul{
+				li{
+					font-size: 14px;
+					line-height: 18px;
+				}
+			}
+
+			&-content{
+				width: 100%;
+				padding: 30px 20px;
+
+				> span {
+					font-size: 20px;
+					line-height: 23px;
+				}
+
+				span:first-child+ul{
+					margin-bottom: 25px;
+					padding-bottom: 20px;
+				}
+			}
+
+		}
+	}
+}
+
+
+
+

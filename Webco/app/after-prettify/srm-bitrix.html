@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title> CRM Bitrix </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#fff">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-favicon.png">
+    <link rel="stylesheet" href="css/styles.min.css">
+  </head>
+  <body class="fixed">
+    <div class="wrap-preloader">
+      <div class="wrap-logo img-resp"><img src="img/logo-fixed.svg" alt=""></div>
+    </div>
+    <div class="wrap-modal-windows">
+      <div class="container">
+        <div class="wrap-modal-windows-content">
+          <div class="layer-out"></div>
+          <div class="modal-window modal-callback"><span class="close-modal"><img src="img/icon-close.svg" alt=""></span>
+            <div class="modal-content"><span class="title">Заказать звонок</span>
+              <form class="form">
+                <div class="wrap-field success">
+                  <input class="field-name field" type="text" placeholder="Сергей">
+                  <div class="wrap-success"><span class="icon icon-success"><img src="img/icon-success.svg" alt=""></span></div>
+                  <div class="wrap-error"><span class="icon icon-error"> <img src="img/icon-error.svg" alt=""></span><span class="msg-status">Заполните поле</span></div>
+                </div>
+                <div class="wrap-field error">
+                  <input class="field-phone field field-phone" type="tel" placeholder="Номер телефона *">
+                  <div class="wrap-success"><span class="icon icon-success"><img src="img/icon-success.svg" alt=""></span></div>
+                  <div class="wrap-error"><span class="icon icon-error"><img src="img/icon-error.svg" alt=""></span><span class="msg-status">Заполните поле</span></div>
+                </div>
+                <div class="wrap-select error">
+                  <select class="select" placeholder="Время звонка">
+                    <option value=""> </option>
+                    <option value="ex5">8:00-10:00</option>
+                    <option value="ex6">8:00-10:00</option>
+                    <option value="ex7">8:00-10:00</option>
+                    <option value="ex8">8:00-10:00</option>
+                  </select>
+                  <div class="wrap-error"><span class="msg-status">Заполните поле</span></div>
+                </div>
+                <div class="wrap-select">
+                  <select class="select" placeholder="Тема звонка">
+                    <option value=""></option>
+                    <option value="ex1">Margin или padding</option>
+                    <option value="ex2">Курица или яйцо?</option>
+                    <option value="ex3">Таблица умножения</option>
+                    <option value="ex4">Webcompany</option>
+                  </select>
+                  <div class="wrap-error"><span class="msg-status">Заполните поле</span></div>
+                </div>
+                <div class="wrap-area">
+                  <textarea placeholder="Сообщение…"></textarea>
+                </div>
+                <div class="wrap-btn wrap-btn-blue">
+                  <button class="btn">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-window modal-message"><span class="close-modal"><img src="img/icon-close.svg" alt=""></span>
+            <div class="modal-content"><span class="title">Оставить сообщение</span>
+              <form class="form">
+                <div class="wrap-field success">
+                  <input class="field-name field" type="text" placeholder="Ваше имя *">
+                  <div class="wrap-success"><span class="icon icon-success"><img src="img/icon-success.svg" alt=""></span></div>
+                  <div class="wrap-error"><span class="icon icon-error"> <img src="img/icon-error.svg" alt=""></span><span class="msg-status">Заполните поле</span></div>
+                </div>
+                <div class="wrap-field error">
+                  <input class="field-phone field" type="tel" placeholder="Номер телефона *">
+                  <div class="wrap-success"><span class="icon icon-success"><img src="img/icon-success.svg" alt=""></span></div>
+                  <div class="wrap-error"><span class="icon icon-error"> <img src="img/icon-error.svg" alt=""></span><span class="msg-status">Заполните поле</span></div>
+                </div>
+                <div class="wrap-field">
+                  <input class="field" type="text" placeholder="Email *">
+                  <div class="wrap-success"><span class="icon icon-success"><img src="img/icon-success.svg" alt=""></span></div>
+                  <div class="wrap-error"><span class="icon icon-error"> <img src="img/icon-error.svg" alt=""></span><span class="msg-status">Заполните поле</span></div>
+                </div>
+                <div class="wrap-area error">
+                  <textarea placeholder="Сообщение…"></textarea>
+                </div>
+                <div class="wrap-btn wrap-btn-blue">
+                  <button class="btn">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-window modal-site-promotion"><span class="close-modal"><img src="img/icon-close.svg" alt=""></span>
+            <div class="modal-content"><span class="title">Заявка на продвижение сайта</span>
+              <form class="form">
+                <div class="wrap-field success">
+                  <input class="field-name field" type="text" placeholder="Ваше имя *">
+                  <div class="wrap-success"><span class="icon icon-success"><img src="img/icon-success.svg" alt=""></span></div>
+                  <div class="wrap-error"><span class="icon icon-error"> <img src="img/icon-error.svg" alt=""></span><span class="msg-status">Заполните поле</span></div>
+                </div>
+                <div class="wrap-field error">
+                  <input class="field-phone field" type="tel" placeholder="Номер телефона *">
+                  <div class="wrap-success"><span class="icon icon-success"><img src="img/icon-success.svg" alt=""></span></div>
+                  <div class="wrap-error"><span class="icon icon-error"> <img src="img/icon-error.svg" alt=""></span><span class="msg-status">Заполните поле</span></div>
+                </div>
+                <div class="wrap-field">
+                  <input class="field" type="text" placeholder="Email *">
+                  <div class="wrap-success"><span class="icon icon-success"><img src="img/icon-success.svg" alt=""></span></div>
+                  <div class="wrap-error"><span class="icon icon-error"> <img src="img/icon-error.svg" alt=""></span><span class="msg-status">Заполните поле</span></div>
+                </div>
+                <div class="wrap-field">
+                  <input class="field" type="text" placeholder="Название сайта">
+                  <div class="wrap-success"><span class="icon icon-success"><img src="img/icon-success.svg" alt=""></span></div>
+                  <div class="wrap-error"><span class="icon icon-error"> <img src="img/icon-error.svg" alt=""></span><span class="msg-status">Заполните поле</span></div>
+                </div>
+                <div class="wrap-btn wrap-btn-blue">
+                  <button class="btn">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-window modal-testimonials"><span class="close-modal"><img src="img/icon-close.svg" alt=""></span>
+            <div class="testimonials-slider-modal owl-carousel">
+              <div class="testimonial-item-modal">
+                <div class="wrap-img img-resp"><img src="img/testimonial-1.svg"></div>
+              </div>
+              <div class="testimonial-item-modal">
+                <div class="wrap-img img-resp"><img src="img/testimonial-2.svg"></div>
+              </div>
+              <div class="testimonial-item-modal">
+                <div class="wrap-img img-resp"><img src="img/testimonial-3.svg"></div>
+              </div>
+              <div class="testimonial-item-modal">
+                <div class="wrap-img img-resp"><img src="img/testimonial-4.svg"></div>
+              </div>
+              <div class="testimonial-item-modal">
+                <div class="wrap-img img-resp"><img src="img/testimonial-3.svg"></div>
+              </div>
+              <div class="testimonial-item-modal">
+                <div class="wrap-img img-resp"><img src="img/testimonial-2.svg"></div>
+              </div>
+              <div class="testimonial-item-modal">
+                <div class="wrap-img img-resp"><img src="img/testimonial-2.svg"></div>
+              </div>
+              <div class="testimonial-item-modal">
+                <div class="wrap-img img-resp"><img src="img/testimonial-4.svg"></div>
+              </div>
+            </div>
+            <div class="wrap-slider-nav"></div>
+          </div>
+          <div class="modal-window modal-other"><span class="close-modal"><img src="img/icon-close.svg" alt=""></span>
+            <div class="modal-content"><span class="title">Что Вас интересует?</span>
+              <form class="form">
+                <div class="wrap-select error">
+                  <select class="select" placeholder="Выбирите услуги">
+                    <option value=""> </option>
+                    <option value="exa5">Мойка</option>
+                    <option value="exa6">Уборка</option>
+                    <option value="exa7">Демократия</option>
+                  </select>
+                  <div class="wrap-error"><span class="msg-status">Заполните поле</span></div>
+                </div>
+                <div class="wrap-field">
+                  <input class="field-name field" type="text" placeholder="Ваше имя *">
+                  <div class="wrap-success"><span class="icon icon-success"><img src="img/icon-success.svg" alt=""></span></div>
+                  <div class="wrap-error"><span class="icon icon-error"> <img src="img/icon-error.svg" alt=""></span><span class="msg-status">Заполните поле</span></div>
+                </div>
+                <div class="wrap-field success">
+                  <input class="field-phone field" type="tel" placeholder="Номер телефона *">
+                  <div class="wrap-success"><span class="icon icon-success"><img src="img/icon-success.svg" alt=""></span></div>
+                  <div class="wrap-error"><span class="icon icon-error"> <img src="img/icon-error.svg" alt=""></span><span class="msg-status">Заполните поле</span></div>
+                </div>
+                <div class="wrap-field error">
+                  <input class="field" type="text" placeholder="Email *">
+                  <div class="wrap-success"><span class="icon icon-success"><img src="img/icon-success.svg" alt=""></span></div>
+                  <div class="wrap-error"><span class="icon icon-error"> <img src="img/icon-error.svg" alt=""></span><span class="msg-status">Заполните поле</span></div>
+                </div>
+                <div class="wrap-field file-upload error">
+                  <label class="field-file" for="field-file">
+                    <input class="field-file" type="file" id="field-file" accept=".doc,.pdf,.jpg"><span class="file-name"><span class="text"></span></span><span class="field placeholder"> <span class="text">+ Прикрепить файл (doc, pdf, jpg)</span></span><span class="icon-remove"><img src="img/icon-error.svg" alt=""></span>
+                  </label>
+                  <div class="wrap-error"><span class="msg-status">Заполните поле</span></div>
+                </div>
+                <div class="wrap-area">
+                  <textarea placeholder="Сообщение…"></textarea>
+                </div>
+                <div class="wrap-btn wrap-btn-blue">
+                  <button class="btn">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="mobile-menu">
+      <ul>
+        <li class="item main-item"><a href="#">Разработка сайта</a>
+          <ul>
+            <li> <a href="#">Лендинг <span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Сайт Визитка<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Корпоративный сайт<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Интернет-магазин<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Готовые решения<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Сайты на 1С-Битрикс<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Сайты на ModX<span class="price">от<em>900 BYN</em></span></a></li>
+          </ul>
+        </li>
+        <li class="item main-item"><a href="#">Продвижение сайтов</a>
+          <ul>
+            <li> <a href="#">Лендинг <span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Сайт Визитка<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Корпоративный сайт<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Интернет-магазин<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Готовые решения<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Сайты на 1С-Битрикс<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Сайты на ModX<span class="price">от<em>900 BYN</em></span></a></li>
+          </ul>
+        </li>
+        <li class="item main-item"><a href="#">Контекстная реклама</a>
+          <ul>
+            <li> <a href="#">Лендинг <span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Сайт Визитка<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Корпоративный сайт<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Интернет-магазин<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Готовые решения<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Сайты на 1С-Битрикс<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Сайты на ModX<span class="price">от<em>900 BYN</em></span></a></li>
+          </ul>
+        </li>
+        <li class="item main-item"><a href="#">Поддержка сайтов</a>
+          <ul>
+            <li> <a href="#">Лендинг <span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Сайт Визитка<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Корпоративный сайт<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Интернет-магазин<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Готовые решения<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Сайты на 1С-Битрикс<span class="price">от<em>900 BYN</em></span></a></li>
+            <li> <a href="#">Сайты на ModX<span class="price">от<em>900 BYN</em></span></a></li>
+          </ul>
+        </li>
+        <li class="item main-item"><a href="#">ещё</a>
+          <ul>
+            <li><a href="#">Мои заказы</a></li>
+            <li><a href="#">Личные данные</a></li>
+            <li><a href="#">Выйти</a></li>
+          </ul>
+        </li>
+        <div class="wrap-other-pages">
+          <ul class="mm-nolistview">
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Портфолио</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="wrap-phones">
+          <ul class="mm-nolistview">
+            <li><a href="tel:375172684740"> <em>+375 (17) 268-47-40</em><span> - Городской</span></a></li>
+            <li><a href="tel:375293080562"> <em>+375 (29) 308-05-62</em><span> - Velcom</span></a></li>
+            <li><a href="tel:375297950272"> <em>+375 (29) 795-02-72</em><span> - МТС</span></a></li>
+            <li class="link-order"><a href="#">zakaz@webcompany.by</a></li>
+          </ul>
+        </div>
+        <li class="wrap-btn wrap-btn-border">
+          <button class="btn btn-show-modal" data-modal-key="modal-callback">Заказать звонок</button>
+        </li>
+      </ul>
+    </nav>
+    <div class="page">
+      <header class="main-header header">
+        <div class="top-line">
+          <div class="container">
+            <div class="top-line-content header-line-content"><a class="wrap-logo-img img-resp" href="index.html"><img src="img/main-logo.svg" alt=""></a>
+              <nav class="top-line-nav">
+                <ul>
+                  <li><a href="about-us.html">О компании</a></li>
+                  <li><a href="#">Портфолио</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </nav>
+              <div class="wrap-link"><a class="link-accent-line" href="#">zakaz@webcompany.by</a></div>
+              <div class="wrap-btn wrap-btn-border">
+                <button class="btn btn-show-modal" data-modal-key="modal-callback">Заказать услугу</button>
+              </div>
+              <div class="wrap-phone-dropdown">
+                <div class="visible">
+                  <div class="wrap-icon-phone wrap-icon img-resp"><img src="img/phone.svg" alt="#"></div><a class="phone-number" href="tel:+375(29)308-05-62">+375 (29) 308-05-62</a>
+                  <div class="wrap-icon-dropdown wrap-icon img-resp"><img src="img/icon-dropdown.svg"></div>
+                </div>
+                <div class="hidden">
+                  <div class="hidden-content">
+                    <div class="top-content"><span class="title-content">Наш адресс</span>
+                      <address>г. Минск, Бизнес- центр «Парус» ул. Мележа 1, офис 816</address><a class="link-border-dotted" href="#">Показать на карте</a>
+                    </div>
+                    <div class="bottom-content"><span class="title-content">Время работы:</span>
+                      <div class="wrap-data-time-work">
+                        <div class="days-week"><span class="day"></span><span class="day"></span><span class="day"></span><span class="day"></span><span class="day"></span><span class="day weekends"></span><span class="day weekends"></span></div>
+                        <div class="time"><span>с 09:00 до 18:00</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-line">
+          <div class="container">
+            <div class="bottom-line-content header-line-content"><a class="wrap-logo-text" href="#"><span>Продающие интернет-решения</span></a>
+              <nav class="bottom-line-nav">
+                <div class="bottom-line-nav-content">
+                  <ul>
+                    <li class="has-dropdown"><a href="#">Разработка сайта</a>
+                      <div class="wrap-dropdown">
+                        <ul>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-1.svg"></div><a class="title" href="#">Техническая поддержка сайтов</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Работы по программированию, верстке, дизайну, оптимизации и контенту</p>
+                            </div>
+                            <div class="bottom-content"><span>от<span class="price">900 BYN</span></span></div>
+                          </li>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-2.svg"></div><a class="title" href="#">Поддержка сайтов на 1С-Битрикс и Битрикс24</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Доработаываем и поддерживаем сайты на базе 1С-Битрикс и Битрикс24</p>
+                            </div>
+                            <div class="bottom-content"><span>от<span class="price">1 800 BYN</span></span></div>
+                          </li>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-3.svg"></div><a class="title" href="#">Лицензии 1С Битрикс</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Готовые сайты на базе професиисональных решений</p>
+                            </div>
+                            <div class="bottom-content"><span>от<span class="price">800 BYN</span></span></div>
+                          </li>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-4.svg"></div><a class="title" href="#">CRM Битрикс24</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Лицензии и внедрение CRM Битрикс24</p>
+                            </div>
+                            <div class="bottom-content"><span>от<span class="price">3 000 BYN</span></span></div>
+                          </li>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-5.svg"></div><a class="title" href="#">Переход на Битрикс</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Готовые сайты на базе професиисональных решений</p>
+                            </div>
+                            <div class="bottom-content"><span>от<span class="price">2 300 BYN</span></span></div>
+                          </li>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-6.svg"></div><a class="title" href="#">Поддержка сайтов на MODx</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Профессиональная поддержка сайтов на системе управения MODx Evolution/Revolution</p>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-7.svg"></div><a class="title" href="#">Редизайн сайта</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Профессиональная разработка на Modx Evolution/Revolution</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="has-dropdown"><a href="#">Продвижение сайтов</a>
+                      <div class="wrap-dropdown">
+                        <ul>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-5.svg"></div><a class="title" href="#">Переход на Битрикс</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Готовые сайты на базе професиисональных решений</p>
+                            </div>
+                            <div class="bottom-content"><span>от<span class="price">2 300 BYN</span></span></div>
+                          </li>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-6.svg"></div><a class="title" href="#">Поддержка сайтов на MODx</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Профессиональная поддержка сайтов на системе управения MODx Evolution/Revolution</p>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-7.svg"></div><a class="title" href="#">Редизайн сайта</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Профессиональная разработка на Modx Evolution/Revolution</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li><a href="#">Контекстная реклама</a></li>
+                    <li><a href="#">Поддержка сайтов</a></li>
+                    <li class="has-dropdown"><a href="#">Разработка сайта</a>
+                      <div class="wrap-dropdown">
+                        <ul>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-5.svg"></div><a class="title" href="#">Переход на Битрикс</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Готовые сайты на базе професиисональных решений</p>
+                            </div>
+                            <div class="bottom-content"><span>от<span class="price">2 300 BYN</span></span></div>
+                          </li>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-6.svg"></div><a class="title" href="#">Поддержка сайтов на MODx</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Профессиональная поддержка сайтов на системе управения MODx Evolution/Revolution</p>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-7.svg"></div><a class="title" href="#">Редизайн сайта</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Профессиональная разработка на Modx Evolution/Revolution</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li><a href="#">Поддержка сайтов</a></li>
+                    <li class="has-dropdown"><a href="#">Разработка сайта</a>
+                      <div class="wrap-dropdown">
+                        <ul>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-5.svg"></div><a class="title" href="#">Переход на Битрикс</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Готовые сайты на базе професиисональных решений</p>
+                            </div>
+                            <div class="bottom-content"><span>от<span class="price">2 300 BYN</span></span></div>
+                          </li>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-6.svg"></div><a class="title" href="#">Поддержка сайтов на MODx</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Профессиональная поддержка сайтов на системе управения MODx Evolution/Revolution</p>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-7.svg"></div><a class="title" href="#">Редизайн сайта</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Готовые сайты на базе професиисональных решений</p>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-6.svg"></div><a class="title" href="#">Поддержка сайтов на MODx в две строки</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Профессиональная поддержка сайтов на системе управения MODx Evolution/Revolution</p>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="top-content">
+                              <div class="wrap-icon img-resp"><img src="img/menu-item-img-7.svg"></div><a class="title" href="#">Редизайн сайта</a>
+                            </div>
+                            <div class="middle-content">
+                              <p>Готовые сайты на базе професиисональных решений</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <header class="header-fixed header">
+        <div class="top-line">
+          <div class="container">
+            <div class="top-line-content header-line-content">
+              <div class="wrap-menu-btn-fixed">
+                <button class="icon hamburger hamburger--squeeze" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><span class="btn-text">Меню</span>
+                <div class="wrap-menu-fixed">
+                  <ul>
+                    <li class="has-dropdown"><a href="#">Услуги</a>
+                      <ul>
+                        <li><a href="#">Растработка сайтов</a></li>
+                        <li class="has-dropdown"><a href="#">Продвижение сайтов</a>
+                          <ul>
+                            <li><a href="#">Комплексное продвижения сайта</a></li>
+                            <li><a href="#">Продвижение сайта по трафику</a></li>
+                            <li><a href="#">Продвижение молодого сайта в две строки</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Контекстная реклама</a></li>
+                        <li class="has-dropdown"><a href="#">Поддержка сайтов скорее всего в две строки</a>
+                          <ul>
+                            <li><a href="#">Комплексное продвижения</a></li>
+                            <li><a href="#">Продвижение сайта по трафику</a></li>
+                            <li><a href="#">Продвижение молодого сайта</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Еще</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Услуги</a></li>
+                  </ul>
+                </div>
+              </div><a class="wrap-logo" href="index.html">
+                <div class="wrap-logo-img"><img src="img/logo-fixed.svg" alt=""></div>
+                <div class="wrap-logo-text"><span>Продающие интернет-решения</span></div>
+              </a>
+              <div class="wrap-link"><a class="link-accent-line" href="#">zakaz@webcompany.by</a></div>
+              <div class="wrap-btn wrap-btn-border">
+                <button class="btn btn-show-modal" data-modal-key="modal-callback">Заказать услугу</button>
+              </div>
+              <div class="wrap-phone-dropdown">
+                <div class="visible">
+                  <div class="wrap-icon-phone wrap-icon img-resp"><img src="img/phone.svg" alt="#"></div><a class="phone-number" href="tel:+375(29)308-05-62">+375 (29) 308-05-62</a>
+                  <div class="wrap-icon-dropdown wrap-icon img-resp"><img src="img/icon-dropdown.svg"></div>
+                </div>
+                <div class="hidden">
+                  <div class="hidden-content">
+                    <div class="top-content"><span class="title-content">Наш адресс</span>
+                      <address>г. Минск, Бизнес- центр «Парус» ул. Мележа 1, офис 816</address><a class="link-border-dotted" href="#">Показать на карте</a>
+                    </div>
+                    <div class="bottom-content"><span class="title-content">Время работы:</span>
+                      <div class="wrap-data-time-work">
+                        <div class="days-week"><span class="day"></span><span class="day"></span><span class="day"></span><span class="day"></span><span class="day"></span><span class="day weekends"></span><span class="day weekends"></span></div>
+                        <div class="time"><span>с 09:00 до 18:00</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wrap-full-menu-btn">
+                <button class="menu-icon icon hamburger hamburger--squeeze" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="srm-bitrix-banner page-banner img-bg" style="background-image: url('img/banner-srm-bitrix-bg.jpg')">
+        <div class="container">
+          <div class="page-banner-content">
+            <div class="left-content">
+              <div class="wrap-breadcrumbs breadcrumbs-yellow"><a href="index.html">Главная</a><span class="delimiter">/</span><a href="#">Услуги</a><span class="delimiter">/</span><a href="#">SEO оптимизация</a><span class="delimiter">/</span><span class="cur-page">Анализ и аудит сайта</span></div>
+              <div class="page-banner-text"><span class="banner-title">CRM Битрикс24</span>
+                <p class="subtext">CRM помогает продавать больше:<br> берет под контроль все каналы коммуникаций с клиентами,<br> подсказывает, что делать и автоматизирует продажи.</p>
+                <div class="wrap-btn wrap-btn-blue wrap-btn-blue-arrow">
+                  <button class="btn">Заказать консультацию <div class="wrap-icon"><svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.7685 4.97443L11.7095 0.217666C11.4009 -0.0725555 10.9003 -0.0725555 10.5917 0.217666C10.2829 0.507948 10.2829 0.978511 10.5917 1.26879L14.3012 4.75675H0.790455C0.353934 4.75675 0 5.08954 0 5.49999C0 5.91038 0.353934 6.24324 0.790455 6.24324H14.3012L10.5918 9.73119C10.2831 10.0215 10.2831 10.492 10.5918 10.7823C10.7461 10.9273 10.9484 11 11.1507 11C11.353 11 11.5553 10.9273 11.7097 10.7823L16.7685 6.02556C17.0772 5.73527 17.0772 5.26471 16.7685 4.97443Z" fill="white"></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="srm-bitrix-plus sec-page">
+        <div class="srm-bitrix-plus-text-mobile">
+          <div class="container"><span class="main-text"><span>Бизнес работает<br> в</span><img src="img/bitrix24-logo.png" alt=""></span><span class="under-text">Беслатно. Неограниченно. Онлайн.</span></div>
+        </div>
+        <div class="wrap-img img-resp"><img src="img/srm-bitrix-plus.svg" alt=""></div>
+      </section>
+      <section class="bitrix-tasks sec-page img-bg" style="background-image: url('img/bitrix-plus-bg.jpg')">
+        <div class="container">
+          <div class="bitrix-tasks-content"><span class="sec-title">Ключевые задачи, которые решают БИТРИКС-24</span>
+            <div class="wrap-tasks-items">
+              <div class="item">
+                <div class="wrap-img img-resp"><img src="img/bitrix-task-1.png"></div>
+                <div class="wrap-text wrap-list-point"><span>Корпоративный портал</span>
+                  <ul>
+                    <li>Постановка задач и контроль их исполнения</li>
+                    <li>Единая среда для коммуникации сотрудников</li>
+                    <li>Внутреннее информационное пространство компании</li>
+                    <li>Общий диск для хранения документов и файлов</li>
+                    <li>Интеграция с почвой</li>
+                    <li>Управление персоналом</li>
+                    <li>Автоматизация бизнес-процессов</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="item">
+                <div class="wrap-img img-resp"><img src="img/bitrix-task-2.png"></div>
+                <div class="wrap-text wrap-list-point"><span>CRM</span>
+                  <ul>
+                    <li>Учет и ведение лидов</li>
+                    <li>Управление сделками</li>
+                    <li>Формирование коммерческого предложения и счетов</li>
+                    <li>Отчёт по продажам</li>
+                    <li>Интеграция с 1С: Бухгалтерия и Интернет-магазином на 1С-БИТРИКС</li>
+                    <li>Интеграция с IP-телефонией</li>
+                    <li>Автоматизация бизнес-процессов</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="prices-bitrix sec-page">
+        <div class="container">
+          <div class="prices-bitrix-content">
+            <div class="wrap-title"><span class="title">Цена на Битрикс24</span><span class="subtitle">Выберите подходящую версию установки</span></div>
+            <div class="wrap-tabs">
+              <button class="btn btn-active">Облако</button>
+              <button class="btn">Коробка</button>
+            </div>
+            <div class="wrap-tables">
+              <div class="wrap-table-accent wrap-table-accent-2 wrap-table-x-custom-scroll table-hover table-active">
+                <table>
+                  <tr class="row-title-col">
+                    <td class="empty-cell"></td>
+                    <td>Проект</td>
+                    <td>Проект +</td>
+                    <td>CRM +</td>
+                    <td>Команда</td>
+                    <td>Компания</td>
+                  </tr>
+                  <tr class="row-gray-text">
+                    <td class="empty-cell"></td>
+                    <td>Бесплатный «облачный» сервис для небольшой компании до 12 сотрудников. Включает базовый функционал</td>
+                    <td>«Облачный» сервис для компании до 24 сотрудников. Включает расширенные возможности и дополнительные инструменты</td>
+                    <td>Бесплатный «облачный» сервис для небольшой компании до 12 сотрудников. Включает базовый функционал</td>
+                    <td>«Облачный» сервис для компании до 24 сотрудников. Включает расширенные возможности и дополнительные инструменты</td>
+                    <td>«Облачный» сервис для компании до 24 сотрудников. Включает расширенные возможности и дополнительные инструменты</td>
+                  </tr>
+                  <tr>
+                    <td>Стоимость</td>
+                    <td>0 BYN/.мес</td>
+                    <td>0 BYN/.мес</td>
+                    <td>0 BYN/.мес</td>
+                    <td>0 BYN/.мес</td>
+                    <td>0 BYN/.мес</td>
+                  </tr>
+                  <tr>
+                    <td>Бизнес-пользователи</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>неограниченно</td>
+                    <td>неограниченно</td>
+                  </tr>
+                  <tr>
+                    <td>Место в облаке, Гб</td>
+                    <td><img class="icon-true" src="img/icon-success.svg" alt=""></td>
+                    <td><img class="icon-false" src="img/icon-error.svg" alt=""></td>
+                    <td><img class="icon-true" src="img/icon-success.svg" alt=""></td>
+                    <td><img class="icon-false" src="img/icon-error.svg" alt=""></td>
+                    <td><img class="icon-true" src="img/icon-success.svg" alt=""></td>
+                  </tr>
+                  <tr>
+                    <td>Открытые линии</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>неограниченно</td>
+                    <td>неограниченно</td>
+                  </tr>
+                  <tr>
+                    <td>Внешние пользователи (экстранет)</td>
+                    <td><img class="icon-true" src="img/icon-success.svg" alt=""></td>
+                    <td><img class="icon-false" src="img/icon-error.svg" alt=""></td>
+                    <td><img class="icon-true" src="img/icon-success.svg" alt=""></td>
+                    <td><img class="icon-false" src="img/icon-error.svg" alt=""></td>
+                    <td><img class="icon-true" src="img/icon-success.svg" alt=""></td>
+                  </tr>
+                  <tr>
+                    <td>Интеграция с 1С</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>неограниченно</td>
+                    <td>неограниченно</td>
+                  </tr>
+                  <tr>
+                    <td>Открытые линии</td>
+                    <td><img class="icon-true" src="img/icon-success.svg" alt=""></td>
+                    <td><img class="icon-false" src="img/icon-error.svg" alt=""></td>
+                    <td><img class="icon-true" src="img/icon-success.svg" alt=""></td>
+                    <td><img class="icon-false" src="img/icon-error.svg" alt=""></td>
+                    <td><img class="icon-true" src="img/icon-success.svg" alt=""></td>
+                  </tr>
+                  <tr>
+                    <td>Учет рабочего времени</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>неограниченно</td>
+                    <td>неограниченно </td>
+                  </tr>
+                  <tr class="row-btn">
+                    <td></td>
+                    <td>
+                      <div class="wrap-btn wrap-btn-blue"><a class="btn" href="#">Попробовать бесплатно</a></div>
+                    </td>
+                    <td>
+                      <div class="wrap-btn wrap-btn-blue"><a class="btn" href="#">Купить</a></div>
+                    </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                  </tr>
+                </table>
+                <div class="wrap-bottom-line">
+                  <div class="wrap-btn wrap-btn-compare"><a class="btn" href="#">
+                      <div class="wrap-icon"><img src="img/compare.svg"></div><span>Сравнить возможности</span>
+                    </a></div>
+                  <div class="wrap-text"><span class="title">Получить консультацию по выбору редакции 1С-Битрикс</span>
+                    <div class="wrap-btn wrap-btn-blue"><a class="btn" href="#">Заказать звонок</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="wrap-table-accent wrap-table-accent-2 wrap-table-x-custom-scroll table-hover">
+                <table>
+                  <tr class="row-title-col">
+                    <td class="empty-cell"></td>
+                    <td>Не Проект</td>
+                    <td>Не Проект +</td>
+                    <td>Не CRM +</td>
+                    <td>Не Команда</td>
+                    <td>Не Компания</td>
+                  </tr>
+                  <tr class="row-gray-text">
+                    <td class="empty-cell"></td>
+                    <td>Бесплатный «облачный» сервис для небольшой компании до 12 сотрудников. Включает базовый функционал</td>
+                    <td>«Облачный» сервис для компании до 24 сотрудников</td>
+                    <td>Бесплатный «облачный» сервис для небольшой компании до 12 сотрудников. Включает базовый функционал Включает расширенные возможности и дополнительные инструменты</td>
+                    <td>«Облачный» сервис для компании до 24 сотрудников. Включает расширенные возможности и дополнительные инструменты</td>
+                    <td>«Облачный» сервис для компании до 24 сотрудников. </td>
+                  </tr>
+                  <tr>
+                    <td>Бизнес-пользователи</td>
+                    <td>9990 BYN/.мес</td>
+                    <td>0 BYN/.мес</td>
+                    <td>20 BYN/.мес</td>
+                    <td>550 BYN/.мес</td>
+                    <td>10 BYN/.мес</td>
+                  </tr>
+                  <tr>
+                    <td>Стоимость</td>
+                    <td>11</td>
+                    <td>634</td>
+                    <td>42</td>
+                    <td>неограниченно</td>
+                    <td>ограничение</td>
+                  </tr>
+                  <tr>
+                    <td>Открытые линии</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>ограничение</td>
+                    <td>неограниченно</td>
+                  </tr>
+                  <tr>
+                    <td>Внешние пользователи (экстранет)</td>
+                    <td><img class="icon-true" src="img/icon-success.svg" alt=""></td>
+                    <td><img class="icon-false" src="img/icon-error.svg" alt=""></td>
+                    <td><img class="icon-true" src="img/icon-success.svg" alt=""></td>
+                    <td><img class="icon-false" src="img/icon-error.svg" alt=""></td>
+                    <td><img class="icon-true" src="img/icon-success.svg" alt=""></td>
+                  </tr>
+                  <tr>
+                    <td>Интеграция с 4С</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>неограниченно</td>
+                    <td>неограниченно</td>
+                  </tr>
+                  <tr>
+                    <td>Открытые линии</td>
+                    <td><img class="icon-true" src="img/icon-success.svg" alt=""></td>
+                    <td><img class="icon-false" src="img/icon-error.svg" alt=""></td>
+                    <td><img class="icon-true" src="img/icon-success.svg" alt=""></td>
+                    <td><img class="icon-false" src="img/icon-error.svg" alt=""></td>
+                    <td><img class="icon-true" src="img/icon-success.svg" alt=""></td>
+                  </tr>
+                  <tr>
+                    <td>Учет рабочего времени</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>ограничение</td>
+                    <td>ограничение </td>
+                  </tr>
+                  <tr class="row-btn">
+                    <td></td>
+                    <td>
+                      <div class="wrap-btn wrap-btn-blue"><a class="btn" href="#">Попробовать бесплатно</a></div>
+                    </td>
+                    <td>
+                      <div class="wrap-btn wrap-btn-blue"><a class="btn" href="#">Купить</a></div>
+                    </td>
+                    <td>
+                      <div class="wrap-btn wrap-btn-blue"><a class="btn" href="#">Закупить</a></div>
+                    </td>
+                    <td>
+                      <div class="wrap-btn wrap-btn-blue"><a class="btn" href="#">Выкупить</a></div>
+                    </td>
+                    <td>
+                      <div class="wrap-btn wrap-btn-blue"><a class="btn" href="#">Перекупить</a></div>
+                    </td>
+                  </tr>
+                </table>
+                <div class="wrap-bottom-line">
+                  <div class="wrap-btn wrap-btn-compare"><a class="btn" href="#">
+                      <div class="wrap-icon"><img src="img/compare.svg"></div><span>Сравнить возможности</span>
+                    </a></div>
+                  <div class="wrap-text"><span class="title">Получить консультацию по выбору редакции 1С-Битрикс</span>
+                    <div class="wrap-btn wrap-btn-blue"><a class="btn" href="#">Заказать звонок</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bitrix-price-realisation sec-page">
+        <div class="container">
+          <div class="bitrix-price-realisation-content">
+            <div class="wrap-title"><span class="title">Стоимость внедрения</span></div>
+            <div class="bitrix-price-items">
+              <div class="item item-type-1">
+                <div class="top-content">
+                  <div class="wrap-icon"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5L6 10L15 1" stroke="white" stroke-width="2" />
+                    </svg>
+                  </div><span class="title">Запуск корпоративного портала БИТРИКС-24</span>
+                </div>
+                <div class="content">
+                  <div class="wrap-price"><span class="title">Стоймость</span><span class="price"><span class="accent">240 — 700</span> BYN</span></div>
+                  <div class="wrap-time"><span class="title">Сроки</span><span class="time">5 — 10 рабочих дней</span></div>
+                </div>
+                <div class="wrap-btn wrap-btn-blue">
+                  <button class="btn">Заказать внедрение</button>
+                </div>
+              </div>
+              <div class="item item-type-2">
+                <div class="top-content">
+                  <div class="wrap-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.181 9.67955L14.058 9.87007C13.941 10.2478 13.7906 10.6121 13.6068 10.9597L14.2686 11.8855C14.5493 12.2799 14.5059 12.818 14.1616 13.159L13.1656 14.155C12.9784 14.3422 12.7311 14.4458 12.467 14.4458C12.2598 14.4458 12.0626 14.3823 11.8955 14.262L10.9663 13.6002C10.6053 13.7907 10.2276 13.9478 9.83658 14.0648L9.64941 15.1744C9.56919 15.6524 9.15808 16 8.67344 16H7.2663C6.78166 16 6.37055 15.6524 6.29033 15.1744L6.09647 14.038C5.72213 13.921 5.35781 13.7673 5.01021 13.5801L4.09106 14.2419C3.92394 14.3622 3.7234 14.4257 3.51617 14.4257C3.25212 14.4257 3.00144 14.3221 2.81761 14.1349L1.81825 13.1389C1.47733 12.798 1.43053 12.2599 1.71129 11.8655L2.37976 10.9263C2.19593 10.5753 2.04887 10.211 1.93523 9.8333L0.825564 9.64613C0.347606 9.56591 0 9.15479 0 8.67015V7.263C0 6.77836 0.347606 6.36724 0.825564 6.28703L1.96197 6.09317C2.07895 5.71882 2.2327 5.3545 2.41987 5.00689L1.76143 4.09108C1.48067 3.69668 1.52412 3.15856 1.86838 2.81763L2.86441 1.8216C3.05158 1.63443 3.29891 1.53081 3.56296 1.53081C3.77019 1.53081 3.96739 1.59432 4.13451 1.71464L5.07371 2.38312C5.41129 2.20598 5.76558 2.06225 6.1299 1.94861L6.31707 0.82557C6.39729 0.347609 6.8084 9.53674e-07 7.29304 9.53674e-07H8.70352C9.18816 9.53674e-07 9.59927 0.347609 9.67949 0.82557L9.87001 1.94861C10.2477 2.06559 10.612 2.216 10.9596 2.39983L11.8855 1.73804C12.0526 1.61772 12.2531 1.55421 12.4603 1.55421C12.7244 1.55421 12.9717 1.65782 13.1589 1.845L14.1549 2.84103C14.4958 3.18195 14.5426 3.72008 14.2619 4.11448L13.6001 5.04366C13.7839 5.39461 13.9377 5.75893 14.0513 6.13328L15.1743 6.32045C15.6523 6.40067 15.9999 6.81178 15.9999 7.29643V8.70357C16.0066 9.18822 15.659 9.59933 15.181 9.67955ZM15.1042 7.29643C15.1042 7.25298 15.0741 7.21621 15.0306 7.20953L13.6268 6.97556C13.4497 6.94548 13.3093 6.81512 13.2658 6.64466C13.1388 6.15333 12.945 5.68206 12.6843 5.2442C12.594 5.09045 12.6007 4.89994 12.7043 4.75287L13.5299 3.58972C13.5533 3.5563 13.55 3.50616 13.5199 3.47608L12.5238 2.48005C12.5004 2.45665 12.4771 2.45331 12.4603 2.45331C12.4403 2.45331 12.4236 2.46 12.4102 2.47002L11.2504 3.29559C11.1067 3.39921 10.9128 3.40589 10.7591 3.31565C10.3212 3.05494 9.84995 2.86108 9.35862 2.73407C9.18482 2.69062 9.05447 2.5469 9.02773 2.37309L8.79042 0.969293C8.78374 0.925842 8.74697 0.89576 8.70352 0.89576H7.29638C7.25293 0.89576 7.21617 0.925842 7.20948 0.969293L6.97552 2.37309C6.94544 2.55024 6.81508 2.69062 6.64462 2.73407C6.16667 2.85774 5.70542 3.04826 5.27425 3.29559C5.20406 3.3357 5.12385 3.35576 5.04697 3.35576C4.95673 3.35576 4.86314 3.32902 4.78627 3.2722L3.61644 2.43994C3.59973 2.42992 3.58302 2.42323 3.5663 2.42323C3.55293 2.42323 3.5262 2.42657 3.5028 2.44997L2.50677 3.446C2.47669 3.47608 2.47335 3.52288 2.49675 3.55964L3.31897 4.71276C3.42258 4.85983 3.42927 5.05369 3.33902 5.20744C3.07832 5.64195 2.87778 6.11322 2.75077 6.60455C2.70397 6.77502 2.56359 6.90537 2.38979 6.93545L0.975971 7.1761C0.93252 7.18279 0.902439 7.21955 0.902439 7.263V8.67015C0.902439 8.7136 0.93252 8.75037 0.975971 8.75705L2.36974 8.99102C2.54688 9.0211 2.6906 9.15145 2.73406 9.32526C2.85772 9.81659 3.04824 10.2912 3.3056 10.7291C3.39584 10.8828 3.38582 11.0733 3.2822 11.217L2.44995 12.3869C2.42656 12.4203 2.4299 12.4704 2.45998 12.5005L3.45601 13.4966C3.4794 13.5199 3.5028 13.5233 3.51951 13.5233C3.53957 13.5233 3.55628 13.5166 3.56965 13.5066L4.72276 12.6844C4.86983 12.5807 5.06368 12.5741 5.21743 12.6643C5.65194 12.925 6.12321 13.1255 6.61454 13.2526C6.785 13.2994 6.91535 13.4397 6.94544 13.6135L7.18609 15.0274C7.19277 15.0708 7.22954 15.1009 7.27299 15.1009H8.68012C8.72357 15.1009 8.76034 15.0708 8.76702 15.0274L9.00099 13.6336C9.03107 13.4564 9.16142 13.3127 9.33523 13.2693C9.83992 13.1423 10.3212 12.9451 10.7691 12.681C10.9229 12.5908 11.1134 12.5975 11.2604 12.7011L12.4135 13.53C12.4303 13.54 12.447 13.5467 12.4637 13.5467C12.4771 13.5467 12.5038 13.5433 12.5272 13.5199L13.5232 12.5239C13.5533 12.4938 13.5566 12.447 13.5332 12.4103L12.7077 11.2505C12.6041 11.1067 12.5974 10.9129 12.6876 10.7591C12.9483 10.3213 13.1422 9.85001 13.2692 9.35868C13.3126 9.18488 13.4564 9.05452 13.6302 9.02778L15.034 8.79047C15.0774 8.78379 15.1075 8.74702 15.1075 8.70357V7.29643H15.1042Z" fill="white" />
+                      <path d="M8.00161 11.4543C6.09647 11.4543 4.54895 9.90682 4.54895 8.00166C4.54895 6.0965 6.09647 4.54898 8.00161 4.54898C9.90676 4.54898 11.4543 6.0965 11.4543 8.00166C11.4543 9.90682 9.90676 11.4543 8.00161 11.4543ZM8.00161 5.45142C6.59448 5.45142 5.45139 6.59452 5.45139 8.00166C5.45139 9.40881 6.59448 10.5519 8.00161 10.5519C9.40875 10.5519 10.5518 9.40881 10.5518 8.00166C10.5518 6.59452 9.40875 5.45142 8.00161 5.45142Z" fill="white" />
+                    </svg>
+                  </div><span class="title">Автоматизация отдела продаж</span>
+                </div>
+                <div class="content">
+                  <div class="wrap-price"><span class="title">Стоймость</span><span class="price"><span class="accent">240 — 700</span> BYN</span></div>
+                  <div class="wrap-time"><span class="title">Сроки</span><span class="time">5 — 10 рабочих дней</span></div>
+                </div>
+                <div class="wrap-btn wrap-btn-blue">
+                  <button class="btn">Заказать внедрение</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="srm-bitrix-text-group sec-page">
+        <div class="container">
+          <div class="srm-bitrix-text-group-content"><span class="title">Какую роль играет CRM в ведении <br>современного бизнеса</span>
+            <div class="wrap-text">
+              <p>1C-Bitrix - это мощнейшая платформа для композитного сайта с большим количеством товара, это огромные возможности функционального управления магазином: цены, наличие на складе, товарные предложения, интеграция с 1С Бухгалтерией, настройка мобильной версии и дизайна. Для корпоративных сайтов и визиток Bitrix (Битрикс) также подойдет. Мы предлагаем выгодные условия и цены своим клиентам по услуге создание сайта 1с Bitrix.</p>
+              <p>1C-Bitrix - это мощнейшая платформа для композитного сайта с большим количеством товара, это огромные возможности функционального управления магазином: цены, наличие на складе, товарные предложения, интеграция с 1С Бухгалтерией, настройка мобильной версии и дизайна. Для корпоративных сайтов и визиток Bitrix (Битрикс) также подойдет. Мы предлагаем выгодные условия и цены своим клиентам по услуге создание сайта 1с Bitrix.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="sec-have-projects img-bg" style="background-image: url('img/img-sec-have-projects.jpg')">
+          <div class="text"><span class="sec-title">У вас есть проект?</span><span class="subtext">Давайте обсудим его. Продумаем. И сделаем!</span></div>
+          <div class="wrap-btn wrap-btn-white-arrow">
+            <button class="btn btn-show-modal" data-modal-key="modal-other">Оставить заявку <div class="wrap-icon"><svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.7685 4.97443L11.7095 0.217666C11.4009 -0.0725555 10.9003 -0.0725555 10.5917 0.217666C10.2829 0.507948 10.2829 0.978511 10.5917 1.26879L14.3012 4.75675H0.790455C0.353934 4.75675 0 5.08954 0 5.49999C0 5.91038 0.353934 6.24324 0.790455 6.24324H14.3012L10.5918 9.73119C10.2831 10.0215 10.2831 10.492 10.5918 10.7823C10.7461 10.9273 10.9484 11 11.1507 11C11.353 11 11.5553 10.9273 11.7097 10.7823L16.7685 6.02556C17.0772 5.73527 17.0772 5.26471 16.7685 4.97443Z" fill="white" />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <footer class="main-footer">
+        <div class="container">
+          <div class="line-info">
+            <div class="wrap-phone-info"><span class="info-title">Отдел продаж</span>
+              <div class="wrap-phone-dropdown">
+                <div class="visible"><a class="phone-number" href="tel:+375(17)268-47-40">+375 (17) 268-47-40</a>
+                  <div class="wrap-icon">
+                    <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.6" d="M1 1.5L8.5 9L1 16.5" stroke="white" stroke-width="2"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="hidden">
+                  <div class="hidden-content">
+                    <div class="top-content"><span class="title-content">Наш адресс</span>
+                      <address>220113, г. Минск, Бизнес- центр «Парус» ул. Мележа 1, офис 816</address><a class="link-border-dotted" href="#">Показать на карте</a>
+                    </div>
+                    <div class="bottom-content"><span class="title-content">Время работы:</span>
+                      <div class="wrap-data-time-work">
+                        <div class="days-week"><span class="day"></span><span class="day"></span><span class="day"></span><span class="day"></span><span class="day"></span><span class="day weekends"></span><span class="day weekends"></span></div>
+                        <div class="time"><span>с 09:00 до 18:00</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wrap-email-info"><span class="info-title">Почта для заявок</span><a class="link-accent-line" href="mailto:zakaz@webcompany.by">zakaz@webcompany.by</a></div>
+            <div class="wrap-address-info"><span class="info-title">Наш адрес</span>
+              <address>г. Минск, Бизнес- центр «Парус» ул. Мележа 1, офис 816</address>
+            </div>
+            <div class="wrap-btn wrap-btn-border wrap-btn-user">
+              <button class="btn">
+                <div class="wrap-icon img-resp"><img src="img/user-icon.svg" alt=""></div>Личный кабинет
+              </button>
+            </div>
+          </div>
+          <div class="footer-wrap-cols">
+            <div class="footer-col"><a class="col-title" href="#">О компании <div class="dropdown-btn"><svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 1.5L8.5 8.5L15.5 1.5" stroke="#9096A8" stroke-width="2" />
+                  </svg>
+                </div></a>
+              <ul class="dropdown-content">
+                <li> <a class="link-dark" href="#">Статьи</a></li>
+                <li> <a class="link-dark" href="#">Портфолио</a></li>
+                <li> <a class="link-dark" href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="footer-col"><a class="col-title" href="#">Разработка сайтов <div class="dropdown-btn"><svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 1.5L8.5 8.5L15.5 1.5" stroke="#9096A8" stroke-width="2" />
+                  </svg>
+                </div></a>
+              <ul class="dropdown-content">
+                <li> <a class="link-dark" href="#">Лэндинг</a></li>
+                <li> <a class="link-dark" href="#">Сайт Визитка</a></li>
+                <li> <a class="link-dark" href="#">Корпоративный сайт</a></li>
+                <li> <a class="link-dark" href="#">Интернет-магазин</a></li>
+                <li> <a class="link-dark" href="#">Сайт на 1С-Битрикс</a></li>
+                <li> <a class="link-dark" href="#">Сайты на ModX</a></li>
+                <li> <a class="link-dark" href="#">Готовые решения</a></li>
+              </ul>
+            </div>
+            <div class="footer-col"><a class="col-title" href="#">Продвижение сайтов <div class="dropdown-btn"><svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 1.5L8.5 8.5L15.5 1.5" stroke="#9096A8" stroke-width="2" />
+                  </svg>
+                </div></a>
+              <ul class="dropdown-content">
+                <li> <a class="link-dark" href="#">Лэндинг</a></li>
+                <li> <a class="link-dark" href="#">Сайт Визитка</a></li>
+                <li> <a class="link-dark" href="#">Корпоративный сайт</a></li>
+                <li> <a class="link-dark" href="#">Интернет-магазин</a></li>
+                <li> <a class="link-dark" href="#">Сайт на 1С-Битрикс</a></li>
+                <li> <a class="link-dark" href="#">Сайты на ModX</a></li>
+                <li> <a class="link-dark" href="#">Готовые решения</a></li>
+              </ul>
+            </div>
+            <div class="footer-col"><a class="col-title" href="#">Контекстная реклама <div class="dropdown-btn"><svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 1.5L8.5 8.5L15.5 1.5" stroke="#9096A8" stroke-width="2" />
+                  </svg>
+                </div></a>
+              <ul class="dropdown-content">
+                <li> <a class="link-dark" href="#">Реклама в Google</a></li>
+                <li> <a class="link-dark" href="#">Реклама в Yandex</a></li>
+                <li> <a class="link-dark" href="#">Реклама в YouTube</a></li>
+                <li> <a class="link-dark" href="#">Баннерная реклама</a></li>
+                <li> <a class="link-dark" href="#">в контекстной медийной сети</a></li>
+                <li> <a class="link-dark" href="#">Догоняющая реклама</a></li>
+                <li> <a class="link-dark" href="#">Ремаркетинг и ретаргетин</a></li>
+              </ul>
+            </div>
+            <div class="footer-col"><a class="col-title" href="#">Поддержка сайтов <div class="dropdown-btn"><svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 1.5L8.5 8.5L15.5 1.5" stroke="#9096A8" stroke-width="2" />
+                  </svg>
+                </div></a>
+              <ul class="dropdown-content">
+                <li> <a class="link-dark" href="#">Техническая поддержка сайта</a></li>
+                <li> <a class="link-dark" href="#">Поддрежка сайтов на 1С-Битрикс</a></li>
+                <li> <a class="link-dark" href="#">и Битрикс 24</a></li>
+                <li> <a class="link-dark" href="#">Переход на Битрикс</a></li>
+                <li> <a class="link-dark" href="#">Поддержка сайтов на ModX</a></li>
+                <li> <a class="link-dark" href="#">Лицензия 1С-Битрикс</a></li>
+                <li> <a class="link-dark" href="#">CRM Битрикс 24</a></li>
+                <li> <a class="link-dark" href="#">Редизайн сайта</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom-line">
+          <div class="container">
+            <p>© 2011-2018 Вебкомпани — продающие интернет-решения</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByBaaAx1KIZ13dnnPwwx0O6HFNtdMPpec" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>

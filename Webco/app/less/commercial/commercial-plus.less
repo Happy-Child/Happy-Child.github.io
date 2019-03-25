@@ -1,0 +1,124 @@
+@import "../common/vars";
+
+.commercial-plus{
+	
+	.wrap-blue-items-circle{
+
+		.item{
+			text-align: center;
+			width: auto;
+			flex: 4;
+			display: block;
+			margin-bottom: 0;
+
+			.wrap-icon{
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 20px;
+			}
+
+			&-title{
+				margin-bottom: 12px;
+			}
+
+			&-text{
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+	}
+
+}
+
+
+@media (max-width: 1399px) {
+
+}
+
+
+@media (max-width: 1199px) {
+	.solve-problems{
+		padding-top: 60px;
+		padding-bottom: 20px;
+
+		.wrap-blue-items-circle .item{
+			margin-bottom: 40px;
+		}
+	}
+}
+
+
+@media (max-width: 991px) {
+	.commercial-plus{
+		.wrap-blue-items-circle{
+			margin-bottom: 0;
+
+			.item{
+				padding: 0 5px;
+
+				&-title{
+					margin-bottom: 6px;
+					font-size: 14px;
+					line-height: 17px;
+				}
+
+				.text{
+					font-size: 12px;
+					line-height: 18px;
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 767px) {
+	.commercial-plus{
+		.wrap-blue-items-circle{
+			margin-bottom: -20px;
+			.item{
+				flex: auto;
+				width: 100%;
+				max-width: 50%;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 575px) {
+	.commercial-plus{
+		.wrap-title{
+			text-align: left;
+
+		}
+
+		.wrap-blue-items-circle{
+			margin-bottom: 0;
+			margin-top: 0;
+
+			.item{
+				max-width:  100%;
+				margin-bottom: 20px;
+				text-align: left;
+
+				.wrap-icon{
+					margin-left: 0;
+					margin-bottom: 10px;
+				}
+
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+
+		}
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+extends templates/page.pug
+
+block title
+	| Анализ и аудит
+
+
+block content
+	+modal-windows
+		include modules/modal-parts/modal-callback
+		include modules/modal-parts/modal-promotion
+		include modules/modal-parts/modal-other
+
+
+	.page
+		include modules/header.pug
+						
+		include analys-audit/analys-audit-banner.pug
+		include analys-audit/what-audit.pug
+		include analys-audit/when-to-us.pug
+		include analys-audit/sec-blue.pug
+		include analys-audit/proof.pug
+		include analys-audit/text-group.pug
+		include modules/order-consultation.pug
+		include modules/clients-up.pug
+		include modules/sec-have-projects.pug
+
+		include modules/footer.pug

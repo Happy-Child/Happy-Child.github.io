@@ -1,0 +1,333 @@
+@import "../common/vars";
+
+.header-fixed{
+	box-shadow: 0px 2px 8px rgba(31, 47, 87, 0.1);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9;
+	-webkit-transform: translate(0, -105%);
+	-ms-transform: translate(0, -105%);
+	-o-transform: translate(0, -105%);
+	transform: translate(0, -105%);
+	-webkit-transition: .5s transform ease;
+	-o-transition: .5s transform ease;
+	transition: .5s transform ease;
+
+	.top-line-content{
+		position: relative;
+	}
+
+	.wrap-menu-btn-fixed{
+		border: 1px solid transparent;
+		border-right-color: #E6E8F0;
+		border-left-color: #E6E8F0;
+		margin-right: 20px;
+		padding: 0 15px;
+		-ms-align-self: stretch;
+		align-self: stretch;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-ms-align-items: center;
+		align-items: center;
+		cursor: pointer;
+
+		&:hover{
+			.icon{
+				.hamburger-inner{
+					background-color: @accent;
+					&:after, &:before{
+						background-color: @accent;
+					}
+				}	
+			}
+			.btn-text{
+				color: @accent;
+			}
+			.wrap-menu-fixed{
+				display: block;
+			}
+		}
+
+		.icon{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			-ms-align-items: center;
+			align-items: center;
+			width: 25px;
+			padding: 0;
+			.hamburger-box{
+				width: 25px;
+			}
+			.hamburger-inner{
+				width: inherit;
+				height: 2px;
+				-webkit-transition: .1s all ease, .3s background-color ease;
+				-o-transition: .1s all ease, .3s background-color ease;
+				transition: .1s all ease, .3s background-color ease;
+				&:after, &:before{
+					width: inherit;
+					height: inherit;
+					-webkit-transition: inherit;
+					-o-transition: inherit;
+					transition: inherit;
+				}
+				&:after{
+					top: -7px;
+				}
+				&:before{
+					top: calc(100% + 6px);
+				}
+			}
+		}
+
+		.is-active{
+			.hamburger-inner{
+				&:after{
+					top: 0px;
+				}
+			}
+		}
+
+		.btn-text{
+			color: #151515;
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 14px;
+			margin-left: 10px;
+			-webkit-transition: .3s color ease;
+			-o-transition: .3s color ease;
+			transition: .3s color ease;
+		}
+
+		.wrap-menu-fixed{
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: 9;
+			display: none;
+			ul {
+				background-color: #fff;
+				box-shadow: 0px 0px 10px rgba(31, 47, 87, 0.1);
+				width: 265px;
+				li{
+					position: relative;
+					border-bottom: 1px solid #DADCE4;
+					&:last-child{
+						border-bottom-color: transparent;
+					}
+					a{
+						padding: 15px 40px 15px 15px;
+						color: #151515;
+						font-size: 14px;
+						font-weight: 600;
+						line-height: 20px;
+						display: block;
+					}
+					&:hover{
+						> a{
+							color: @accent;
+						}
+					}
+				}
+				.has-dropdown{
+					&:after{
+						content: "";
+						position: absolute;
+						top: 43%;
+						right: 15px;
+						-webkit-transform: translate(-50%, 0);
+						-ms-transform: translate(-50%, 0);
+						-o-transform: translate(-50%, 0);
+						transform: translate(-50%, 0);
+						background-image: url("../img/icon-dropdown-fixed-gray.svg");
+						-webkit-background-size: cover;
+						background-size: cover;
+						background-position: center;
+						background-repeat: no-repeat;
+						width: 5px;
+						height: 12px;
+					}
+					&:hover{
+						&:after{
+							background-image: url("../img/icon-dropdown-fixed-blue.svg");
+						}
+						> ul {
+							display: block;
+						}
+					}
+				}
+			}
+			> ul {
+				ul {
+					display: none;
+					position: absolute;
+					left: 100%;
+					top: 0;
+				}
+			}
+		}
+	}
+
+	.wrap-logo{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-ms-align-items: center;
+		align-items: center;
+		
+		> div{
+			background-color: transparent;
+		}
+
+		.wrap-logo-img{
+			width: 105px;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.wrap-logo-text{
+			margin-right: 14px;
+			span{
+				color: #959CB0;
+				text-align: left;
+				font-size: 12px;
+				line-height: 16px;
+			}
+		}
+	}
+
+	.wrap-full-menu-btn{
+		display: none;
+
+		.icon{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			-ms-align-items: center;
+			align-items: center;
+			width: 25px;
+			padding: 0;
+
+			.hamburger-box{
+				width: 25px;
+			}
+
+			.hamburger-inner{
+				width: inherit;
+				height: 2px;
+				-webkit-transition: .1s all ease, .3s background-color ease;
+				-o-transition: .1s all ease, .3s background-color ease;
+				transition: .1s all ease, .3s background-color ease;
+				&:after, &:before{
+					width: inherit;
+					height: inherit;
+					-webkit-transition: inherit;
+					-o-transition: inherit;
+					transition: inherit;
+				}
+				&:after{
+					top: -7px;
+				}
+				&:before{
+					top: calc(100% + 6px);
+				}
+			}
+
+		}
+
+		.is-active{
+			.hamburger-inner:after{
+				top: 0;
+			}
+		}
+	}
+}
+
+.header-fixed-active{
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	-o-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
+
+
+
+@media (max-width: 1400px) {
+
+}
+
+
+@media (max-width: 1200px) {
+
+}
+
+
+@media (max-width: 992px) {
+	.header-fixed{
+		-webkit-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		-o-transform: translate(0, 0);
+		transform: translate(0, 0);
+		box-shadow: 0px 2px 34px -9px rgba(0,0,0,0.37);
+		
+		.container{
+			max-width: 100%;
+		}
+
+		.wrap-full-menu-btn{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			-ms-align-items: center;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.wrap-menu-btn-fixed, .wrap-link, .wrap-btn, .wrap-phone-dropdown{
+			display: none;
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+	.header-fixed{
+		.wrap-logo{
+			.wrap-logo-img{
+				width: 90px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 576px) {
+	.header-fixed{
+		.wrap-logo{
+			.wrap-logo-text{
+				font-size: 11px;
+				line-height: 13px;
+			}
+		}
+	}
+}
+
+
+

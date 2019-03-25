@@ -1,0 +1,25 @@
+extends templates/page.pug
+
+block title
+	| Реклама в Яндекс
+
+block content
+	+modal-windows
+		include modules/modal-parts/modal-callback
+		include modules/modal-parts/modal-testimonials
+		include modules/modal-parts/modal-other
+
+	.page
+		include modules/header.pug
+						
+		include yandex-commercial/yandex-commercial-banner.pug
+		include yandex-commercial/direct.pug
+		include yandex-commercial/text-under-direct.pug
+		include yandex-commercial/direct-plus.pug
+		include yandex-commercial/direct-start.pug
+		include modules/list-good-works.pug
+		include yandex-commercial/our-clients.pug
+		include modules/sec-testimonials.pug
+		include modules/sec-have-projects.pug
+
+		include modules/footer.pug

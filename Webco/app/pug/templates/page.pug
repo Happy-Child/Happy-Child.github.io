@@ -1,0 +1,44 @@
+doctype html
+
+html(lang="ru")
+	head
+		title 
+			block title
+
+		//- Default
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+
+		//- Theme color
+		meta(name="theme-color", content="#fff")
+
+		//- Favicon
+		link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon.png")
+		link(rel="apple-touch-icon", sizes="57x57", href="img/favicon/apple-touch-favicon.png")
+
+		//- Styles
+		link(rel="stylesheet", href="css/top-content.min.css")
+		link(rel="stylesheet", href="css/styles.min.css")
+
+
+	body
+		mixin modal-windows()
+			.wrap-modal-windows
+				.container
+					.wrap-modal-windows-content
+						.layer-out
+						block
+
+
+		include ../modules/preloader.pug
+		include ../modules/mobile-menu.pug
+
+		block content
+		
+		//-Google Map
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByBaaAx1KIZ13dnnPwwx0O6HFNtdMPpec" async defer></script>
+		//-Main
+		script(src="js/libs.min.js")
+		script(src="js/scripts.min.js")

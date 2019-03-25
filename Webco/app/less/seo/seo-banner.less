@@ -1,0 +1,197 @@
+@import "../common/vars";
+
+.seo-banner{
+	position: relative;
+	overflow: hidden;
+
+	&:after{
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 100%;
+		background-color: rgba(0,0,0,.7);
+	}
+
+	.page-banner-content{
+		position: relative;
+		z-index: 1;	
+	}
+
+	.wrap-text {
+		margin-bottom: 26px;
+	}
+
+	.subtext{
+		em{
+			color: @yellow;
+		}
+	}
+
+	.right-list{
+		padding-left: 50px;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-ms-align-items: center;
+		align-items: center;
+
+		&-info{
+			> span{
+				color: #fff;
+				font-size: 26px;
+				line-height: 30px;
+				margin-bottom: 33px;
+				display: block;
+				font-weight: 600;
+			}
+		}
+		
+	}
+
+}
+
+
+
+@media (max-width: 1400px) {
+	.seo-banner{
+		.right-list{
+			padding-left: 40px;
+
+			&-info{
+				> span{
+					font-size: 24px;
+					line-height: 27px;
+					margin-bottom: 30px;
+				}
+			}
+			
+		}
+	}
+}
+
+
+@media (max-width: 1200px) {
+	.seo-banner{
+		
+	}
+}
+
+
+@media (max-width: 992px) {
+	.seo-banner{
+		&:after{
+			right: -11.5%;
+		}
+
+		.page-banner-text{
+			width: 65%;
+			padding-right: 80px;
+		}
+
+		.right-list{
+			width: 35%;
+			padding: 45px 0;
+
+			&-info{
+				> span {
+					font-size: 18px;
+					line-height: 18px;
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+	.seo-banner{
+		.wrap-breadcrumbs{
+			width: 100%;
+		}
+
+		&:after{
+			right: -9%;
+		}
+
+		.page-banner-text{
+			padding-right: 40px;
+		}
+	}
+}
+
+
+@media (max-width: 576px) {
+	.seo-banner{
+
+		&:after{
+			display: none;
+		}
+
+		.page-banner-content{
+			display: block;
+			overflow: visible;
+			min-height: 390px;
+		}
+
+		.page-banner-text{
+			margin: 20px auto;
+			padding-right: 0;
+
+			.btn{
+				.wrap-icon{
+					display: none;
+				}
+			}
+		}
+
+		.right-list{
+			width: 100%;
+			position: relative;
+			order: 2;
+			padding: 16px 0;
+			margin: 0 auto;
+
+			&:after{
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 50%;
+				-webkit-transform: translate(50%, 0);
+				-ms-transform: translate(50%, 0);
+				-o-transform: translate(50%, 0);
+				transform: translate(50%, 0);
+				width: 300%;
+				height: 100%;
+				background-color: rgba(0,0,0,.7);
+			}
+
+			&-info{
+				position: relative;
+				z-index: 1;
+
+				> span{
+					display: none;
+				}
+			}
+			
+		}
+
+		.right-list, .page-banner-text{
+			max-width: 340px;
+			width: 100%;
+		}
+
+	}
+}
+
+
+
+
+
+
+
