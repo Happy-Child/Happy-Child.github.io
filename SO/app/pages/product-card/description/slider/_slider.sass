@@ -1,0 +1,109 @@
+.wrap-description-slider
+	padding-top: 45px
+
+	.top-line
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 30px
+		.product-card-sec-title
+			margin-bottom: 0
+
+
+	.description-slider
+		margin: -33px 0
+		.slick-list
+			margin: 0 -25px
+			padding: 0 15px
+		.slick-track
+			display: flex
+			align-items: stretch
+			padding: 33px 0
+		.slick-slide
+			height: auto
+			opacity: 0
+			transition: .4s all ease
+			max-width: 295px
+		.slick-active
+			opacity: 1
+
+	.wrap-slider-dots
+		margin-top: 30px
+		ul
+			justify-content: center
+			li
+				z-index: 4
+				&:not(.slick-active)
+					background-color: #DEDEDE
+
+
+
++media-breakpoint-down(lg)
+	.wrap-description-slider
+		.top-line
+			margin-bottom: 20px
+
+		.description-slider
+			.slick-slide
+				max-width: 240px
+
+
++media-breakpoint-down(md)
+	.wrap-description-slider
+		padding-top: 30px
+
++media-breakpoint-down(sm)
+	.wrap-description-slider
+		.description-slider
+			.slick-slide
+				max-width: 270px
+
+
++media-breakpoint-down(xs)
+	.wrap-description-slider
+		padding-top: 22px
+			
+		.top-line
+			justify-content: center
+			margin-bottom: 30px
+			.wrap-slider-arrows
+				display: none
+
+
+		.description-slider
+			.slick-slide
+				max-width: calc(50vw - 10px)
+
+			.slick-list
+				margin: 0 -20px
+
+			.wrap-product-card-default
+				padding: 0 5px
+				.product-card
+					padding: 0 12px 22px
+					min-height: 250px
+
+					.wrap-img
+						margin: 0 -10px 10px
+
+					.brand
+						font-size: 10px
+						line-height: 12px
+
+					.product-name
+						font-size: 12px
+						line-height: 16px
+						margin-top: 0
+
+					.wrap-price
+						.old-price
+							font-size: 10px
+							line-height: 12px
+							margin-bottom: 0
+						.cur-price
+							font-size: 14px
+							line-height: 18px
+				
+					.wrap-icon-like
+						max-width: 14px
+

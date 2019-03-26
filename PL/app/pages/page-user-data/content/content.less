@@ -1,0 +1,416 @@
+@import "../../../less/common/vars";
+
+.page-user-data{
+
+	.user-data-info{
+		max-width: calc(100% - 202px);
+
+		.account-out{
+			display: none;
+		}
+
+		.wrap-user-info{
+			background-color: @bgF1;
+			padding: 20px;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 20px;
+
+			> div {
+				width: 50%;
+			}
+
+			.wrap-name{
+				> span {
+					display: block;
+				}
+			}
+
+			.name{
+				font-family: "RobMed";
+			}
+
+			.wrap-prices{
+				table{
+					margin-left: auto;
+				}
+
+				.price-item{
+					td{
+						&:first-child{
+							text-align: right;
+							color: @textGrayLight;
+							padding-right: 8px;
+						}
+
+						&:last-child{
+							color: @textDark;
+						}
+					}
+				}
+
+				> span {
+					text-align: right;
+					
+				}
+			}
+		}
+
+		.wrap-table-products-info{
+			overflow-x: auto;
+
+			.mCustomScrollBox{
+				padding-bottom: 15px;
+			}
+
+			.mCSB_container{
+				display: flex;
+				margin-bottom: 0;
+			}
+
+
+			.mCSB_scrollTools{
+				bottom: 0;
+				top: auto;
+				background-color: #EAEAEA;
+			}
+
+			.mCSB_draggerContainer{
+				margin: 0 auto;
+				width: 88%;
+
+				.mCSB_draggerRail{
+					position: relative;
+					&::before{
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 50%;
+						width: 110%;
+						-webkit-transform: translate(-50%, 0);
+						-ms-transform: translate(-50%, 0);
+						-o-transform: translate(-50%, 0);
+						transform: translate(-50%, 0);
+						height: 100%;
+						background-color: #DCDCDC;
+					}
+				}
+				
+			}
+
+
+			.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+				background-color: #C4C4C4;
+				opacity: 1;
+				border-radius: 3px;
+				height: 4px;
+			}
+
+			.mCSB_scrollTools .mCSB_draggerRail{
+				background-color: #EBEBEB;
+				height: 2px;
+				border-radius: 3px;
+			}
+
+			.table-products-info{
+				min-width: 968px;
+				display: block;
+			}
+
+			.row-filter{
+				background-color: @bgF1;
+
+				a{
+					font-family: "RobMed";
+					position: relative;
+					color: @textDark;
+				}
+
+				.filter-param{
+					margin-right: 10px;
+
+					&::after, &::before{
+						content: "";
+						position: absolute;
+						right: -15px;
+						border: 4px solid transparent;
+						cursor: default;
+					}
+
+					&::before{
+						border-bottom-color: @textGrayLight;
+						top: 5%;
+					}
+
+					&::after{
+						border-top-color: @textGrayLight;
+						top: 70%;
+					}
+
+				}
+
+				.filter-param-top{
+					&::before{
+						border-bottom-color: @textDark;
+					}
+
+					&::after{
+						
+					}
+				}
+
+				.filter-param-bottom{
+					&::after{
+						border-top-color: @textDark;
+					}
+				}
+			}
+
+			tr:not(.row-filter){
+				transition: .3s all ease;
+				background-color: #fff;
+
+				td:last-child{
+					cursor: pointer;
+				}
+
+				&:hover{
+					background-color: #FBFBFB;
+				}
+
+				.circle{
+					display: inline-block;
+					width: 12px;
+					height: 12px;
+					background-color: @blue;
+					margin-right: 12px;
+					border-radius: 50%;
+					position: relative;
+
+					&::before{
+						content: "";
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						border-radius: 50%;
+						width: 18px;
+						height: 18px;
+						border: 1px solid @blue;
+						-webkit-transform: translate(-50%, -50%);
+						-moz-transform: translate(-50%, -50%);
+						-ms-transform: translate(-50%, -50%);
+						-o-transform: translate(-50%, -50%);
+						transform: translate(-50%, -50%);
+						
+					}
+				}
+
+				.btn-remove{
+					cursor: pointer;
+				}
+			}
+
+			tr{
+				td{
+					border: 1px solid #EAEAEA;
+					padding: 16px 15px;
+				}
+			}
+		}
+
+		.wrap-groups-fields{
+			border: 1px solid #EAEAEA;
+			margin-bottom: -1px;
+			padding: 25px 25px 30px;
+
+			.form-title{
+				font-size: 18px;
+				line-height: 26px;
+				display: block;
+				font-family: "RobMed";
+				margin-bottom: 15px;
+			}
+
+			.last-activity{
+				margin-bottom: 15px;
+				margin-top: -8px;
+				span{
+					display: block;
+					font-size: 12px;
+					line-height: 18px;
+				}
+			}
+
+			.in-company{
+				margin-top: 8px;
+				color: @blue;
+				text-decoration: underline;
+				font-family: "RobMed";
+				display: block;
+				width: 100%;
+			}
+		}
+
+		
+	}
+
+}
+
+
+@media (min-width: 1259px) {
+	.page-user-data{
+		.user-data-info{
+
+			.wrap-user-info{
+				background-color: @bgF1;
+				padding: 20px;
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 20px;
+
+				> div {
+					width: 50%;
+				}
+
+				.wrap-name{
+					> span {
+						display: block;
+					}
+				}
+
+				.name{
+					font-family: "RobMed";
+				}
+
+				.wrap-prices{
+					table{
+						margin-left: auto;
+					}
+
+					.price-item{
+						td{
+							&:first-child{
+								text-align: right;
+								color: @textGrayLight;
+								padding-right: 8px;
+							}
+
+							&:last-child{
+								color: @textDark;
+							}
+						}
+					}
+
+					> span {
+						text-align: right;
+						
+					}
+				}
+			}
+
+		}
+	}
+}
+
+@media (max-width: 1259px) {
+	
+}
+
+@media (max-width: 991px) {
+	.page-user-data{
+		.user-data-info{
+			max-width: 100%;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.page-user-data{
+		.user-data-info{
+
+			.wrap-name span, .wrap-prices td{
+				padding: 2px 0;
+				font-size: 12px;
+				line-height: 16px;
+			}
+
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.page-user-data{
+		padding-bottom: 40px;
+
+		.user-data-info{
+			.account-out{
+				display: inline-flex;
+				margin-top: 25px;
+				padding: 12px 20px;
+			}
+
+			.wrap-user-info{
+				display: block;
+
+				.wrap-name span, .wrap-prices td{
+					padding-top: 1px;
+					margin-bottom: 0px;
+				}
+
+				.wrap-prices{
+					table{
+						margin-left: 0;
+						margin-right: auto;
+						width: 100%;
+						max-width: 380px;
+						margin-top: 5px;
+					}
+
+					.price-item{
+						td{
+	
+							&:first-child{
+								text-align: left;
+								padding-right: 60px;
+							}
+						}
+					}
+				}
+
+				> div{
+					width: 100%;
+				}
+			}
+
+			.wrap-table-products-info{
+				margin-left: -15px;
+				margin-right: -15px;
+
+				.mCSB_scrollTools.mCSB_scrollTools_horizontal{
+					width: 100%;
+				}
+
+				.table-products-info{
+					margin-left: 15px;
+					margin-right: 15px;
+					padding-right: 15px;
+					min-width: 985px;
+				}
+			}
+
+			.wrap-groups-fields{
+				padding: 20px 15px 30px;
+			}
+		}
+	}
+}
+
+

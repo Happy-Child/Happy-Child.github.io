@@ -1,0 +1,290 @@
+.wrap-modals
+
+	.modal.modal-sign-in(data-modal-key="modal-sign-in")
+		.modal-content
+
+			span.btn-close
+
+			span.title Авторизация
+
+			form.form
+				.wrap-field
+					input(type="text", placeholder="Email").field
+					span.error Заполните поле
+				.wrap-field
+					input(type="password", placeholder="Пароль").field
+					span.error Заполните поле
+
+				.btns-row
+					a(href="#").link-new-password Забыли пароль?
+					button.btn.btn-accent Войти
+
+				.bottom-row
+					.cell
+						span.cell-title Нет аккаунта?
+						button.modal-show(data-modal-key="modal-reg-user") Зарегистрироваться
+
+					.cell
+						span.cell-title Войти через соцсети
+
+						.row-social
+							a(href="#")
+								.wrap-img
+									img(src="img/vk.png", alt="")
+								.icon-hover
+									img(src="img/vk-hover.png")
+							a(href="#")
+								.wrap-img
+									img(src="img/fb.png", alt="")
+								.icon-hover
+									img(src="img/fb-hover.png")
+							a(href="#")
+								.wrap-img
+									img(src="img/ok.png", alt="")
+								.icon-hover
+									img(src="img/ok-hover.png")
+
+
+	.modal.modal-reg-user(data-modal-key="modal-reg-user")
+		.modal-content
+
+			span.btn-close
+
+			span.title Регистрация
+
+			form.form
+				.wrap-fields-group
+					.wrap-field
+						input(type="text", placeholder="Имя").field
+						span.error Заполните поле
+					.wrap-field
+						input(type="text", placeholder="Email").field
+						span.error Заполните поле
+					.wrap-field
+						input(type="password", placeholder="Пароль").field
+						span.error Заполните поле
+					.wrap-field.wrap-field-date
+						input(type="text", datepicker, data-date-format="dd.mm.yy" placeholder="Дата рождения").field
+						span.error Заполните поле
+
+				.wrap-radio-btns
+					.radio
+						input(type="checkbox", id="rb1")
+						label(for="rb1").box
+						span.text Я соглашаюсь на обработку моих пресональных данных
+						span.error Заполните поле
+						
+					.radio
+						input(type="checkbox", id="rb2")
+						label(for="rb2").box
+						span.text Регистрируясь, я соглашаюсь с <a href="#">правилами конкурса</a><br> и подтверждаю, что мне есть 18 лет
+						span.error Заполните поле
+
+				button.btn-accent.btn Зарегистрироваться
+
+				.bottom-row
+					.cell
+						button.cell-title.modal-show(data-modal-key="modal-sign-in") Авторизоваться
+
+					.cell
+						span.cell-title Войти через соцсети
+
+						.row-social
+							a(href="#")
+								.wrap-img
+									img(src="img/vk.png", alt="")
+								.icon-hover
+									img(src="img/vk-hover.png")
+							a(href="#")
+								.wrap-img
+									img(src="img/fb.png", alt="")
+								.icon-hover
+									img(src="img/fb-hover.png")
+							a(href="#")
+								.wrap-img
+									img(src="img/ok.png", alt="")
+								.icon-hover
+									img(src="img/ok-hover.png")
+
+
+	.modal.modal-birthday(data-modal-key="modal-birthday")
+		.modal-content
+
+			span.btn-close
+
+			span.title Пожалуйста,<br> укажите дату рождения
+
+			form.form
+				.wrap-fields-group
+					.wrap-select.wrap-select-days
+						select.select.select-day
+							option
+							option(value="1") 1
+							option(value="2") 2
+							option(value="3") 3
+							option(value="4") 4
+							option(value="5") 5
+							option(value="6") 6
+							option(value="7") 7
+							option(value="8") 8
+							option(value="9") 9
+							option(value="10") 10
+							option(value="11") 11
+							option(value="12") 12
+							option(value="13") 13
+							option(value="14") 14
+							option(value="15") 15
+							option(value="16") 16
+							option(value="17") 17
+							option(value="18") 18
+							option(value="19") 19
+							option(value="20") 20
+							option(value="21") 21
+							option(value="22") 22
+							option(value="23") 23
+							option(value="24") 24
+							option(value="25") 25
+							option(value="26") 26
+							option(value="27") 27
+							option(value="28") 28
+							option(value="29") 29
+							option(value="30") 30
+							option(value="31") 31
+		
+					.wrap-select.wrap-select-month
+						select.select.select-month
+							option
+							option(value="2") 2
+							option(value="3") 3
+							option(value="4") 4
+							option(value="5") 5
+							option(value="6") 6
+							option(value="7") 7
+							option(value="8") 8
+							option(value="9") 9
+							option(value="10") 10
+							option(value="11") 11
+							option(value="12") 12
+							option(value="13") 13
+							option(value="14") 14
+							option(value="15") 15
+							option(value="16") 16
+							option(value="17") 17
+							option(value="18") 18
+							option(value="19") 19
+							option(value="20") 20
+							option(value="21") 21
+							option(value="22") 22
+							option(value="23") 23
+							option(value="24") 24
+							option(value="25") 25
+							option(value="26") 26
+							option(value="27") 27
+							option(value="28") 28
+							option(value="29") 29
+							option(value="30") 30
+							option(value="31") 31
+
+					.wrap-select.wrap-select-year
+						select.select.select-year
+							option
+							option(value="2") 2
+							option(value="3") 3
+							option(value="4") 4
+							option(value="5") 5
+							option(value="6") 6
+							option(value="7") 7
+							option(value="8") 8
+							option(value="9") 9
+							option(value="10") 10
+							option(value="11") 11
+							option(value="12") 12
+							option(value="13") 13
+							option(value="14") 14
+							option(value="15") 15
+							option(value="16") 16
+							option(value="17") 17
+							option(value="18") 18
+							option(value="19") 19
+							option(value="20") 20
+							option(value="21") 21
+							option(value="22") 22
+							option(value="23") 23
+							option(value="24") 24
+							option(value="25") 25
+							option(value="26") 26
+							option(value="27") 27
+							option(value="28") 28
+							option(value="29") 29
+							option(value="30") 30
+							option(value="31") 31
+
+				span.error Укажите дату рождения
+
+				p.subtext Данный сайт может содержать контент,<br> предназначенный для лиц старше 18 лет. Чтобы<br> продолжить, подтвердите возраст.
+
+				.btns-row
+					button.btn.btn-close.btn-blue-border Нет
+					button(type="submit").btn.btn-accent Да
+
+
+	.modal.modal-input-code(data-modal-key="modal-input-code")
+		.modal-content
+
+			span.btn-close
+
+			span.title Введите код
+
+			form.form
+				.wrap-field
+					input(type="text", placeholder="Код").field
+					span.error Заполните поле
+
+				button(type="submit").btn.btn-accent Зарегистрировать
+
+
+	.modal.modal-success(data-modal-key="modal-success")
+		.modal-content
+
+			span.btn-close
+
+			span.title Спасибо!
+
+			p.subtext Для завершения регистрации пройдите по ссылке из письма, отправленного на ваш email. Не забудьте,пожалуйста, проверить папку спам, возможно, письмо попало туда.
+
+			button.btn.btn-accent.btn-close Ок
+
+
+	.modal.modal-error(data-modal-key="modal-error")
+		.modal-content
+
+			span.btn-close
+
+			span.title :-(
+
+			p.subtext К сожелению, информация,<br> представленная на нашем сайте,<br> предназначена только для<br> совершеннолетних.
+
+			button.btn.btn-accent.btn-close Ок
+
+
+	.modal.modal-crop(data-modal-key="modal-crop")
+		.modal-content
+
+			span.btn-close
+
+			span.title Кадрирование
+
+			form.form
+
+				.wrap-crop-img
+					img#crop-img(src="img/crop-img.png", alt="")
+
+				input.data-img.data-x(type="text")
+				input.data-img.data-y(type="text")
+				input.data-img.data-width(type="text")
+				input.data-img.data-height(type="text")
+				input.data-img.data-scaleX(type="text")
+				input.data-img.data-scaleY(type="text")
+
+				button(type="submit").btn.btn-accent Применить
+

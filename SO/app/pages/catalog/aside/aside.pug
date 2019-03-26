@@ -1,0 +1,298 @@
+.wrap-aside
+	aside.aside.element-shadow-static
+		span.btn-hide-filter.btn-close
+
+		span.aside-title.h-3 Фильтры
+
+		form
+			.filter-group
+				.filter-group_head
+					span категории
+
+				ul.filter-group_parameters.list-category
+					li
+						a(href="#").filter-item.text-medium Вся обувь
+					li
+						a(href="#").filter-item.text-medium.active Кроссовки
+					li
+						a(href="#").filter-item.text-medium Ботинки
+					li
+						a(href="#").filter-item.text-medium Кеды
+					li
+						a(href="#").filter-item.text-medium Сланцы
+					li
+						a(href="#").filter-item.text-medium Футболки
+					li
+						a(href="#").filter-item.text-medium Вся обувь
+					li
+						a(href="#").filter-item.text-medium Кроссовки
+					li
+						a(href="#").filter-item.text-medium Ботинки
+					li
+						a(href="#").filter-item.text-medium Кеды
+					li
+						a(href="#").filter-item.text-medium Сланцы
+					li
+						a(href="#").filter-item.text-medium Футболки
+
+				.btn-view-all.text-medium.text-fw-bold + ещё <span></span>
+
+			.filter-group
+				.filter-group_head.btn-dropdown
+					span бренды
+					.icon-dropdown
+				
+				ul.filter-group_parameters.list-brands
+					li
+						.wrap-checkbox
+							input(type="checkbox", id="rb1")
+							label(for="rb1").box
+							a(href="#").filter-item.text.text-medium Adidas
+							.btn-dropdown
+						ul
+							li
+								a(href="#") Classic Leather
+							li
+								a(href="#") Leather
+							li
+								a(href="#") Classic Leather
+							li
+								a(href="#") Classic
+							li
+								a(href="#") Leather Classic Leather
+							li
+								a(href="#") Classic Leather
+
+					li
+						.wrap-checkbox
+							input(type="checkbox", id="rb12")
+							label(for="rb12").box
+							a(href="#").filter-item.text.text-medium Puma
+							.btn-dropdown
+						ul
+							li
+								a(href="#") Classic
+							li
+								a(href="#") Leather Classic Leather
+							li
+								a(href="#") Classic Leather
+
+					li
+						.wrap-checkbox
+							input(type="checkbox", id="rb13")
+							label(for="rb13").box
+							a(href="#").filter-item.text.text-medium Reebok
+							.btn-dropdown
+						ul
+							li
+								a(href="#") Classic Leather
+							li
+								a(href="#") Leather
+							li
+								a(href="#") Leather Classic Leather
+							li
+								a(href="#") Classic Leather
+
+					li
+						.wrap-checkbox
+							input(type="checkbox", id="rb14")
+							label(for="rb14").box
+							a(href="#").filter-item.text.text-medium Ander Armour
+							.btn-dropdown
+						ul
+							li
+								a(href="#") Classic Leather
+							li
+								a(href="#") Leather
+							li
+								a(href="#") Classic Leather
+							li
+								a(href="#") Classic
+							li
+								a(href="#") Leather Classic Leather
+							li
+								a(href="#") Leather
+							li
+								a(href="#") Classic Leather
+							li
+								a(href="#") Classic
+							li
+								a(href="#") Leather Classic Leather
+							li
+								a(href="#") Classic Leather
+
+					li
+						.wrap-checkbox
+							input(type="checkbox", id="rb15")
+							label(for="rb15").box
+							a(href="#").filter-item.text.text-medium Nike
+							.btn-dropdown
+						ul
+							li
+								a(href="#") Leather
+							li
+								a(href="#") Classic Leather
+
+
+			.filter-group
+				.filter-group_head.btn-dropdown
+					span цвет
+					.icon-dropdown
+
+				ul.filter-group_parameters.list-colors
+					li
+						a(href="#")
+							span.color-box(style="background-color: #DFBE95;")
+					li
+						a(href="#")
+							span.color-box(style="background-color: #78DFDB;")
+					li
+						a(href="#")
+							span.color-box(style="background-color: #FFD03F;")
+					li
+						a(href="#")
+							span.color-box(style="background-color: #8AD467;")
+					li
+						a(href="#")
+							span.color-box(style="background-color: #EF4444;")
+					li
+						a(href="#")
+							span.color-box(style="background-color: #3C3C3C;")
+					li
+						a(href="#")
+							span.color-box.white-box(style="background-color: #FFFFFF;")
+					li
+						a(href="#")
+							span.color-box(style="background-color: #ABB07A;")
+					li
+						a(href="#")
+							span.color-box(style="background-color: #B6B6B6;")
+					li
+						a(href="#")
+							span.color-box(style="background-color: #FF7B01;")
+
+
+			.filter-group
+				.filter-group_head.btn-dropdown
+					span размер
+					.icon-dropdown
+
+				ul.filter-group_parameters.list-sizes
+					li
+						a(href="#") 34,5
+					li
+						a(href="#") 35
+					li
+						a(href="#") 36
+					li
+						a(href="#") 36,5
+					li
+						a(href="#") 37
+					li
+						a(href="#") 37,5
+					li
+						a(href="#") 38
+					li
+						a(href="#") 38,5
+					li
+						a(href="#") 34,5
+					li
+						a(href="#") 35
+					li
+						a(href="#") 36
+					li
+						a(href="#") 36,5
+					li
+						a(href="#") 37
+					li
+						a(href="#") 37,5
+					li
+						a(href="#") 38
+					li
+						a(href="#") 38,5
+
+
+			.filter-group
+				.filter-group_head.btn-dropdown
+					span Цена, руб.
+					.icon-dropdown
+					
+				
+				ul.filter-group_parameters
+					li
+						.wrap-range
+							.wrap-fields
+								.wrap-field
+									input.field-min(type="text", value="0", maxlength="6")
+								span -
+								.wrap-field
+									input.field-max(type="text", value="90 000", maxlength="6")
+							.range(data-max-value="90000")
+
+
+			.filter-group
+				.filter-group_head.btn-dropdown
+					span виды спорта
+					.icon-dropdown
+					
+				ul.filter-group_parameters
+					li
+						.wrap-checkbox
+							input(type="checkbox", id="rb66")
+							label(for="rb66").box
+							a(href="#").filter-item.text.text-medium Футбол
+					li
+						.wrap-checkbox
+							input(type="checkbox", id="rb44")
+							label(for="rb44").box
+							a(href="#").filter-item.text.text-medium Бег
+					li
+						.wrap-checkbox
+							input(type="checkbox", id="rb48")
+							label(for="rb48").box
+							a(href="#").filter-item.text.text-medium Футбол
+					li
+						.wrap-checkbox
+							input(type="checkbox", id="rb49")
+							label(for="rb49").box
+							a(href="#").filter-item.text.text-medium Бег
+					li
+						.wrap-checkbox
+							input(type="checkbox", id="rb40")
+							label(for="rb40").box
+							a(href="#").filter-item.text.text-medium Футбол
+					li
+						.wrap-checkbox
+							input(type="checkbox", id="rb42")
+							label(for="rb42").box
+							a(href="#").filter-item.text.text-medium Бег
+
+
+			.filter-group
+				.filter-group_head.btn-dropdown
+					span Пол
+					.icon-dropdown
+
+				ul.filter-group_parameters
+					li
+						.wrap-checkbox
+							input(type="checkbox", id="rb36")
+							label(for="rb36").box
+							a(href="#").filter-item.text.text-medium Дети
+
+					li
+						.wrap-checkbox
+							input(type="checkbox", id="rb37")
+							label(for="rb37").box
+							a(href="#").filter-item.text.text-medium Женщина
+
+					li
+						.wrap-checkbox
+							input(type="checkbox", id="rb38")
+							label(for="rb38").box
+							a(href="#").filter-item.text.text-medium Мужчина
+
+			.wrap-filter-btn
+				button(type="submit").btn.btn-dark Применить фильтры
+
+

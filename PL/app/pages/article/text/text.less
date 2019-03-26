@@ -1,0 +1,77 @@
+@import "../../../less/common/vars";
+
+.wrap-article{
+
+	.wrap-text{
+		p{
+			font-size: 15px;
+			line-height: 23px;
+			margin-bottom: 20px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+
+		> img{
+			display: block;
+			margin-bottom: 20px;
+			width: 100%;
+			height: auto;
+		}
+
+		.btn-come-back{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			-ms-align-items: center;
+			align-items: center;
+			margin-top: 30px;
+			text-transform: uppercase;
+			color: @blue;
+			font-family: "RobMed";
+
+			.wrap-img{
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				-ms-align-items: center;
+				align-items: center;
+				margin-right: 8px;
+
+				img{
+					-webkit-transform: rotate(180deg);
+					-moz-transform: rotate(180deg);
+					-ms-transform: rotate(180deg);
+					-o-transform: rotate(180deg);
+					transform: rotate(180deg);
+					
+				}
+			}
+		}
+	}
+
+}
+
+@media (max-width: 991px) {
+	.wrap-article{
+		.wrap-text .btn-come-back{
+			margin-top: 20px;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.wrap-article{
+		.wrap-text{
+			p{
+				font-size: 14px;
+				line-height: 21px;
+			}
+		}
+	}
+}

@@ -1,0 +1,141 @@
+.field-groups
+	.container
+
+		span.main-title Как получить<br> гарантированный приз
+
+		.wrap-steps
+			.step.step-ready
+				.top-line
+					.wrap-icon
+						img(src="img/icon-check-white.png", alt="")
+					.wrap-title
+						span.top-text шаг 1
+						span.title Зарегистрируйте промокод
+					.wrap-info
+						span.top-text введен код
+						span.text kM-w9-1872-POWM
+
+			.step
+				.top-line
+					.wrap-icon
+						img(src="img/icon-check-white.png", alt="")
+					.wrap-title
+						span.top-text шаг 2
+						span.title Загрузите фото с ребенком
+					.wrap-info
+						span.top-text Статус
+						span.text На модерации
+				span.subtext Пожалуйста, ознакомьтесь с 
+					a(href="#") критериями фотографии
+					|  для участия в конкурсе  
+				form.form.form-children-photo
+					.set-photo
+						.set-photo_top-text
+							span То, что нас связывает
+							span Когда малое значит так много
+
+						.wrap-field
+							label(for="photo").img-load
+								.img-container
+									img(src="img/crop-img.jpg", alt="")
+								.stretch-box
+								input(type="file", id="photo")
+								span.text Загрузить фото
+							.cur-border.border-1
+						.thumbs-photo
+							a(href="#").thumb.cur-thumb.thumb-1
+								span 1
+								.thumb-border
+							a(href="#").thumb.thumb-2
+								span 2
+								.thumb-border
+							a(href="#").thumb.thumb-3
+								span 3
+								.thumb-border
+							a(href="#").thumb.thumb-4
+								span 4
+								.thumb-border
+						span.thumbs-subtext Рамка на фото
+
+					.other-data
+						.wrap-field
+							input(type="text", placeholder="Ваше имя").field
+
+						.wrap-field
+							input(type="text", placeholder="Имя ребенка").field
+
+						.wrap-select
+							select.select.select-profile
+								option
+								option(value="ex1") г. Минск
+								option(value="ex2") г. Барановичи
+								option(value="ex3") г. Брест
+								option(value="ex4") г. Борисов
+								option(value="ex5") г. Вилейка
+								option(value="ex6") г. Гомель
+								option(value="ex7") г. Витебск
+								option(value="ex8") г. Жлобин
+
+
+						button.btn-accent
+							span.text Сохранить
+
+						.wrap-social
+							span Поделитесь этим теплым<br> моментом
+							.row-social
+								a(href="#")
+									.wrap-img
+										img(src="img/vk-white.png", alt="")
+									.icon-hover
+										img(src="img/vk.png")
+								a(href="#")
+									.wrap-img
+										img(src="img/fb-white.png", alt="")
+									.icon-hover
+										img(src="img/fb.png")
+								a(href="#")
+									.wrap-img
+										img(src="img/ok-white.png", alt="")
+									.icon-hover
+										img(src="img/ok.png")
+
+			.step
+				.top-line
+					.wrap-icon
+						img(src="img/icon-check-white.png", alt="")
+					.wrap-title
+						span.top-text шаг 3
+						span.title Выберите цвет браслета
+
+				.wrap-bracelets
+					.bracelet
+						img(src="img/bracelet-blue.png", alt="")
+						span.name Синий
+					.bracelet.bracelet-select
+						img(src="img/bracelet-red.png", alt="")
+						span.name Красный
+
+			.step
+				.top-line
+					.wrap-icon
+						img(src="img/icon-check-white.png", alt="")
+					.wrap-title
+						span.top-text шаг 4
+						span.title Введите адрес доставки
+
+				form.form.form-address
+					.wrap-field.wrap-field-index.field-small
+						input(type="text", placeholder="Индекс").field
+
+					.wrap-field.field-medium
+						input(type="text", placeholder="Город").field
+
+					.wrap-field.wrap-field-address.field-large
+						input(type="text", placeholder="Адрес").field
+
+					.wrap-field.field-medium
+						input(type="tel", placeholder="Номер телефона").field
+
+					button.btn-accent.field-small
+						span.text Сохранить
+

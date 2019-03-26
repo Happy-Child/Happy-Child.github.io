@@ -1,0 +1,167 @@
+.our-program
+	.wrap-item
+		max-width: calc(100% / 3)
+		padding-bottom: 2 * $gutters
+
+		.item
+			min-height: inherit
+			height: 100%
+			cursor: pointer
+			padding: 33px 37px 37px
+			display: flex
+			flex-direction: column
+			overflow: hidden
+			
+			&, & > *
+				transition: .4s all ease
+
+			.text, .price
+				color: #fff
+
+			.text
+				margin: 16px 0
+			
+			.bottom-line
+				display: flex
+				align-items: center
+				justify-content: space-between
+				margin-top: 20px
+
+				> *
+					font-family: Ubuntu
+
+				.view-all
+					z-index: 1
+
+		&-large
+			min-height: 620px
+			.item
+				background-color: $purple
+				&:hover
+					background-color: $light-purple
+					.title, .bottom-line > *
+						color: $purple
+
+					.bottom-line > *
+						&:hover
+							color: $hover
+
+			.wrap-img
+				margin: -33px -37px 50px		
+			.price
+				margin-top: auto
+
+			.bottom-line > *
+				&:hover
+					color: $hover
+
+		&-simple
+			min-height: 370px
+			.item
+				padding-top: 60px
+				padding-bottom: 35px
+				justify-content: space-between
+				background-color: $light-purple
+				&:hover
+					background-color: $dark-purple
+					.title, .bottom-line > *
+						color: $accent
+				.bottom-line > *
+					&:hover
+						color: $hover
+			.title
+				margin-bottom: 23px
+			.price
+				margin-top: auto
+
+	.wrap-btn-calculate
+		margin-top: 32px
+
++media(xl)
+	.our-program
+		.wrap-item
+
+			.item
+				.text
+					margin: 14px 0
+				
+				.bottom-line
+					margin-top: 5px
+
+			&-large
+				min-height: 550px
+
+				.item
+					padding: 28px 33px 33px
+
+				.wrap-img
+					margin: -28px -33px 40px		
+
+
+
++media(lg)
+	.our-program
+		.wrap-item
+
+			&-large
+				min-height: 400px
+
+				.item
+					padding: 20px 20px 25px
+
+					.text
+						font-size: .87rem
+						line-height: 1.2rem
+
+				.wrap-img
+					margin: -20px -20px 25px
+
+			&-simple
+				min-height: 280px
+
+				.item
+					padding: 45px 20px 28px
+
+				.title
+					margin-bottom: 18px
+
+				.price
+					font-size: 1.2rem
+
+				.bottom-line
+					> *
+						font-size: .9rem
+
+
+
++media(md)
+	.our-program
+		.wrap-item
+			max-width: 50%
+
+
++media(sm)
+	.our-program
+		.wrap-slider
+			max-width: 380px
+			margin-left: auto
+			margin-right: auto
+
+		.wrap-item
+			max-width: 100%
+			&-simple
+				.item
+					padding-top: 35px
+
+				.title
+					margin-bottom: 8px
+
+		.wrap-arrows-angles
+			> *
+				top: 170px
+	
+@media (max-width: 440px)
+	.our-program
+		.wrap-arrows-angles
+			> *
+				top: 36vw

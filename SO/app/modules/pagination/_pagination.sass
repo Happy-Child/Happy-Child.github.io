@@ -1,0 +1,85 @@
+.pagination
+	margin: 40px auto 60px
+
+	ul
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: 0 auto
+		width: 100%
+
+		li
+			width: 100%
+			max-width: 44px
+			margin: 0 8px
+			display: flex
+			align-items: center
+			justify-content: center
+			border: 2px solid transparent
+			text-align: center
+			transition: .4s all ease
+
+			&:hover:not(.active):not(:first-child):not(:last-child)
+				background-color: $hover-btns-links
+				a
+					color: #fff
+
+			&:first-child, &:last-child
+				border-color: $dark
+				svg
+					width: 14px
+					height: auto
+					position: relative
+					top: 2px
+					path
+						transition: .4s all ease
+						fill: $dark
+				&:hover
+					border-color: $hover-btns-links
+					svg
+						path
+							fill: $hover-btns-links
+
+			&:last-child
+				svg
+					transform: rotate(180deg)
+
+		a
+			display: block
+			line-height: 40px
+			width: 100%
+			font-weight: bold
+			font-size: 0.75rem
+
+		.active
+			background-color: $dark
+			border-color: $dark
+			a
+				color: #fff
+
+.wrap-btn-view-more
+	margin: 15px 0 40px
+
++media-breakpoint-down(lg)
+
++media-breakpoint-down(md)
+	.pagination
+		margin: 25px 0 45px
+
+		ul
+			li
+				max-width: 38px
+				margin: 0 4px
+
+				&:first-child, &:last-child
+					svg
+						width: 11pxs
+
+			a
+				font-size: .65rem
+				line-height: 35px
+
++media-breakpoint-down(sm)
+
+
++media-breakpoint-down(xs)

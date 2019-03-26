@@ -1,0 +1,106 @@
+@import "../../../less/common/vars";
+
+.row-other-products{
+	.top-line{
+		margin-bottom: 24px;
+
+		.title{
+			font-size: 22px;
+			line-height: 26px;
+			font-family: "RobMed";
+		}
+	}
+
+	.wrap-products-cards{
+		margin-left: 0;
+		margin-right: 0;
+
+		.wrap-card{
+			max-width: calc(20% + 1px);
+			width: 100%;
+			margin: 0 -1px -1px 0;
+
+			.wrap-cur-price{
+				.cur-price{
+					font-size: 15px;
+				}
+			}
+		}
+
+		.btn-product{
+			margin-left: 21px;
+		}
+
+		.card{
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			border-radius: 0;
+			border: 1px solid #EEEEEE;
+		}
+	}
+}
+
+@media (min-width: 1260px) {
+
+}
+
+@media (max-width: 1259px) {
+	.row-other-products .wrap-products-cards .wrap-card{
+		max-width: calc(25% + 1px);
+	}
+}
+
+@media (max-width: 991px) {
+	.row-other-products {
+		.wrap-products-cards .wrap-card{
+			max-width: calc(100% / 3 + 1px);
+		}
+		
+		.top-line{
+			.title{
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.row-other-products {
+		.wrap-products-cards .wrap-card{
+			max-width: 50%;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.row-other-products{
+		.top-line{
+			.title{
+				font-size: 18px;
+				line-height: 24px;
+			}
+		}
+
+		.wrap-products-cards-index{
+			margin: 0 -15px;
+
+			.slick-track{
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+			}
+
+			.wrap-card{
+				max-width: none;
+				height: auto;
+				width: 238px;
+			}
+		}
+	}
+}
+
+
+
+

@@ -1,0 +1,370 @@
+.modal-recovery-password.window-modal
+	.modal-content.element-static-shadow
+		span.btn-close(data-izimodal-close="")
+		
+		.wrap-icon
+			img(src="img/key.svg", alt="")
+	
+		.modal-text
+			span.modal-title.h-3 Восстановление пароля
+
+			p.modal-subtitle.text-medium Для восстановления введите контрольную строку,<br> указанную в письме
+
+		form.form.form-validate
+			.wrap-field
+				input(required, type="text", name="email", placeholder="E-mail")
+				.error-icon
+					img(src="img/icon-error.svg", alt="")
+
+			.wrap-field
+				input(required, type="text", placeholder="Контрольная строка")
+				.error-icon
+					img(src="img/icon-error.svg", alt="")
+
+			.wrap-field
+				input(required, type="password", placeholder="Новый пароль", name="password").password
+				.error-icon
+					img(src="img/icon-error.svg", alt="")
+
+			.wrap-field
+				input(required, type="password", placeholder="Подтверждение пароля", name="confirm_password")
+				.error-icon
+					img(src="img/icon-error.svg", alt="")
+			
+			button(type="submit").btn.btn-dark Отправить
+
+.modal-simple-recovery-password.window-modal
+	.modal-content.element-static-shadow
+		span.btn-close(data-izimodal-close="")
+		
+		.wrap-icon
+			img(src="img/key.svg", alt="")
+	
+		.modal-text
+			span.modal-title.h-3 Восстановление пароля
+
+			p.modal-subtitle.text-medium Для восстановления введите контрольную строку,<br> указанную в письме
+
+		form.form.form-validate
+			.wrap-field
+				input(required, type="text", name="email", placeholder="E-mail")
+				.error-icon
+					img(src="img/icon-error.svg", alt="")
+			
+			button(type="submit").btn.btn-dark восстановить пароль
+
+.modal-registration.window-modal
+	.modal-content.element-static-shadow
+		span.btn-close(data-izimodal-close="")
+		
+		.wrap-icon
+			img(src="img/key.svg", alt="")
+	
+		.modal-text
+			span.modal-title.h-3 Регистрация
+
+		form.form.form-validate
+			.wrap-field
+				input(required, type="text", placeholder="Имя")
+				.error-icon
+					img(src="img/icon-error.svg", alt="")
+
+			.wrap-field
+				input(required, type="text", name="email", placeholder="email@gmail.ru")
+				.error-icon
+					img(src="img/icon-error.svg", alt="")
+
+			.wrap-field
+				input(required, type="password", placeholder="Пароль", name="password").password
+				.error-icon
+					img(src="img/icon-error.svg", alt="")
+
+			.wrap-field
+				input(required, type="password", placeholder="Подтверждение пароля", name="confirm_password")
+				.error-icon
+					img(src="img/icon-error.svg", alt="")
+
+			.wrap-checkbox
+				input(required, type="checkbox", id="chmodalreg", name="agree")
+				label(for="chmodalreg").box
+				span.text.text-medium Согласен с обработкой 
+					em.text-dark-blue.text-fw-normal персональных данных
+
+			button(type="submit").btn.btn-dark зарегистироваться
+
+			.bottom-line-btns.d-flex.justify-content-center.align-items-center
+				a(href="#").text-small.text-dark-blue.text-fw-bold(data-izimodal-open=".modal-sing-in") Уже зарегистрированы?
+
+.modal-sing-in.window-modal
+	.modal-content.element-static-shadow
+
+		span.btn-close(data-izimodal-close="")
+	
+		.modal-text
+			span.modal-title.h-3 Вход
+
+		.wrap-social-circle
+			span Войти через соцсети
+
+			.social-circle-row
+				a(href="#").social-fb.social-circle
+					img(src="img/icon-fb-white.svg", alt="")
+
+				a(href="#").social-vk.social-circle
+					img(src="img/icon-vk-white.svg", alt="")
+
+				a(href="#").social-inst.social-circle
+					img(src="img/icon-inst-white.svg", alt="")
+
+				a(href="#").social-inst.social-circle
+					img(src="img/icon-google-white.svg", alt="")
+
+			span.social-circle-bottom-text Или
+
+
+		form.form.form-validate
+			.wrap-field
+				input(required, type="text", name="email", placeholder="email@gmail.ru")
+				.error-icon
+					img(src="img/icon-error.svg", alt="")
+
+			.wrap-field
+				input(required, type="password", placeholder="Новый пароль", name="password")
+				.error-icon
+					img(src="img/icon-error.svg", alt="")
+
+			.wrap-checkbox
+				input(type="checkbox", id="chmodalin")
+				label(for="chmodalin").box
+				span.text.text-medium Запомнить меня на сайте
+	
+			button(type="submit").btn.btn-dark Отправить
+
+			.bottom-line-btns.d-flex.justify-content-between.align-items-center
+				a(href="#").text-small.text-dark-blue.text-fw-bold(data-izimodal-open=".modal-registration") Еще не зарегистрированы?
+
+				a(href="#").text-small.text-dark-blue.text-fw-bold(data-izimodal-open=".modal-recovery-password") Забыли пароль?
+
+.modal-add-address.window-modal
+	.modal-content.element-static-shadow
+		span.btn-close(data-izimodal-close="")
+		
+		.wrap-icon
+			img(src="img/map-mark.svg", alt="")
+	
+		.modal-text
+			span.modal-title.h-3 Добавить адрес
+
+		form.form.form-validate
+			.wrap-fields.d-flex.flex-wrap
+
+				.wrap-field
+					input(required, type="text", name="country", placeholder="Город")
+					.error-icon
+						img(src="img/icon-error.svg", alt="")
+
+				.wrap-field
+					input(required, type="text", name="street", placeholder="Улица")
+					.error-icon
+						img(src="img/icon-error.svg", alt="")
+
+				.wrap-field.form-el-3
+					input(required, type="text", name="house", placeholder="Дом")
+					.error-icon
+						img(src="img/icon-error.svg", alt="")
+
+				.wrap-field.form-el-3
+					input(required, type="text", name="housing", placeholder="Корпус", data-placeholder-mobile="Корп.")
+					.error-icon
+						img(src="img/icon-error.svg", alt="")
+
+				.wrap-field.form-el-3
+					input(required, type="text", name="apartment", placeholder="Квартира", data-placeholder-mobile="Кв.")
+					.error-icon
+						img(src="img/icon-error.svg", alt="")
+
+				.wrap-field
+					input(required, type="text", name="noempty", placeholder="Название адреса в личном кабинете")
+					.error-icon
+						img(src="img/icon-error.svg", alt="")
+
+			.wrap-checkbox
+				input(type="checkbox", id="chmodaladd")
+				label(for="chmodaladd").box
+				span.text.text-medium Адрес по умолчанию
+
+
+
+			button(type="submit").btn.btn-dark добавить адрес
+
+
+.modal-testimonial.window-modal
+	.modal-content.element-static-shadow
+		span.btn-close(data-izimodal-close="")
+		
+		.wrap-icon
+			img(src="img/comment.svg", alt="")
+	
+		.modal-text
+			span.modal-title.h-3 Оставить отзыв
+
+			p.modal-subtitle.text-medium Нам важна ваша обратная связь. Если вы заказывали этот товар, поделитесь своим впечатлением о нем.
+		
+		.wrap-rating
+			img(src="img/star-full.svg", alt="")
+			img(src="img/star-full.svg", alt="")
+			img(src="img/star-full.svg", alt="")
+			img(src="img/star-half.svg", alt="")
+			img(src="img/star-none.svg", alt="")
+
+		form.form.form-validate
+			.wrap-field
+				input(required, type="text", placeholder="Имя")
+				.error-icon
+					img(src="img/icon-error.svg", alt="")
+
+			.wrap-field
+				input(required, name="email", type="text", placeholder="E-mail")
+				.error-icon
+					img(src="img/icon-error.svg", alt="")
+			
+			.wrap-field
+				textarea(required, placeholder="Текст отзыва", name="message")
+				.error-icon
+					img(src="img/icon-error.svg", alt="")
+
+			button(type="submit").btn.btn-dark Отправить
+
+
+
+.modal-email-recovery-password.window-modal
+	.modal-content.element-static-shadow
+		span.btn-close(data-izimodal-close="")
+		
+		.wrap-icon
+			img(src="img/key.svg", alt="")
+	
+		.modal-text
+			span.modal-title.h-3 Восстановление пароля
+
+			p.modal-subtitle.text-medium Письмо с ссылкой для восстановления пароля придет<br> на указнный e-mail в течние 5 минут.  Пожалуйста, проверьте<br> почту и следуйте инструкции в письме
+
+.modal-success-recovery-password.window-modal
+	.modal-content.element-static-shadow
+		span.btn-close(data-izimodal-close="")
+		
+		.wrap-icon
+			img(src="img/icon-success.svg", alt="")
+	
+		.modal-text
+			span.modal-title.h-3 Пароль успешно<br> восстановлен
+
+		a(href="#").btn.btn-dark(data-izimodal-open=".modal-sing-in") войти
+
+.modal-thanks.window-modal
+	.modal-content.element-static-shadow
+		span.btn-close(data-izimodal-close="")
+		
+		.wrap-icon
+			img(src="img/icon-success.svg", alt="")
+	
+		.modal-text
+			span.modal-title.h-3 Спасибо за обращение!
+			p.modal-subtitle.text-medium В ближайшее время мы рассмотрим ваше письмо<br> и вышлем ответ на email@gmail.ru
+
+		a(href="#").btn.btn-dark(data-izimodal-close="") Ок
+
+.modal-remove-address-question.window-modal
+	.modal-content.element-static-shadow
+		span.btn-close(data-izimodal-close="")
+		
+		.wrap-icon
+			img(src="img/icon-red-cross-square.svg", alt="")
+	
+		.modal-text
+			span.modal-title.h-3 Вы действительно хотите удалить адрес «Дом»?
+		
+		.wrap-btns.d-flex.justify-content-center
+			button.btn.btn-dark да
+			a(href="#").btn.btn-border(data-izimodal-close="") отмена
+
+//- .modal-program-info.window-modal
+//- 	.modal-content.element-static-shadow
+
+//- 		span.btn-close(data-izimodal-close="")
+		
+//- 		.modal-text
+//- 			span.modal-title.h-2 Программа лояльности Sportgoods
+		
+//- 			p.modal-subtitle.text-medium Наша программа лояльности нацелена на поощрение покупателей интернет-магазина SPORTgoods.by.<br> Участник программы получает Клубную карту, на которую при каждой последующей покупке<br> возвращается часть средств в виде Cashback бонусов. 
+
+//- 		.modal-program-info_content
+//- 			span.modal-program-info_title.h-3 Как работает программа и как получить бонусы
+			
+//- 			p Для участия в программе заполните форму регистрации на сайте или при оформлении заказа в магазине.<br> Клубная карта выдается при любой покупке на сайте. Cashback бонусы начисляются на Клубную карту за покупки при расчёте:<br> наличными; банковской картой; картой рассрочки «Халва».
+
+//- 			.row-benefit.d-block.d-md-flex.align-items-center
+
+//- 				.benefit-item.d-flex
+//- 					.wrap-precent-icon
+//- 						img(src="img/icon-benefit-present.svg", alt="")
+
+//- 					.wrap-text
+//- 						span.text-fw-bold.text-big Делайте покупки и получайте бонусы<br> за каждые 10 руб. в чеке
+//- 						span 10 руб. = 1 бонусу
+
+//- 				.benefit-item.d-flex
+//- 					.wrap-precent-icon
+//- 						img(src="img/icon-benefit-card.svg", alt="")
+					
+//- 					.wrap-text
+//- 						span.text-fw-bold.text-big Используйте бонусы для оплаты<br> следующих покупок на Sportgoods
+//- 						span 1 бонусу = 1 рублю
+
+//- 			span.modal-program-info_title.h-3 Как потратить бонусы
+			
+//- 			p При последующих заказах на сайте sportgoods.by и покупке в магазинах сети Вы можете рассчитываться Cashback бонусами и оплачивать <em>до 50% стоимости товара</em> (за исключением Подарочных сертификатов, акционных и ранее уцененных товаров). 
+
+//- 			span.modal-program-info_title.h-3 Дополнительно
+			
+//- 			p При возврате товара начисленные за него Cashback Бонусы аннулируются.  Участником Программы может стать любое физическое лицо, от 16 лет, совершившее покупку на сайте SPORTgoods или в сети магазинов Adidas / Reebok, заполнившее форму регистрации и получившее Клубную Карту. 
+
+//- 			p Узнать количество наколенных Cashback бонусов можно в личном кабинете. <em>Внимание! На часть стоимости товара, которую Вы оплачиваете Бонусами, новые Бонусы не начисляются.</em>
+
+//- 			p Бонусы, начисленные в течение календарного года (с 01.01 по 31.12 включительно) действуют по 31.12 следующего года включительно. Ежегодно 1 января начисленные и неиспользованные за прошедший календарный год бонусы аннулируются.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,200 @@
+.index-list
+	padding: 40px
+
+	li
+		margin-bottom: 8px
+		&:last-child
+			margin-bottom: 0
+
+	a
+		display: block
+		font-size: 1.4rem
+		line-height: 1.8rem
+		color: #000
+		&:visited
+			color: blue
+
+
+*
+	box-sizing: border-box
+	font-family: $default-font
+
+html
+	overflow-x: hidden
+
+html, body	
+	font-size: 18px
+	line-height: 25px
+
+body
+	min-width: 320px
+	position: relative
+	font-family: $default-font
+	font-weight: 400
+	overflow-x: hidden
+	color: $text
+	background-color: $gray
+	padding-top: 120px
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.video-url
+	display: none
+
++media(xl)
+
++media(lg)
+
++media(md)
+
++media(sm)
+
+
+a
+	color: inherit
+	transition: .4s color ease
+
+	&:hover
+		color: $hover
+
+	&:active
+		color: $active
+
+b
+	font-weight: bold
+
+
+.index-page
+	padding-top: 0 !important
+
+.resp-img
+	img, svg
+		display: block
+		width: 100%
+		height: auto
+
+.section
+	padding: 88px 0
+
+	.page-titles
+		text-align: center
+		margin-bottom: 40px
+
+		> *
+			display: block
+			margin-left: 0
+			margin-right: 0
+
+		.title
+			font-family: Ubuntu
+			color: $dark-text
+			font-weight: 300
+
+		.subtitle
+			margin-top: 3px
+
+	&-white
+		background-color: #fff
+
+.bg-elements
+	background-repeat: no-repeat
+	background-position: center 60px
+	background-size: 88%
+
+.page
+	padding-top: 105px
+
+
++media(xl)
+	html, body	
+		font-size: 17px
+		line-height: 24px
+
+	.section
+		padding: 70px 0
+	
+	.page
+		padding-top: 90px
+
+
++media(lg)
+	html, body	
+		font-size: 15px
+		line-height: 23px
+
+	body
+		padding-top: 95px
+
+	.section
+		padding: 50px 0
+		
+	.page
+		padding-top: 70px
+
++media(md)
+	html, body	
+		font-size: 14px
+		line-height: 21px
+
+	.section
+		.page-titles
+			br
+				display: none
+
+	body
+		padding-top: 80px
+
++media(sm)
+	html, body	
+		font-size: 15px
+		line-height: 21px
+
+	body
+		padding-top: 60px
+
+	.section
+		padding: 45px 0
+		.page-titles
+			margin-bottom: 30px
+			.subtitle
+				margin-top: 8px
+
+	.page
+		padding-top: 60px
+
+	.bg-elements
+		background-image: none !important
+
+
+
+//Grid system START
+.container
+	margin: 0 auto
+	padding: 0 15px
+
+@media (min-width: 0px)
+  .container
+    width: 100%
+
+@media (min-width: 576px)
+  .container
+    width: 540px
+
+@media (min-width: 820px)
+  .container
+    width: 750px
+
+@media (min-width: 1065px)
+  .container
+    width: 970px
+
+@media (min-width: 1270px)
+	.container
+		width: 1170px
+
+//Grid system END

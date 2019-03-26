@@ -1,0 +1,274 @@
+.garant-present
+	margin: 30px 0 90px
+	.item
+		position: relative
+		border-radius: 20px
+		border: 2px solid rgb(255, 248, 243)
+		box-shadow: 0px 4px 15.48px 2.52px rgba(188, 188, 188, 0.18)
+		background-color: #fff
+		padding: 60px 80px 50px
+
+	.decor
+		position: absolute
+		top: 0px
+		right: 7%
+		width: 370px
+		z-index: 9
+		img
+			width: 100%
+			height: auto
+
+	.wrap-text
+		width: 52%
+		margin-bottom: 50px
+		.title
+			font-size: 48px
+			line-height: 57px
+			color: $blue
+			margin-bottom: 30px
+			display: block
+		.text
+			font-size: 21px
+			line-height: 31px
+			color: #424242
+			font-family: "OpenR"
+
+	.row-steps
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-top: 30px
+		border-top: 1px solid rgba(65,158,227,.4)
+		.step
+			padding-left: 40px
+			font-family: "OpenSB"
+			position: relative
+			> span
+				display: block
+			&-num
+				text-transform: uppercase
+				font-size: 17px
+				line-height: 20px
+				color: #dbdbdb
+				margin-bottom: 10px
+			.btn
+				font-size: 20px
+				color: $blue
+				line-height: 24px
+				position: relative
+				cursor: pointer
+				transition: .4s all ease
+				&:before
+					content: ""
+					top: 101%
+					position: absolute
+					left: 50%
+					width: 101%
+					transform: translate(-50%, 0)
+					height: 1px
+					background-color: $blue
+					transition: .4s all ease
+				&:hover
+					color: $red
+					&:before
+						background-color: $red
+
+				&:after
+					content: ""
+					position: absolute
+					left: calc(100% + 23px)
+					top: 50%
+					transform: translate(0, -50%)
+					width: 12px
+					height: 20px
+					background: url("../img/arrow-left.png") no-repeat center
+					background-size: contain
+			.icon-check
+				width: 21px
+				height: auto
+				position: absolute
+				bottom: 3px
+				left: 10px
+				display: none
+			&:last-child
+				.btn
+					&:after
+						display: none
+		.cur-step
+			.icon-check
+				display: block
+			.btn
+				color: $red-light
+				cursor: default
+				pointer-events: none
+				&:before
+					display: none
+
+
+@media (max-width: 1440px)
+	.garant-present
+		margin: 30px 0 90px
+
+		.item
+			padding: 60px 40px 50px
+
+		.wrap-text
+			.title
+				font-size: 48px
+				line-height: 57px
+				color: $blue
+				margin-bottom: 30px
+				display: block
+			.text
+				font-size: 21px
+				line-height: 31px
+				color: #424242
+				font-family: "OpenR"
+
+		.row-steps
+			.step
+				padding-left: 30px
+				&-num
+					font-size: 15px
+					line-height: 27px
+				.btn
+					font-size: 16px
+					line-height: 22px
+					&:after
+						width: 8px
+						height: 16px
+				.icon-check
+					width: 18px
+			.cur-step
+				.icon-check
+					display: block
+					left: 0
+					bottom: 3px
+				.btn
+					color: $red-light
+					cursor: default
+					&:before
+						display: none
+
+@media (max-width: 1290px)
+	.garant-present
+		margin: 30px 0 70px
+
+		.item
+			padding: 60px 65px 80px
+			max-width: 585px
+			margin-left: auto
+			margin-right: auto
+			
+		.decor
+			right: 2%
+			top: auto
+			bottom: 60px
+			width: 330px
+
+		.wrap-text
+			width: 100%
+			margin-bottom: 20px
+			.text
+				br
+					display: none
+
+		.row-steps
+			display: block
+			border-top: none
+			padding-top: 0
+			width: 50%
+			.step
+				padding-left: 0
+				margin-bottom: 23px
+				position: relative
+				&:last-child
+					margin-bottom: 0
+				&-num
+					font-size: 18px
+					line-height: 20px
+					margin-bottom: 7px
+				.btn
+					font-size: 20px
+					line-height: 24px
+					display: inline-block
+					text-decoration: underline
+					&:after, &:before
+						display: none
+				.icon-check
+					width: 28px
+					transform: translate(-130%, -20%)
+					position: absolute
+					top: 60%
+			.cur-step
+				.icon-check
+					display: block
+					bottom: 3px
+
+@media (max-width: 768px)
+	.garant-present
+		.decor
+			width: 250px
+			bottom: 100px
+
+
+
+@media (max-width: 576px)
+	.garant-present
+		margin: 30px 0 70px
+
+		.item
+			padding: 40px 20px 50px
+			max-width: 360px
+
+		.decor
+			width: 164px
+			bottom: 55px
+
+		.wrap-text
+			width: 100%
+			margin-bottom: 20px
+			.title
+				font-size: 31px
+				line-height: 35px
+				margin-bottom: 18px
+			.text
+				font-size: 15px
+				line-height: 24px
+
+		.row-steps
+			.step
+				margin-bottom: 15px
+				display: -webkit-inline-flex
+				display: -moz-inline-flex
+				display: -ms-inline-flex
+				display: -o-inline-flex
+				display: inline-flex
+				flex-wrap: wrap
+				&:last-child
+					margin-bottom: 0
+				&-num
+					font-size: 13px
+					width: 100%
+					line-height: 20px
+					margin-bottom: 4px
+				.btn
+					font-size: 15px
+					line-height: 20px
+				.icon-check
+					width: 20px
+					left: 100%
+					top: 70%
+			.cur-step
+				.icon-check
+					display: block
+					bottom: 3px
+
+@media (max-width: 435px)
+	.garant-present
+		.decor
+			display: none
+		.row-steps
+			width: 90%
+
+

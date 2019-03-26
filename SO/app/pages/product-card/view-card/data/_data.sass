@@ -1,0 +1,127 @@
+.product-card-data
+	padding: 0 45px 0 20px
+
+	.wrap-product-card-name
+		margin-bottom: 12px
+		margin-top: -8px
+		
+	.product-name
+		line-height: 48px
+
+	.wrap-comments-count
+		margin: 0 25px
+		cursor: pointer
+		> *
+			vertical-align: middle
+		.count
+			line-height: 12px
+			margin-bottom: 3px
+		.wrap-icon
+			width: 100%
+			max-width: 16px
+			margin-right: 7px
+
+	.wrap-card-info
+		margin: 22px 0
+
+	.wrap-sizes
+		display: flex
+		flex-wrap: wrap
+		margin: 25px 0 30px
+		> span:first-child
+			line-height: 28px
+			
+		.list-title
+			margin-left: 23px
+			color: $dark-blue
+		.list-sizes
+			width: 100%
+			margin-top: 14px
+
+	.wrap-btn-to-cart
+		display: flex
+		align-items: center
+		.btn
+			display: flex
+			align-items: center
+			margin-right: 20px
+			max-width: none
+			width: auto
+			.wrap-icon
+				max-width: 18px
+				margin-right: 12px
+
+	.wrap-brand
+		margin-top: 25px
+
+
+
++media-breakpoint-down(lg)
+	.product-card-data
+		.product-name
+			font-size: 2.3rem
+			line-height: 44px
+
+
++media-breakpoint-down(md)
+	.product-card-data
+		padding: 0
+		margin-top: 0
+
+		.wrap-sizes
+			width: 100%
+			> span:first-child
+				line-height: 24px
+
+		.product-name
+			font-size: 2.1rem
+			line-height: 42px
+
+
+
++media-breakpoint-down(sm)
+	.product-card-data
+		.product-name
+			font-size: 1.7rem
+			line-height: 34px
+
+		.wrap-card-info
+			margin: 16px 0 17px
+
+		.wrap-sizes
+			margin-bottom: 30px
+
+
+
++media-breakpoint-down(xs)
+	.product-card-data
+		.wrap-product-card-name
+			text-align: left
+
+		.product-name
+			font-size: 24px
+			line-height: 32px
+
+		.brand
+			margin-top: 22px
+			
+		.wrap-comments-count
+			margin: 0 17px
+
+		.wrap-card-info
+			margin: 5px 0 17px
+
+		.wrap-price
+			.cur-price
+				font-size: 24px
+				line-height: 32px
+
+		.wrap-sizes
+			margin-bottom: 30px
+			margin-top: 20px
+			.list-sizes
+				margin-top: 0
+				width: 80%
+			.list-title
+				margin: 0
+

@@ -1,0 +1,15 @@
+extends ../pug/template/page.pug
+
+block title 
+	| Наши программы
+
+block content
+	include ../modules/header/header
+
+	.page.page-out-programs
+		include our-programs/program-items/program-items
+		include our-programs/team-building/team-building
+		include our-programs/mini-banner/mini-banner
+		include our-programs/result-work/result-work
+	
+	include ../modules/footer/footer

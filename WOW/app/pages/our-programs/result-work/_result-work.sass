@@ -1,0 +1,83 @@
+.result-work
+	.wrap-items
+		display: flex
+		justify-content: center
+		margin: 60px -16px 0
+		flex-wrap: wrap
+
+		.wrap-item
+			width: 100%
+			max-width: 25%
+			text-align: center
+			padding: 0 $gutters
+			margin-bottom: 32px
+
+			.wrap-icon
+				width: 80px
+				margin-left: auto
+				margin-right: auto
+				margin-bottom: 28px
+
+			.wrap-text
+				em
+					display: block
+					font-weight: bold
+
+	.wrap-btn
+		margin-top: 60px
+	
+
+
++media(xl)
+	.result-work
+		.wrap-btn
+			margin-top: 50px
+
++media(lg)
+	.result-work
+		.wrap-items
+			margin: 50px -6px 0
+
+			.wrap-item
+				padding: 0 6px
+
+				.wrap-icon
+					margin-bottom: 20px
+
+				.wrap-text
+					font-size: .93rem
+					line-height: 1.4rem
+
+				em
+					line-height: 1.2rem
+
+		.wrap-btn
+			margin-top: 40px
+
+
++media(md)
+	.result-work
+		.wrap-items
+			margin: 50px -16px 0
+
+			.wrap-item
+				max-width: 50%
+				padding: 0 $gutters
+
+				em
+					margin-bottom: 2px
+
+		.wrap-btn
+			margin-top: 20px
+
++media(sm)
+	.result-work
+		.wrap-items
+
+			.wrap-item
+				max-width: 240px
+				.wrap-text
+					font-size: 1rem
+				
+				em
+					line-height: 1.3rem

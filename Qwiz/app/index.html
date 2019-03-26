@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title> Project
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#fff">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/favicon.png">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <div class="wrapper" style="background-image: url('img/bg.jpg')">
+      <div class="container">
+        <div class="wrapper-content">
+          <header class="header">
+            <div class="wrap-logo">
+              <div class="wrap-img"><img src="img/logo.png" alt=""></div><span class="text text-small">Фабричное производство <br class="d-sm-none"> кухонь в Минске</span>
+            </div>
+            <div class="wrap-callback">
+              <div class="phone">
+                <div class="wrap-img"><img src="img/phone.png" alt=""></div><a class="number" href="tel:375297734509">+375 29 <span class="num-accent">773-45-09</span></a>
+              </div><span class="btn-show-callback text-small">заказать звонок</span>
+            </div>
+          </header>
+          <main class="main">
+            <div class="wrap-main-content"><span class="title">Рассчитайте стоимость <br class="d-sm-none">вашей будущей кухни</span>
+              <div class="present">
+                <div class="wrap-img"><img src="img/present.png" alt=""></div>
+                <div class="wrap-text"><span>+ 3 варианта дизайна</span><span>получите в подарок!</span></div>
+              </div>
+              <div class="wrap-btn"><span class="btn-show-questions">
+                  Рассчитать<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.6" d="M1 1.5L8.5 9L1 16.5" stroke="#000" stroke-width="3"/>
+</svg></span></div>
+            </div>
+          </main>
+          <footer class="footer">
+            <div class="wrap-address">
+              <div class="wrap-img"><img src="img/location.png" alt=""></div>
+              <address class="text-small">г. Минск, ТЦ  «Ленинград», пав. 70</address>
+            </div>
+            <div class="wrap-mail">
+              <div class="wrap-img"><img src="img/mail.png" alt=""></div><span class="text-small">zakaz@comfy-mebel.by</span>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper-modal">
+      <div class="container">
+        <div class="wrapper-modal-content">
+          <div class="layer-out"></div>
+          <div class="modal modal-callback modal-active"><span class="icon-close"></span>
+            <div class="form-text"><span class="title">Оставить заявку</span></div>
+            <form class="form form-callback">
+              <div class="wrap-field">
+                <input class="input name" id="callback-name" required="required" type="text" placeholder="Ваше имя">
+              </div>
+              <div class="wrap-field">
+                <input class="input phone" id="callback-phone" required="required" type="tel" placeholder="+375 ( 99 ) 999 - 99 - 99">
+              </div>
+              <div class="wrap-btn">
+                <button class="btn btn-callback-send" type="text">Оставить заявку</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal modal-success"><span class="icon-close"></span>
+            <div class="wrap-img"><svg width="78" height="76" viewBox="0 0 78 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="circle" d="M71.4351 31.5739C69.6949 31.5739 68.2843 33.0114 68.2843 34.7844V38.0181C68.2796 46.4531 65.0514 54.3814 59.1946 60.3423C53.342 66.2989 45.5648 69.5787 37.2935 69.5787C37.2874 69.5787 37.2813 69.5787 37.2752 69.5787C20.1865 69.5687 6.29181 55.3946 6.30156 37.9818C6.30628 29.5469 9.53444 21.6186 15.3915 15.6573C21.244 9.70077 29.0214 6.42103 37.2926 6.42103C37.2987 6.42103 37.3047 6.42103 37.3108 6.42103C41.6788 6.42351 45.9167 7.34342 49.9066 9.15482C51.4965 9.87665 53.3586 9.14846 54.067 7.52892C54.7751 5.90938 54.0609 4.01151 52.4713 3.28968C47.6701 1.10975 42.5707 0.00294941 37.3143 0C37.3064 0 37.3003 0 37.2924 0C27.3399 0 17.9802 3.94724 10.938 11.1146C3.89026 18.2876 0.00579521 27.828 6.14327e-06 37.9783C-0.00563058 48.1284 3.86786 57.6733 10.9077 64.8546C17.9475 72.036 27.3102 75.9941 37.2715 76C37.2793 76 37.2855 76 37.2935 76C47.2459 76 56.6056 72.0529 63.6479 64.8854C70.6956 57.7122 74.5801 48.1718 74.5859 38.0199V34.7846C74.5859 33.0114 73.1753 31.5739 71.4351 31.5739Z" fill="#332C28"/>
+<path class="check" d="M77.0772 4.43927C75.8467 3.18561 73.8518 3.18561 72.6213 4.43927L37.2929 40.4373L29.2783 32.2707C28.0479 31.0169 26.0528 31.0169 24.8225 32.2707C23.592 33.5245 23.592 35.5573 24.8225 36.8111L35.0652 47.248C35.6804 47.875 36.4869 48.1884 37.2932 48.1884C38.0996 48.1884 38.9059 47.875 39.5213 47.248L77.0772 8.97965C78.3077 7.72584 78.3077 5.69308 77.0772 4.43927Z" fill="#F47139"/>
+</svg>
+            </div>
+            <div class="wrap-text"><span class="title">Спасибо! Скоро мы позвоним!</span>
+              <p class="text">Наши специалисты свяжутся с Вами по указанным контактным данным и ответят на любые интересующие Вас вопросы</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper-modal-question">
+      <div class="wrapper-modal-question-content">
+        <div class="icon-close"><img src="img/cross.png" alt=""></div><span class="progress-text">Выполнено на <span class="total">0</span>%</span>
+        <div class="wrap-progress-bar">
+          <div class="progress"></div>
+        </div>
+        <div class="wrap-questions">
+          <div class="question question-1 question-current">
+            <div class="title-group"><span class="subtitle">Вопрос 1 из 6.</span><span class="title">Выберите планировку кухни:</span></div>
+            <div class="wrap-answers">
+              <div class="answer-box-img-wrap">
+                <div class="answer-box type type-1 answer-box-img">
+                  <div class="wrap-img"><img data-src="img/img-q-1-1-size.png" src="img/img-q-1-1.png" alt=""></div>
+                  <div class="wrap-text"><span class="title value">Прямая</span></div>
+                </div>
+              </div>
+              <div class="answer-box-img-wrap">
+                <div class="answer-box type type-2 answer-box-img">
+                  <div class="wrap-img"><img data-src="img/img-q-1-3-size.png" src="img/img-q-1-3.png" alt=""></div>
+                  <div class="wrap-text"><span class="title value">Угол слева</span></div>
+                </div>
+              </div>
+              <div class="answer-box-img-wrap">
+                <div class="answer-box type type-2 answer-box-img">
+                  <div class="wrap-img"><img data-src="img/img-q-1-2-size.png" src="img/img-q-1-2.png" alt=""></div>
+                  <div class="wrap-text"><span class="title value">Угол справа</span></div>
+                </div>
+              </div>
+              <div class="answer-box-img-wrap">
+                <div class="answer-box type type-3 answer-box-img">
+                  <div class="wrap-img"><img data-src="img/img-q-1-4-size.png" src="img/img-q-1-4.png" alt=""></div>
+                  <div class="wrap-text"><span class="title value">П-образная</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="question question-select-sizes">
+            <div class="title-group"><span class="subtitle">Вопрос 2 из 6.</span><span class="title">Выберите размеры кухни:</span></div>
+            <div class="wrap-answers">
+              <div class="answer-box-img-wrap">
+                <div class="answer-box-custom answer-box-img">
+                  <div class="wrap-text"><span class="title">Тип вашей кухни - <span></span></span></div>
+                  <div class="wrap-img"><img src="img/img-q-1-1.png" alt=""></div>
+                </div>
+              </div>
+              <div class="answer-box-fields">
+                <div class="answer-box-field-price input-1">
+                  <div class="answer-box-custom"><span>Длина кухни X:</span>
+                    <div class="wrap-field">
+                      <input type="text" placeholder="Например: 350">
+                    </div><span>см</span>
+                  </div>
+                </div>
+                <div class="answer-box-field-price input-2">
+                  <div class="answer-box-custom"><span>Длина кухни Y:</span>
+                    <div class="wrap-field">
+                      <input type="text" placeholder="Например: 350">
+                    </div><span>см</span>
+                  </div>
+                </div>
+                <div class="answer-box-field-price input-3">
+                  <div class="answer-box-custom"><span>Длина кухни Z:</span>
+                    <div class="wrap-field">
+                      <input type="text" placeholder="Например: 350">
+                    </div><span>см</span>
+                  </div>
+                </div>
+                <div class="answer-box-radio-wrap">
+                  <div class="answer-box answer-box-radio">
+                    <div class="radio-circle"><span></span></div><span class="wrap-text value">Не знаю размеров</span>
+                  </div>
+                </div>
+                <div class="answer-box wrap-btn btn-active">
+                  <div class="btn">Далее</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="question question-3">
+            <div class="title-group"><span class="subtitle">Вопрос 3 из 6.</span><span class="title">Выберите материал фасадов:</span></div>
+            <div class="question-3__arrow"></div>
+            <div class="wrap-answers">
+              <div class="answer-box-img-wrap">
+                <div class="answer-box answer-box-img">
+                  <div class="wrap-img"><img src="img/img-q-2-2.jpg" alt=""></div>
+                  <div class="wrap-text"><span class="title value">ЛДСП Egger</span>
+                    <ul class="list">
+                      <li class="list-item">низкая стоимость</li>
+                      <li class="list-item">хит продаж</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="answer-box-img-wrap">
+                <div class="answer-box answer-box-img">
+                  <div class="wrap-img"><img src="img/img-q-2-1.jpg" alt=""></div>
+                  <div class="wrap-text"><span class="title value">ЛДСП Cleaf</span>
+                    <ul class="list">
+                      <li class="list-item">премиум</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="answer-box-img-wrap">
+                <div class="answer-box answer-box-img">
+                  <div class="wrap-img"><img src="img/img-q-2-3.jpg" alt=""></div>
+                  <div class="wrap-text"><span class="title value">Пластик Arpa</span>
+                    <ul class="list">
+                      <li class="list-item">эконом</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="answer-box-img-wrap">
+                <div class="answer-box answer-box-img">
+                  <div class="wrap-img"><img src="img/img-q-2-5.jpg" alt=""></div>
+                  <div class="wrap-text"><span class="title value">Пластик-нано Fenix</span>
+                    <ul class="list">
+                      <li class="list-item">премиум</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="answer-box-img-wrap">
+                <div class="answer-box answer-box-img">
+                  <div class="wrap-img"><img src="img/img-q-2-6.jpg" alt=""></div>
+                  <div class="wrap-text"><span class="title value">Акриловый пластик S-line</span>
+                    <ul class="list">
+                      <li class="list-item">средняя стоимость</li>
+                      <li class="list-item">хит продаж</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="answer-box-img-wrap">
+                <div class="answer-box answer-box-img">
+                  <div class="wrap-img"><img src="img/img-q-2-4.jpg" alt=""></div>
+                  <div class="wrap-text"><span class="title value">Крашенный МДФ</span>
+                    <ul class="list">
+                      <li class="list-item">средняя стоимость</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="question">
+            <div class="title-group"><span class="subtitle">Вопрос 4 из 6.</span><span class="title">Выберите столешницу:</span></div>
+            <div class="wrap-answers">
+              <div class="answer-box-img-wrap">
+                <div class="answer-box answer-box-img">
+                  <div class="wrap-img"><img src="img/img-q-4-1.jpg" alt=""></div>
+                  <div class="wrap-text"><span class="title value">Egger</span>
+                    <ul class="list">
+                      <li class="list-item">лучшая цена</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="answer-box-img-wrap">
+                <div class="answer-box answer-box-img">
+                  <div class="wrap-img"><img src="img/img-q-4-4.png" alt=""></div>
+                  <div class="wrap-text"><span class="title value">Кварц</span>
+                    <ul class="list">
+                      <li class="list-item">искусственный камень</li>
+                      <li class="list-item">премиум</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="answer-box-img-wrap">
+                <div class="answer-box answer-box-img">
+                  <div class="wrap-img"><img src="img/img-q-4-3.jpg" alt=""></div>
+                  <div class="wrap-text"><span class="title value">Juan</span>
+                    <ul class="list">
+                      <li class="list-item">низкая цена</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="question">
+            <div class="title-group"><span class="subtitle">Вопрос 5 из 6.</span><span class="title">Выберите тип фурнитуры:</span></div>
+            <div class="wrap-answers">
+              <div class="answer-box-img-wrap">
+                <div class="answer-box answer-box-img">
+                  <div class="wrap-img"><img src="img/img-q-5-2.png" alt=""></div>
+                  <div class="wrap-text"><span class="title value">Эконом</span>
+                    <ul class="list">
+                      <li class="list-item">шариковые направляющее с доводчиками</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="answer-box-img-wrap">
+                <div class="answer-box answer-box-img">
+                  <div class="wrap-img"><img src="img/img-q-5-3.png" alt=""></div>
+                  <div class="wrap-text"><span class="title value">Стандарт</span>
+                    <ul class="list">
+                      <li class="list-item">GTV Польша</li>
+                      <li class="list-item">система Модернбокс</li>
+                      <li class="list-item">система Модернслайд</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="answer-box-img-wrap">
+                <div class="answer-box answer-box-img">
+                  <div class="wrap-img"><img src="img/img-q-5-4.jpg" alt=""></div>
+                  <div class="wrap-text"><span class="title value">Премиум</span>
+                    <ul class="list">
+                      <li class="list-item">Австрийская фурнитура BLUM</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="question">
+            <div class="title-group"><span class="subtitle">Вопрос 6 из 6.</span><span class="title">В какой бюджет Вы планируете уложиться?</span></div>
+            <div class="wrap-answers">
+              <div class="answer-box-radio-wrap">
+                <div class="answer-box answer-box-radio">
+                  <div class="radio-circle"><span></span></div><span class="wrap-text value">до 2 000 руб</span>
+                </div>
+              </div>
+              <div class="answer-box-radio-wrap">
+                <div class="answer-box answer-box-radio">
+                  <div class="radio-circle"><span></span></div><span class="wrap-text value">2 000 - 4 000 руб</span>
+                </div>
+              </div>
+              <div class="answer-box-radio-wrap">
+                <div class="answer-box answer-box-radio">
+                  <div class="radio-circle"><span></span></div><span class="wrap-text value">4 000 - 6 000 руб</span>
+                </div>
+              </div>
+              <div class="answer-box-radio-wrap">
+                <div class="answer-box answer-box-radio">
+                  <div class="radio-circle"><span></span></div><span class="wrap-text value">от 6 000 руб</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="question question-present">
+            <div class="title-group"><span class="title">Благодарим за ответы!</span><span class="subtitle">Выберите Ваш персональный подарок:</span></div>
+            <div class="wrap-answers">
+              <div class="answer-box-img-wrap">
+                <div class="answer-box answer-box-img">
+                  <div class="wrap-img"><img src="img/present-1.jpg" alt=""></div>
+                  <div class="wrap-text"><span class="title value">Мойка каменная</span><span class="text">стоимость в магазине:</span><span class="price">215 руб</span></div>
+                </div>
+              </div>
+              <div class="answer-box-img-wrap">
+                <div class="answer-box answer-box-img">
+                  <div class="wrap-img"><img src="img/present-3.jpg" alt=""></div>
+                  <div class="wrap-text"><span class="title value">Скидка на кухню</span><span class="text">от стоимости: </span><span class="price">-25%</span></div>
+                </div>
+              </div>
+              <div class="answer-box-img-wrap">
+                <div class="answer-box answer-box-img">
+                  <div class="wrap-img"><img src="img/present-4.jpg" alt=""></div>
+                  <div class="wrap-text"><span class="title value">Вытяжка EXITEG</span><span class="text">стоимость в магазине: </span><span class="price">299 руб</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="question question-massager">
+            <div class="title-group"><span class="title">Расчёт готов!</span><span class="subtitle">Введите номер телефона, мы Вышлем на него стоимость и дизайн-проект</span></div>
+            <div class="box"><span class="send-to">Выслать на:</span>
+              <div class="massager-row">
+                <div class="wrap-massager">
+                  <div class="massager">
+                    <div class="wrap-img"><img src="img/whatsapp.jpg" alt=""></div><span class="text value">WhatsApp</span>
+                  </div>
+                </div>
+                <div class="wrap-massager">
+                  <div class="massager">
+                    <div class="wrap-img"><img src="img/viber.png" alt=""></div><span class="text value">Viber</span>
+                  </div>
+                </div>
+                <div class="wrap-massager">
+                  <div class="massager">
+                    <div class="wrap-img"><img src="img/tel.png" alt=""></div><span class="text value">SMS</span>
+                  </div>
+                </div>
+              </div>
+              <form class="form form-result">
+                <div class="wrap-field">
+                  <input class="input phone" id="callback-phone" required="required" type="tel" placeholder="+375 ( 99 ) 999 - 99 - 99">
+                </div>
+                <div class="wrap-btn">
+                  <div class="wrap-img img-play"><img src="img/btn-play.png" alt=""></div><span class="btn">Получить стоимость →</span>
+                  <div class="wrap-img img-arrow"><img src="img/arrow-resalt-btn.png" alt=""></div>
+                </div>
+                <div class="w-100"></div><span class="file-title">Есть свой проект? Загружайте</span>
+                <label class="wrap-field-file" for="field-file">
+                  <input class="field-file" type="file" name="field-file" id="field-file"><span class="file-text"></span><span class="file-placeholder">Загрузите файл</span>
+                  <div class="img-file"><svg width="30" height="39" viewBox="0 0 30 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28.8108 7.06225L22.5249 1.12287C21.869 0.502937 20.5991 0 19.6906 0H1.64595C0.736565 0 0 0.728 0 1.625V37.375C0 38.272 0.736565 39 1.64595 39H28.354C29.2626 39 30 38.272 30 37.375V9.81094C30.0008 8.91394 29.4684 7.683 28.8108 7.06225ZM26.4966 33.3872C26.4966 34.2842 25.7592 35.0122 24.8506 35.0122H4.96502C4.05646 35.0122 3.31907 34.2842 3.31907 33.3872V4.69219C3.31907 3.79519 4.05646 3.06719 4.96502 3.06719H18.5598C19.4684 3.06719 20.2057 3.79519 20.2057 4.69219V7.3905C20.2057 8.28831 20.9431 9.0155 21.8517 9.0155H24.8515C25.76 9.0155 26.4974 9.7435 26.4974 10.6405V33.3872H26.4966Z" fill="#DADCE4"/>
+<path d="M5.26847 20H23.7315C24.4309 20 25 19.5513 25 19C25 18.4487 24.4309 18 23.7315 18H5.26847C4.56912 18 4 18.4487 4 19C4 19.5513 4.56828 20 5.26847 20Z" fill="#DADCE4"/>
+<path d="M23.7315 23H5.26847C4.56912 23 4 23.673 4 24.5C4 25.327 4.56912 26 5.26847 26H23.7315C24.4309 26 25 25.327 25 24.5C25 23.673 24.4317 23 23.7315 23Z" fill="#DADCE4"/>
+<path d="M20.8072 29H8.19205C7.53483 29 7 29.673 7 30.5C7 31.327 7.53483 32 8.19205 32H20.8079C21.466 32 22 31.327 22 30.5C22 29.673 21.4652 29 20.8072 29Z" fill="#DADCE4"/>
+<path d="M10.5 15C13.5325 15 16 12.5325 16 9.5C16 6.46745 13.5325 4 10.5 4C7.46745 4 5 6.46745 5 9.5C5 12.5325 7.46745 15 10.5 15ZM10.5 6.47488C12.1681 6.47488 13.5251 7.83193 13.5251 9.5C13.5251 11.1681 12.1681 12.5251 10.5 12.5251C8.83193 12.5251 7.47488 11.1681 7.47488 9.5C7.47488 7.83193 8.83193 6.47488 10.5 6.47488Z" fill="#DADCE4"/>
+</svg>
+                  </div>
+                  <div class="btn-clear"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.23814 7.00015L13.7435 1.49459C14.0855 1.15283 14.0855 0.598303 13.7435 0.256541C13.4014 -0.0855136 12.8475 -0.0855136 12.5055 0.256541L7.00015 5.7621L1.49453 0.256541C1.15249 -0.0855136 0.59857 -0.0855136 0.25653 0.256541C-0.08551 0.598303 -0.08551 1.15283 0.25653 1.49459L5.76215 7.00015L0.25653 12.5057C-0.08551 12.8475 -0.08551 13.402 0.25653 13.7438C0.42755 13.9145 0.651685 14 0.875529 14C1.09937 14 1.32351 13.9145 1.49453 13.7435L7.00015 8.2379L12.5055 13.7435C12.6765 13.9145 12.9006 14 13.1245 14C13.3483 14 13.5724 13.9145 13.7435 13.7435C14.0855 13.4017 14.0855 12.8472 13.7435 12.5054L8.23814 7.00015Z" fill="white"/>
+</svg>
+                  </div>
+                </label>
+              </form><span class="bottom-text">*Подарок и скидку забронируем за Вашим номером телефона</span>
+            </div>
+          </div>
+          <div class="question last-screen"><span class="text">Спасибо за ответы. Результат вышлем в течение двух часов в рабочее <br> время. Пн-Вс 9.00 - 20.00</span><span class="subtext">Вам может перезвонить дизайнер, для уточненния дополнительной информации</span><span class="btn-show-callback btn">Заказать звонок</span></div>
+          <div class="preloader"><span class="text">Рассчитываем</span>
+            <div class="wrap-img"><img src="img/preloader.gif" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>

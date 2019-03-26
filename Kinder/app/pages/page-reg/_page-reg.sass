@@ -1,0 +1,373 @@
+.page-reg
+	min-height: 100vh
+	overflow: hidden
+	display: flex
+	flex-direction: column
+
+	.top-line-page-reg
+		padding-top: 180px
+		.title
+			font-size: 135px
+			line-height: 148px
+			margin-bottom: 60px
+			display: block
+		.container
+			&:before
+				margin-top: -50px
+	
+	&-content
+		.form
+			width: 100%
+			max-width: 895px
+			transition: .2s all ease
+			transition: .4s all ease
+			margin: 80px auto 0
+			a
+				transition: .4s all ease
+			.wrap-field, .wrap-select
+				margin-bottom: 30px
+			.wrap-field .field, .wrap-select .selectize-control.single .selectize-input
+				width: 100%
+				padding: 25px 55px
+				font-size: 30px
+				line-height: 40px
+				&::placeholder
+					color: $blue
+			
+			.wrap-fields-group
+				display: flex
+				flex-wrap: wrap
+				margin-left: -15px
+				margin-right: -15px
+				.wrap-field
+					width: 50%
+					padding: 0 15px
+					margin-bottom: 30px
+					
+
+			.wrap-radio-btns
+				padding-left: 20px
+				margin-top: 15px
+				font-family: "OpenR"
+				.radio
+					display: flex
+					flex-wrap: wrap
+					align-items: center
+					font-size: 22px
+					line-height: 29px
+					margin-bottom: 23px
+					&:last-child
+						margin-bottom: 0
+					a
+						color: $red
+						text-decoration: underline
+						margin: 0
+						&:hover
+							color: $blue
+				.box
+					margin-right: 18px
+					border: 5px solid $blue
+					border-radius: 50%
+					position: relative
+					width: 100%
+					cursor: pointer
+					max-width: 48px
+					height: 48px
+					align-self: flex-start
+					&:before
+						content: ""
+						position: absolute
+						top: 50%
+						left: 50%
+						-webkit-transform: translate(-50%, -50%)
+						-moz-transform: translate(-50%, -50%)
+						-ms-transform: translate(-50%, -50%)
+						-o-transform: translate(-50%, -50%)
+						transform: translate(-50%, -50%)
+						width: 22px
+						height: 22px
+						background-color: rgba(254,86,0,1)
+						opacity: 0
+						transition: .4s all ease
+						border-radius: inherit
+
+				.text
+					max-width: calc(100% - 75px)
+
+				input:checked + .box
+					&:before
+						opacity: 1
+
+			.btns-row, .bottom-row
+				font-family: "OpenR"
+				font-size: 24px
+				line-height: 30px
+
+			.btns-row
+				display: flex
+				align-items: center
+				justify-content: center
+				font-family: "OpenR"
+				.link-new-password
+					color: $blue
+					text-decoration: underline
+					&:hover
+						color: $red-light
+			.btn
+				margin-top: 60px
+				margin-left: auto
+				display: block
+				margin-right: auto
+			.bottom-row
+				display: flex
+				align-items: center
+				justify-content: space-between
+				margin-top: 100px
+				padding: 0 90px 0 20px
+				align-items: flex-start
+				.modal-show
+					text-decoration: underline
+					color: $red-light
+					font-family: "OpenR"
+					cursor: pointer
+					color: $blue
+					transition: .4s all ease
+					font-size: 24px
+					line-height: 30px
+					text-decoration: underline
+					&:hover
+						color: $red
+				.cell
+					&-title
+						display: block
+						margin-bottom: 7px
+
+
+	.footer
+		&-content
+			padding-top: 90px
+		&-bottom
+			margin-top: 0
+
+
+
+@media (max-width: 1440px)
+	.page-reg
+		.top-line-page-reg
+			padding-top: 150px
+			.title
+				font-size: 104px
+				line-height: 114px
+				margin-bottom: 10px
+
+		&-content
+			.form
+				.wrap-fields-group
+					.wrap-select
+						.selectize-control.single .selectize-input
+							padding: 20px 30px
+							font-size: 27px
+							line-height: 35px
+					.wrap-field
+						.field
+							padding: 22px 48px
+							font-size: 25px
+				.bottom-row
+					padding: 0
+				.subtext
+					margin: 35px 0
+					br
+						display: none
+
+		.footer
+			&-content
+				padding-top: 65px
+
+@media (max-width: 1290px)
+	.page-reg
+		.top-line-page-reg
+			.title
+				position: static
+				font-size: 104px
+				line-height: 114px
+				margin-bottom: 10px
+				margin-top: 70px
+			.container
+				&:before
+					margin-top: 0
+					bottom: 65%
+
+		&-content
+			.form
+				.wrap-fields-group
+					margin: 0 -8px
+					.wrap-select
+						margin-bottom: 20px
+						padding: 0 8px
+						.selectize-control.single .selectize-input
+							font-size: 23px
+							padding: 16px 30px
+				.wrap-radio-btns
+					padding: 0
+					br
+						display: none
+					.wrap-field
+						width: 100%
+				.subtext
+					margin: 25px 0 51px
+				.btns-row
+					.btn
+						padding: 30px 40px
+
+@media (max-width: 768px)
+	.page-reg
+		.top-line-page-reg
+			.title
+				font-size: 80px
+				margin-bottom: 0
+				margin-top: 100px
+
+		&-content
+			.form
+				.wrap-field, .wrap-select
+					margin-bottom: 20px				
+				.wrap-field .field, .wrap-select .selectize-control.single .selectize-input
+					padding: 19px 40px
+					font-size: 26px
+					line-height: 35px
+				.wrap-fields-group
+					display: block
+					margin-left: 0
+					margin-right: 0
+					.wrap-select
+						max-width: 100%
+						margin-bottom: 15px
+					.wrap-field
+						padding: 0
+						width: 100%
+				.wrap-radio-btns
+					.text
+						font-size: 20px
+						line-height: 26px
+				.subtext
+					font-size: 20px
+					line-height: 29px
+
+				.bottom-row
+					margin-top: 50px
+					.modal-show
+						font-size: 17px
+
+				.btns-row, .bottom-row
+					font-size: 17px
+					line-height: 19px
+
+@media (max-width: 576px)
+	.page-reg
+
+		.top-line-page-reg
+			.title
+				margin-top: 60px
+				font-size: 45px
+				line-height: 50px
+			.container
+				&:before
+					bottom: 85%
+
+		&-content
+			.form
+				margin-top: 40px
+				.wrap-field .field, .wrap-select .selectize-control.single .selectize-input
+					padding: 13px 25px
+					font-size: 20px
+					line-height: 27px
+					border-width: 3px
+				.btn
+					font-size: 20px
+					line-height: 24px
+					padding: 15px 25px
+					max-width: 100%
+					margin-top: 40px
+				.wrap-fields-group
+					padding: 0
+					.wrap-select
+						margin-bottom: 15px
+						.selectize-control.single .selectize-input
+							padding: 13px 25px
+							font-size: 20px
+							line-height: 27px
+							&:after
+								right: 20px
+					.wrap-field
+						margin-bottom: 15px
+						.field
+							padding: 13px 25px
+							font-size: 20px
+							line-height: 27px
+							border-width: 3px
+				.btns-row
+					button.btn.btn-accent
+						padding: 16px 18px
+						margin: 0
+						width: 100%
+						&:last-child
+							margin-bottom: 0
+					button.btn.btn-blue-border.btn-close
+						margin: 0 0 15px
+						&:before
+							border-width: 4px
+				.wrap-radio-btns
+					.text
+						font-size: 13px
+						line-height: 18px
+					.box
+						margin-right: 10px
+						border-width: 3px
+						border-radius: 50%
+						max-width: 35px
+						height: 35px
+						&:before
+							width: 18px
+							height: 18px
+					.text
+						max-width: calc(100% - 52px)							
+				.subtext
+					font-size: 14px
+					line-height: 23px
+					margin: 24px 0px
+
+				.bottom-row
+					margin-top: 40px
+					.cell
+						> *
+							font-size: 11px
+							line-height: 14px
+					.row-social
+						a
+							height: 18px
+							margin-right: 15px
+							*
+								width: auto
+								height: 100%
+								width: auto
+								display: block
+
+				.btns-row
+					flex-wrap: wrap
+					text-align: center
+					.btn
+						order: 1
+						margin-bottom: 25px
+					.link-new-password
+						order: 2
+						margin-top: 25px
+
+				.btns-row, .bottom-row
+					font-size: 12px
+					line-height: 15px
+
+
+		.footer
+			padding-top: 40px
+			&-content
+				padding-top: 35px

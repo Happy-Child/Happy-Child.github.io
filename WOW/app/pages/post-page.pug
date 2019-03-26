@@ -1,0 +1,14 @@
+extends ../pug/template/page.pug
+
+block title 
+	| Большие гонки
+
+block content
+	include ../modules/header/header
+	
+	.page.post-page
+		include post-page/banner/banner
+		include post-page/about/about
+		include post-page/prices/prices
+
+	include ../modules/footer/footer

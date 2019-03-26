@@ -1,0 +1,103 @@
+.section-news-month
+	.index-products-cards-slider
+		margin-bottom: 40px
+		width: 100%
+		.wrap-slider-dots
+			ul li:not(.slick-active)
+				background-color: #dedede
+
+
++media-breakpoint-down(lg)
+
++media-breakpoint-down(md)
+	.section-news-month
+		.index-products-cards-slider
+			
+			.wrap-product-card
+				max-width: calc(100% / 3)
+				display: none
+				
+				&:nth-child(-n + 3)
+					display: block
+
+
++media-breakpoint-down(sm)
+	.section-news-month
+		.index-products-cards-slider
+			.wrap-product-card
+				max-width: 50%
+
+				&:nth-child(-n + 3)
+					display: none
+				
+				&:nth-child(-n + 2)
+					display: block
+
+
+
+
++media-breakpoint-down(xs)
+	.section-news-month
+		.collection-item
+			.title
+				font-size: 30px
+				line-height: 36px
+
+		.index-products-cards-slider
+			margin: 20px auto 0
+			position: relative
+
+			.slider
+				margin: -33px 0
+
+			.wrap-product-card
+				max-width: 290px
+				display: block
+				padding: 0
+				margin: 0 20px
+
+				&:nth-child(-n + 3)
+					display: block
+				
+				&:nth-child(-n + 2)
+					display: block
+
+			.slick-list
+				margin: 0 -5px
+
+			.slick-track
+				display: flex
+				align-items: stretch
+				padding: 33px 0
+
+			.slick-slide
+				height: auto
+				max-width: 290px
+				opacity: 0
+				transition: .4s all ease
+
+			.slick-center
+				opacity: 1
+
+			.wrap-slider-arrows
+
+			.slick-arrow
+				position: absolute
+				top: 145px
+				transform: translate(0, -50%)
+				border: none
+
+			.arrow-prev
+				left: 10px
+
+			.arrow-next
+				right: 10px
+
+			.wrap-slider-dots
+				margin: 20px 0
+				z-index: 9
+				position: relative
+				ul
+					justify-content: center
+
+

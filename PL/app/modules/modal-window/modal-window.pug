@@ -1,0 +1,343 @@
+.wrap-modal-window
+	.wrap-modal.container
+
+		.modal.modal-form(data-modal-key="report-me")
+			span.icon-close
+
+			.wrap-form
+				span.form-title Сообщить о поступлении
+
+				form.form
+					span.label Ваше имя
+					.wrap-field
+						input.field.field-name(type="text")
+						span.text-error-empty Поле обязательно для заполнения
+
+					span.label E-mail *
+					.wrap-field
+						input.field.field-email(type="text").error-invalid
+						span.text-error-empty Поле обязательно для заполнения
+						span.text-error-invalid Неверный формат
+
+					span.label Введите код *
+					.wrap-field.wrap-field-capcha
+						.capcha-img
+							img(src="img/capcha.png", alt="")
+						.btn-refresh
+							img(src="img/capcha-refresh.svg", alt="")
+						input.field(type="text").error-invalid
+						span.text-error-empty Поле обязательно для заполнения
+						span.text-error-invalid Неверно введён код
+
+					.wrap-check
+						label(for="check-agree")
+							input(id="check-agree", type="checkbox")
+							.box
+							span.text-error-empty Согласитесь с условиями
+						span.text Я согласен на
+							span.accent-text  обработку персональных данных
+
+					button(type="submit").form-btn.btn-blue
+						span.text Сообщить о поступлении
+
+		.modal.modal-form(data-modal-key="buy-click")
+			span.icon-close
+
+			.wrap-form
+				span.form-title Купить в 1 клик
+
+				form.form
+					span.label Ваше имя *
+					.wrap-field
+						input.field.field-name(type="text")
+						span.text-error-empty Поле обязательно для заполнения
+
+					span.label Телефон *
+					.wrap-field
+						input.field.field-tel(type="tel").error-invalid
+						span.text-error-empty Поле обязательно для заполнения
+						span.text-error-invalid Неверный формат
+
+					.wrap-check
+						label(for="check-agree-1")
+							input(id="check-agree-1", type="checkbox")
+							.box
+							span.text-error-empty Согласитесь с условиями
+						span.text Я согласен на
+							span.accent-text  обработку персональных данных
+
+					button(type="submit").form-btn.btn-blue
+						span.text Купить в 1 клик
+
+					span.botom-text В стоимость заказа может быть<br>включена цена доставки
+
+		.modal.modal-form(data-modal-key="callback")
+			span.icon-close
+
+			.wrap-form
+				span.form-title Обратная связь
+
+				form.form
+					span.label Ваше имя *
+					.wrap-field
+						input.field.field-name(type="text").error-empty
+						span.text-error-empty Поле обязательно для заполнения
+
+					span.label Телефон *
+					.wrap-field
+						input.field.field-tel(type="tel").error-invalid
+						span.text-error-empty Поле обязательно для заполнения
+						span.text-error-invalid Неверный формат
+
+					span.label E-mail *
+					.wrap-field
+						input.field.field-email(type="tel")
+						span.text-error-empty Поле обязательно для заполнения
+						span.text-error-invalid Неверный формат
+
+					span.label Ваш вопрос *
+					.wrap-field
+						textarea.field.error-empty
+						span.text-error-empty Поле обязательно для заполнения
+
+					.wrap-check
+						label(for="check-agree-2")
+							input(id="check-agree-2", type="checkbox").error-empty
+							span.text-error-empty Согласитесь с условиями
+							.box
+						span.text Я согласен на
+							span.accent-text  обработку персональных данных
+
+					button(type="submit").form-btn.btn-blue
+						span.text Отправить
+
+		.modal.modal-form(data-modal-key="sing-in")
+			span.icon-close
+
+			.wrap-form
+				span.form-title Вход в личный кабинет
+
+				form.form.form-sing-in
+					.error-msg
+						span Неверный логин или пароль
+
+					span.label Логин *
+					.wrap-field
+						input.field.field-login(type="text").error-empty
+						span.text-error-empty Поле обязательно для заполнения
+
+					span.label Пароль *
+					.wrap-field
+						input.field.field-password(type="password").error-invalid
+						span.text-error-empty Поле обязательно для заполнения
+						span.text-error-invalid Минимальная длина - 6 символов
+
+					.wrap-check
+						label(for="check-agree-3")
+							input(id="check-agree-3", type="checkbox")
+							.box
+							span.text-error-empty Согласитесь с условиями
+						span.text Запомнить меня
+						a(href="#") Забыли пароль?
+
+					button(type="submit").btn.form-btn.btn-blue
+						span.text Войти
+
+					a(href="#").btn.btn-gray
+						span.text Регистрация
+
+		.modal.modal-product-slider(data-modal-key="product-img-slider")
+			span.icon-close
+
+			.wrap-slider
+				.slider
+					.item
+						.wrap-img(style="background-image: url('img/big-img-1.png')")
+						span.text Смартфон Samsung Galaxy S8 (мистический аметист)
+
+					.item
+						.wrap-img(style="background-image: url('img/big-img-2.png')")
+						span.text Смартфон Samsung Galaxy S8
+
+					.item
+						.wrap-img(style="background-image: url('img/big-img-1.png')")
+						span.text Смартфон Samsung Galaxy S8 (мистический аметист) 2
+
+					.item
+						.wrap-img(style="background-image: url('img/big-img-1.png')")
+						span.text Смартфон Samsung Galaxy S8
+
+					.item
+						.wrap-img(style="background-image: url('img/big-img-1.png')")
+						span.text Смартфон Samsung Galaxy S8
+				.wrap-dots
+				.wrap-nav
+
+		.modal.modal-set-product(data-modal-key="product-set")
+			span.icon-close
+
+			.modal-content.wrap-products-cards
+				span.modal-title Собрать свой набор
+
+				.set-info.wrap-card
+					.cur-product-info
+						.wrap-img
+							img(src="img/set-product-2.png", alt="")
+						span.product-name Смартфон Samsung Galaxy S8 (мистический аметист)
+						span.old-price 270,20 руб.
+						span.cur-price 250,00 руб.
+
+					.set-product-info
+						ul
+							li
+								.wrap-thumb
+									img(src="img/product-2.png")
+
+								span.product-name Смартфон Samsung Galaxy S8 (мистический аметист)
+									.wrap-price-sm.wrap-price
+										span.cur-price 2500,00 руб.
+
+								.wrap-price
+									span.cur-price 2500,00 руб.
+
+								.remove-product.wrap-img
+									img(src="img/icon-cross.svg", alt="")
+
+							li
+								.wrap-thumb
+									img(src="img/product-1.png")
+
+								span.product-name Смартфон Samsung Galaxy S8 (мистический аметист)
+									.wrap-price-sm.wrap-price
+										span.old-price 270,20 руб.
+										span.cur-price 2,00 руб.
+
+								.wrap-price
+									span.old-price 270,20 руб.
+									span.cur-price 2,00 руб.
+
+								.remove-product.wrap-img
+									img(src="img/icon-cross.svg", alt="")
+
+							li
+								.wrap-thumb
+									img(src="img/product-3.png")
+
+								span.product-name Смартфон Samsung Galaxy S8 (мистический<br> аметист) с очень очень длинное название в две строки
+									.wrap-price-sm.wrap-price
+										span.old-price 270,20 руб.
+										span.cur-price 2,00 руб.
+
+								.wrap-price
+									span.old-price 270,20 руб.
+									span.cur-price 250,00 руб.
+
+								.remove-product.wrap-img
+									img(src="img/icon-cross.svg", alt="")
+
+				.wrap-slider
+					.wrap-slider-nav
+						
+					.other-product-slider.wrap-products-cards.wrap-products-cards-index
+						.wrap-card.bonus-action
+							.card
+								a(href="#").wrap-img-product
+									img(src="img/product-3.png", alt="")
+								a(href="#").title Многофункциональное<br>устройство Epson WorkForce 
+								span.old-price 270,20 руб.
+								span.wrap-cur-price
+									span.cur-price 250,00 руб.
+									span.save-prise Экономия 2,99
+								.bottom-info
+									span.btn-product-add-set.btn-white 
+										span.text-before-add Добавить
+						.wrap-card.bonus-action
+							.card
+								a(href="#").wrap-img-product
+									img(src="img/product-3.png", alt="")
+								a(href="#").title Многофункциональное<br>устройство Epson WorkForce 
+								span.old-price 270,20 руб.
+								span.wrap-cur-price
+									span.cur-price 250,00 руб.
+									span.save-prise Экономия 2,99
+								.bottom-info
+									span.btn-product-add-set.btn-white 
+										span.text-before-add Добавить
+						.wrap-card.bonus-full
+							.card
+								a(href="#").wrap-img-product
+									img(src="img/product-1.png", alt="")
+								a(href="#").title Бинокль PENTAX 10x36<br>DCF 
+								span.wrap-cur-price
+									span.cur-price 250,00 руб.
+								.bottom-info
+									span.btn-product-add-set.btn-white 
+										span.text-before-add Добавить
+						.wrap-card.bonus-action
+							.card
+								a(href="#").wrap-img-product
+									img(src="img/product-3.png", alt="")
+								a(href="#").title Многофункциональное<br>устройство Epson WorkForce 
+								span.old-price 270,20 руб.
+								span.wrap-cur-price
+									span.cur-price 250,00 руб.
+									span.save-prise Экономия 2,99
+								.bottom-info
+									span.btn-product-add-set.btn-white 
+										span.text-before-add Добавить
+						.wrap-card.bonus-new
+							.card
+								a(href="#").wrap-img-product
+									img(src="img/product-2.png", alt="")
+								a(href="#").title Смартфон Samsung<br>Galaxy S8 (мистический ам
+								span.old-price 270,20 руб.
+								span.wrap-cur-price
+									span.cur-price 250,00 руб.
+									span.save-prise Экономия 2,99
+								.bottom-info
+									span.btn-product-add-set.btn-white 
+										span.text-before-add Добавить
+
+				.bottom-line
+					table.table-info
+						tr
+							td Стоймость товаров по отдельности:
+							td 
+								em.price 1 100,00 руб.
+							td К оплате: 
+								em.price 1 000,00 руб
+						tr
+							td Стоймость набора:
+							td 
+								em.price 1 000,00 руб.
+							td(rowspan="2").cell-btn
+								a(href="#").btn-blue
+									span.text Купить набор
+						tr
+							td.accent-text Экономия:
+							td 
+								em.price 100,00 руб.
+							td
+
+					.block-mobile-info
+						.row-info
+							span Стоймость<br> товаров по отдельности:
+							em.price 1 000,00 руб.
+
+						.row-info
+							span Стоймость набора:
+							em.price 1 000,00 руб.
+
+						.row-info
+							span.accent-text Экономия:
+							em.price 100,00 руб.
+
+						.row-info
+							span К оплате: 
+							em.price 1 000,00 руб.
+
+						span.btn-blue
+							span.text Купить набор
+
+
+

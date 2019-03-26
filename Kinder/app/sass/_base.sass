@@ -1,0 +1,63 @@
+*
+	box-sizing: border-box
+	font-family: $default-font
+
+body
+	font-size: 16px
+	min-width: 320px
+	min-height: 100vh
+	position: relative
+	line-height: 20px
+	font-family: $default-font
+	font-weight: 400
+	color: $text
+	display: flex
+	overflow-x: hidden
+	flex-direction: column
+
+a
+	color: #fff
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $blue
+	color: #fff
+
+.fixed
+	overflow: hidden
+
+.img-resp
+	img
+		display: block
+		width: 100%
+		height: auto
+
+.container
+	width: 100%
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+
+@media (min-width: 1441px)
+	.container
+		max-width: 1230px
+
+
+@media (min-width: 1291px)
+	.container
+		max-width: 1020px
+
+
+@media (min-width: 769px)
+	.container
+		max-width: 720px
+
+
+@media (min-width: 577px)
+	.container
+		max-width: 540px
+
+

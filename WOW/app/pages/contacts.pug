@@ -1,0 +1,12 @@
+extends ../pug/template/page.pug
+
+block title 
+	| Контакты
+
+block content
+	include ../modules/header/header
+	
+	.page.page-contacts.bg-elements(style="background-image: url('img/bg-elements-7.svg')")
+		include contacts/contacts
+	
+	include ../modules/footer/footer

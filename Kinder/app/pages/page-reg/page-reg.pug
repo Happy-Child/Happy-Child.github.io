@@ -1,0 +1,80 @@
+.page-reg
+	.top-line-page.top-line-page-reg
+		img.bg-orange(src="img/bg-orange-2.png", alt="")
+		img.bg-orange.bg-orange-sm(src="img/bg-orange-2-sm.png", alt="")
+
+		.container
+			span.title Регистрация
+	
+	.page-reg-content
+		.container
+
+			form.form
+				.wrap-fields-group
+					.wrap-field
+						input(type="text", placeholder="Имя").field
+						span.error Заполните поле
+					.wrap-field
+						input(type="text", placeholder="Email").field
+						span.error Заполните поле
+					.wrap-field
+						input(type="password", placeholder="Пароль").field
+						span.error Заполните поле
+					.wrap-field.wrap-field-date
+						input(type="text", datepicker, data-date-format="dd.mm.yy" placeholder="Дата рождения").field
+						span.error Заполните поле
+
+				.wrap-radio-btns
+					.radio
+						input(type="checkbox", id="rb1")
+						label(for="rb1").box
+						span.text Я соглашаюсь на обработку моих пресональных данных
+						span.error Заполните поле
+						
+					.radio
+						input(type="checkbox", id="rb2")
+						label(for="rb2").box
+						span.text Регистрируясь, я соглашаюсь с <a href="#">правилами конкурса</a><br> и подтверждаю, что мне есть 18 лет
+						span.error Заполните поле
+
+				button.btn-accent.btn Зарегистрироваться
+
+				.bottom-row
+					.cell
+						button.cell-title.modal-show(data-modal-key="modal-sign-in") Авторизоваться
+
+					.cell
+						span.cell-title Войти через соцсети
+
+						.row-social
+							a(href="#")
+								.wrap-img
+									img(src="img/vk.png", alt="")
+								.icon-hover
+									img(src="img/vk-hover.png")
+							a(href="#")
+								.wrap-img
+									img(src="img/fb.png", alt="")
+								.icon-hover
+									img(src="img/fb-hover.png")
+							a(href="#")
+								.wrap-img
+									img(src="img/ok.png", alt="")
+								.icon-hover
+									img(src="img/ok-hover.png")
+
+
+	footer.footer
+		img.footer-bg.footer-bg-desktop(src="img/footer-bg-desktop.png", alt="")
+		img.footer-bg.footer-bg-mobile(src="img/footer-bg-mobile.png", alt="")
+
+		.footer-content
+			.container
+				.footer-bottom.row.no-gutters
+					span.copyright © Ferrero 2019 − All rights reserved
+
+					.footer-bottom-text
+						a(href="#", target="_blank") Правила участия
+						a(href="#", target="_blank") Обратная связь
+						a(href="#", target="_blank") Политика в отношении обработки персональных данных
+					

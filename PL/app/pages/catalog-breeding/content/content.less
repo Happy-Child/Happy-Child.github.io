@@ -1,0 +1,144 @@
+@import "../../../less/common/vars";
+
+.lists-group{
+	padding-bottom: 50px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: stretch;
+	align-items: stretch;
+	flex-wrap: wrap;
+	padding-left: 2px;
+
+	.wrap-list{
+		max-width: 25%;
+		width: 100%;
+		padding: 18px;
+		border: 1px solid #D9DCDE;
+		margin: 0 -1px -1px 0;
+
+		.title{
+			font-size: 16px;
+			line-height: 19px;
+			font-family: "RobMed";
+			display: block;
+			color: @blue;
+		}
+
+		ul{
+			li{
+				margin-bottom: 3px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+
+				&:first-child{
+					margin-top: 6px;
+				}
+			}
+
+			ul{
+				display: none;
+			}
+
+			a{
+				color: @textDark;
+
+			}
+
+			.btn-list{
+				display: none;
+				cursor: pointer;
+				-webkit-transition: .3s all ease;
+				-moz-transition: .3s all ease;
+				-ms-transition: .3s all ease;
+				-o-transition: .3s all ease;
+				transition: .3s all ease;
+				-ms-align-items: center;
+				align-items: center;
+				
+				span{
+					border-bottom: 2px dotted @textGrayLight;
+					color: @textGrayLight;
+					transition: .3s all ease;
+				}
+
+				svg{
+					margin-top: 3px;
+					margin-left: 10px;
+					-webkit-transform: rotate(90deg);
+					-moz-transform: rotate(90deg);
+					-ms-transform: rotate(90deg);
+					-o-transform: rotate(90deg);
+					transform: rotate(90deg);
+					
+					path{
+						transition: .3s all ease;
+						fill: @textGrayLight;
+					}
+				}
+
+				&:hover{
+					span{
+						color: @pink;
+						border-color: @pink;
+					}
+					svg{
+						path{
+							fill: @pink;
+						}
+					}
+				}
+			}
+
+			.btn-hide{
+				svg{
+					-webkit-transform: rotate(-90deg);
+					-moz-transform: rotate(-90deg);
+					-ms-transform: rotate(-90deg);
+					-o-transform: rotate(-90deg);
+					transform: rotate(-90deg);
+				}
+			}
+
+			.btn-active{
+				display: -webkit-inline-flex;
+				display: -moz-inline-flex;
+				display: -ms-inline-flex;
+				display: -o-inline-flex;
+				display: inline-flex;
+			}
+		}
+
+		a{
+			&:hover{
+				color: @pink;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 991px) {
+	.lists-group{
+		.wrap-list{
+			max-width: 50%;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.lists-group{
+		.wrap-list{
+			max-width: 100%;
+		}
+
+		.item-no-active{
+			display: none;
+		}
+	}
+}
+
+

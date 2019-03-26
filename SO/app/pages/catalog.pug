@@ -1,0 +1,13 @@
+extends ../pug/template/page.pug
+
+block title 
+	| Каталог
+
+block content
+	main.main
+		include ../modules/breadcrumbs/breadcrumbs
+		
+		include catalog/catalog
+
+		include ../modules/pagination/pagination
+		include ../modules/subscribe-banner/subscribe-banner

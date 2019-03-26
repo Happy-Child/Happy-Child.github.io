@@ -1,0 +1,283 @@
+.persons
+	padding-bottom: 65px
+
+	.wrap-persons-items
+		padding-top: 65px
+
+	.wrap-person-item
+		margin-bottom: 80px
+
+		&:last-child
+			margin-bottom: 0
+
+		.person-item
+			display: flex
+		
+		.wrap-img
+			width: 100%
+			max-width: 272px
+
+		.wrap-content
+			padding-left: 65px
+			width: 100%
+
+		.top-line
+			margin-bottom: 33px
+
+			> *
+				display: block
+
+			.name
+				font-family: Ubuntu
+				font-weight: 300
+				line-height: 1.8rem
+				margin-bottom: 10px
+
+			.position
+				font-family: Gilroy
+				text-transform: uppercase
+				font-size: .7rem
+		
+		.wrap-text
+			background-color: #fff
+			padding: 33px 95px 57px 80px
+			position: relative
+			box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.05)
+			border: 1px solid #E5E5E5
+
+			&::before, &::after
+				content: ""
+				position: absolute
+				width: 30px
+				height: 30px
+				background: url("../img/quote.svg") no-repeat center
+				background-size: contain
+				background-position: center
+
+			&::before
+				top: 14px
+				right: 55px
+
+			&::after
+				bottom: 30px
+				left: 30px
+				transform: rotate(180deg)
+				transform-origin: 50% 50%
+
+		.about-person
+			background-color: $gray
+			padding: 32px 75px
+			display: flex
+			justify-content: space-around
+			margin-top: 45px
+			flex-wrap: wrap
+
+			&-white
+				background-color: #fff
+
+			.item
+				width: 100%
+				max-width: calc(100% / 3)
+				padding: 0 25px
+				text-align: center
+			
+			.wrap-icon	
+				width: 100%
+				max-width: 80px
+				height: 80px
+				margin-bottom: 40px
+				margin-left: auto
+				margin-right: auto
+
+			p
+				color: $dark
+
+		
+
++media(xl)
+	.persons
+		padding-bottom: 55px
+
+		.wrap-persons-items
+			padding-top: 60px
+
+		.wrap-person-item
+			margin-bottom: 70px
+
+			.wrap-img
+				max-width: 220px
+
+			.wrap-content
+				padding-left: 25px
+
+			.top-line
+				margin-bottom: 18px
+
+				.name
+					margin-bottom: 6px
+			
+			.wrap-text
+				
+				padding: 20px 65px 40px 60px
+				font-size: .9rem
+				line-height: 1.3rem
+
+				br
+					display: none
+
+				&::before, &::after
+					width: 25px
+					height: 25px
+
+				&::before
+					top: 10px
+					right: 30px
+
+				&::after
+					bottom: 18px
+					left: 18px
+
+			.about-person
+				padding: 25px 50px
+				margin-top: 25px
+
+				.wrap-icon	
+					margin-bottom: 30px
+
+
++media(lg)
+	.persons
+		padding-bottom: 50px
+
+		.wrap-persons-items
+			padding-top: 50px
+
+		.wrap-person-item
+			margin-bottom: 50px
+
+			.wrap-img
+				max-width: 180px
+
+			.wrap-content
+				padding-left: 20px
+
+			.top-line
+				margin-bottom: 13px
+
+				.name
+					margin-bottom: 0px
+			
+			.wrap-text
+				padding: 20px 30px 20px
+
+				&::before, &::after
+					width: 22px
+					height: 22px
+
+				&::before
+					top: -8px
+					right: -8px
+
+				&::after
+					bottom: -8px
+					left: -8px
+
+			.about-person
+				padding: 25px
+				margin-top: 20px
+
+				.wrap-icon	
+					margin-bottom: 20px
+					max-width: 60px
+					height: 60px
+
+
+
++media(md)
+	.persons
+		.wrap-persons-items
+			padding-top: 40px
+
+		.wrap-person-item
+			margin-bottom: 60px
+
+			.person-item
+				display: block
+
+			.wrap-img
+				max-width: 290px
+				margin-left: auto
+				margin-right: auto
+
+			.wrap-content
+				padding-left: 0px
+				padding-top: 30px
+
+			.top-line
+				margin-bottom: 13px
+				text-align: center
+
+				.name
+					margin-bottom: 3px
+
+				.position
+					font-size: .8rem
+					line-height: 1.2rem
+			
+
+			.wrap-text
+				padding: 20px 30px 20px
+				font-size: 1rem
+				line-height: 1.5rem
+
+				
+			.about-person
+				padding: 20px
+
+				.item
+					padding: 0 8px
+
+				.wrap-icon	
+					margin-bottom: 15px
+					max-width: 45px
+					height: 45px
+
+				p
+					font-size: .9rem
+					line-height: 1.35rem
+
+
++media(sm)
+	.persons
+		.wrap-persons-items
+			padding-top: 35px
+
+		.wrap-person-item
+			margin-bottom: 50px
+
+			.wrap-content
+				padding-top: 20px
+
+			.top-line
+				margin-bottom: 17px
+				.name
+					margin-bottom: 6px
+
+			.wrap-text
+				padding: 15px 20px 30px
+				
+			.about-person
+				padding: 25px 20px 5px
+
+				.item
+					padding: 0 8px 20px
+					width: auto
+					max-width: none
+					flex-basis: 110px
+					max-width: 175px
+					min-width: 150px
+					flex-grow: 1
+
+				.wrap-icon	
+					margin-bottom: 10px
+

@@ -1,0 +1,84 @@
+.inst
+	padding-bottom: 0 !important
+	background-color: $purple
+
+	.page-titles
+		> *, .title
+			color: #fff
+
+		.title
+			margin-bottom: 12px
+
+		a
+			color: $accent
+			&:hover
+				color: $hover
+
+	.wrap-items
+		margin: 40px 0 0
+		display: flex
+		align-items: stretch
+		justify-content: center
+		padding: 0 3px
+
+	.wrap-item
+		width: 100%
+		max-width: calc(100% / 6)
+		padding: 0 3px 6px
+
+
+.footer
+	background-color: $dark
+	text-align: center
+	padding: 72px 0 40px
+
+	.wrap-logo-footer
+		margin-left: auto
+		margin-right: auto
+
+	&-text
+		color: $gray-text
+
+	.wrap-logo-footer, &-text
+		margin-bottom: 42px
+
+	&-nav
+		margin-bottom: 56px
+		ul
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-wrap: wrap
+			margin-bottom: -6px
+			li
+				color: $accent
+				margin: 0 12px 6px
+
+
++media(xl)
+
++media(lg)
+	.footer
+		padding: 50px 0 40px
+
+		.wrap-logo-footer, &-text
+			margin-bottom: 25px
+
+		&-text
+			br
+				display: none
+
+		&-nav
+			margin-bottom: 35px
+
+
++media(md)
+
++media(sm)
+	.inst
+		.wrap-items
+			margin: 30px 0 0
+			flex-wrap: wrap
+
+		.wrap-item
+			max-width: calc(100% / 3)

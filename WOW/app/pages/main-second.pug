@@ -1,0 +1,26 @@
+extends ../pug/template/page.pug
+
+block title 
+	| Главная
+
+block vars
+	- var bodyClass = 'index-page'
+
+block content
+	include ../modules/header/index-header
+
+	include index/banner/banner-video-bg
+
+	include  ../modules/cards/our-programs/our-programs-simple
+
+	include ../modules/cards/portfolio/portfolio-simple-circle
+
+	include index/special-banner/special-banner
+
+	include index/work-steps/work-steps-purple
+
+	include index/about-us/about-us
+	
+	include ../modules/cards/testimonials/testimonials-circle
+
+	include ../modules/footer/footer

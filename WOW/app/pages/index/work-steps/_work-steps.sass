@@ -1,0 +1,130 @@
+.work-steps
+	background-size: 88%
+
+	.wrap-items
+		display: flex
+		flex-wrap: wrap
+		align-items: stretch
+		justify-content: center
+		margin: 55px 0 20px
+
+	.wrap-item
+		width: 100%
+		max-width: 25%
+		margin-bottom: 30px
+
+		.item
+			text-align: center
+			position: relative
+
+		.wrap-decor-line
+			position: absolute
+			top: 10px
+			left: 83%
+
+		.wrap-icon
+			width: 63px
+			position: relative
+			margin-bottom: 25px
+			margin-left: auto
+			margin-right: auto
+
+		.text
+			color: $subtitle
+			padding: 0 32px
+			a
+				color: $accent
+				&:hover
+					color: $hover
+
+		&:nth-child(4)
+			.wrap-decor-line
+				display: none
+
+		&:nth-child(7)
+			.wrap-decor-line
+				left: 87%
+
+
+	&-purple
+		background-color: $purple
+		.page-titles
+			> *, .title
+				color: #fff
+
+		.wrap-item
+			.wrap-icon
+				path
+					fill: $accent
+			.text
+				color: #fff
+				font-weight: 300
+	
++media(xl)
+	.work-steps
+		.wrap-item
+
+			.wrap-decor-line
+				left: 78%
+
+			.text
+				padding: 0 5px
+
+
++media(lg)
+	.work-steps
+		.wrap-item
+
+			.wrap-decor-line
+				left: 78%
+				width: 75px
+				svg
+					width: 100%
+					height: auto
+					display: block
+
+			.wrap-icon
+				width: 50px
+
+			.text
+				font-size: .9rem
+				line-height: 1.4rem
+
+
++media(md)
+	.work-steps
+		.wrap-item
+
+			.wrap-decor-line
+				left: 83%
+				width: 40px
+
+			.wrap-icon
+				width: 37px
+				margin-bottom: 18px
+
+			.text
+				font-size: .8rem
+				line-height: 1.1rem
+
+
++media(sm)
+	.work-steps
+		.wrap-items
+			flex-wrap: wrap
+			justify-content: center
+			margin: 45px 0 10px
+
+		.wrap-item
+			max-width: 200px
+			width: 100%
+
+			.text
+				font-size: 1rem
+				line-height: 1.4rem
+
+			.wrap-decor-line
+				display: none
+
+			.wrap-icon
+

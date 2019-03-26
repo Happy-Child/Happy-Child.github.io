@@ -1,0 +1,16 @@
+.wrap-basket-bar
+
+	include ../../../modules/box-result-price/box-result-price
+
+	.wrap-promo-field.element-shadow-static
+		form
+			span.form-title.text-fw-bold Промокод
+				.icon-dropdown.el-show-dropdown ?
+				.wrap-dropdown-label
+					.dropdown-label.text-small Может не суммироваться<br> с другими предложениями
+
+			.wrap-field
+				input(type="text", placeholder="Промокод")
+
+			button(type="submit").btn.btn-border Применить
+		

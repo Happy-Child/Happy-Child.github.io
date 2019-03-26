@@ -1,0 +1,60 @@
+.row-brands
+	background-color: #fff
+	padding: 40px 0
+
+	.wrap-slider-dots
+		ul li:not(.slick-active)
+			background-color: #dedede
+
+	.wrap-brand
+		width: 170px
+		height: 90px
+		padding: 15px
+		display: flex
+		justify-content: center
+		align-items: center
+
+	svg
+		max-width: 100%
+		max-height: 100%
+		&:hover
+			path
+				fill: $hover-btns-links
+			.adidas-stroke
+				stroke: $hover-btns-links
+			.reebok-point
+				fill: #fff
+
+
+
++media-breakpoint-down(lg)
+
++media-breakpoint-down(md)
+	.row-brands
+		padding: 20px 0
+
+		.wrap-brand
+			width: 130px
+			height: 60px
+			padding: 15px
+
+
++media-breakpoint-down(sm)
+	.row-brands
+		padding-bottom: 30px
+		.wrap-slider-dots
+			margin-top: 15px
+
+
++media-breakpoint-down(xs)
+	.row-brands
+		.wrap-brand
+			padding: 16px
+			height: 64px
+
+		.slick-list
+			margin: 0 -15px
+
+		.slick-track
+			padding-right: 15px
+

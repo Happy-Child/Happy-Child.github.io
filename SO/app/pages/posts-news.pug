@@ -1,0 +1,12 @@
+extends ../pug/template/page.pug
+
+block title 
+	| Новости
+
+block content
+	main.main
+		include ../modules/breadcrumbs/breadcrumbs
+
+		include posts-news/posts-news
+
+		include ../modules/subscribe-banner/subscribe-banner

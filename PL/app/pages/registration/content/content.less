@@ -1,0 +1,108 @@
+@import "../../../less/common/vars";
+
+.registration{
+	.other-info{
+		max-width: calc(100% - 767px);
+		padding: 34px 25px;
+		border-left: 1px solid #EAEAEA;
+
+		p{
+			display: block;
+
+			&:first-child{
+				font-family: "RobMed";
+				margin-bottom: 25px;
+				padding-bottom: 25px;
+				color: @green;
+				border-bottom: 1px solid #EAEAEA;
+			}
+
+			.btn{
+				color: @blue;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.wrap-mobile-text{
+		order: 3;
+		display: none;
+		padding: 25px;
+		border-top: 1px solid #EAEAEA;
+
+		.btn{
+			color: @blue;
+			cursor: pointer;
+		}
+	}
+}
+
+@media (min-width: 1260px) {
+
+}
+
+@media (max-width: 1259px) {
+	.registration{
+		.other-info{
+			order: 1;
+			max-width: 100%;
+			border: none;
+			padding: 25px;
+
+			p{
+				&:first-child{
+					padding: 0;
+					margin: 0;
+					border: none;
+				}
+				&:last-child{
+					display: none;
+				}
+			}
+		}
+
+		.wrap-mobile-text{
+			display: block;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+	.registration{
+		.other-info{
+			padding: 20px;
+
+			p:first-child{
+				br{
+					display: none;
+				}
+			}
+		}
+
+		.wrap-mobile-text{
+			padding: 20px;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.registration{
+		.other-info{
+			padding: 15px;
+
+			p{
+				font-size: 12px;
+				line-height: 16px;
+			}
+		}
+
+		.wrap-mobile-text{
+			padding: 20px 15px;
+		}
+	}
+}
+

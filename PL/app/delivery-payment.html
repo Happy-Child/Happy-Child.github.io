@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title> Доставка и оплата
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#fff">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-favicon.png">
+    <link rel="stylesheet" href="libs/css/hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" href="libs/css/reset/reset.min.css">
+    <link rel="stylesheet" href="libs/css/selectize/selectize.min.css">
+    <link rel="stylesheet" href="libs/css/custom-scrollbar/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="libs/css/slick/slick.css">
+    <link rel="stylesheet" href="libs/css/jq-ui/jquery-ui.css">
+    <link rel="stylesheet" href="libs/css/mmenu/jquery.mmenu.all.css">
+    <link rel="stylesheet" href="libs/css/slider-swiper/swiper.min.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <!--Maps--><script src="https://api-maps.yandex.ru/2.1/?apikey=<a6d9fe96-0aa0-4450-bce7-6291a3a230fe>&lang=ru_RU", type="text/javascript"></script>
+  </head>
+  <body>
+    <nav class="mobile-menu">
+      <ul>
+        <li class="item-icon"><a href="#">
+            <div class="icon"><img src="img/mob-menu-icon-1.svg" alt=""></div>Каталог товаров</a>
+          <ul>
+            <li> <a href="#">Акустика</a></li>
+            <li> <a href="#">Бинокли и телескопы</a>
+              <ul>
+                <li> <a href="#">Audac</a></li>
+                <li> <a href="#">Акустические системы</a></li>
+                <li> <a href="#">Микшеры</a></li>
+                <li> <a href="#">Направленный звук</a></li>
+              </ul>
+            </li>
+            <li> <a href="#">Бумага и пленка</a>
+              <ul>
+                <li><a href="#"> Провода</a></li>
+                <li> <a href="#">Сабвуферы</a></li>
+                <li> <a href="#">Сабвуферы</a></li>
+                <li> <a href="#">Усилители</a></li>
+                <li> <a href="#">Саунбары</a></li>
+                <li> <a href="#">Направленный звук</a></li>
+              </ul>
+            </li>
+            <li> <a href="#">Дополнительная гарантия Epson Cover Plus</a></li>
+            <li> <a href="#">Кабели интерфейсные</a>
+              <ul>
+                <li> <a href="#">Audac</a></li>
+                <li> <a href="#">Провода</a></li>
+                <li> <a href="#">Акустические системы</a></li>
+              </ul>
+            </li>
+            <li> <a href="#">Компьютеры, ноутбуки, комплектующие</a></li>
+            <li> <a href="#">Кронштейны, стойки, держатели</a>
+              <ul>
+                <li> <a href="#">Сабвуферы</a></li>
+                <li> <a href="#">Усилители</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="item-icon"><a href="#">
+            <div class="icon"><img src="img/mob-menu-icon-2.svg" alt=""></div>Корзина
+            <div class="icon-count icon-count-gray">99</div></a></li>
+        <li class="item-icon"><a href="#">
+            <div class="icon"><img src="img/mob-menu-icon-3.svg" alt=""></div>Отложенные
+            <div class="icon-count">6</div></a></li>
+        <li class="item-icon"><a href="#">
+            <div class="icon"><img src="img/mob-menu-icon-4.svg" alt=""></div>Сравнение товаров
+            <div class="icon-count">12</div></a></li>
+        <li class="item-gray item-icon item-user"><a href="#">
+            <div class="icon"><img src="img/icon-user.svg" alt=""></div>Личный кабинет</a>
+          <ul>
+            <li><a class="modal-show" href="#" data-modal-key="sing-in">Вход</a></li>
+            <li><a href="#">Регистрация</a></li>
+          </ul>
+        </li>
+        <li class="item-gray"><a href="#">Личный кабинет</a>
+          <ul>
+            <li> <a href="#">Вход</a></li>
+            <li> <a href="#">Регистрация</a></li>
+          </ul>
+        </li>
+        <li class="item-gray"><a href="#">Компания</a>
+          <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Оптовый отдел</a></li>
+            <li><a href="#">Сервисный центр</a></li>
+            <li><a href="#">Учебный центр</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </li>
+        <li class="item-gray"><a href="#">Интернет-магазин</a>
+          <ul>
+            <li><a href="#">Интернет-магазин</a></li>
+            <li><a href="#">Интернет-магазин</a></li>
+            <li><a href="#">Интернет-магазин</a></li>
+          </ul>
+        </li>
+        <li class="item-gray"><a href="#">Наши контакты</a>
+          <ul>
+            <li data-style-type="contact"><a href="tel:375172629111">+375 17 262 91 11<span class="text-gray"> (многоканалный)</span></a></li>
+            <li data-style-type="contact"><a href="tel:375172161922">+375 17 216 19 22</a></li>
+            <li data-style-type="contact"><a href="tel:375172664910">+375 17 266 49 10</a></li>
+            <li data-style-type="contact"><a href="tel:375296960580">+375 29 696 05 80<span> (велком)</span></a></li>
+            <li data-style-type="contact-link"><a href="mailto:info@printlux.by">info@printlux.by</a></li>
+          </ul>
+        </li>
+        <li class="item-gray"><a href="#">Время работы</a>
+          <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </li>
+        <li class="item-gray item-phones"><a href="tel:375297776768">+375 (29) 777 67 68</a><a href="tel:375258879799">+375 (25) 887 97 99</a></li>
+      </ul>
+    </nav>
+    <div class="wrap-modal-window">
+      <div class="wrap-modal container">
+        <div class="modal modal-form" data-modal-key="report-me"><span class="icon-close"></span>
+          <div class="wrap-form"><span class="form-title">Сообщить о поступлении</span>
+            <form class="form"><span class="label">Ваше имя</span>
+              <div class="wrap-field">
+                <input class="field field-name" type="text"><span class="text-error-empty">Поле обязательно для заполнения</span>
+              </div><span class="label">E-mail *</span>
+              <div class="wrap-field">
+                <input class="field field-email error-invalid" type="text"><span class="text-error-empty">Поле обязательно для заполнения</span><span class="text-error-invalid">Неверный формат</span>
+              </div><span class="label">Введите код *</span>
+              <div class="wrap-field wrap-field-capcha">
+                <div class="capcha-img"><img src="img/capcha.png" alt=""></div>
+                <div class="btn-refresh"><img src="img/capcha-refresh.svg" alt=""></div>
+                <input class="field error-invalid" type="text"><span class="text-error-empty">Поле обязательно для заполнения</span><span class="text-error-invalid">Неверно введён код</span>
+              </div>
+              <div class="wrap-check">
+                <label for="check-agree">
+                  <input id="check-agree" type="checkbox">
+                  <div class="box"></div><span class="text-error-empty">Согласитесь с условиями</span>
+                </label><span class="text">Я согласен на<span class="accent-text"> обработку персональных данных</span></span>
+              </div>
+              <button class="form-btn btn-blue" type="submit"><span class="text">Сообщить о поступлении</span></button>
+            </form>
+          </div>
+        </div>
+        <div class="modal modal-form" data-modal-key="buy-click"><span class="icon-close"></span>
+          <div class="wrap-form"><span class="form-title">Купить в 1 клик</span>
+            <form class="form"><span class="label">Ваше имя *</span>
+              <div class="wrap-field">
+                <input class="field field-name" type="text"><span class="text-error-empty">Поле обязательно для заполнения</span>
+              </div><span class="label">Телефон *</span>
+              <div class="wrap-field">
+                <input class="field field-tel error-invalid" type="tel"><span class="text-error-empty">Поле обязательно для заполнения</span><span class="text-error-invalid">Неверный формат</span>
+              </div>
+              <div class="wrap-check">
+                <label for="check-agree-1">
+                  <input id="check-agree-1" type="checkbox">
+                  <div class="box"></div><span class="text-error-empty">Согласитесь с условиями</span>
+                </label><span class="text">Я согласен на<span class="accent-text"> обработку персональных данных</span></span>
+              </div>
+              <button class="form-btn btn-blue" type="submit"><span class="text">Купить в 1 клик</span></button><span class="botom-text">В стоимость заказа может быть<br>включена цена доставки</span>
+            </form>
+          </div>
+        </div>
+        <div class="modal modal-form" data-modal-key="callback"><span class="icon-close"></span>
+          <div class="wrap-form"><span class="form-title">Обратная связь</span>
+            <form class="form"><span class="label">Ваше имя *</span>
+              <div class="wrap-field">
+                <input class="field field-name error-empty" type="text"><span class="text-error-empty">Поле обязательно для заполнения</span>
+              </div><span class="label">Телефон *</span>
+              <div class="wrap-field">
+                <input class="field field-tel error-invalid" type="tel"><span class="text-error-empty">Поле обязательно для заполнения</span><span class="text-error-invalid">Неверный формат</span>
+              </div><span class="label">E-mail *</span>
+              <div class="wrap-field">
+                <input class="field field-email" type="tel"><span class="text-error-empty">Поле обязательно для заполнения</span><span class="text-error-invalid">Неверный формат</span>
+              </div><span class="label">Ваш вопрос *</span>
+              <div class="wrap-field">
+                <textarea class="field error-empty"></textarea><span class="text-error-empty">Поле обязательно для заполнения</span>
+              </div>
+              <div class="wrap-check">
+                <label for="check-agree-2">
+                  <input class="error-empty" id="check-agree-2" type="checkbox"><span class="text-error-empty">Согласитесь с условиями</span>
+                  <div class="box"></div>
+                </label><span class="text">Я согласен на<span class="accent-text"> обработку персональных данных</span></span>
+              </div>
+              <button class="form-btn btn-blue" type="submit"><span class="text">Отправить</span></button>
+            </form>
+          </div>
+        </div>
+        <div class="modal modal-form" data-modal-key="sing-in"><span class="icon-close"></span>
+          <div class="wrap-form"><span class="form-title">Вход в личный кабинет</span>
+            <form class="form form-sing-in">
+              <div class="error-msg"><span>Неверный логин или пароль</span></div><span class="label">Логин *</span>
+              <div class="wrap-field">
+                <input class="field field-login error-empty" type="text"><span class="text-error-empty">Поле обязательно для заполнения</span>
+              </div><span class="label">Пароль *</span>
+              <div class="wrap-field">
+                <input class="field field-password error-invalid" type="password"><span class="text-error-empty">Поле обязательно для заполнения</span><span class="text-error-invalid">Минимальная длина - 6 символов</span>
+              </div>
+              <div class="wrap-check">
+                <label for="check-agree-3">
+                  <input id="check-agree-3" type="checkbox">
+                  <div class="box"></div><span class="text-error-empty">Согласитесь с условиями</span>
+                </label><span class="text">Запомнить меня</span><a href="#">Забыли пароль?</a>
+              </div>
+              <button class="btn form-btn btn-blue" type="submit"><span class="text">Войти</span></button><a class="btn btn-gray" href="#"><span class="text">Регистрация</span></a>
+            </form>
+          </div>
+        </div>
+        <div class="modal modal-product-slider" data-modal-key="product-img-slider"><span class="icon-close"></span>
+          <div class="wrap-slider">
+            <div class="slider">
+              <div class="item">
+                <div class="wrap-img" style="background-image: url('img/big-img-1.png')"></div><span class="text">Смартфон Samsung Galaxy S8 (мистический аметист)</span>
+              </div>
+              <div class="item">
+                <div class="wrap-img" style="background-image: url('img/big-img-2.png')"></div><span class="text">Смартфон Samsung Galaxy S8</span>
+              </div>
+              <div class="item">
+                <div class="wrap-img" style="background-image: url('img/big-img-1.png')"></div><span class="text">Смартфон Samsung Galaxy S8 (мистический аметист) 2</span>
+              </div>
+              <div class="item">
+                <div class="wrap-img" style="background-image: url('img/big-img-1.png')"></div><span class="text">Смартфон Samsung Galaxy S8</span>
+              </div>
+              <div class="item">
+                <div class="wrap-img" style="background-image: url('img/big-img-1.png')"></div><span class="text">Смартфон Samsung Galaxy S8</span>
+              </div>
+            </div>
+            <div class="wrap-dots"></div>
+            <div class="wrap-nav"></div>
+          </div>
+        </div>
+        <div class="modal modal-set-product" data-modal-key="product-set"><span class="icon-close"></span>
+          <div class="modal-content wrap-products-cards"><span class="modal-title">Собрать свой набор</span>
+            <div class="set-info wrap-card">
+              <div class="cur-product-info">
+                <div class="wrap-img"><img src="img/set-product-2.png" alt=""></div><span class="product-name">Смартфон Samsung Galaxy S8 (мистический аметист)</span><span class="old-price">270,20 руб.</span><span class="cur-price">250,00 руб.</span>
+              </div>
+              <div class="set-product-info">
+                <ul>
+                  <li>
+                    <div class="wrap-thumb"><img src="img/product-2.png"></div><span class="product-name">Смартфон Samsung Galaxy S8 (мистический аметист)
+                      <div class="wrap-price-sm wrap-price"><span class="cur-price">2500,00 руб.</span></div></span>
+                    <div class="wrap-price"><span class="cur-price">2500,00 руб.</span></div>
+                    <div class="remove-product wrap-img"><img src="img/icon-cross.svg" alt=""></div>
+                  </li>
+                  <li>
+                    <div class="wrap-thumb"><img src="img/product-1.png"></div><span class="product-name">Смартфон Samsung Galaxy S8 (мистический аметист)
+                      <div class="wrap-price-sm wrap-price"><span class="old-price">270,20 руб.</span><span class="cur-price">2,00 руб.</span></div></span>
+                    <div class="wrap-price"><span class="old-price">270,20 руб.</span><span class="cur-price">2,00 руб.</span></div>
+                    <div class="remove-product wrap-img"><img src="img/icon-cross.svg" alt=""></div>
+                  </li>
+                  <li>
+                    <div class="wrap-thumb"><img src="img/product-3.png"></div><span class="product-name">Смартфон Samsung Galaxy S8 (мистический<br> аметист) с очень очень длинное название в две строки
+                      <div class="wrap-price-sm wrap-price"><span class="old-price">270,20 руб.</span><span class="cur-price">2,00 руб.</span></div></span>
+                    <div class="wrap-price"><span class="old-price">270,20 руб.</span><span class="cur-price">250,00 руб.</span></div>
+                    <div class="remove-product wrap-img"><img src="img/icon-cross.svg" alt=""></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="wrap-slider">
+              <div class="wrap-slider-nav"></div>
+              <div class="other-product-slider wrap-products-cards wrap-products-cards-index">
+                <div class="wrap-card bonus-action">
+                  <div class="card"><a class="wrap-img-product" href="#"><img src="img/product-3.png" alt=""></a><a class="title" href="#">Многофункциональное<br>устройство Epson WorkForce </a><span class="old-price">270,20 руб.</span><span class="wrap-cur-price"><span class="cur-price">250,00 руб.</span><span class="save-prise">Экономия 2,99</span></span>
+                    <div class="bottom-info"><span class="btn-product-add-set btn-white"> <span class="text-before-add">Добавить</span></span></div>
+                  </div>
+                </div>
+                <div class="wrap-card bonus-action">
+                  <div class="card"><a class="wrap-img-product" href="#"><img src="img/product-3.png" alt=""></a><a class="title" href="#">Многофункциональное<br>устройство Epson WorkForce </a><span class="old-price">270,20 руб.</span><span class="wrap-cur-price"><span class="cur-price">250,00 руб.</span><span class="save-prise">Экономия 2,99</span></span>
+                    <div class="bottom-info"><span class="btn-product-add-set btn-white"> <span class="text-before-add">Добавить</span></span></div>
+                  </div>
+                </div>
+                <div class="wrap-card bonus-full">
+                  <div class="card"><a class="wrap-img-product" href="#"><img src="img/product-1.png" alt=""></a><a class="title" href="#">Бинокль PENTAX 10x36<br>DCF </a><span class="wrap-cur-price"><span class="cur-price">250,00 руб.</span></span>
+                    <div class="bottom-info"><span class="btn-product-add-set btn-white"> <span class="text-before-add">Добавить</span></span></div>
+                  </div>
+                </div>
+                <div class="wrap-card bonus-action">
+                  <div class="card"><a class="wrap-img-product" href="#"><img src="img/product-3.png" alt=""></a><a class="title" href="#">Многофункциональное<br>устройство Epson WorkForce </a><span class="old-price">270,20 руб.</span><span class="wrap-cur-price"><span class="cur-price">250,00 руб.</span><span class="save-prise">Экономия 2,99</span></span>
+                    <div class="bottom-info"><span class="btn-product-add-set btn-white"> <span class="text-before-add">Добавить</span></span></div>
+                  </div>
+                </div>
+                <div class="wrap-card bonus-new">
+                  <div class="card"><a class="wrap-img-product" href="#"><img src="img/product-2.png" alt=""></a><a class="title" href="#">Смартфон Samsung<br>Galaxy S8 (мистический ам</a><span class="old-price">270,20 руб.</span><span class="wrap-cur-price"><span class="cur-price">250,00 руб.</span><span class="save-prise">Экономия 2,99</span></span>
+                    <div class="bottom-info"><span class="btn-product-add-set btn-white"> <span class="text-before-add">Добавить</span></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-line">
+              <table class="table-info">
+                <tr>
+                  <td>Стоймость товаров по отдельности:</td>
+                  <td> <em class="price">1 100,00 руб.</em></td>
+                  <td>К оплате: <em class="price">1 000,00 руб</em></td>
+                </tr>
+                <tr>
+                  <td>Стоймость набора:</td>
+                  <td> <em class="price">1 000,00 руб.</em></td>
+                  <td class="cell-btn" rowspan="2"><a class="btn-blue" href="#"><span class="text">Купить набор</span></a></td>
+                </tr>
+                <tr>
+                  <td class="accent-text">Экономия:</td>
+                  <td> <em class="price">100,00 руб.</em></td>
+                  <td></td>
+                </tr>
+              </table>
+              <div class="block-mobile-info">
+                <div class="row-info"><span>Стоймость<br> товаров по отдельности:</span><em class="price">1 000,00 руб.</em></div>
+                <div class="row-info"><span>Стоймость набора:</span><em class="price">1 000,00 руб.</em></div>
+                <div class="row-info"><span class="accent-text">Экономия:</span><em class="price">100,00 руб.</em></div>
+                <div class="row-info"><span>К оплате: </span><em class="price">1 000,00 руб.</em></div><span class="btn-blue"><span class="text">Купить набор</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap-btn-to-top"><span class="btn-to-top"><svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.2724 7.66891L6.22406 13.723C6.58719 14.0923 7.1761 14.0923 7.53923 13.723C7.90243 13.3535 7.90243 12.7546 7.53923 12.3852L3.1751 7.94596L19.0701 7.94596C19.5836 7.94596 20 7.5224 20 7.00001C20 6.4777 19.5836 6.05406 19.0701 6.05406L3.1751 6.05406L7.53908 1.61485C7.90228 1.2454 7.90228 0.646498 7.53908 0.277049C7.35756 0.0924759 7.11949 0 6.8815 0C6.6435 0 6.40551 0.0924759 6.22391 0.277049L0.2724 6.33111C-0.0907993 6.70056 -0.0907993 7.29946 0.2724 7.66891Z" fill="#A1A1A1"/>
+</svg></span></div><div class="preloader">
+<div class="loader">
+<div class="circle item0"></div>
+<div class="circle item1"></div>
+<div class="circle item2"></div>
+</div>
+</div>
+    <div class="wrap-fixed-bar">
+      <div class="wrap-btns">
+        <div class="wrap-btn">
+          <div class="btn" data-show-key="show-basket">
+            <div class="wrap-icon img-resp"><img src="img/icon-shopping-cart.svg" alt=""></div><span class="count">10</span>
+          </div>
+          <div class="btn-label">В корзине товаров<br>на сумму:<span class="total-price"> 50 000.00</span> руб.</div>
+        </div>
+        <div class="wrap-btn">
+          <div class="btn" data-show-key="show-deferred">
+            <div class="wrap-icon img-resp"><img src="img/icon-heart.svg" alt=""></div><span class="count">2</span>
+          </div>
+          <div class="btn-label">Отложенных товаров<br>на сумму:<span class="total-price"> 2.00</span> руб.</div>
+        </div>
+        <div class="wrap-btn"><a class="btn btn-compare" href="#">
+            <div class="wrap-icon img-resp"><img src="img/icon-diagram.svg" alt=""></div><span class="count">10</span></a>
+          <div class="btn-label">Сравнение товаров</div>
+        </div>
+      </div>
+      <div class="wrap-content">
+        <div class="content content-cart" data-show-key="show-basket">
+          <div class="top-line"><span class="title">Корзина</span><span class="btn-gray btn-clear-basket"><span class="text">Очистить</span></span></div>
+          <div class="info">
+            <table class="table-products table-products-fix-bar">
+              <tr class="row-title">
+                <td></td>
+                <td>Название</td>
+                <td>Цена</td>
+                <td>Кол-во</td>
+                <td>Сумма</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="wrap-img-product"><img src="img/product-3.png" alt=""></div>
+                </td>
+                <td>
+                  <div class="wrap-product-info">
+                    <div class="wrap-text"><span class="title">Смартфон Samsung<br>Galaxy S8 (мистический аметист)</span><span class="subtext">Артикуль:<em> 3356528</em></span></div>
+                  </div>
+                </td>
+                <td><span class="cur-price price">1 100,00 руб.</span></td>
+                <td>
+                  <div class="wrap-product-counter">
+                    <div class="icon-counter less"><img src="img/icon-minus.svg" alt=""></div>
+                    <input class="cur-counter" type="text" value="1" maxlength="3">
+                    <div class="icon-counter plus"><img src="img/icon-plus.svg" alt=""></div>
+                  </div>
+                </td>
+                <td><span class="price">1 100,00 руб.</span></td>
+                <td>
+                  <div class="remove-product wrap-img"><img src="img/icon-cross.svg" alt=""></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="wrap-img-product"><img src="img/product-1.png" alt=""></div>
+                </td>
+                <td>
+                  <div class="wrap-product-info">
+                    <div class="wrap-text"><span class="title">Смартфон Samsung<br>Galaxy S8 (мистический аметист)</span><span class="subtext">Артикуль:<em> 3356528</em></span></div>
+                  </div>
+                </td>
+                <td><span class="old-price">110,99 руб.</span><span class="cur-price price">1 100,00 руб.</span></td>
+                <td>
+                  <div class="wrap-product-counter">
+                    <div class="icon-counter less"><img src="img/icon-minus.svg" alt=""></div>
+                    <input class="cur-counter" type="text" value="1" maxlength="3">
+                    <div class="icon-counter plus"><img src="img/icon-plus.svg" alt=""></div>
+                  </div>
+                </td>
+                <td><span class="price">1 100,00 руб.</span></td>
+                <td>
+                  <div class="remove-product wrap-img"><img src="img/icon-cross.svg" alt=""></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="wrap-img-product"><img src="img/product-2.png" alt=""></div>
+                </td>
+                <td>
+                  <div class="wrap-product-info">
+                    <div class="wrap-text"><span class="title">Смартфон Samsung<br>Galaxy S8 (мистический аметист)</span><span class="subtext">Артикуль:<em> 3356528</em></span></div>
+                  </div>
+                </td>
+                <td><span class="old-price">110,99 руб.</span><span class="cur-price price">1 100,00 руб.</span></td>
+                <td>
+                  <div class="wrap-product-counter">
+                    <div class="icon-counter less"><img src="img/icon-minus.svg" alt=""></div>
+                    <input class="cur-counter" type="text" value="1" maxlength="3">
+                    <div class="icon-counter plus"><img src="img/icon-plus.svg" alt=""></div>
+                  </div>
+                </td>
+                <td><span class="price">1 100,00 руб.</span></td>
+                <td>
+                  <div class="remove-product wrap-img"><img src="img/icon-cross.svg" alt=""></div>
+                </td>
+              </tr>
+            </table>
+            <div class="bottom-line">
+              <div class="total-price"><span class="text">Итого:</span><span class="price">2 200, 00 руб.</span></div>
+              <div class="btns-row"><span class="btn-hide-bar"> 
+                  <div class="icon"><svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.08944 8.9101L0.0859408 4.70734C0.0286771 4.64729 -3.39776e-08 4.57821 -3.39776e-08 4.50006C-3.39776e-08 4.42192 0.0286771 4.35271 0.0859408 4.29263L4.08944 0.0902123C4.14679 0.0300076 4.2126 0 4.28708 0C4.36152 0 4.42742 0.0301023 4.48466 0.0902123L4.91409 0.541021C4.97135 0.601131 4.99997 0.670306 4.99997 0.748452C4.99997 0.826598 4.97135 0.895774 4.91409 0.955884L1.53779 4.50006L4.9143 8.04437C4.97156 8.10445 5 8.17365 5 8.25167C5 8.32995 4.97138 8.39912 4.9143 8.4592L4.48469 8.91007C4.42745 8.97015 4.36152 9 4.28711 9C4.2126 9.00003 4.1467 8.97018 4.08944 8.9101Z" fill="#292929"/>
+</svg>
+                  </div>Вернуться к покупкам</span>
+                <div class="btn-group"><a class="btn-white" href="#"> <span class="text">Перейти в корзину</span></a><a class="btn-blue" href="#"> <span class="text">Оформить заказ</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content content-deferred" data-show-key="show-deferred">
+          <div class="top-line"><span class="title">Отложенные товары</span><span class="btn-gray btn-clear-basket"><span class="text">Очистить</span></span></div>
+          <div class="info">
+            <table class="table-products table-products-fix-bar">
+              <tr class="row-title">
+                <td></td>
+                <td>Название</td>
+                <td>Цена</td>
+                <td>Кол-во</td>
+                <td>Сумма</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="wrap-img-product"><img src="img/product-3.png" alt=""></div>
+                </td>
+                <td>
+                  <div class="wrap-product-info">
+                    <div class="wrap-text"><span class="title">Смартфон Samsung<br>Galaxy S8 (мистический аметист в длинную стоку)</span><span class="subtext">Артикуль:<em> 3356528</em></span></div>
+                  </div>
+                </td>
+                <td><span class="old-price">110,99 руб.</span><span class="cur-price price">1 100,00 руб.</span></td>
+                <td>
+                  <div class="wrap-product-counter">
+                    <div class="icon-counter less"><img src="img/icon-minus.svg" alt=""></div>
+                    <input class="cur-counter" type="text" value="1" maxlength="3">
+                    <div class="icon-counter plus"><img src="img/icon-plus.svg" alt=""></div>
+                  </div>
+                </td>
+                <td><span class="price">1 100,00 руб.</span></td>
+                <td>
+                  <div class="remove-product wrap-img"><img src="img/icon-cross.svg" alt=""></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="wrap-img-product"><img src="img/product-1.png" alt=""></div>
+                </td>
+                <td>
+                  <div class="wrap-product-info">
+                    <div class="wrap-text"><span class="title">Смартфон Samsung<br>Galaxy S8 (мистический аметист)</span><span class="subtext">Артикуль:<em> 3356528</em></span></div>
+                  </div>
+                </td>
+                <td><span class="old-price">110,99 руб.</span><span class="cur-price price">1 100,00 руб.</span></td>
+                <td>
+                  <div class="wrap-product-counter">
+                    <div class="icon-counter less"><img src="img/icon-minus.svg" alt=""></div>
+                    <input class="cur-counter" type="text" value="1" maxlength="3">
+                    <div class="icon-counter plus"><img src="img/icon-plus.svg" alt=""></div>
+                  </div>
+                </td>
+                <td><span class="price">1 100,00 руб.</span></td>
+                <td>
+                  <div class="remove-product wrap-img"><img src="img/icon-cross.svg" alt=""></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="wrap-img-product"><img src="img/product-2.png" alt=""></div>
+                </td>
+                <td>
+                  <div class="wrap-product-info">
+                    <div class="wrap-text"><span class="title">Смартфон Samsung<br>Galaxy S8 (мистический аметист)</span><span class="subtext">Артикуль:<em> 3356528</em></span></div>
+                  </div>
+                </td>
+                <td><span class="old-price">110,99 руб.</span><span class="cur-price price">1 100,00 руб.</span></td>
+                <td>
+                  <div class="wrap-product-counter">
+                    <div class="icon-counter less"><img src="img/icon-minus.svg" alt=""></div>
+                    <input class="cur-counter" type="text" value="1" maxlength="3">
+                    <div class="icon-counter plus"><img src="img/icon-plus.svg" alt=""></div>
+                  </div>
+                </td>
+                <td><span class="price">1 100,00 руб.</span></td>
+                <td>
+                  <div class="remove-product wrap-img"><img src="img/icon-cross.svg" alt=""></div>
+                </td>
+              </tr>
+            </table>
+            <div class="bottom-line">
+              <div class="btns-row"><span class="btn-hide-bar"> 
+                  <div class="icon"><svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.08944 8.9101L0.0859408 4.70734C0.0286771 4.64729 -3.39776e-08 4.57821 -3.39776e-08 4.50006C-3.39776e-08 4.42192 0.0286771 4.35271 0.0859408 4.29263L4.08944 0.0902123C4.14679 0.0300076 4.2126 0 4.28708 0C4.36152 0 4.42742 0.0301023 4.48466 0.0902123L4.91409 0.541021C4.97135 0.601131 4.99997 0.670306 4.99997 0.748452C4.99997 0.826598 4.97135 0.895774 4.91409 0.955884L1.53779 4.50006L4.9143 8.04437C4.97156 8.10445 5 8.17365 5 8.25167C5 8.32995 4.97138 8.39912 4.9143 8.4592L4.48469 8.91007C4.42745 8.97015 4.36152 9 4.28711 9C4.2126 9.00003 4.1467 8.97018 4.08944 8.9101Z" fill="#292929"/>
+</svg>
+                  </div>Вернуться к покупкам</span>
+                <div class="btn-group"><a class="btn-white" href="#"> <span class="text">Перейти в корзину</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content content-cart-empty content-cur">
+          <div class="top-line"><span class="title">Корзина</span></div>
+          <div class="info">
+            <div class="wrap-icon img-resp"><svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.8375 13.8229C14.4624 13.8229 13.3437 14.9841 13.3437 16.4114C13.3437 17.8387 14.4625 19 15.8375 19C17.2126 19 18.3313 17.8387 18.3313 16.4114C18.3313 14.9841 17.2126 13.8229 15.8375 13.8229ZM15.8375 17.4468C15.2874 17.4468 14.84 16.9825 14.84 16.4114C14.84 15.8404 15.2874 15.376 15.8375 15.376C16.3876 15.376 16.835 15.8404 16.835 16.4114C16.835 16.9825 16.3876 17.4468 15.8375 17.4468Z" fill="white"/>
+<path d="M19.841 3.81835C19.6994 3.63017 19.4822 3.52041 19.252 3.52041H4.618L3.94467 0.596128C3.86413 0.246691 3.56311 4.52952e-10 3.21697 4.52952e-10H0.74813C0.334924 -4.0547e-05 0 0.347613 0 0.776524C0 1.20543 0.334924 1.55309 0.74813 1.55309H2.62646L5.05788 12.1134C5.13843 12.4631 5.43945 12.7095 5.78558 12.7095H17.4316C17.7755 12.7095 18.0752 12.4662 18.1577 12.1198L19.9782 4.48357C20.0333 4.25168 19.9827 4.00653 19.841 3.81835ZM16.8462 11.1564H6.37609L4.97558 5.07354H18.2961L16.8462 11.1564Z" fill="white"/>
+<path d="M6.78283 13.8229C5.40774 13.8229 4.28906 14.9841 4.28906 16.4114C4.28906 17.8387 5.40778 19 6.78283 19C8.15787 19 9.27659 17.8387 9.27659 16.4114C9.27659 14.9841 8.15787 13.8229 6.78283 13.8229ZM6.78283 17.4468C6.23271 17.4468 5.78532 16.9825 5.78532 16.4114C5.78532 15.8404 6.23271 15.376 6.78283 15.376C7.33295 15.376 7.78033 15.8404 7.78033 16.4114C7.78033 16.9825 7.33295 17.4468 6.78283 17.4468Z" fill="white"/>
+</svg>
+            </div><span class="main-text">Ваша корзина пуста</span><span class="subtext">Выберите в каталоге интересующий товар и нажмите кнопку “В корзину”</span><a class="btn btn-blue" href="#">В каталог</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <header class="header">
+        <div class="header-top-line">
+          <div class="container">
+            <div class="header-top-line-content">
+              <div class="wrap-menu-btn">
+                <button class="menu-icon icon hamburger hamburger--squeeze" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+              </div><a class="wrap-logo" href="#"><img src="img/logo.png" alt=""></a>
+              <div class="wrap-accent-field">
+                <form>
+                  <input class="field" type="text" placeholder="Я ищу…" maxlength="50" autocomplete="off">
+                  <div class="wrap-field-btn">
+                    <button class="field-btn" type="submit">Найти</button>
+                  </div>
+                </form>
+              </div>
+              <div class="wrap-dropdown">
+                <div class="dropdown-top">
+                  <div class="wrap-icon wrap-img"><img src="img/icon-user.svg" alt=""></div><span class="name">Егор Александрович</span>
+                  <div class="dropdown-icon"><img src="img/arrow-dropdown-menu-hover.svg" alt=""></div>
+                </div>
+                <div class="dropdown-content"><a href="#">Мои заказы</a><a href="#">Личные данные</a><a href="#">Выйти</a></div>
+              </div>
+              <div class="wrap-phones"><a class="tel" href="tel:375297776768">+375 (29) 777 67 68</a><a class="tel" href="tel:375258879799">+375 (25) 887 97 99</a></div>
+              <div class="wrap-cart">
+                <div class="wrap-img"><img src="img/icon-shopping-cart-black.svg" alt=""><span class="product-count">99</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom-line">
+          <div class="container">
+            <nav class="desktop-nav header-bottom-line-content">
+              <ul class="nav-list">
+                <li class="list-item"><a href="#">Акустика</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-1.png" alt=""></div><span class="title">Audac</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-2.png" alt=""></div><span class="title">Акустические системы</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-3.png" alt=""></div><span class="title">Микшеры</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-4.png" alt=""></div><span class="title">Направленный звук</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-5.png" alt=""></div><span class="title">Провода</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-6.png" alt=""></div><span class="title">Сабвуферы</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-7.png" alt=""></div><span class="title">Саундбары</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-8.png" alt=""></div><span class="title">Усилители</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-item"><a href="#">Бинокли и телескопы</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-1.png" alt=""></div><span class="title">Audac</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-2.png" alt=""></div><span class="title">Акустические системы</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-3.png" alt=""></div><span class="title">Микшеры</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-4.png" alt=""></div><span class="title">Направленный звук</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-5.png" alt=""></div><span class="title">Провода</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-6.png" alt=""></div><span class="title">Сабвуферы</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-7.png" alt=""></div><span class="title">Саундбары</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-8.png" alt=""></div><span class="title">Усилители</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-1.png" alt=""></div><span class="title">Audac</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-1.png" alt=""></div><span class="title">Audac</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-1.png" alt=""></div><span class="title">Audac</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-item"><a href="#">Кабели интерфейсные</a></li>
+                <li class="list-item"><a href="#">Офисная техника</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-1.png" alt=""></div><span class="title">Audac</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-4.png" alt=""></div><span class="title">Направленный звук</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-5.png" alt=""></div><span class="title">Провода</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-6.png" alt=""></div><span class="title">Сабвуферы</span></a></li>
+                    <li><a href="#">
+                        <div class="wrap-img img-resp"><img src="img/submenu-7.png" alt=""></div><span class="title">Саундбары</span></a></li>
+                  </ul>
+                </li>
+                <li class="list-item"><a href="#">Принтеры и МФУ</a></li>
+                <li class="list-item"><a href="#">Проекционное оборудования </a></li>
+                <li class="list-item"><a href="#">Накопители</a></li>
+                <li class="list-item"><a href="#">Кронштейны. Стойки. Держатели</a></li>
+                <li class="list-item"><a href="#">Компьютеры, Ноутбуки, Комплектующие</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Опции и аксессуары</a></li>
+                    <li><a href="#">Комплектующие</a></li>
+                    <li><a href="#">Системные блоки в две строки</a></li>
+                  </ul>
+                </li>
+                <li class="list-item"><a href="#">Переферийные устройства</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Комплектующие</a></li>
+                    <li><a href="#">Системные блоки в две строки</a></li>
+                    <li><a href="#">Комплектующие</a></li>
+                    <li><a href="#">Системные блоки в две строки</a></li>
+                  </ul>
+                </li>
+                <li class="list-item"><a href="#">Програмное обеспечение</a></li>
+                <li class="list-item"><a href="#">Бумага, плёнка</a></li>
+                <li class="list-item"><a href="#">Мониторы</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Комплектующие</a></li>
+                    <li><a href="#">Системные блоки в две строки</a></li>
+                    <li><a href="#">Опции и аксессуары</a></li>
+                    <li><a href="#">Комплектующие</a></li>
+                    <li><a href="#">Системные блоки в две строки</a></li>
+                  </ul>
+                </li>
+                <li class="list-item"><a href="#">Сканеры</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div class="delivery-payment page-no-aside page-content">
+        <div class="container">
+          <div class="page-no-aside-content">
+            <div class="top-page-line">
+              <div class="wrap-breadcrumbs"><a class="other-page" href="index.html">Главная</a><span class="cur-page">Доставка и оплата</span></div>
+              <div class="wrap-title"><span class="page-title">Доставка и оплата</span></div>
+            </div>
+            <div class="wrap-tabs">
+              <div class="wrap-tabs-btn"><span class="tab cur-tab">Доставка</span><span class="tab">Оплата</span><span class="tab">Как сделать заказ</span></div>
+              <div class="wrap-tabs-content"><span class="dropdown-title">
+                  Доставка<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.09267 9.90012L5.89687 5.23037C5.96559 5.16366 6 5.0869 6 5.00007C6 4.91324 5.96559 4.83634 5.89687 4.76959L1.09267 0.100236C1.02385 0.0333418 0.944879 0 0.855507 0C0.766172 0 0.687092 0.033447 0.618412 0.100236L0.103092 0.601134C0.0343757 0.667923 3.52859e-05 0.744785 3.52859e-05 0.831614C3.52859e-05 0.918443 0.0343757 0.995304 0.103092 1.06209L4.15466 5.00007L0.102839 8.93819C0.0341229 9.00494 -4.76837e-07 9.08184 -4.76837e-07 9.16853C-4.76837e-07 9.2555 0.0343394 9.33236 0.102839 9.39911L0.618376 9.90008C0.687056 9.96683 0.766172 10 0.855471 10C0.944878 10 1.02396 9.96687 1.09267 9.90012Z" fill="#14AAE6"/>
+</svg></span>
+                <article class="tab-content dropdown-content tab-content-cur"><strong>Способы доставки</strong>
+                  <p>Наш курьер доставит заказ по указанному адресу с 9:00 до 23:00 в выбранный вами интервал времени (из предложенных при оформлении заказа). Курьер дополнительно свяжется с вами перед выездом (ориентировочно за 1 час). По указанному адресу курьер будет ждать 15 минут, после чего мы оставляем за собой право перенести доставку на другое время, согласовав его с вами.</p>
+                  <ul>
+                    <li>курьерская;</li>
+                    <li>самовывоз из магазина;</li>
+                    <li>срочная доставка;</li>
+                    <li>почта.</li>
+                  </ul>
+                </article><span class="dropdown-title">
+                  Оплата<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.09267 9.90012L5.89687 5.23037C5.96559 5.16366 6 5.0869 6 5.00007C6 4.91324 5.96559 4.83634 5.89687 4.76959L1.09267 0.100236C1.02385 0.0333418 0.944879 0 0.855507 0C0.766172 0 0.687092 0.033447 0.618412 0.100236L0.103092 0.601134C0.0343757 0.667923 3.52859e-05 0.744785 3.52859e-05 0.831614C3.52859e-05 0.918443 0.0343757 0.995304 0.103092 1.06209L4.15466 5.00007L0.102839 8.93819C0.0341229 9.00494 -4.76837e-07 9.08184 -4.76837e-07 9.16853C-4.76837e-07 9.2555 0.0343394 9.33236 0.102839 9.39911L0.618376 9.90008C0.687056 9.96683 0.766172 10 0.855471 10C0.944878 10 1.02396 9.96687 1.09267 9.90012Z" fill="#14AAE6"/>
+</svg></span>
+                <article class="tab-content dropdown-content"><strong>Оплата</strong>
+                  <p>Наш курьер доставит заказ по указанному адресу с 9:00 до 23:00 в выбранный вами интервал времени (из предложенных при оформлении заказа). Курьер дополнительно свяжется с вами перед выездом (ориентировочно за 1 час). По указанному адресу курьер будет ждать 15 минут, после чего мы оставляем за собой право перенести доставку на другое время, согласовав его с вами. Наш курьер доставит заказ по указанному адресу с 9:00 до 23:00 в выбранный вами интервал времени (из предложенных при оформлении заказа). Курьер дополнительно свяжется с вами перед выездом (ориентировочно за 1 час). По указанному адресу курьер будет ждать 15 минут, после чего мы оставляем за собой право перенести доставку на другое время, согласовав его с вами. Наш курьер доставит заказ по указанному адресу с 9:00 до 23:00 в выбранный вами интервал времени (из предложенных при оформлении заказа). Курьер дополнительно свяжется с вами перед выездом (ориентировочно за 1 час). По указанному адресу курьер будет ждать 15 минут, после чего мы оставляем за собой право перенести доставку на другое время, согласовав его с вами.</p>
+                  <ul>
+                    <li>курьерская;</li>
+                    <li>самовывоз из магазина;</li>
+                  </ul>
+                </article><span class="dropdown-title">
+                  Как сделать заказ<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.09267 9.90012L5.89687 5.23037C5.96559 5.16366 6 5.0869 6 5.00007C6 4.91324 5.96559 4.83634 5.89687 4.76959L1.09267 0.100236C1.02385 0.0333418 0.944879 0 0.855507 0C0.766172 0 0.687092 0.033447 0.618412 0.100236L0.103092 0.601134C0.0343757 0.667923 3.52859e-05 0.744785 3.52859e-05 0.831614C3.52859e-05 0.918443 0.0343757 0.995304 0.103092 1.06209L4.15466 5.00007L0.102839 8.93819C0.0341229 9.00494 -4.76837e-07 9.08184 -4.76837e-07 9.16853C-4.76837e-07 9.2555 0.0343394 9.33236 0.102839 9.39911L0.618376 9.90008C0.687056 9.96683 0.766172 10 0.855471 10C0.944878 10 1.02396 9.96687 1.09267 9.90012Z" fill="#14AAE6"/>
+</svg></span>
+                <article class="tab-content dropdown-content"><strong>Как сделать заказ</strong>
+                  <p>Наш курьер доставит заказ по указанному адресу с 9:00 до 23:00 в выбранный вами интервал времени (из предложенных при оформлении заказа). Курьер дополнительно свяжется с вами перед выездом (ориентировочно за 1 час). По указанному адресу курьер будет ждать 15 минут, после чего мы оставляем за собой право перенести доставку на другое время, согласовав его с вами.</p>
+                  <p>Наш курьер доставит заказ по указанному адресу с 9:00 до 23:00 в выбранный вами интервал времени (из предложенных при оформлении заказа). Курьер дополнительно свяжется с вами перед выездом (ориентировочно за 1 час). По указанному адресу курьер будет ждать 15 минут, после чего мы оставляем за собой право перенести доставку на другое время, согласовав его с вами.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="footer-top-content">
+              <div class="footer-col"><span class="title dropdown-title">Компания</span>
+                <ul class="dropdown-content">
+                  <li><a href="#">О нас</a></li>
+                  <li><a href="#">Оптовый отдел</a></li>
+                  <li><a href="#">Сервисный центр</a></li>
+                  <li><a href="#">Учебный центр</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="footer-col"><span class="title dropdown-title">Интернет-магазин</span>
+                <ul class="dropdown-content">
+                  <li><a href="#">Каталог</a></li>
+                  <li><a href="#">Доставка и оплата</a></li>
+                  <li><a href="#">Возврат товара</a></li>
+                  <li><a href="#">Кредит и рассрочка</a></li>
+                </ul>
+              </div>
+              <div class="footer-col"><span class="title dropdown-title">Наши контакты</span>
+                <ul class="dropdown-content">
+                  <li> <a href="tel:375172629111">+375 17 262 91 11 (многоканальный)</a></li>
+                  <li> <a href="tel:375172161922">+375 17 216 19 22</a></li>
+                  <li> <a href="tel:375172664910">+375 17 266 49 10</a></li>
+                  <li> <a href="tel:375296960580">+375 29 696 05 80 (велком)</a></li>
+                  <li> <a href="mailto:info@printlux.by">info@printlux.by</a></li>
+                </ul>
+              </div>
+              <div class="footer-col"><span class="title dropdown-title">Время работы</span>
+                <ul class="dropdown-content">
+                  <li>Понедельник-Пятница:<br>с 9.00 до 18.00,</li>
+                  <li>Суббота-Воскресенье:<br>выходной </li>
+                </ul>
+              </div>
+              <div class="footer-col"><span class="title">Мы в социальных сетях:</span>
+                <div class="social-row">
+                  <div class="wrap-icon"><a class="icon" href="#"><img src="img/facebook.svg" alt=""></a></div>
+                  <div class="wrap-icon"><a class="icon" href="#"><img src="img/vk.svg" alt=""></a></div>
+                  <div class="wrap-icon"><a class="icon" href="#"><img src="img/instagram.svg" alt=""></a></div>
+                  <div class="wrap-icon"><a class="icon" href="#"><img src="img/youtube.svg" alt=""></a></div>
+                </div>
+                <div class="wrap-company">
+                  <div class="wrap-logo wrap-img"><img src="img/icon-next-lavel.svg" alt=""></div><span class="name-company">Детский<br>учебный центр</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="footer-bottom-content"><span class="copyright">© 2013-2018 Printlux</span>
+              <div class="company-development"><span>Разработка сайта:</span>
+                <div class="wrap-img"><img src="img/logo-webco.svg" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>

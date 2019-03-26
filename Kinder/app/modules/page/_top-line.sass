@@ -1,0 +1,231 @@
+.top-line-page
+	padding-top: 120px
+	position: relative
+
+	.bg-orange
+		position: absolute
+		left: -10%
+		width: 100%
+		height: auto
+		top: -70px
+		z-index: -1
+
+	.bg-orange-sm
+		display: none
+		left: 0
+		width: 100%
+
+	.container
+		position: relative
+
+		&:before
+			content: ""
+			position: absolute
+			right: 0
+			top: 40%
+			transform: translate(0, -50%)
+			background: url("../img/logo-top-line-page.png") no-repeat center
+			background-size: contain
+			width: 265px
+			height: 95px
+
+	a
+		span
+			position: relative
+			font-family: "OpenSB"
+			transition: .4s all ease
+			&::after
+				content: ""
+				top: 101%
+				position: absolute
+				left: 50%
+				width: 101%
+				transform: translate(-50%, 0)
+				height: 1px
+				background-color: $blue
+				transition: .4s all ease
+		&:hover
+			span
+				color: $red
+				&::after
+					background-color: $red
+
+	.breadcrumbs
+		display: -webkit-inline-flex
+		display: -moz-inline-flex
+		display: -ms-inline-flex
+		display: -o-inline-flex
+		display: inline-flex
+		align-items: center
+		margin-bottom: 50px
+		a
+			font-size: 32px
+			line-height: 34px
+			color: $blue
+			margin-right: 60px
+			display: flex
+			align-items: center
+			.icon
+				margin-right: 25px
+
+		
+	.title
+		font-size: 81px
+		line-height: 90px
+		display: block
+		color: $red
+
+	.btn-out-profile
+		font-size: 24px
+		line-height: 28px
+		color: #A39E9A
+		margin-top: 0
+		position: relative
+		display: -webkit-inline-flex
+		display: -moz-inline-flex
+		display: -ms-inline-flex
+		display: -o-inline-flex
+		display: inline-block
+		font-family: "OpenSB"
+		transition: .4s all ease
+		&::after
+			content: ""
+			top: 101%
+			position: absolute
+			left: 50%
+			width: 101%
+			transform: translate(-50%, 0)
+			height: 1px
+			background-color: #A39E9A
+			transition: .4s all ease
+		&:hover
+			color: $red
+			&::after
+				background-color: $red
+
+
+@media (max-width: 1440px)
+	.top-line-page.top-line-profile-page
+		align-items: center
+		.container
+			align-items: center
+		.btn-out-profile
+			order: 3
+			margin-left: 0
+			margin-top: 0
+			padding-top: 8px
+		.breadcrumbs
+			padding: 0
+
+
+@media (max-width: 1290px)
+	.top-line-page.top-line-profile-page
+		.btn-out-profile
+		.breadcrumbs
+			width: auto
+			a:last-child
+				margin: 0 60px
+		.btn-out-profile
+			margin-bottom: 3px
+
+
+	.top-line-page
+		padding-top: 225px
+
+		.bg-orange
+			display: none
+
+		.bg-orange-sm
+			display: block
+
+		.container
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			&::before
+				top: auto
+				bottom: 100%
+		.breadcrumbs
+			order: 2
+			margin: 40px 0
+			justify-content: space-between
+			width: 100%
+			padding: 0 17%
+			a
+				margin-right: 0
+		.title
+			order: 1
+
+
+@media (max-width: 768px)
+	.top-line-page.top-line-profile-page
+		.container
+
+		.breadcrumbs
+			width: auto
+			a, a:last-child
+				margin: 0 20px
+				.icon
+					display: none
+		.btn-out-profile
+			margin-bottom: 0
+			padding-top: 0
+			font-size: 24px
+			line-height: 28px
+			margin-left: 20px
+
+	.top-line-page.top-line-page-gallery
+		.container
+			max-width: 500px
+
+
+	.top-line-page
+		.breadcrumbs
+			padding: 0
+			margin: 35px 0
+			a
+				font-size: 24px
+				line-height: 28px
+
+
+@media (max-width: 576px)
+	.top-line-page.top-line-profile-page
+		margin-bottom: 30px
+		.btn-out-profile
+		.breadcrumbs
+			a, a:last-child
+				margin: 0 10px
+		.btn-out-profile
+			font-size: 16px
+			line-height: 21px
+			margin-left: 10px
+
+	.top-line-page.top-line-page-gallery
+		.container
+			max-width: 290px
+
+	.top-line-page
+		padding-top: 150px
+		text-align: center
+
+		.container
+			&::before
+				right: 50%
+				transform: translate(50%, -30%)
+				width: 195px
+				height: 75px
+
+		.breadcrumbs
+			margin: 11px 0
+			a
+				font-size: 16px
+				line-height: 21px
+				margin: 0 10px
+
+		.title
+			font-size: 42px
+			line-height: 55px
+			width: 100%
+
+
+			

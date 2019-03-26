@@ -1,0 +1,382 @@
+.wrap-content
+	.products-posts
+		.wrap-btn-aside
+			.icon
+				img(src="img/icon-param.svg", alt="")
+			span.text Фильтр
+
+		.row-filter
+			.wrap-filter-btns
+				a(href="#").cur-btn.filter-btn По цене
+				a(href="#").filter-btn По названию
+				a(href="#").filter-btn По популярности
+				
+			.wrap-filter-select.wrap-select
+				select(placeholder="По популярности").select
+					option(value="")
+					option(value="ex-price") По цене
+					option(value="ex-name") По названию
+					option(value="ex-popular") По популярности
+
+			.wrap-view-card
+				a(href="#").cur-vied.view-item
+					include ../../../img/masonry.svg
+				a(href="#").view-item
+					include ../../../img/list.svg
+				a(href="#").view-item
+					include ../../../img/list-small.svg
+
+		.wrap-products-cards.wrap-products-cards-masonry
+			.wrap-card.bonus-action
+				.card
+					a(href="#").wrap-img-product
+						img(src="img/product-1.png", alt="")
+					a(href="#").title Многофункциональное<br>устройство Epson WorkForce 
+					span.old-price 270,20 руб.
+					span.wrap-cur-price
+						span.cur-price 250,00 руб.
+						span.save-prise Экономия 2,99
+					span.status Наличие: 
+						span.not-many мало
+					.wrap-counter-btn
+						.wrap-product-counter
+							.icon-counter.less
+								img(src="img/icon-minus.svg", alt="")
+							input(type="text", value="1", maxlength="3").cur-counter
+							.icon-counter.plus
+								img(src="img/icon-plus.svg", alt="")
+						span.btn-product.btn-blue 
+							span.text-before-add В корзину
+							span.text-after-add В корзине
+
+					.wrap-actions
+						.action.action-set
+							.icon.icon-set
+								include ../../../img/icon-heart.svg
+							span.text-before-add Отложить
+							span.text-after-add В отложенных
+						.action.action-compare
+							.icon.icon-compare
+								include ../../../img/icon-diagram.svg
+							span.text-before-add Сравнить
+							span.text-after-add В сравнении
+
+			.wrap-card.bonus-full
+				.card
+					a(href="#").wrap-img-product
+						img(src="img/product-2.png", alt="")
+					a(href="#").title Бинокль PENTAX 10x36 DCF
+					span.old-price 270,20 руб.
+					span.wrap-cur-price
+						span.cur-price 250,00 руб.
+						span.save-prise Экономия 2,99
+					span.status Наличие: 
+						span.many много
+					.wrap-counter-btn
+						.wrap-product-counter
+							.icon-counter.less
+								img(src="img/icon-minus.svg", alt="")
+							input(type="text", value="1", maxlength="3").cur-counter
+							.icon-counter.plus
+								img(src="img/icon-plus.svg", alt="")
+						span.btn-product.btn-blue 
+							span.text-before-add В корзину
+							span.text-after-add В корзине
+
+					.wrap-actions
+						.action.action-set
+							.icon.icon-set
+								include ../../../img/icon-heart.svg
+							span.text-before-add Отложить
+							span.text-after-add В отложенных
+						.action.action-compare
+							.icon.icon-compare
+								include ../../../img/icon-diagram.svg
+							span.text-before-add Сравнить
+							span.text-after-add В сравнении
+
+			.wrap-card
+				.card
+					.wrap-img-product
+						img(src="img/no_photo.png", alt="")
+					a(href="#").title Многофункциональное<br>устройство Epson WorkForce 
+					span.wrap-cur-price
+						span.cur-price 250,00 руб.
+					span.status Наличие: 
+						span.not-many мало
+					.wrap-counter-btn
+						.wrap-product-counter
+							.icon-counter.less
+								img(src="img/icon-minus.svg", alt="")
+							input(type="text", value="1", maxlength="3").cur-counter
+							.icon-counter.plus
+								img(src="img/icon-plus.svg", alt="")
+						span.btn-product.btn-blue 
+							span.text-before-add В корзину
+							span.text-after-add В корзине
+
+					.wrap-actions
+						.action.action-set
+							.icon.icon-set
+								include ../../../img/icon-heart.svg
+							span.text-before-add Отложить
+							span.text-after-add В отложенных
+						.action.action-compare
+							.icon.icon-compare
+								include ../../../img/icon-diagram.svg
+							span.text-before-add Сравнить
+							span.text-after-add В сравнении
+
+			.wrap-card.bonus-new
+				.card
+					a(href="#").wrap-img-product
+						img(src="img/product-3.png", alt="")
+					a(href="#").title Многофункциональное<br>устройство Epson WorkForce 
+					span.status Нет в наличии
+					span.btn-report.modal-show(data-modal-key="report-me") Сообщить о поступлении
+
+					.wrap-actions
+						.action.action-set
+							.icon.icon-set
+								include ../../../img/icon-heart.svg
+							span.text-before-add Отложить
+							span.text-after-add В отложенных
+						.action.action-compare
+							.icon.icon-compare
+								include ../../../img/icon-diagram.svg
+							span.text-before-add Сравнить
+							span.text-after-add В сравнении
+
+			.wrap-card.bonus-full
+				.card
+					a(href="#").wrap-img-product
+						img(src="img/product-2.png", alt="")
+					a(href="#").title Смартфон Samsung<br>Galaxy S8 (мистический аметист)
+					span.old-price 270,20 руб.
+					span.wrap-cur-price
+						span.cur-price 250,00 руб.
+						span.save-prise Экономия 2,99
+					span.status Наличие: 
+						span.many много
+					.wrap-counter-btn
+						.wrap-product-counter
+							.icon-counter.less
+								img(src="img/icon-minus.svg", alt="")
+							input(type="text", value="1", maxlength="3").cur-counter
+							.icon-counter.plus
+								img(src="img/icon-plus.svg", alt="")
+						span.btn-product.btn-blue 
+							span.text-before-add В корзину
+							span.text-after-add В корзине
+
+					.wrap-actions
+						.action.action-set
+							.icon.icon-set
+								include ../../../img/icon-heart.svg
+							span.text-before-add Отложить
+							span.text-after-add В отложенных
+						.action.action-compare
+							.icon.icon-compare
+								include ../../../img/icon-diagram.svg
+							span.text-before-add Сравнить
+							span.text-after-add В сравнении
+
+			.wrap-card
+				.card
+					.wrap-img-product
+						img(src="img/no_photo.png", alt="")
+					a(href="#").title Многофункциональное<br>устройство Epson WorkForce 
+					span.status Нет в наличии
+					span.btn-report.modal-show(data-modal-key="report-me") Сообщить о поступлении
+
+					.wrap-actions
+						.action.action-set
+							.icon.icon-set
+								include ../../../img/icon-heart.svg
+							span.text-before-add Отложить
+							span.text-after-add В отложенных
+						.action.action-compare
+							.icon.icon-compare
+								include ../../../img/icon-diagram.svg
+							span.text-before-add Сравнить
+							span.text-after-add В сравнении
+
+			.wrap-card.bonus-action
+				.card
+					a(href="#").wrap-img-product
+						img(src="img/product-1.png", alt="")
+					a(href="#").title Смартфон Samsung<br>Galaxy S8 (мистический аметист)
+					span.old-price 270,20 руб.
+					span.wrap-cur-price
+						span.cur-price 250,00 руб.
+						span.save-prise Экономия 2,99
+					span.status Наличие: 
+						span.not-many мало
+					.wrap-counter-btn
+						.wrap-product-counter
+							.icon-counter.less
+								img(src="img/icon-minus.svg", alt="")
+							input(type="text", value="1", maxlength="3").cur-counter
+							.icon-counter.plus
+								img(src="img/icon-plus.svg", alt="")
+						span.btn-product.btn-blue 
+							span.text-before-add В корзину
+							span.text-after-add В корзине
+
+					.wrap-actions
+						.action.action-set
+							.icon.icon-set
+								include ../../../img/icon-heart.svg
+							span.text-before-add Отложить
+							span.text-after-add В отложенных
+						.action.action-compare
+							.icon.icon-compare
+								include ../../../img/icon-diagram.svg
+							span.text-before-add Сравнить
+							span.text-after-add В сравнении
+
+			.wrap-card
+				.card
+					.wrap-img-product
+						img(src="img/no_photo.png", alt="")
+					a(href="#").title Смартфон Samsung<br>Galaxy S8 (мистический аметист)
+					span.status Нет в наличии
+					span.btn-report.modal-show(data-modal-key="report-me") Сообщить о поступлении
+
+					.wrap-actions
+						.action.action-set
+							.icon.icon-set
+								include ../../../img/icon-heart.svg
+							span.text-before-add Отложить
+							span.text-after-add В отложенных
+						.action.action-compare
+							.icon.icon-compare
+								include ../../../img/icon-diagram.svg
+							span.text-before-add Сравнить
+							span.text-after-add В сравнении
+
+			.wrap-card.bonus-full
+				.card
+					a(href="#").wrap-img-product
+						img(src="img/product-2.png", alt="")
+					a(href="#").title Смартфон Samsung<br>Galaxy S8 (мистический аметист)
+					span.old-price 270,20 руб.
+					span.wrap-cur-price
+						span.cur-price 250,00 руб.
+						span.save-prise Экономия 2,99
+					span.status Наличие: 
+						span.many много
+					.wrap-counter-btn
+						.wrap-product-counter
+							.icon-counter.less
+								img(src="img/icon-minus.svg", alt="")
+							input(type="text", value="1", maxlength="3").cur-counter
+							.icon-counter.plus
+								img(src="img/icon-plus.svg", alt="")
+						span.btn-product.btn-blue 
+							span.text-before-add В корзину
+							span.text-after-add В корзине
+
+					.wrap-actions
+						.action.action-set
+							.icon.icon-set
+								include ../../../img/icon-heart.svg
+							span.text-before-add Отложить
+							span.text-after-add В отложенных
+						.action.action-compare
+							.icon.icon-compare
+								include ../../../img/icon-diagram.svg
+							span.text-before-add Сравнить
+							span.text-after-add В сравнении
+
+			.wrap-card.bonus-action
+				.card
+					a(href="#").wrap-img-product
+						img(src="img/product-1.png", alt="")
+					a(href="#").title Бинокль PENTAX 10x36 DCF 
+					span.old-price 270,20 руб.
+					span.wrap-cur-price
+						span.cur-price 250,00 руб.
+						span.save-prise Экономия 2,99
+					span.status Наличие: 
+						span.not-many мало
+					.wrap-counter-btn
+						.wrap-product-counter
+							.icon-counter.less
+								img(src="img/icon-minus.svg", alt="")
+							input(type="text", value="1", maxlength="3").cur-counter
+							.icon-counter.plus
+								img(src="img/icon-plus.svg", alt="")
+						span.btn-product.btn-blue 
+							span.text-before-add В корзину
+							span.text-after-add В корзине
+
+					.wrap-actions
+						.action.action-set
+							.icon.icon-set
+								include ../../../img/icon-heart.svg
+							span.text-before-add Отложить
+							span.text-after-add В отложенных
+						.action.action-compare
+							.icon.icon-compare
+								include ../../../img/icon-diagram.svg
+							span.text-before-add Сравнить
+							span.text-after-add В сравнении
+
+			.wrap-card.bonus-full
+				.card
+					a(href="#").wrap-img-product
+						img(src="img/product-3.png", alt="")
+					a(href="#").title Многофункциональное<br>устройство Epson WorkForce 
+					span.wrap-cur-price
+						span.cur-price 250,00 руб.
+					span.status Наличие: 
+						span.many много
+					.wrap-counter-btn
+						.wrap-product-counter
+							.icon-counter.less
+								img(src="img/icon-minus.svg", alt="")
+							input(type="text", value="1", maxlength="3").cur-counter
+							.icon-counter.plus
+								img(src="img/icon-plus.svg", alt="")
+						span.btn-product.btn-blue 
+							span.text-before-add В корзину
+							span.text-after-add В корзине
+
+					.wrap-actions
+						.action.action-set
+							.icon.icon-set
+								include ../../../img/icon-heart.svg
+							span.text-before-add Отложить
+							span.text-after-add В отложенных
+						.action.action-compare
+							.icon.icon-compare
+								include ../../../img/icon-diagram.svg
+							span.text-before-add Сравнить
+							span.text-after-add В сравнении
+
+			.wrap-card.bonus-new
+				.card
+					a.wrap-img-product
+						img(src="img/no_photo.png", alt="")
+					a(href="#").title Бинокль PENTAX 10x36 DCF 
+					span.status Нет в наличии
+					span.btn-report.modal-show(data-modal-key="report-me") Сообщить о поступлении
+
+					.wrap-actions
+						.action.action-set
+							.icon.icon-set
+								include ../../../img/icon-heart.svg
+							span.text-before-add Отложить
+							span.text-after-add В отложенных
+						.action.action-compare
+							.icon.icon-compare
+								include ../../../img/icon-diagram.svg
+							span.text-before-add Сравнить
+							span.text-after-add В сравнении
+
+		include ../../../modules/btn-load-more/btn-load-more
+
+		include ../../../modules/pagination/pagination
+
+		

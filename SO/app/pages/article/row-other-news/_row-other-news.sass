@@ -1,0 +1,81 @@
+.section-row-other-news
+	background-color: $bg-gray
+	padding: 40px 0 70px
+	margin-bottom: -100px
+
+	.row-news
+		margin-top: 45px
+		margin-bottom: 60px
+
+	.link-view-all
+		line-height: 22px
+
+
++media-breakpoint-down(lg)
+	.section-row-other-news
+		margin-bottom: -80px
+
+		.row-other-news-title
+			font-size: 2.1rem
+
+		.row-news
+			margin-top: 35px
+
+
++media-breakpoint-down(md)
+	.section-row-other-news
+		margin-bottom: -60px
+
+		.row-other-news-title
+			font-size: 2.1rem
+
+		.row-news
+			margin-top: 25px
+			margin-bottom: 45px
+
+			> div
+				display: none
+
+				&:nth-child(-n + 3)
+					display: block
+
+
+
++media-breakpoint-down(sm)
+	.section-row-other-news
+		.row-news
+			> div
+				&:nth-child(-n + 3)
+					display: none
+
+				&:nth-child(-n + 2)
+					display: block
+
+
++media-breakpoint-down(xs)
+	.section-row-other-news
+		.row-other-news-title
+			text-align: center
+			font-size: 24px
+			line-height: 30px
+			display: block
+			margin-right: auto
+			margin-left: auto
+			
+		
+		.link-view-all
+			display: none
+
+
+		.row-news
+			margin-bottom: 20px
+
+			> div
+				margin-bottom: 15px
+				display: block
+
+				&:nth-child(-n + 3), &:nth-child(-n + 2)
+					display: block
+		
+		.wrap-subscribe-banner
+			margin-top: 50px

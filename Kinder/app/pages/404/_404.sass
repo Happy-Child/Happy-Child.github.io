@@ -1,0 +1,90 @@
+.page-404
+	min-height: 100vh
+	overflow: hidden
+	display: flex
+	flex-direction: column
+
+	.top-line-404-page
+		padding-top: 180px
+		.title
+			font-size: 158px
+			line-height: 168px
+			margin-bottom: 20px
+			display: block
+		.container
+			&:before
+				margin-top: -50px
+
+	&-content
+		span
+			display: block
+
+		.accent-text
+			font-size: 66px
+			line-height: 76px
+			color: $blue
+			margin-bottom: 35px
+
+		.subtext
+			font-size: 21px
+			line-height: 26px
+			font-family: "OpenR"
+			a
+				text-decoration: underline
+				color: $blue
+
+	.footer
+		&-content
+			padding-top: 90px
+		&-bottom
+			margin-top: 0
+
+
+@media (max-width: 1440px)
+	.page-404
+		.top-line-404-page
+			padding-top: 150px
+
+		.footer
+			&-content
+				padding-top: 65px
+
+@media (max-width: 1290px)
+	.page-404
+		.top-line-404-page
+			.title
+				position: static
+				margin-right: auto
+				margin-top: 145px
+				font-size: 170px
+				line-height: 180px
+			.container
+				&:before
+					margin-top: 0
+					bottom: 85%
+
+@media (max-width: 768px)
+	.page-404
+		.top-line-404-page
+			.title
+				font-size: 150px
+
+@media (max-width: 576px)
+	.page-404
+
+		.top-line-404-page
+			.title
+				margin-top: 60px
+				font-size: 75px
+				line-height: 85px
+		&-content
+			.accent-text
+				font-size: 35px
+				line-height: 40px
+			.subtext
+				font-size: 14px
+				line-height: 20px
+
+		.footer
+			&-content
+				padding-top: 35px

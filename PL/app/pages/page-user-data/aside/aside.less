@@ -1,0 +1,199 @@
+@import "../../../less/common/vars";
+
+.page-user-data{
+	.user-data-aside{
+		max-width: 202px;
+		margin-right: 20px;
+
+		.wrap-dropdown{
+			width: 100%;
+			max-width: 250px;
+			display: none;
+			margin-right: 15px;
+			position: relative;
+			width: 100%;
+			height: 100%;
+
+			.dropdown-top{
+				border: 1px solid #D9DCDE;
+				border-radius: 3px;
+				padding: 6px 12px;
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				-ms-align-items: center;
+				align-items: center;
+				cursor: pointer;
+				height: 100%;
+				width: 100%;
+				position: relative;
+
+				.wrap-icon{
+					width: 100%;
+					max-width: 18px;
+					margin-right: 8px;
+				}
+
+				.name{
+					font-size: 13px;
+					line-height: 16px;
+					white-space: nowrap;
+					position: relative;
+					max-width: 110px;
+					&::selection{
+						background-color: transparent;
+						color: @textDark;
+					}
+				}
+
+				.dropdown-icon{
+					margin-left: auto;
+					border: 4px solid transparent;
+					border-top-color: @textDark;
+				}
+			}
+
+			.dropdown-content{
+				display: none;
+				box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.18);
+				border-radius: 3px;
+				background-color: #fff;
+				padding: 13px 15px 17px;
+				width: 100%;
+				position: absolute;
+				top: 105%;
+				left: 0;
+				z-index: 2;
+
+				a{
+					display: block;
+					color: @textDark;
+					margin-bottom: 4px;
+
+					&:hover{
+						color: @blue;
+					}
+
+					&:last-child{
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		.dropdown-active{
+			.dropdown-top{
+				.dropdown-icon{
+					border-top-color: transparent;
+					border-bottom-color: @textDark;
+				}
+			}
+
+			.dropdown-content{
+				display: block;
+			}
+		}
+
+		ul{
+			border: 1px solid #EAEAEA;
+			margin-bottom: 15px;
+
+			li{
+				border-bottom: 1px solid #EAEAEA;
+
+				&:last-child{
+					border-bottom: none;
+				}
+
+				a{
+					display: block;
+					font-size: 15px;
+					line-height: 26px;
+					font-family: "RobMed";
+					padding: 10px 20px;
+					color: @textDark;
+				}
+			}
+
+			.cur-item{
+				background-color: @blue;
+
+				a{
+					color: #fff;
+				}
+			}
+		}
+
+		.account-out{
+			display: flex;
+		}
+	}
+}
+
+
+@media (min-width: 1260px) {
+
+}
+
+@media (max-width: 1259px) {
+
+}
+
+@media (max-width: 991px) {
+	.page-user-data{
+
+		.user-data-aside{
+			max-width: 100%;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			-ms-align-items: stretch;
+			align-items: stretch;
+			margin-bottom: 20px;
+
+			nav{
+				display: none;
+			}
+
+			.wrap-dropdown{
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+
+				.dropdown-top{
+					padding: 9px 12px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 575px) {
+	.page-user-data{
+		.user-data-aside{
+			.account-out{
+				display: none;
+			}
+
+			.wrap-dropdown{
+				max-width: 100%;
+				margin-right: 0;
+			}
+		}
+
+	}
+}
+
+
+
+

@@ -1,0 +1,60 @@
+.section-news-index
+	padding-bottom: 100px
+
+	.row-news
+		margin-bottom: 40px
+
+	.wrap-subscribe-banner
+		margin-top: 50px
+
+
+
+
++media-breakpoint-down(lg)
+	.section-news-index
+		padding-bottom: 80px
+
+
+
++media-breakpoint-down(md)
+	.section-news-index
+		padding-bottom: 60px
+
+		.row-news
+			> div
+				display: none
+				
+				&:nth-child(-n + 3)
+					display: block
+
+
++media-breakpoint-down(sm)
+	.section-news-index
+		padding-bottom: 60px
+
+		.row-news
+			> div
+				&:nth-child(-n + 3)
+					display: none
+				
+				&:nth-child(-n + 2)
+					display: block
+
+
++media-breakpoint-down(xs)
+	.section-news-index
+		.row-news
+			margin-bottom: 20px
+
+		.section-title
+			font-size: 24px
+			line-height: 28px
+			padding: 0 15px
+		
+
+
+
+
+
+
+

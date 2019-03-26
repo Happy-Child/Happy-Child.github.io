@@ -1,0 +1,258 @@
+.banner
+	&-bg
+
+		.bg-mobile
+			display: none
+
+	&-row-links
+		display: flex
+		align-items: center
+		justify-content: space-between
+		position: relative
+		padding: 0 190px 0 70px
+		margin-top: 25px
+		margin-bottom: 45px
+		.link
+			display: flex
+			align-items: center
+			cursor: pointer
+			.wrap-icon
+			.text
+				color: $red
+				font-size: 33px
+				line-height: 40px
+				position: relative
+				transition: .4s all ease
+				&:after
+					content: ""
+					position: absolute
+					top: 100%
+					left: 0
+					width: 101%
+					height: 1px
+					background-color: $red-light
+					transition: .4s all ease
+			&:first-child
+				.wrap-icon
+					margin-right: 20px
+			&:last-child
+				.wrap-icon
+					margin-left: 20px
+					order: 2
+				.text
+					order: 1
+			&:hover
+				.text
+					color: $blue
+					&:after
+						background-color: $blue
+
+		.wrap-big-logo
+			width: 100%
+			max-width: 370px
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translate(-50%, 0)
+
+	&-row-text
+		position: relative
+
+		.wrap-img
+			position: absolute
+			top: 110%
+			&:first-child
+				left: -40px
+				width: 100px
+			&:last-child
+				right: -40px
+				width: 170px
+		.text
+			color: $blue
+			font-family: "OpenSB"
+			width: 100%
+			display: block
+			text-align: center
+			em
+				color: $red
+		.text-accent
+			font-size: 34px
+			line-height: 51px
+			margin-bottom: 40px
+		.text-small
+			font-size: 22px
+			line-height: 34px
+
+
+
+
+
+@media (max-width: 1440px)
+	.banner
+		&-row-links
+			padding: 0px 60px 0 10px
+			.link
+				.wrap-icon
+					width: 100%
+					max-width: 50px
+					img
+						width: 100%
+						height: auto
+				.text
+					font-size: 28px
+					line-height: 34px
+				&:first-child
+					.wrap-icon
+						margin-right: 15px
+				&:last-child
+					.wrap-icon
+						margin-left: 15px
+
+			.wrap-big-logo
+				max-width: 325px
+				
+		&-row-text
+			.wrap-img
+				top: 111%
+				&:first-child
+					width: 100px
+					left: 0
+				&:last-child
+					width: 120px
+			.text br
+				display: none
+			.text-accent
+				line-height: 48px
+			.text-small
+				font-size: 21px
+				br
+					display: none
+
+
+@media (max-width: 1290px)
+	.banner
+
+		&-bg
+			.bg-desktop
+				display: none
+			.bg-mobile
+				display: block
+				margin-top: -80px
+
+		&-row-links
+			flex-wrap: wrap
+			justify-content: space-between
+			padding: 115px 0 0
+			margin-top: 0
+			margin-bottom: 60px
+			.link
+				max-width: 50%
+				width: 100%
+				.wrap-icon
+					max-width: 65px
+				.text
+					font-size: 35px
+					line-height: 40px
+				&:last-child
+					justify-content: flex-end
+
+			.wrap-big-logo
+				max-width: 350px
+				bottom: 48%
+
+				
+		&-row-text
+			.wrap-img
+				display: none
+			.text-accent
+				font-size: 28px
+				margin-bottom: 35px
+				line-height: 42px
+			.text-small
+				font-size: 24px
+
+
+@media(max-width: 991px)
+	.banner
+		&-bg
+			.bg-mobile
+				margin-top: 0px
+
+
+
+@media (max-width: 768px)
+	.banner
+		&-bg
+			margin-top: -40px
+
+		&-row-links
+			padding: 135px 0 0
+			.link
+				.wrap-icon
+					max-width: 45px
+				.text
+					font-size: 28px
+					line-height: 36px
+
+			.wrap-big-logo
+				max-width: 290px
+				bottom: 45%
+
+				
+		&-row-text
+			.text-small
+				font-size: 24px
+				line-height: 36px
+
+
+@media (max-width: 576px)
+	.banner
+		&-bg
+			margin-top: 0
+
+		&-row-links
+			padding-top: 80px
+			margin-bottom: 35px
+			justify-content: center
+			.link
+				justify-content: center
+				width: auto
+				max-width: none
+				margin: 0 10px
+				&:first-child
+					.wrap-icon
+						margin-right: 10px
+				&:last-child
+					.wrap-icon
+						order: 1
+						margin-left: 0
+						margin-right: 10px
+					.text
+						order: 2
+				.wrap-icon
+					max-width: 28px
+				.text
+					font-size: 19px
+					line-height: 28px
+
+			.wrap-big-logo
+				max-width: 180px
+				bottom: 45%
+				
+		&-row-text
+			.text-accent
+				font-size: 20px
+				line-height: 32px
+				margin-bottom: 28px
+			.text-small
+				font-size: 16px
+				line-height: 28px
+
+@media (max-width: 370px)
+	.banner
+		&-row-links
+			padding-top: 65px
+			.wrap-big-logo
+				width: 140px
+				bottom: 51%
+
