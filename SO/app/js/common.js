@@ -442,7 +442,49 @@ $(function () {
 			}
 		}
 
-		selectFn(itemsBrands);
+		const brandsCheckbox = $(".aside .list-brands .wrap-checkbox input[type=checkbox]");
+		if ( brandsCheckbox.length ) {
+			brandsCheckbox.change(function() {
+				if ( $(this).prop('checked') ) {
+					$(this).parent().next("ul").find("a").addClass("active");
+				} else {
+					$(this).parent().next("ul").find("a").removeClass("active");
+				}
+			});
+		}
+
+		if ( itemsBrands.length ) {
+			itemsBrands.click(function (e) {
+				e.preventDefault();
+				$(this).toggleClass("active");
+				const curCheckbox = $(this).closest("ul").prev("div").find("input[type=checkbox]");
+				const arr = $(this).closest("ul").find("a");
+				const resultCheck = [];
+
+				for ( let i = 0; i < arr.length; i++ ) {
+					resultCheck[i] = arr.eq(i).hasClass("active");
+				}
+
+				const status = resultCheck.every(function(n) {
+					return n == true;
+				});
+
+				if ( status ) {
+					curCheckbox.prop( "checked", true );
+				} else {
+					curCheckbox.prop( "checked", false );
+				}
+
+				// if ( resultCheck ) {
+				// 	console.log("all")
+				// } else {
+				// 	console.log("no")
+				// }
+
+			});
+		}
+
+		
 		selectFn(itemsColors);
 		selectFn(itemsSizes);
 	};
@@ -767,6 +809,15 @@ $(function () {
 
 
 //Form functional START
+	//Set mask START
+	const fieldPhone = $("input[type=tel]");
+
+	if ( fieldPhone.length ) {
+		fieldPhone.mask("+375 00 000-00-00");
+	}
+	//Set mask END
+
+
 	//Clear fields START
 	const clearField = () => {
 		const wrapFields = $(".wrap-field-clear");

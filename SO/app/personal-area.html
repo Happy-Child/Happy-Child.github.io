@@ -60,6 +60,8 @@
             <li><a href="#" data-izimodal-open=".modal-simple-recovery-password">Простое восст. пароля</a></li>
             <li><a href="#" data-izimodal-open=".modal-email-recovery-password">Email восст. пароля</a></li>
             <li><a href="#" data-izimodal-open=".modal-success-recovery-password">Успешное восст. пароля</a></li>
+            <li><a href="#" data-izimodal-open=".modal-registration">Регистрация</a></li>
+            <li><a href="#" data-izimodal-open=".modal-sing-in">Авторизация</a></li>
             <li><a href="#" data-izimodal-open=".modal-thanks">Спасибо</a></li>
             <li><a href="#" data-izimodal-open=".modal-remove-address-question">Удалить адрес?</a></li>
             <li><a href="#" data-izimodal-open=".modal-testimonial">Оставить отзыв</a></li>
@@ -256,10 +258,6 @@
               <div class="error-icon"><img src="img/icon-error.svg" alt=""></div>
             </div>
             <div class="wrap-field">
-              <input required name="email" type="text" placeholder="E-mail">
-              <div class="error-icon"><img src="img/icon-error.svg" alt=""></div>
-            </div>
-            <div class="wrap-field">
               <textarea required placeholder="Текст отзыва" name="message"></textarea>
               <div class="error-icon"><img src="img/icon-error.svg" alt=""></div>
             </div>
@@ -393,19 +391,6 @@
 <path d="M11.200,9.600 C12.533,8.622 13.333,7.022 13.333,5.333 C13.333,2.400 10.933,-0.000 8.000,-0.000 C5.067,-0.000 2.667,2.400 2.667,5.333 C2.667,7.022 3.467,8.622 4.800,9.600 C2.222,10.755 0.356,13.155 -0.000,16.000 L1.778,16.000 C2.222,12.978 4.889,10.666 8.000,10.666 C11.111,10.666 13.778,12.978 14.222,16.000 L16.000,16.000 C15.644,13.155 13.778,10.755 11.200,9.600 L11.200,9.600 ZM8.000,8.889 C6.044,8.889 4.444,7.289 4.444,5.333 C4.444,3.377 6.044,1.778 8.000,1.778 C9.955,1.778 11.555,3.377 11.555,5.333 C11.555,7.289 9.955,8.889 8.000,8.889 L8.000,8.889 Z" class="cls-1"/>
 </svg>
                       </div><span class="text-fw-black text-small">личная информация</span></a><a class="dropdown-user-info_item" href="#">
-                      <div class="wrap-icon responsive-img"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 384 384" xml:space="preserve">
-<g>
-<g>
-<path d="M192,0C108.184,0,40,69.648,40,155.256c0,42.728,17.504,84.008,47.68,112.928L170.16,352h-29.904c-8.832,0-16,7.168-16,16 c0,8.832,7.168,16,16,16h103.496c8.832,0,16-7.168,16-16c0-8.832-7.168-16-16-16H213.84l82.304-83.656 C326.56,239.136,344,197.928,344,155.256C344,69.648,275.816,0,192,0z M273.832,245.4c-0.12,0.112-0.232,0.224-0.344,0.336 L192,328.568l-81.84-83.16C85.552,221.824,72,189.808,72,155.256C72,87.296,125.832,32,192,32s120,55.296,120,123.256 C312,189.328,298.088,222.184,273.832,245.4z"/>
-</g>
-</g>
-<g>
-<g>
-<path d="M192,62.048c-48.928,0-88.728,40.584-88.728,90.472s39.8,90.472,88.728,90.472s88.728-40.592,88.728-90.472 C280.728,102.64,240.928,62.048,192,62.048z M192,210.992c-31.28,0-56.728-26.232-56.728-58.472 c0-32.24,25.448-58.472,56.728-58.472c31.28,0,56.728,26.232,56.728,58.472C248.728,184.76,223.28,210.992,192,210.992z"/>
-</g>
-</g>
-</svg>
-                      </div><span class="text-fw-black text-small">мои рассылки</span></a><a class="dropdown-user-info_item" href="#">
                       <div class="wrap-icon responsive-img"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 384.13 384.13" xml:space="preserve">
 <g>
 <g>
@@ -491,6 +476,8 @@
                               <li><a href="#" data-izimodal-open=".modal-simple-recovery-password">Простое восст. пароля</a></li>
                               <li><a href="#" data-izimodal-open=".modal-email-recovery-password">Email восст. пароля</a></li>
                               <li><a href="#" data-izimodal-open=".modal-success-recovery-password">Успешное восст. пароля</a></li>
+                              <li><a href="#" data-izimodal-open=".modal-registration">Регистрация</a></li>
+                              <li><a href="#" data-izimodal-open=".modal-sing-in">Авторизация</a></li>
                               <li><a href="#" data-izimodal-open=".modal-thanks">Спасибо</a></li>
                               <li><a href="#" data-izimodal-open=".modal-remove-address-question">Удалить адрес?</a></li>
                             </ul>
@@ -1195,10 +1182,6 @@
                       </div>
                     </div>
                   </form>
-                  <div class="data-information-social wrap-social-circle"><span class="h-3 text-fw-medium">Социальные сети</span>
-                    <p class="text-medium social-circle-subtext">Нажмите на значок социальной сети, чтобы<br> связать ее с личным кабинетом</p>
-                    <div class="social-circle-row"><a class="social-fb social-circle" href="#"><img src="img/icon-fb-white.svg" alt=""></a><a class="social-vk social-circle social-active" href="#"><img src="img/icon-vk-white.svg" alt=""></a><a class="social-inst social-circle social-active" href="#"><img src="img/icon-inst-white.svg" alt=""></a><a class="social-g social-circle" href="#"><img src="img/icon-google-white.svg" alt=""></a></div>
-                  </div>
                 </div>
                 <div class="personal-data-address personal-data-group tab-content" data-tab-key="address">
                   <div class="personal-data-top-line d-none d-sm-block">
