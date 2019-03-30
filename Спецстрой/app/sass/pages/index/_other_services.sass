@@ -1,0 +1,72 @@
+.other-services
+	.wrap-other-services-items
+		margin-top: 30px
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		margin-right: -15px
+		margin-left: -15px
+		.other-services-item
+			width: calc(50% - 16px)
+			min-height: 425px
+			display: flex
+			position: relative
+			margin: 0 8px 15px
+			&::before
+				+trs(.5, eio)
+				+decor()
+				background: linear-gradient(180deg, rgba(28, 28, 28, 0) 33.7%, rgba(0, 0, 0, 0.8) 100%)
+		.item-content
+			padding: 37px 40px
+			background-repeat: no-repeat
+			background-size: cover
+			background-position: center
+			width: 100%
+			min-height: inherit
+			display: flex
+			h5
+				color: #fff
+				white-space: pre-line
+				position: relative
+				margin-top: auto
+				
+
++media(xl)
+
+
++media(lg)
+	.other-services
+		.wrap-other-services-items
+			.other-services-item
+				min-height: 340px
+			.item-content
+				padding: 27px 30px
+				h5
+					white-space: normal
+					font-size: 20px
+					line-height: 25px
+
+
++media(md)
+	.other-services
+		.wrap-other-services-items
+			display: block
+			margin-bottom: 30px
+			&:last-child
+				margin-bottom: 0
+			.other-services-item
+				width: 100%
+				margin: 0 auto 20px
+				
+				
++media(sm)
+	.other-services
+		.wrap-other-services-items
+			.other-services-item
+				width: calc(100% - 30px)
+				margin: 0 auto 15px
+			.item-content
+				h5
+					font-size: 16px
+					line-height: 22px
+

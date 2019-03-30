@@ -1,0 +1,113 @@
+.banner-top-page
+	display: flex
+	align-items: center
+	min-height: 560px
+	position: relative
+	.img-bg-banner
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+	.wrap-banner-content
+		position: relative
+		width: 50%
+		.banner-title 
+			margin-bottom: 24px
+		.banner-subtitle
+			width: 80%
+	.bottom-line
+		display: flex
+		align-items: center
+		margin-top: 33px
+	.wrap-btn
+		min-width: 232px
+		margin-right: 24px
+		.btn
+			width: 100%
+	.bottom-line-text
+		span
+			display: block
+			color: #000
+			line-height: 24px
+			font-size: 18px
+			white-space: nowrap
+
+
++media(xl)
+	.banner-top-page
+		min-height: 480px
+		.wrap-banner-content
+			width: 55%
+
++media(lg)
+	.banner-top-page
+		.wrap-banner-content
+			width: 65%
+			.banner-title
+				font-size: 47px
+				line-height: 50px
+			.banner-subtitle
+				font-size: 20px
+				line-height: 24px
+
+
++media(md)
+	.banner-top-page
+		.wrap-banner-content
+			width: 80%
+			.banner-title
+				font-size: 38px
+				line-height: 42px
+				margin-bottom: 15px
+			.banner-subtitle
+				font-size: 16px
+				line-height: 22px
+		.bottom-line-text
+			span
+				font-size: 16px
+				line-height: 20px
+		.wrap-btn
+			min-width: 200px
+			.btn
+				padding: 15px 25px
+
++media(sm)
+	.banner-top-page
+		text-align: center
+		min-height: 420px
+		.wrap-banner-content
+			width: 95%
+			margin: 0 auto
+			.banner-title
+				font-size: 33px
+				line-height: 33px
+			.banner-subtitle
+				font-size: 14px
+				line-height: 18px
+				width: 60%
+				margin-left: auto
+				margin-right: auto
+		.bottom-line
+			display: block
+			margin-top: 20px
+		.bottom-line-text
+			margin-top: 10px
+			span
+				font-size: 14px
+				line-height: 18px
+		.wrap-btn
+			margin: 0
+			.btn
+				padding: 12px 23px
+				font-size: 14px
+
+@media(max-width: 430px)
+	.banner-top-page-index
+		.wrap-banner-content
+			.banner-subtitle
+				width: 90%
+

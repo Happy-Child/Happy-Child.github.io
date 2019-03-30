@@ -1,0 +1,93 @@
+.wrap-btn
+	display: inline-block
+	.btn
+		display: block
+		border-radius: 4px
+		font-weight: bold
+		font-size: 16px
+		line-height: 25px
+		text-align: center
+		padding: 19px 29px
+		cursor: pointer
+		+trs(.3, eio)
+
+.wrap-btn-acc
+	.btn
+		color: #fff
+		background-color: $accent
+		&:hover
+			background-color: $btnAccentHover
+
+.wrap-btn-wht
+	.btn
+		color: #3C3D3E
+		background-color: transparent
+		border: 2px solid $btnWhtBorder
+		&:hover
+			color: $accent
+			border-color: $accent
+
+
+.wrap-btn
+	.btn.btn-callback-send
+		position: relative
+		transition: .4s all ease
+		&:after
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			content: ""
+			position: absolute
+			background: url("../img/btn-loader.gif") no-repeat center
+			background-size: cover
+			width: 40px
+			height: 40px
+			z-index: -1
+			opacity: 0
+			transition: .4s all ease
+
+form
+	.wrap-btn
+		.btn.btn-callback-load
+			background-color: transparent !important
+			color: transparent !important
+			border-color: transparent !important
+			&:hover
+				background-color: transparent !important
+				color: transparent !important
+				border-color: transparent !important
+			&:after
+				z-index: 1
+				opacity: 1
+			
+
++media(lg)
+	.wrap-btn-acc
+		.btn
+			&:hover
+				color: #fff
+				background-color: $accent
+	.wrap-btn-wht
+		.btn
+			&:hover
+				color: $accent
+				border-color: $accent
+	form
+		.wrap-btn
+			.btn.btn-callback-load
+				background-color: transparent !important
+				color: transparent !important
+				border-color: transparent !important
+				&:hover
+					background-color: transparent !important
+					color: transparent !important
+					border-color: transparent !important
+				&:after
+					z-index: 1
+					opacity: 1
+
++media(md)
+
+
++media(sm)
+

@@ -1,0 +1,50 @@
+.sec-items
+	padding-bottom: 0
+	.wrap-items
+		margin-top: 35px
+		display: flex
+		justify-content: space-between
+		.item-wrap
+			flex-basis: calc(100% / 6 - 12px)
+		.wrap-icon
+			height: 57px
+			img
+				width: auto
+				height: 100%
+		.title
+			margin-top: 10px
+			margin-bottom: 4px
+			display: block
+			font-size: 17px
+			font-weight: bold
+			line-height: 21px
+			color: $title
+
+
++media(lg)
+	.sec-items
+		padding-top: 60px
+		.wrap-items
+			justify-content: center
+			flex-wrap: wrap
+			.item-wrap
+				flex-basis: calc(100% / 3 - 12px)
+				margin-bottom: 40px
+				text-align: center
+
++media(md)
+	.sec-items
+		.wrap-items
+			.item-wrap
+				flex-basis: calc(100% / 2 - 24px)
+
++media(sm)
+	.sec-items
+		padding: 40px 0
+		.wrap-items
+			.item-wrap
+				flex-basis: auto
+				max-width: 250px
+				width: 100%
+				&:last-child
+					margin-bottom: 0

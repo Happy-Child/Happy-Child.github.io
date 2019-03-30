@@ -1,0 +1,27 @@
+.banner-top-page
+	overflow: hidden
+	.img-bg-banner
+		transform: translate(110%, 0)
+		opacity: 0
+		transition: 2s transform ease, 3s opacity ease
+	.banner-title, .banner-subtitle, .btn
+		opacity: 0
+		transform: translate(-100%, 0)
+	.banner-title
+		transition: transform 1.2s ease 1.8s, opacity 1.2s ease 1.8s
+	.banner-subtitle
+		transition: 1.2s transform ease 2.3s, 1.2s opacity ease 2.3s
+	.btn
+		transition: 1.2s transform ease 2.8s, 1.2s opacity ease 2.8s, .5s background ease
+	.bottom-line-text span
+		opacity: 0
+		transform: translate(-18%, 0)
+		transition: 1.2s transform ease 3.3s, 1.2s opacity ease 3.3s
+
+.banner-animation
+	.img-bg-banner
+		transform: translate(0, 0)
+		opacity: 1
+	.banner-title, .banner-subtitle, .btn, .bottom-line-text span
+		opacity: 1
+		transform: translate(0, 0)

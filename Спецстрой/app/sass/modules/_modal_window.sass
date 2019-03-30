@@ -1,0 +1,124 @@
+.modal-window
+	background-color: rgba(0,0,0,.2)
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 9
+	display: none
+	.layer-out
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		cursor: pointer
+	.wrap-modal
+		height: 100%
+		width: 90%
+		display: flex
+		justify-content: center
+		align-items: center
+		position: relative
+		margin: 0 auto
+	.modal
+		background-color: #fff
+		padding: 50px 35px
+		position: relative
+		max-width: 380px
+		width: 100%
+		margin-bottom: 100px
+		opacity: 0
+		z-index: 0
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		transition: .5s all ease
+		.icon-close
+			position: absolute
+			top: 25px
+			right: 27px
+			width: 14px
+			height: 14px
+			cursor: pointer
+			padding: 10px
+			&:before, &:after
+				content: ""
+				position: absolute
+				width: 18px
+				height: 2px
+				background-color: #BEC2C3
+				top: 45%
+				left: 5%
+			&:before
+				transform: rotate(45deg)
+			&:after
+				transform: rotate(-45deg)
+	.modal-callback
+		text-align: center
+		.form-text
+			padding: 0 20px
+			.subtext
+				margin: 3px 0 16px 0
+				display: block
+		.wrap-btn
+			margin-top: 10px
+			.btn
+				padding: 18px 42px
+	.modal-success
+		text-align: center
+		color: #000
+		.wrap-img
+			width: 78px
+			margin: 0 auto 20px auto
+			svg
+				.check
+					fill: $accent
+				.circle
+					fill: $accent
+					opacity: .2
+		.title
+			margin-bottom: 10px
+			font-size: 22px
+			line-height: 26px
+			display: block
+		.text
+			text-align: center
+			display: block
+	.modal-active
+		opacity: 1
+		z-index: 1
+
++media(sm)
+	.modal-window
+		.modal
+			padding: 35px 20px
+			.icon-close
+				top: 15px
+				right: 15px
+		.modal-callback
+			.form-text
+				padding: 0
+			.wrap-btn
+				.btn
+					padding: 14px 42px
+
+
+@media (max-width: 360px)
+	.modal-window
+		.modal-callback
+			.form-text
+				.form-title
+					font-size: 24px
+					line-height: 29px
+				.subtext
+					font-size: 14px
+					line-height: 17px
+			.wrap-btn
+				width: 100%
+				display: block
+				.btn
+					width: 100%
+					display: block

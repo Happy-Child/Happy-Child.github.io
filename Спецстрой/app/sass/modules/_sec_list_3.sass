@@ -1,0 +1,115 @@
+.sec-list-3
+	position: relative
+	.wrap-img
+		position: absolute
+		top: 50%
+		transform: translate(0, -50%)
+		width: 552px
+		height: 360px
+		background-size: cover
+		background-position: center
+	.sec-list-3-content
+		margin-left: auto
+		width: 55%
+		margin-right: 30px
+		.content-title
+			margin-bottom: 18px
+		.subtext
+			margin-bottom: 25px
+		.wrap-list
+			ul
+				margin-top: 18px
+				li
+					color: $text
+					padding-left: 25px
+					&:before
+						top: 5px
+						left: 0px
+
+@media (max-width: 1440px)
+	.sec-list-3
+		.wrap-img
+			width: 470px
+			height: 310px
+
++media(xl)
+	.sec-list-3
+		.wrap-img
+			width: 380px
+			height: 270px
+		.sec-list-3-content
+			.content-title
+				font-size: 29px
+				line-height: 33px
+			.subtext, .wrap-list p
+				font-size: 15px
+				line-height: 18px
+			.wrap-list
+				ul
+					li
+						font-size: 15px
+						line-height: 18px
+						padding-left: 20px
+		
++media(lg)
+	.sec-list-3
+		.wrap-img
+			display: none
+		.sec-list-3-content
+			width: 70%
+			margin: 0 auto
+
++media(md)
+	.sec-list-3
+		.sec-list-3-content
+			width: 90%
+			.content-title
+				font-size: 26px
+				line-height: 30px
+				margin-bottom: 10px
+			.subtext
+				margin-bottom: 15px
+			.subtext, .wrap-list p
+				font-size: 13px
+				line-height: 16px
+			.wrap-list
+				ul
+					margin-top: 10px
+					li
+						font-size: 13px
+						line-height: 16px
+						padding-left: 15px
+						&:before
+							top: 3px
+							width: 6px
+							height: 9px
+
+
++media(sm)
+	.sec-list-3
+		padding: 40px 0
+		.sec-list-3-content
+			.content-title
+				font-size: 23px
+				line-height: 25px
+			.subtext, .wrap-list p
+				font-size: 12px
+				line-height: 15px
+			.wrap-list
+				ul
+					margin-top: 10px
+					li
+						font-size: 12px
+						line-height: 15px
+						margin-bottom: 8px
+						&:last-child
+							margin-bottom: 0
+						&:before
+							top: 3px
+							width: 6px
+							height: 9px
+
+@media (max-width: 420px)
+	.sec-list-3
+		.sec-list-3-content
+			width: 100%

@@ -1,0 +1,33 @@
+.main-header
+	.wrap-menu-icon, .wrap-logo, .nav-desktop ul > .menu-item, .wrap-callback, .wrap-header-icons > div
+		opacity: 0
+	.wrap-menu-icon
+		+trs(2, ease, opacity, .1)
+	.wrap-logo
+		+trs(2, ease, opacity, .3)
+	.nav-desktop .menu-item
+		+trs(2, ease, opacity)
+	.wrap-callback
+		+trs(2, ease, opacity, 1.2)
+	.wrap-header-icons
+		.wrap-user
+			+trs(2, ease, opacity, 1.5)
+		.wrap-search
+			+trs(2, ease, opacity, 1.7)
+
+.header-animation
+	.wrap-menu-icon, .wrap-logo, .nav-desktop ul > .menu-item, .wrap-callback, .wrap-header-icons > div
+		opacity: 1
+
++media(lg)
+	.main-header
+		.wrap-callback
+			+trs(2, ease, opacity, .6)
+		.wrap-header-icons
+			.wrap-user
+				+trs(2, ease, opacity, .9)
+			.wrap-search
+				+trs(2, ease, opacity, 1.2)
+
+
+//Установки задержки анимации пунктов меню произведена средствами Jq

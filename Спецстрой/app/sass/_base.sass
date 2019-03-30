@@ -1,0 +1,101 @@
+*
+	box-sizing: border-box
+	font-family: $default-font
+
+html
+	overflow-x: hidden
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 20px
+	font-family: $default-font
+	font-weight: 400
+	overflow-x: hidden
+	color: $text
+	
+input, textarea
+	&:focus:required:invalid
+		border: none
+	&:required:valid, &:required:invalid
+		border: none
+		box-shadow: none
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.container
+  margin-right: auto
+  margin-left: auto
+  padding-left: 15px
+  padding-right: 15px
+
+.small-text
+	font-size: 14px
+	line-height: 17px
+
+.img-resp
+	width: 100%
+	height: auto
+
+.sec
+	padding: 80px 0
+	.sec-title, .sec-subtitle
+		text-align: center
+
+.sec-gray
+	background-color: #F4F5F6
+
+#mail-to
+	display: none
+
+a
+	color: $link
+	+trs(.3, eio)
+	&:hover
+		color: $linkHover
+	&:active
+		color: $linkActive
+
++media(xl)
+
++media(lg)
+	body
+		font-size: 15px
+		line-height: 19px
+	a
+		&:hover
+			color: $link
+  .sec
+  	padding: 65px 0
+
++media(md)
+	.sec
+		padding: 50px 0
+
+
+//Grid system
+@media (min-width: 0px)
+  .container
+    width: 100%
+
+@media (min-width: 576px)
+  .container
+    width: 540px
+
+@media (min-width: 768px)
+  .container
+    width: 750px
+
+@media (min-width: 992px)
+  .container
+    width: 970px
+
+@media (min-width: 1200px)
+	.container
+		width: 1140px

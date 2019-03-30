@@ -1,0 +1,210 @@
+.main-services
+	.title-group
+		padding: 80px 60px 55px 60px
+		text-align: center
+		.sec-subtitle
+			color: $text
+			margin-top: 10px
+	.wrap-services-items
+		overflow: hidden
+		.secvices-item
+			padding: 80px 0
+			display: flex
+			align-items: stretch
+			min-height: 648px
+			position: relative
+			.item-img
+				background-size: cover
+				background-repeat: no-repeat
+				background-position: center
+				flex-basis: 62%
+				min-height: 490px
+			.wrap-item-content
+				flex-basis: 38%
+				display: flex
+				align-items: center
+			.item-content
+				flex-direction: column
+				justify-content: space-between
+				align-items: flex-end
+				width: 310px
+				.top-info
+					margin-bottom: 32px
+					.item-title
+						margin-bottom: 10px
+						font-weight: bold
+				.middle-info
+					margin-bottom: 26px
+					.wrap-img
+						margin-bottom: 12px
+						width: 100%	
+						img
+							width: 100%
+							height: auto
+				.bottom-info
+					margin-bottom: 12px
+					> span
+						display: block
+					.category
+					.price
+						font-size: 34px
+						line-height: 40px
+						color: #000
+						margin-top: 3px
+						span
+							color: $accent
+				.bottom-content
+					.wrap-btn
+						min-width: 272px
+						.btn
+							width: 100%
+			// &:before
+			// 	content: ""
+			// 	position: absolute
+			// 	top: 0
+			// 	width: 50%
+			// 	height: 100%
+			// 	background-color: #F4F5F6
+			// 	display: none
+		.item-odd
+			background-color: #F4F5F6
+			.item-img
+				order: 2
+			.wrap-item-content
+				order: 1
+			.item-content
+				margin-left: auto
+				margin-right: 17%
+			// &:before
+			// 	left: 0
+			// 	right: auto
+			// 	display: block
+		.item-even
+			.item-img
+				order: 1
+			.wrap-item-content
+				order: 2
+			.item-content
+				margin-right: auto
+				margin-left: 80px
+			.item-even
+				// &:before
+				// 	right: 0
+				// 	left: auto
+				// 	display: none
+
+@media (max-width: 1440px)
+	.main-services
+		.wrap-services-items
+			.item-odd
+				.item-content
+					margin-right: 13%
+			.item-even
+				.item-content
+					margin-left: 13%
+
++media(xl)
+	.main-services
+		.title-group
+			width: 90%
+			margin: 0 auto
+		.wrap-services-items
+			.secvices-item
+				.item-content
+					width: 300px
+					.top-info
+						.item-title
+							font-size: 27px
+							line-height: 30px
+					.middle-info
+						margin-bottom: 20px
+					.bottom-info
+						.price
+							font-size: 30px
+							line-height: 35px
+			.item-odd
+				.item-content
+					margin-right: 8%
+			.item-even
+				.item-content
+					margin-left: 8%
+
++media(lg)
+	.main-services	
+		.title-group
+			padding: 30px 60px 45px
+		.wrap-services-items
+			.secvices-item
+				.wrap-item-content, .item-img
+					flex-basis: 50%
+			.item-odd
+				.item-content
+					margin: 0 auto
+			.item-even
+				.item-content
+					margin: 0 auto
+
++media(md)
+	.main-services	
+		.title-group
+			width: 100%
+			padding: 60px 30px 40px
+		.wrap-services-items
+			.secvices-item
+				display: block
+				min-height: auto
+				.wrap-item-content, .item-img
+					flex-basis: 100%
+				.item-img
+					display: none
+				.item-content
+					width: 360px
+					.bottom-content
+						.wrap-btn
+							display: block
+				&:before
+					width: 100%
+			.item-odd
+				&:before
+					display: none
+			.item-even
+				&:before
+					display: block
+					
+
+
++media(sm)
+	.main-services	
+		.title-group
+			width: 80%
+			padding: 40px 0
+		.wrap-services-items
+			.secvices-item
+				display: block
+				min-height: auto
+				padding: 0 15px
+				.wrap-item-content, .item-img
+					flex-basis: 100%
+				.item-img
+					display: none
+				.item-content
+					width: 100%
+					max-width: 360px
+					padding: 40px 0
+					.top-info 
+						.item-title
+							font-size: 25px
+							line-height: 28px
+					.bottom-content
+						.wrap-btn
+							display: block
+			.item-even
+				&:before
+					left: 0
+					right: auto
+
+@media (max-width: 480px)
+	.main-services	
+		.title-group
+			width: 100%
+

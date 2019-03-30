@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title> Охрана дома
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#fff">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-favicon.png">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="loader">
+        <div class="circle item0"></div>
+        <div class="circle item1"></div>
+        <div class="circle item2"></div>
+      </div>
+    </div>
+    <div class="modal-window">
+      <div class="wrap-modal">
+        <div class="layer-out"></div>
+        <div class="modal modal-callback"><span class="icon-close"></span>
+          <div class="form-content">
+            <div class="form-text">
+              <h3 class="form-title">Оставить заявку</h3><span class="subtext small-text">на установку охранной тревожной и пожарной сигнализации</span>
+            </div>
+            <form class="form form-callback">
+              <div class="wrap-field">
+                <input class="input name" id="callback-name" required="required" type="text" placeholder="Ваше имя">
+              </div>
+              <div class="wrap-field">
+                <input class="input phone" id="callback-phone" required="required" type="tel" placeholder="+7 ( ___ ) __ - __ - __">
+              </div>
+              <div class="wrap-btn wrap-btn-acc">
+                <button class="btn btn-callback-send" type="text">Оставить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal modal-success"><span class="icon-close"></span>
+          <div class="wrap-img img-resp"><svg width="78" height="76" viewBox="0 0 78 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="circle" d="M71.4351 31.5739C69.6949 31.5739 68.2843 33.0114 68.2843 34.7844V38.0181C68.2796 46.4531 65.0514 54.3814 59.1946 60.3423C53.342 66.2989 45.5648 69.5787 37.2935 69.5787C37.2874 69.5787 37.2813 69.5787 37.2752 69.5787C20.1865 69.5687 6.29181 55.3946 6.30156 37.9818C6.30628 29.5469 9.53444 21.6186 15.3915 15.6573C21.244 9.70077 29.0214 6.42103 37.2926 6.42103C37.2987 6.42103 37.3047 6.42103 37.3108 6.42103C41.6788 6.42351 45.9167 7.34342 49.9066 9.15482C51.4965 9.87665 53.3586 9.14846 54.067 7.52892C54.7751 5.90938 54.0609 4.01151 52.4713 3.28968C47.6701 1.10975 42.5707 0.00294941 37.3143 0C37.3064 0 37.3003 0 37.2924 0C27.3399 0 17.9802 3.94724 10.938 11.1146C3.89026 18.2876 0.00579521 27.828 6.14327e-06 37.9783C-0.00563058 48.1284 3.86786 57.6733 10.9077 64.8546C17.9475 72.036 27.3102 75.9941 37.2715 76C37.2793 76 37.2855 76 37.2935 76C47.2459 76 56.6056 72.0529 63.6479 64.8854C70.6956 57.7122 74.5801 48.1718 74.5859 38.0199V34.7846C74.5859 33.0114 73.1753 31.5739 71.4351 31.5739Z" fill="#332C28"/>
+<path class="check" d="M77.0772 4.43927C75.8467 3.18561 73.8518 3.18561 72.6213 4.43927L37.2929 40.4373L29.2783 32.2707C28.0479 31.0169 26.0528 31.0169 24.8225 32.2707C23.592 33.5245 23.592 35.5573 24.8225 36.8111L35.0652 47.248C35.6804 47.875 36.4869 48.1884 37.2932 48.1884C38.0996 48.1884 38.9059 47.875 39.5213 47.248L77.0772 8.97965C78.3077 7.72584 78.3077 5.69308 77.0772 4.43927Z" fill="#F47139"/>
+</svg>
+          </div>
+          <div class="wrap-text"><span class="title">Спасибо! Скоро мы позвоним!</span>
+            <p class="text">Наши специалисты свяжутся с Вами по указанным контактным данным и ответят на любые интересующие Вас вопросы</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap-header">
+      <header class="main-header">
+        <div class="wrap-menu-2">
+          <ul class="menu-2-list">
+            <li class="menu-item"><a href="#">О компании</a></li>
+            <li class="menu-item"><a href="#">Партнёрам</a></li>
+            <li class="menu-item"><a href="#">Как это работает</a></li>
+            <li class="menu-item"><a href="#">Акции</a></li>
+            <li class="menu-item"><a href="#">Новости</a></li>
+            <li class="menu-item"><a href="#">Вопрос-ответ</a></li>
+            <li class="menu-item"><a href="#">Мониторинг пожарной сигнализации</a></li>
+            <li class="menu-item"><a href="#">Сервисное обслуживание</a></li>
+            <li class="menu-item"><a href="#">Контакты		</a></li>
+          </ul>
+        </div>
+        <div class="wrap-menu-icon">
+          <button class="menu-icon icon hamburger hamburger--squeeze" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+        </div>
+        <div class="wrap-logo"><a class="wrap-logo-img" href="index.html"><img class="img-resp" src="img/logo.png" alt="Спецстрой"></a><span class="sub-text small-text">Системы безопастности</span></div>
+        <nav class="nav-desktop">
+          <ul class="nav-list">
+            <li class="menu-item"><a href="apartment.html" target="_blank">Охрана квартир</a>
+              <ul class="sub-menu">
+                <li><a href="#">Загородные дома</a></li>
+                <li><a href="#">Тревожная сигнализация</a></li>
+                <li><a href="#">Тревожная сигнализация в две строки</a></li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="home.html" target="_blank">Охрана домов</a>
+              <ul class="sub-menu">
+                <li><a href="#">Загородные дома</a></li>
+                <li><a href="#">Тревожная сигнализация</a></li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="business.html" target="_blank">Охрана бизнеса</a></li>
+            <li class="menu-item"><a href="signaling.html" target="_blank">Тревожная сигнализация</a>
+              <ul class="sub-menu">
+                <li><a href="#">Загородные дома</a></li>
+                <li><a href="#">Тревожная сигнализация</a></li>
+                <li><a href="#">Тревожная сигнализация								</a></li>
+                <li><a href="#">Тревожная сигнализация в две строки</a></li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="rates.html" target="_blank">Тарифы</a>
+              <ul class="sub-menu">
+                <li><a href="#">Охрана бизнеса</a></li>
+                <li><a href="#">Охрана квартир</a></li>
+                <li><a href="#">Охрана домов</a></li>
+                <li><a href="#">Тревожная сигнализация																			</a></li>
+                <li><a href="#">Тарифы</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="wrap-callback">
+          <div class="top-line">
+            <div class="phone-icon"><img class="img-resp" src="img/phone_icon.svg" alt=""></div><a class="tel" href="tel:74957814790">+7 495 781-47-90</a>
+          </div>
+          <div class="bottom-line">
+            <button class="btn-callback btn-callback-show small-text">Заказать звонок</button>
+          </div>
+        </div>
+        <div class="wrap-header-icons">
+          <div class="wrap-user">
+            <div class="wrap-visible-content">
+              <div class="wrap-icon user-icon"><img class="img-resp" src="img/user_icon.svg" alt=""></div>
+            </div>
+            <div class="wrap-hidden-content"></div>
+          </div>
+          <div class="wrap-search">
+            <div class="wrap-visible-content">
+              <div class="wrap-icon search-icon"><img class="img-resp" src="img/search_icon.svg" alt=""></div>
+            </div>
+            <div class="wrap-hidden-content"></div>
+          </div>
+        </div>
+      </header>
+      <nav class="nav-mobile">
+        <div class="container">
+          <ul class="nav-list">
+            <li class="menu-item menu-item-has-children"><a href="apartment.html" target="_blank">Квартиры</a>
+              <ul class="sub-menu">
+                <li><a href="#">Загородные дома</a></li>
+                <li><a href="#">Тревожная сигнализация</a></li>
+                <li><a href="#">Тревожная сигнализация в две строки</a></li>
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children"><a href="home.html" target="_blank">Загородные дома</a>
+              <ul class="sub-menu">
+                <li><a href="#">Загородные дома</a></li>
+                <li><a href="#">Тревожная сигнализация</a></li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="business.html" target="_blank">Бизнес центры</a></li>
+            <li class="menu-item menu-item-has-children"><a href="signaling.html" target="_blank">Тревожная сигнализация</a>
+              <ul class="sub-menu">
+                <li><a href="#">Загородные дома</a></li>
+                <li><a href="#">Тревожная сигнализация</a></li>
+                <li><a href="#">Тревожная сигнализация								</a></li>
+                <li><a href="#">Тревожная сигнализация в две строки</a></li>
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children"><a href="rates.html" target="_blank">Тарифы</a>
+              <ul class="sub-menu">
+                <li><a href="#">Загородные дома</a></li>
+                <li><a href="#">Квартиры</a></li>
+                <li><a href="#">Загородные дома</a></li>
+                <li><a href="#">Квартиры																							</a></li>
+                <li><a href="#">Тревожная сигнализация</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="wrap-menu-2-mobile">
+          <div class="container">
+            <ul class="menu-2-list">
+              <li class="menu-item"><a href="#">О компании</a></li>
+              <li class="menu-item"><a href="#">Партнёрам</a></li>
+              <li class="menu-item"><a href="#">Как это работает</a></li>
+              <li class="menu-item"><a href="#">Акции</a></li>
+              <li class="menu-item"><a href="#">Новости</a></li>
+              <li class="menu-item"><a href="#">Вопрос-ответ</a></li>
+              <li class="menu-item"><a href="#">Мониторинг пожарной сигнализации</a></li>
+              <li class="menu-item"><a href="#">Сервисное обслуживание</a></li>
+              <li class="menu-item"><a href="#">Контакты		</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <section class="first-sec-page">
+      <div class="wrap-sec-img" style="background-image: url('img/img_first_page_2.jpg')"></div>
+      <div class="container">
+        <div class="sec-content">
+          <div class="wrap-breadcrumbs"><span class="page-item cur-page"> <a href="#">Главная</a></span><span class="delimiter">/</span><span class="page-item">Охрана дома</span></div>
+          <h1 class="title">Безопастность частных домов</h1>
+          <h5 class="subtitle">Компания «СпецМонтаж» предлагает обезопасить свое жилище с помощью охранной сигнализации. </h5>
+          <div class="bottom-line"><span class="small-text">Абонентская плата</span><span class="price">от 1 099 руб.</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="advantages-items sec sec-gray">
+      <div class="container">
+        <div class="group-title">
+          <h2 class="sec-title">Поставить дом на охрану.</h2><span class="subtext">Установка оборудования требует опыта и наличия качественных комплектующих. Если вы ищете надежного поставщика услуг, то вы на правильном пути.</span>
+        </div>
+        <div class="wrap-advantages-items">
+          <div class="advantage-item">
+            <div class="wrap-img"><img src="img/advantages-item-1.svg" alt=""></div>
+            <div class="wrap-text">
+              <h5 class="item-title">Тревожная кнопка</h5>
+              <p class="small-text">Кнопка «SOS» в мобильном приложении защищает вас уже рядом с домом. В опасной ситуации, находясь во дворе или в доме.</p>
+            </div>
+          </div>
+          <div class="advantage-item">
+            <div class="wrap-img"><img src="img/advantages-item-2.svg" alt=""></div>
+            <div class="wrap-text">
+              <h5 class="item-title">Ночной режим</h5>
+              <p class="small-text">Кнопка «SOS» в мобильном приложении защищает вас уже рядом с домом. В опасной ситуации, находясь во дворе или в доме.</p>
+            </div>
+          </div>
+          <div class="advantage-item">
+            <div class="wrap-img"><img src="img/advantages-item-5.svg" alt=""></div>
+            <div class="wrap-text">
+              <h5 class="item-title">Защита от утечки газа</h5>
+              <p class="small-text">Кнопка «SOS» в мобильном приложении защищает вас уже рядом с домом. В опасной ситуации, находясь во дворе или в доме.</p>
+            </div>
+          </div>
+          <div class="advantage-item">
+            <div class="wrap-img"><img src="img/advantages-item-4.svg" alt=""></div>
+            <div class="wrap-text">
+              <h5 class="item-title">Датчики движения</h5>
+              <p class="small-text">Кнопка «SOS» в мобильном приложении защищает вас уже рядом с домом. В опасной ситуации, находясь во дворе или в доме.	</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec-tabs sec-tabs-apartments">
+      <div class="container">
+        <div class="sec-tabs-content">
+          <aside class="wrap-tabs">
+            <div class="wrap-tabs-group">
+              <h6 class="tabs-group-title">Проводные</h6>
+              <ul class="wrap-tabs-items">
+                <li class="tab-item item-1 active-tab" data-item-pos="item-1"><span>Проводной комплект “Стриж”</span></li>
+              </ul>
+            </div>
+            <div class="wrap-tabs-group">
+              <h6 class="tabs-group-title">Беспроводные</h6>
+              <ul class="wrap-tabs-items">
+                <li class="tab-item" data-item-pos="item-2"><span>Беспроводной комплект “Стриж”</span></li>
+                <li class="tab-item" data-item-pos="item-3"><span>Беспроводной комплект “Proxyma”</span></li>
+                <li class="tab-item" data-item-pos="item-4"><span>Беспроводной комплект “Ритм”</span></li>
+              </ul>
+            </div>
+          </aside>
+          <div class="wrap-tabs-content">
+            <div class="tab-content-item active-content" data-item-pos="item-1">
+              <h2 class="tab-content-item-title">Проводной комплект «Стриж»</h2>
+              <div class="tab-content-item-info">
+                <div class="wrap-img"><img src="img/tab_item.png" alt="Проводной комплект «Стриж»"></div>
+                <div class="wrap-text">
+                  <div class="text-group text-group-1">
+                    <p class="small-text">Цена базового проводного комплекта с установкой и подключением на ПЦН «Радуга»</p><span class="item-price">15 000 руб.</span>
+                  </div>
+                  <div class="text-group text-group-2">
+                    <p class="small-text">Абонентская плата руб./мес.</p><span class="item-price">1 040 руб.</span>
+                  </div>
+                  <div class="wrap-btn wrap-btn-acc">
+                    <button class="btn">Заказать комплект</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content-item" data-item-pos="item-2">
+              <h2 class="tab-content-item-title">Проводной комплект «Стриж»</h2>
+              <div class="tab-content-item-info">
+                <div class="wrap-img"><img src="img/main_services_equipment_3.png" alt="Проводной комплект «Стриж»"></div>
+                <div class="wrap-text">
+                  <div class="text-group text-group-1">
+                    <p class="small-text">Цена базового проводного комплекта с установкой и подключением на ПЦН «Радуга» Цена базового проводного комплекта</p><span class="item-price">11 000 руб.</span>
+                  </div>
+                  <div class="text-group text-group-2">
+                    <p class="small-text">Абонентская плата руб./мес.</p><span class="item-price">900 руб.</span>
+                  </div>
+                  <div class="wrap-btn wrap-btn-acc">
+                    <button class="btn">Заказать комплект</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content-item" data-item-pos="item-3">
+              <h2 class="tab-content-item-title">Проводной комплект «Proxima»</h2>
+              <div class="tab-content-item-info">
+                <div class="wrap-img"><img src="img/tab_item.png" alt="Проводной комплект «Стриж»"></div>
+                <div class="wrap-text">
+                  <div class="text-group text-group-1">
+                    <p class="small-text">Цена базового проводного комплекта с установкой и подключением на ПЦН «Радуга» Цена базового проводного комплекта Цена базового проводного комплекта</p><span class="item-price">19 000 руб.</span>
+                  </div>
+                  <div class="text-group text-group-2">
+                    <p class="small-text">Абонентская плата руб./мес.</p><span class="item-price">1 340 руб.</span>
+                  </div>
+                  <div class="wrap-btn wrap-btn-acc">
+                    <button class="btn">Заказать комплект</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content-item" data-item-pos="item-4">
+              <h2 class="tab-content-item-title">Проводной комплект “Ритм”</h2>
+              <div class="tab-content-item-info">
+                <div class="wrap-img"><img src="img/main_services_equipment_1.png" alt="Проводной комплект «Стриж»"></div>
+                <div class="wrap-text">
+                  <div class="text-group text-group-1">
+                    <p class="small-text">Цена базового проводного комплекта с установкой и подключением на ПЦН «Радуга» базового проводного базового проводного</p><span class="item-price">5500 руб.</span>
+                  </div>
+                  <div class="text-group text-group-2">
+                    <p class="small-text">Абонентская плата руб./мес.</p><span class="item-price">360 руб.</span>
+                  </div>
+                  <div class="wrap-btn wrap-btn-acc">
+                    <button class="btn">Заказать комплект</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec-dark-callback">
+      <div class="container">
+        <div class="sec-content">
+          <div class="wrap-text">
+            <h3 class="sec-title">Заказать звонок</h3><span class="small-text">Оставьте заявку, и наш менеджер перезвонит Вам в течении дня.</span>
+          </div>
+          <div class="wrap-form">
+            <form class="form form-callback">
+              <div class="wrap-field">
+                <input class="input name" type="text" required="required" placeholder="Ваше имя">
+              </div>
+              <div class="wrap-field">
+                <input class="input phone" type="tel" required="required" placeholder="+7 ( ___ ) ___ - __ - __">
+              </div>
+              <div class="wrap-btn wrap-btn-acc">
+                <button class="btn btn-callback-send">Оставить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec-list-1 sec-list-1-circle sec">
+      <div class="container">
+        <div class="sec-list-1-content">
+          <div class="sec-list-1-text">
+            <h4 class="subtext">Схема установки базового комплекта охранной сигнализации для дома</h4>
+            <h2 class="title">Будьте уверены в безопасности своего дома</h2>
+            <div class="wrap-list wrap-list-circle">
+              <ol>
+                <li>Панель/клавиатура</li>
+                <li>Датчик открывания двери</li>
+                <li>Датчик движения</li>
+                <li>Брелок</li>
+              </ol>
+            </div>
+            <p class="subtext">ООО «СпецМонтаж» предлагает круглосуточный мониторинг домов и коттеджей с помощью надежных и современных систем безопасности, подключенных к пульту централизованного наблюдения «Радуга».</p>
+          </div>
+          <div class="sec-list-1-img">
+            <div class="wrap-img"><img class="img-resp" src="img/sec_list_1_home.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec-callback sec-callback-dark-shadow sec" style="background-image: url('img/bg_sec_callback_home.jpg')">
+      <div class="container">
+        <div class="sec-callback-content">
+          <div class="wrap-callback-text">
+            <h2 class="sec-callback-title">Защитите свой дом пока вы в отьезде</h2>
+            <h4 class="sec-callback-subtitle">
+              Ваша организация является нашим клиентом. 
+              
+              Охрана квартир или домов  с реагированием Росгвардии для всех сотрудников Вашей компании - с 50% скидкой.
+            </h4>
+          </div>
+          <div class="wrap-callback-form">
+            <div class="form-content">
+              <div class="form-text">
+                <h3 class="form-title">Оставить заявку</h3><span class="subtext small-text">на установку охранной тревожной и пожарной сигнализации</span>
+              </div>
+              <form class="form form-callback">
+                <div class="wrap-field">
+                  <input class="input name" id="callback-name" required="required" type="text" placeholder="Ваше имя">
+                </div>
+                <div class="wrap-field">
+                  <input class="input phone" id="callback-phone" required="required" type="tel" placeholder="+7 ( ___ ) __ - __ - __">
+                </div>
+                <div class="wrap-btn wrap-btn-acc">
+                  <button class="btn btn-callback-send">Оставить заявку</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec-list-2 sec">
+      <div class="container">
+        <div class="sec-list-2-content">
+          <div class="wrap-info">
+            <h2 class="info-title">Предотвращение незаконных действий</h2>
+            <p class="subtext">Безопасность жилища имеет большое значение для собственника. Учитывая риск незаконного проникновения, кражи и грабежа, целесообразным будет решение поставить квартиру на охрану.</p>
+            <div class="wrap-list wrap-list-arrow">
+              <p>Это открывает собственникам такие возможности, как:</p>
+              <ul>
+                <li>защита от несанкционированного проникновения;</li>
+                <li>контроль над утечками газа и воды;</li>
+                <li>предотвращение незаконных действий в отношении имущества даже в случае проникновения третьих лиц.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrap-img">
+            <div class="img"><img src="img/main_services_equipment_1.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec-list-3 sec sec-gray">
+      <div class="wrap-img" style="background-image: url(img/img_serviecs_list.jpg)"></div>
+      <div class="container">
+        <div class="sec-list-3-content">
+          <h2 class="content-title">Компания «СпецМонтаж» предлагает обезопасить свое жилище с помощью охранной сигнализации. </h2>
+          <p class="subtext">Наработанный с 2003 года опыт позволил создать оптимальные условия для клиентов и собрать лучшие технологические решения для домовладений.</p>
+          <div class="wrap-list wrap-list-arrow">
+            <p>Кроме установки охранных систем, компания предоставляет услуги монтажа пожарной и тревожной сигнализаций. В перечень услуг входит:</p>
+            <ul>
+              <li>установка охраны;</li>
+              <li>вневедомственная охрана жилища;</li>
+              <li>реагирование нарядов полиции и группы немедленного реагирования для контроля безопасности.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec-dark-callback">
+      <div class="container">
+        <div class="sec-content">
+          <div class="wrap-text">
+            <h3 class="sec-title">Заказать звонок</h3><span class="small-text">Оставьте заявку, и наш менеджер перезвонит Вам в течении дня.</span>
+          </div>
+          <div class="wrap-form">
+            <form class="form form-callback">
+              <div class="wrap-field">
+                <input class="input name" type="text" required="required" placeholder="Ваше имя">
+              </div>
+              <div class="wrap-field">
+                <input class="input phone" type="tel" required="required" placeholder="+7 ( ___ ) ___ - __ - __">
+              </div>
+              <div class="wrap-btn wrap-btn-acc">
+                <button class="btn btn-callback-send">Оставить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="wrap-footer-cols">
+          <div class="col first-col">
+            <div class="wrap-logo"><a class="wrap-logo-img" href="#"><img class="img-resp" src="img/logo.png" alt="Спецстрой"></a><span class="sub-text small-text">Централизованная охрана объектов</span></div>
+            <p class="copyright">©2003-2018 ООО «СпецМонтаж» : Системы безопасности . Охранная сигнализация , тревожная сигнализация , пожарная сигнализация. Пожарный мониторинг. Сервисное обслуживание.</p>
+          </div>
+          <div class="col second-col">
+            <div class="wrap-list wrap-list-arrow">
+              <ul>
+                <li><a href="apartment.html" target="_blank">Квартиры</a></li>
+                <li><a href="home.html" target="_blank">Загородные дома</a></li>
+                <li><a href="business.html" target="_blank">Бизнес центры</a></li>
+                <li><a href="signaling.html" target="_blank">Тревожная сигнализация</a></li>
+                <li><a href="#" target="_blank">Пожарный мониторинг</a></li>
+                <li><a href="#" target="_blank">Техническое обслуживание систем сигнализации</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col third-col">
+            <div class="wrap-callback">
+              <div class="top-line">
+                <div class="phone-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.6958 7.0318C4.8478 9.2958 6.7038 11.1518 8.9678 12.3038L10.7278 10.5438C10.9518 10.3198 11.2638 10.2558 11.5438 10.3438C12.4398 10.6398 13.3998 10.7998 14.3998 10.7998C14.612 10.7998 14.8155 10.8841 14.9655 11.0341C15.1155 11.1841 15.1998 11.3876 15.1998 11.5998V14.3998C15.1998 14.612 15.1155 14.8155 14.9655 14.9655C14.8155 15.1155 14.612 15.1998 14.3998 15.1998C10.7929 15.1998 7.33365 13.767 4.78315 11.2165C2.23266 8.66596 0.799805 5.20675 0.799805 1.5998C0.799805 1.38763 0.88409 1.18415 1.03412 1.03412C1.18415 0.88409 1.38763 0.799805 1.5998 0.799805H4.3998C4.61198 0.799805 4.81546 0.88409 4.96549 1.03412C5.11552 1.18415 5.1998 1.38763 5.1998 1.5998C5.1998 2.5998 5.3598 3.5598 5.6558 4.4558C5.7438 4.7358 5.6798 5.0478 5.4558 5.2718L3.6958 7.0318Z" fill="#F84A51"/>
+</svg>
+                </div><a class="tel" href="tel:74957814790">+7 495 781-47-90</a>
+              </div>
+              <div class="bottom-line">
+                <button class="btn-callback btn-callback-show small-text">Заказать обратный звонок</button>
+              </div>
+            </div>
+            <div class="wrap-msg">
+              <div class="wrap-icon"><img class="img-resp" src="img/msg_icon.svg" alt=""></div><a class="link" href="mailto:info@pcnraduga.ru">info@pcnraduga.ru</a>
+            </div>
+            <address class="wrap-address">
+              <div class="wrap-icon"><img class="img-resp" src="img/map_icon.svg" alt=""></div><span class="address-data">Москва,ул. Золоторожский вал 22</span>
+            </address>
+          </div>
+          <div class="col fourth-col">
+            <p class="copyright">©2003-2018 ООО «СпецМонтаж» : Системы безопасности . Охранная сигнализация , тревожная сигнализация , пожарная сигнализация. Пожарный мониторинг. Сервисное обслуживание.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>
