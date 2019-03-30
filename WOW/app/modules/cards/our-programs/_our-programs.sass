@@ -1,4 +1,7 @@
 .our-program
+	.wrap-arrows-angles > *
+		top: 30%
+
 	.wrap-item
 		max-width: calc(100% / 3)
 		padding-bottom: 2 * $gutters
@@ -34,20 +37,44 @@
 					z-index: 1
 
 		&-large
-			min-height: 620px
 			.item
 				background-color: $purple
-				&:hover
-					background-color: $light-purple
-					.title, .bottom-line > *
-						color: $purple
 
-					.bottom-line > *
-						&:hover
-							color: $hover
+				&-hover
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					background-color: rgba(0,0,0,.85)
+					padding: 40px
+					transform: translate(0, 101%)
+					transition: .4s all ease
+					.text, .bottom-line
+						display: block
+
+				&:hover
+					.item-hover
+						transform: translate(0)
+
+			.text
+				color: #fff
+				font-size: 1.2rem
+				line-height: 1.7rem
+				font-weight: 300
+
+			.text, .bottom-line
+				display: none
+
 
 			.wrap-img
-				margin: -33px -37px 50px		
+				position: relative
+				overflow: hidden
+				margin: -33px -37px 35px
+
+			.title
+				margin-bottom: 20px
+
 			.price
 				margin-top: auto
 
@@ -77,10 +104,13 @@
 	.wrap-btn-calculate
 		margin-top: 32px
 
+
 +media(xl)
 	.our-program
-		.wrap-item
+		.wrap-arrows-angles > *
+			top: 150px
 
+		.wrap-item
 			.item
 				.text
 					margin: 14px 0
@@ -89,41 +119,57 @@
 					margin-top: 5px
 
 			&-large
-				min-height: 550px
-
 				.item
 					padding: 28px 33px 33px
 
+					&-hover
+						padding: 30px
+
+					.text
+						font-size: 1.1rem
+						line-height: 1.5rem
+
 				.wrap-img
-					margin: -28px -33px 40px		
+					margin: -28px -33px 25px		
 
 
 
 +media(lg)
 	.our-program
+		.wrap-arrows-angles > *
+			top: 110px
+
+
 		.wrap-item
 
 			&-large
-				min-height: 400px
 
 				.item
 					padding: 20px 20px 25px
 
+					&-hover
+						display: none
+
 					.text
-						font-size: .87rem
-						line-height: 1.2rem
+						font-size: .8rem
+						line-height: 1.24rem
+						font-weight: 400
+
+					.title
+						margin-bottom: 0
+
+					.text, .bottom-line
+						&:not(.item-hover)
+							display: flex
 
 				.wrap-img
-					margin: -20px -20px 25px
+					margin: -20px -20px 20px
 
 			&-simple
 				min-height: 280px
 
 				.item
 					padding: 45px 20px 28px
-
-				.title
-					margin-bottom: 18px
 
 				.price
 					font-size: 1.2rem
@@ -138,6 +184,11 @@
 	.our-program
 		.wrap-item
 			max-width: 50%
+			&-large
+				.item
+					.text
+						font-size: 1rem
+						line-height: 1.5rem
 
 
 +media(sm)
@@ -149,6 +200,13 @@
 
 		.wrap-item
 			max-width: 100%
+
+			&-large
+				.item
+					.text
+						font-size: .8rem
+						line-height: 1.2rem
+
 			&-simple
 				.item
 					padding-top: 35px

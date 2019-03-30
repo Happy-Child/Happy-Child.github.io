@@ -2,20 +2,21 @@
 	background-color: #fff
 	padding-bottom: 65px
 
-	.wrap-slider
-		&-bottom
-			margin-top: -115px
-		&:hover
-			z-index: 9
+	.slider-title
+		display: block
+		text-align: center
+		margin: 40px auto 30px
+		font-size: 2rem
+		line-height: 2.6rem
+		color: #000
+		font-family: Ubuntu
+		font-weight: 300
+		&-top
+			margin-top: 0
 
-	.swiper-wrapper
-		padding-bottom: 120px
-
-	.wrap-items
-		margin-bottom: -120px
 
 	.wrap-btn
-		margin-top: 140px
+		margin-top: 50px
 
 
 +media(xl)
@@ -39,10 +40,24 @@
 			margin-bottom: 0
 
 		.wrap-btn
-			margin-top: 40px
+			margin-top: 30px
 
 +media(md)
 	.page-portfolio
 
 		.wrap-btn
 			margin-top: 30px
+
+		.slider-title
+			margin: 20px auto
+			font-size: 1.7rem
+			line-height: 2.2rem
+
++media(sm)
+	.page-portfolio
+		font-size: 1.15rem
+		line-height: 1.3rem
+		.slider-title
+			br
+				display: none
+

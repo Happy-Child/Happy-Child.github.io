@@ -475,7 +475,6 @@ $(function () {
 		var allModals = $(".wrap-modal-windows .modal-window");
 		var $menuAPI = $(".mobile-menu").data("mmenu");
 		var $btnHeader = $(".header-fixed .wrap-full-menu-btn .menu-icon");
-		console.log(!!$menuAPI);
 
 		if (btns && modalWrap) {
 			//Open

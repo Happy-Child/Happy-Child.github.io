@@ -112,9 +112,13 @@
 		.social-circle-row
 			margin: 15px 0 25px
 			justify-content: center
+			@media(max-width: 475px)
+				margin-bottom: 10px
 		
 		.social-circle-bottom-text
 			position: relative
+			@media(max-width: 475px)
+				font-size: 12px
 
 			&::before, &::after
 				content: ""
@@ -427,26 +431,33 @@
 
 	.window-modal
 		.modal-content
-			padding: 30px 15px
+			padding: 20px 15px
+
+		.wrap-icon
+			margin-bottom: 5px
 
 		.modal-text
 			padding: 0 10px
 
 		.modal-title
-			font-size: 24px
-			line-height: 28px
+			font-size: 22px
+			line-height: 26px
 
 		.modal-subtitle
-			line-height: 20px
-			font-size: 13px
+			line-height: 18px
+			font-size: 12px
+			margin-top: 5px
 
 		.form
-			margin-top: 20px
+			margin-top: 10px
 			.wrap-checkbox
-				margin-bottom: 20px
+				margin-bottom: 10px
 				.text
-					line-height: 18px
+					line-height: 15px
 					font-size: 12px
+			.wrap-field
+				margin-bottom: 10px
+
 
 		.bottom-line-btns
 			> *

@@ -22,7 +22,7 @@ const syntax 				= 'sass',
 gulp.task('pre', function() {
   return gulp.src('app/*.html')
     .pipe(prettify())
-    .pipe(gulp.dest('app/after-prettify'));
+    .pipe(gulp.dest('app'));
 });
 
 
@@ -74,12 +74,12 @@ gulp.task('common-babel', () =>
 gulp.task('js', () =>
 	gulp.src([
 		'app/libs/jquery/jquery.min.js',
-		'app/libs/jq-mask/jquery.maskedinput.min.js',
 		'app/libs/jq-range/jquery-ui.min.js',
 		'app/libs/jq-range/jquery.ui.touch-punch.min.js',
 		'app/libs/slick/slick.min.js',		
 		'app/libs/datepicker/datepicker.min.js',
 		'app/libs/select2/select2.min.js',
+		'app/libs/jq-mask/jquery.mask.min.js',
 		'app/libs/mmenu/jquery.mmenu.all.js',
 		'app/libs/custom-scrollbar/jquery.mCustomScrollbar.js',
 		'app/libs/timer/countdown.js',
@@ -107,10 +107,6 @@ gulp.task('watch', ['pug', 'styles', 'js', 'browser-sync'], () => {
 
 //Build
 gulp.task('b', ['pug', 'pre', 'styles', 'js'], () => {
-	//HTML
-	gulp.src('app/*.html')
-		.pipe(gulp.dest('project'));
-
 	//CSS
  	gulp.src('app/css/main.min.css')
 		.pipe(gulp.dest('project/css'));

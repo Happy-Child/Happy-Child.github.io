@@ -31,12 +31,32 @@
 				display: block
 				height: 100%
 
+				&-hover
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					background-color: rgba(0,0,0,.85)
+					padding: 40px
+					transform: translate(0, 101%)
+					transition: .4s all ease
+
+				&:hover
+					.item-hover
+						transform: translate(0)
+
+			.item-text:not(.item-hover)
+				display: none
+
+
 			img
 				border-radius: 4px 4px 0 0
 
 			.wrap-img
 				z-index: 2
 				position: relative
+				overflow: hidden
 
 			.item-info
 				background-color: $purple
@@ -52,23 +72,23 @@
 				z-index: 2
 				position: relative
 
-			.item-text
-				position: absolute
-				left: 0
-				right: 0
-				top: 99%
-				transition: .2s all ease
-				background-color: $purple
-				padding: 0 40px 35px
-				z-index: -1
-				border-radius: 0 0 4px 4px
-				transform: translate(0, -100%)
+			// .item-text
+			// 	position: absolute
+			// 	left: 0
+			// 	right: 0
+			// 	top: 99%
+			// 	transition: .2s all ease
+			// 	background-color: $purple
+			// 	padding: 0 40px 35px
+			// 	z-index: -1
+			// 	border-radius: 0 0 4px 4px
+			// 	transform: translate(0, -100%)
 
-			&:hover
-				.item-text
-					z-index: 1
-					transition: .4s all ease
-					transform: translate(0)
+			// &:hover
+			// 	.item-text
+			// 		z-index: 1
+			// 		transition: .4s all ease
+			// 		transform: translate(0)
 	
 	.wrap-slider-arrows
 		> *
@@ -91,17 +111,17 @@
 					background-color: $purple
 					border-radius: 4px
 
+					&-hover
+						display: none
+
 				.item-info
 					padding: 25px 30px 15px
 					border-radius: 0
 
-				.item-text
-					padding: 0 30px 25px
+				.item-text:not(.item-hover)
 					display: block
-					position: static
-					transform: translate(0)
-					visibility: visible
-					margin-top: 0
+					padding: 0 30px 25px
+
 
 			&-simple
 				.title
@@ -126,7 +146,7 @@
 			&-dropdown
 				.item-info
 					padding: 15px 20px 12px
-				.item-text
+				.item-text:not(.item-hover)
 					padding: 0 20px 20px
 					font-size: .9rem
 					line-height: 1.3rem

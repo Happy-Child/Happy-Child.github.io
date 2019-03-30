@@ -180,11 +180,41 @@ const sliderTestimonials = () => {
 //
 
 
+//
+const sliderPhotos = () => {
+	const sliderParams = {
+    slidesPerView: 3,
+    spaceBetween: 16,
+    speed: 700,
+    navigation: {
+	    nextEl: '.about-program .wrap-slider .wrap-slider-arrows .button-next',
+	    prevEl: '.about-program .wrap-slider .wrap-slider-arrows .button-prev',
+	  },
+		breakpoints: {
+		  // when window width is <= 820px
+		  820: {
+		    slidesPerView: 2,
+		  },
+		  // when window width is <= 576px
+		  576: {
+		  	slidesPerView: 1,
+		  	spaceBetween: 8
+		  },
+		}
+  }
+
+	const slider = new Swiper($(".about-program .wrap-photos-slider .slider"), sliderParams);
+};
+//
+
+
+
 //Init
 const slidersInit = () => {
 	slidersOurPrograms();
 	slidersPortfolio();
 	sliderTestimonials();
+	sliderPhotos();
 };
 //Sliders END
 
@@ -192,11 +222,11 @@ const slidersInit = () => {
 
 //Slider arrows status visible START
 const sliderArrowsStatusVisible = () => {
-	const slidersProgramsAndTestimonials = $(".our-program .slider, .testimonials .slider");
+	const slidersTritle = $(".our-program .slider, .testimonials .slider, .about-program .slider");
 	const sliderPortfolio = $(".portfolio .slider");
 
-	if ( slidersProgramsAndTestimonials.length ) {
-		slidersProgramsAndTestimonials.each(function() {
+	if ( slidersTritle.length ) {
+		slidersTritle.each(function() {
 			const cur = $(this);
 			const curItemsLenght = cur.find(".wrap-item").length;
 			const curArrows = cur.next(".wrap-slider-arrows");
@@ -304,6 +334,118 @@ const parseUrlVideo = () => {
 
 
 
+//Parallax banner START
+const parallaxBanner = () => {
+	const parallaxLayer = $(".main-banner-parallax");
+
+	if ( parallaxLayer.length ) {
+		parallaxLayer.mousemove(function(e) {
+	    let change;
+	    let xpos = e.clientX;
+	    let ypos = e.clientY;
+	    let left = change * 20;
+	    xpos = xpos *2 ;
+	    ypos = ypos*2;
+	    let topResult = (0 + (ypos/50)) + "px";
+	    let rightResult = (0 + (xpos/80)) + "px";
+
+	    parallaxLayer.css('top', `calc(50% - ${topResult})`);
+	    parallaxLayer.css('left', `calc(50% - ${rightResult})`);
+
+	  });
+	}
+};
+//Parallax banner END
+
+
+
+//Set mask START
+const setMask = () => {
+	const fields = $("input[type=tel]");
+
+	if ( fields.length ) {
+		fields.mask(("+7 (000) 00 - 00 - 00"));
+	}
+};
+//Set mask END
+
+
+
+//Modals START
+const modalsLogic = () => {
+	const modals = $(".wrap-modal");
+	const btns = $(".btn");
+	const btnClose = $(".icon-close");
+
+	if ( modals.length && btns.length ) {
+		btns.click(function() {
+			const key = $(this).attr("data-modal-key");
+			$(`.wrap-modal[data-modal-key=${key}]`).addClass("active");
+		});
+
+		btnClose.click(function() {
+			modals.removeClass("active");
+		});
+
+		$(document).mouseup(function (e) {
+			if (!modals.find(".modal").is(e.target) && modals.find(".modal").has(e.target).length === 0) {
+				modals.removeClass("active");
+			}
+		});
+	}
+}
+//Modals END
+
+
+
+
+//Send message (AJAX) START
+const sendMessage = (data) => {
+	$(".form-callback").submit(function (e) {
+		e.preventDefault();
+		const form = $(this);
+		const btn = form.find(".btn-callback-send");
+
+		btn.attr("disabled", "disabled").addClass("btn-callback-load");
+
+				$(".wrap-modal").removeClass("active");
+				setTimeout(function() {
+					$(".wrap-modal[data-modal-key=modal-success]").addClass("active");
+					btn.removeAttr("disabled");
+				}, 300);
+
+		// const data = {
+		// 	name: form.find("input.name").val(),
+		// 	phone: form.find("input.phone").val()
+		// };
+
+		// $.ajax({
+		// 	type: "POST",
+		// 	url: "/sendform.php",
+		// 	data: $(this).serialize(),
+		// 	success (data) {
+		// 		form.trigger('reset');
+		// 		console.log(data);
+
+		// 		$(".wrap-modal").removeClass("active");
+		// 		setTimeout(function() {
+		// 			$(".wrap-modal[data-modal-key=modal-success]").addClass("active");
+		// 			btn.removeAttr("disabled");
+		// 		}, 300);
+
+		// 	},
+		// 	error (data) {
+		// 		form.trigger('reset');
+		// 		console.log(data);
+		// 	}
+		// });
+	});
+}
+//Send message (AJAX) END
+
+
+
+
 //Init START
 const scriptsInit = () => {
 	headerFixedStyle();
@@ -313,6 +455,10 @@ const scriptsInit = () => {
 	replaceSVGToInline();
 	preloader();
 	sliderArrowsStatusVisible();
+	parallaxBanner();
+	sendMessage();
+	modalsLogic();
+	setMask();
 };
 //Init END
 

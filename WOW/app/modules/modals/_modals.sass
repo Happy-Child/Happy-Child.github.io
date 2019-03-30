@@ -1,0 +1,135 @@
+.wrap-modal
+	background-color: rgba(0,0,0,.6)
+	position: fixed
+	top: 0
+	left: 0
+	z-index: -1
+	display: flex
+	justify-content: center
+	align-items: center
+	margin: 0 auto
+	height: 100%
+	width: 100%
+	opacity: 0
+	transition: .5s all ease
+	cursor: pointer
+
+	&.active
+		z-index: 999
+		opacity: 1
+
+	.modal
+		background-color: #fff
+		cursor: default
+		padding: 50px 35px 40px
+		position: relative
+		max-width: 380px
+		width: calc(100% - 30px)
+		transition: .5s all ease
+		.icon-close
+			position: absolute
+			top: 15px
+			right: 15px
+			width: 14px
+			height: 14px
+			cursor: pointer
+			width: 20px
+			height: 20px
+			&:before, &:after
+				content: ""
+				position: absolute
+				width: 18px
+				height: 2px
+				background-color: #BEC2C3
+				top: 45%
+				left: 5%
+			&:before
+				transform: rotate(45deg)
+			&:after
+				transform: rotate(-45deg)
+
+		.form-title
+			font-size: 28px
+			line-height: 33px
+			font-weight: 300
+			display: block
+			margin-bottom: 20px
+
+		.wrap-field
+			border: 1px solid #e0e0e0
+			margin-bottom: 8px
+
+		.input
+			width: 100%
+			padding: 15px 24px
+			color: #1a1b1b
+
+	.modal-callback
+		text-align: center
+		.form-text
+			padding: 0 20px
+			.subtext
+				margin: 3px 0 16px 0
+				display: block
+		.wrap-btn
+			margin-top: 20px
+			.btn
+				padding: 18px 42px
+	.modal-success
+		text-align: center
+		color: #000
+		.wrap-img
+			width: 78px
+			margin: 0 auto 20px auto
+			svg
+				.check
+					fill: $accent
+				.circle
+					fill: $accent
+					opacity: .2
+		.title
+			margin-bottom: 10px
+			font-size: 22px
+			line-height: 26px
+			display: block
+		.text
+			text-align: center
+			display: block
+			color: #666666
+			font-size: 15px
+			line-height: 21px
+	.modal-active
+		opacity: 1
+		z-index: 1
+
++media(sm)
+	.wrap-modal
+		.modal
+			padding: 35px 20px
+			.icon-close
+				top: 15px
+				right: 15px
+		.modal-callback
+			.form-text
+				padding: 0
+			.wrap-btn
+				.btn
+					padding: 14px 42px
+
+
+@media (max-width: 360px)
+	.wrap-modal
+		.modal-callback
+			.form-text
+				.form-title
+					font-size: 24px
+					line-height: 29px
+				.subtext
+					font-size: 14px
+					line-height: 17px
+			.wrap-btn
+				width: 100%
+				display: block
+				.btn
+					width: 100%
+					display: block

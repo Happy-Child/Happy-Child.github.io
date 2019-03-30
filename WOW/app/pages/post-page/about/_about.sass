@@ -36,19 +36,12 @@
 			&:last-child
 				margin-bottom: 0
 
-	.wrap-photos
-		display: flex
-		align-items: stretch
-		margin-left: -$gutters
-		margin-right: -$gutters
-		flex-wrap: wrap
-		margin-bottom: -16px
-
-		.wrap-photo
-			width: 100%
-			max-width: calc(100% / 3)
-			padding: 0 $gutters 16px
-
+	.wrap-photos-slider
+		margin-left: auto
+		margin-right: auto
+		.wrap-slider-arrows
+			> *
+				top: 50%
 		.photo
 			height: 100%
 	
@@ -87,10 +80,6 @@
 			max-width: 385px
 			margin-bottom: 30px
 
-		.wrap-photos
-			.wrap-photo
-				max-width: 50%
-
 
 +media(sm)
 	.about-program
@@ -103,11 +92,3 @@
 			p
 				margin-bottom: 15px
 
-		.wrap-photos
-			.wrap-photo
-				max-width: none
-				min-width: 210px
-				width: auto
-				flex-grow: 1
-				flex-basis: 200px
-	
