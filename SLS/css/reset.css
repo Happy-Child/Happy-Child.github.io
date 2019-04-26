@@ -1,0 +1,106 @@
+html, body, p, hr, table, tr, th, td, h1, h2, h3, h4, h5, h6, ul, ol, li, input, select, textarea, button, img {padding:0;border:0;margin:0;}
+
+@font-face {
+	font-family:'CenturyGothic';font-weight:normal;font-style:normal;
+	src:url('../fonts/CenturyGothic.eot');
+	src:url('../fonts/CenturyGothic.eot') format('embedded-opentype'),
+		url('../fonts/CenturyGothic.woff') format('woff'),
+		url('../fonts/CenturyGothic.ttf') format('truetype'),
+		url('../fonts/CenturyGothic.svg#CenturyGothic') format('svg');
+}
+@font-face {
+	font-family:'CenturyGothic';font-weight:bold;font-style:normal;
+	src:url('../fonts/CenturyGothic-Bold.eot');
+	src:url('../fonts/CenturyGothic-Bold.eot') format('embedded-opentype'),
+		url('../fonts/CenturyGothic-Bold.woff') format('woff'),
+		url('../fonts/CenturyGothic-Bold.ttf') format('truetype'),
+		url('../fonts/CenturyGothic-Bold.svg#CenturyGothic') format('svg');
+}
+@font-face {
+	font-family:'CenturyGothic';font-weight:normal;font-style:italic;
+	src:url('../fonts/CenturyGothic-Italic.eot');
+	src:url('../fonts/CenturyGothic-Italic.eot') format('embedded-opentype'),
+		url('../fonts/CenturyGothic-Italic.woff') format('woff'),
+		url('../fonts/CenturyGothic-Italic.ttf') format('truetype'),
+		url('../fonts/CenturyGothic-Italic.svg#CenturyGothic') format('svg');
+}
+@font-face {
+	font-family:'CenturyGothic';font-weight:bold;font-style:italic;
+	src:url('../fonts/CenturyGothic-BoldItalic.eot');
+	src:url('../fonts/CenturyGothic-BoldItalic.eot') format('embedded-opentype'),
+		url('../fonts/CenturyGothic-BoldItalic.woff') format('woff'),
+		url('../fonts/CenturyGothic-BoldItalic.ttf') format('truetype'),
+		url('../fonts/CenturyGothic-BoldItalic.svg#CenturyGothic') format('svg');
+}
+
+* {box-sizing:border-box;}
+html, body {min-width:320px;height:100%;}
+html {font-size:100px;}
+body {font:14px/1.2 'CenturyGothic',arial,sans-serif;color:#000;background:#fff;}
+table {border-collapse:collapse;}
+td {vertical-align:top;}
+p {margin:1em 0;}
+a {color:#025692;text-decoration:none;transition:all .1s ease-in 0s;outline:none;}
+a:hover {}
+ul {}
+ul li {}
+h1, h2, h3, h4, h5, h6, .title {text-transform:uppercase;color:#e52413;margin:1.5em 0 .2em;}
+h1, .title {font-size:30px;text-align:center;margin:0 0 1em;}
+.title {line-height:1;font-weight:bold;margin:0;padding:0 0 .8em;}
+h2 {font-size:25px;}
+h3 {font-size:20px;}
+h4, h5, h6 {font-size:18px;color:#949494;}
+hr {
+}
+input, select, textarea {
+	display:block;
+	width:470px;
+	height:35px;
+	border:1px solid #cbcbcb;
+	background:#fff;
+	padding:0 15px;
+	font:18px 'CenturyGothic',arial,sans-serif;
+}
+input:hover, select:hover, textarea:hover {}
+input:focus, select:focus, textarea:focus {}
+input {}
+select {cursor:pointer;}
+textarea {overflow:auto;height:140px;}
+input[type=radio], input[type=checkbox] {background:none;border:0;padding:0;margin:0;width:auto!important;height:auto!important;cursor:pointer;vertical-align:middle;}
+button, input[type=submit], input[type=button], .button {
+	display:block;
+	width:254px;
+	height:54px;
+	background:#025692;
+	font:bold 20px/54px 'CenturyGothic',arial,sans-serif;
+	text-transform:uppercase;
+	text-align:center;
+	color:#fff;
+	margin:25px auto 0;
+	cursor:pointer;
+}
+button:hover, input[type=submit]:hover, input[type=button]:hover {}
+button:focus, input[type=submit]:focus, input[type=button]:focus {}
+label {display:inline-block;vertical-align:middle;font-size:18px;color:#000;}
+.checkbox, .radio {
+	display:inline-block;
+	vertical-align:middle;
+	width:22px;
+	height:22px;
+	border:1px solid #cbcbcb;
+	padding:1px;
+	background:#fff;
+	margin:0 5px 0 0;
+	cursor:pointer;
+}
+.checkbox.checked:after, .radio.checked:after {
+	content:"";
+	display:block;
+	width:16px;
+	height:16px;
+	background:#025692;
+	border:1px solid #b0cadd;
+}
+.checkbox input, .radio input {
+	display:none;
+}
