@@ -15,7 +15,7 @@ $(function () {
 
 		const animationLogo = () => {
 			const preloaderLogoAnimation = new LazyLinePainter(preloaderLogoAnimationEl, {
-				"ease": "easeOutQuart",
+				"ease": "easeLinear",
 				"strokeWidth": 1,
 				"strokeOpacity": 1,
 				"strokeColor": "#fff",
