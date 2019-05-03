@@ -27,7 +27,7 @@ $(function () {
 			setTimeout(() => {
 		    preloaderLogo.addClass("fill-show");
 		    preloaderHide();
-		  }, animationDuration - 400);
+		  }, animationDuration - 200);
 		};
 
 		//Initialization BEGIN
