@@ -27,7 +27,7 @@ $(function () {
 			setTimeout(() => {
 		    preloaderLogo.addClass("fill-show");
 		    preloaderHide();
-		  }, animationDuration - 200);
+		  }, animationDuration - 50);
 		};
 
 		//Initialization BEGIN
@@ -95,12 +95,35 @@ $(function () {
 	// -- Menu END
 
 
+	// -- Function set property depending on the page BEGIN
+	const functionSetProperty = () => {
+		//Check page scrollbar & set header margin-right BEGIN
+		const checkPageScrollbar = () => {
+			const header = $(".header");
+			const windowHeight = $(window).outerHeight(true);
+			const pageHeight = $(document).outerHeight(true);
+
+			if ( windowHeight < pageHeight && $(window).width() > 992 ) {
+				header.css({"width": "calc(100% - 15px)"});
+			}
+		};
+		//Check page scrollbar & set header margin-right END
+
+
+		//Initialization BEGIN
+		checkPageScrollbar();
+		//Initialization END
+	};
+	// -- Function set property depending on the page END
+
+
 
 	// -- Initialization work functions BEGIN
 	const initializationFunctions = () => {
 		preloader();
 		menu();
 		fixedHeader();
+		functionSetProperty();
 	};
 	initializationFunctions();
 	// -- Initialization work functions END
