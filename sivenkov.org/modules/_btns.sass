@@ -1,0 +1,58 @@
+.btn
+	+M-SemiBold
+	background-color: $accent
+	font-size: 24px
+	line-height: 1em
+	border-radius: 3px
+	color: #fff
+	padding: .9em 1.875em
+	display: inline-block
+	position: relative
+	transition: .3s background-color ease
+	overflow: hidden
+	+media(md)
+		font-size: 20px
+	+media(sm)
+		font-size: 18px
+		padding: 1.2em 1.875em
+
+	&:hover
+		&:before
+			color: #fff
+			transform: translateZ(0)
+			opacity: 1
+		.btn__overlay
+			transform: translate3d(10%, 0, 0) skew(-20deg)
+			opacity: 1
+		.btn__text
+			transform: translate3d(-50%,0,0)
+			opacity: 0
+
+	&:before, &__text
+		transition: opacity .25s ease, transform .25s ease
+		z-index: 1
+		display: inline-block
+
+	&:before
+		content: attr(data-text)
+		position: absolute
+		transform: translate3d(50%, 0, 0)
+		opacity: 0
+
+	&__overlay
+		position: absolute
+		top: 0
+		right: 0
+		height: 100%
+		width: 140%
+		transform: translate3d(100%, 0, 0) skew(0deg)
+		background-color: darken($accent, 8%)
+		opacity: 0
+		transition: transform .5s ease,opacity .3s ease
+		border-radius: 2px
+		display: block
+
+	&__text
+		font-size: 1em
+	
+		

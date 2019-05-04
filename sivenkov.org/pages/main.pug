@@ -1,0 +1,20 @@
+extends ../pug/template/page.pug
+
+block title 
+	| Main
+
+block content
+	//Header BEGIN
+	include ../modules/header/header
+	//Header END 
+
+	//Content BEGIN
+	.page.page-main
+		.container
+
+			span.title-h1.page__title.page-main__title We specialize<br class="d-480-inline-block"> in UX/UI, mobile<br class="d-480-inline-block"> & <br> web design, development<br class="d-480-inline-block"> for the startups, individuals,<br class="d-480-inline-block"> brands and<br class="d-480-inline-block"> corporations.
+
+			a(href="#", data-text="Take a look what we do").page-main__btn.btn
+				span.btn__overlay
+				span.btn__text Take a look what we do
+	//Content END

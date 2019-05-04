@@ -1,0 +1,21 @@
+html.page-fixed
+	overflow: hidden
+
+body.page-fixed
+	overflow-y: scroll
+
+.responsive-image
+	img, svg
+		display: block
+		width: 100%
+		height: auto
+
+.page
+	padding: 5.2em 0 40px
+	&__title
+		display: inline-block
+
+	.d-480-inline-block
+		display: none
+		+media(none, 480px)
+			display: inline-block
