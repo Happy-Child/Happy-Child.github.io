@@ -50,20 +50,26 @@ $(function () {
 	const fixedHeader = () => {
 		const header = $(".header");
 		const headerHeight = $(".header").outerHeight(true);
+		const windowHeight = $(window).height();
 		let prevOffset;
 
 		//Functions BEGIN
 		function checkOffset () {
 			$(document).scroll(function() {
-				header.addClass("scroll scroll-hide");
 				const curOffset = $(window).scrollTop();
 
-				if ( curOffset > headerHeight ) {
-					if ( !!prevOffset && prevOffset > curOffset ) {
-						header.removeClass("scroll-hide");
+				if ( curOffset > windowHeight ) {
+					header.addClass("scroll");
+
+					if ( !!prevOffset && prevOffset >= curOffset ) { //scroll top
+						header.addClass("scroll-show");
+					} else if ( !!prevOffset && prevOffset < curOffset ) { //scroll bottom
+						header.removeClass("scroll-show");
 					}
 				} else {
-					header.removeClass("scroll scroll-hide");
+					if ( curOffset <= 1 ){
+						header.removeClass("scroll scroll-show");
+					}
 				}
 
 				prevOffset = curOffset;
@@ -90,6 +96,9 @@ $(function () {
 		const deskMenuBtnDuration = 1100;
 		const mobileMenuBtnDuration = 500;
 
+		const widthBodyBeforeFixed = $("body").width();
+		let widthBodyAfterFixed;
+
 		const isDesktop = $(window).width() > breakpoints.lg;
 
 
@@ -102,9 +111,22 @@ $(function () {
 					header.toggleClass("active");
 
 					if ( isDesktop ) {
-						setTimeout(function() {
-							page.toggleClass("page-fixed");
-						}, delayMenu);
+						if ( !$(this).hasClass("active") ) { // If menu show
+							setTimeout(function() {
+								page.toggleClass("page-fixed");
+								header.css({"padding-right": "0px"});
+							}, delayMenu + 200);
+						} else { // If menu hide
+							setTimeout(function() {
+								page.toggleClass("page-fixed");
+
+								widthBodyAfterFixed = $("body").width();
+
+								if ( header.hasClass("scroll") ) {
+									header.css({"padding-right": (widthBodyAfterFixed - widthBodyBeforeFixed) + "px"});
+								}
+							}, delayMenu);
+						}
 
 						setTimeout( () => {
 							$(this).removeClass("btn-disabled");
@@ -155,7 +177,7 @@ $(function () {
 	const initializationFunctions = () => {
 		preloader();
 		menu();
-		// fixedHeader();
+		fixedHeader();
 		// functionSetProperty();
 	};
 	initializationFunctions();
