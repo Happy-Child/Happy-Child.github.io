@@ -16,6 +16,8 @@ $(function () {
 		const preloaderWrapper = $(".preloader");
 		const preloaderLogo = $('.preloader__logo-img');
 		const preloaderLogoAnimationEl = document.querySelector('.preloader__logo-img');
+		
+		const delayAfterAnimation = 1000;
 		const animationDuration = 1700;
 
 		const preloaderHide = () => {
@@ -23,20 +25,25 @@ $(function () {
 		};
 
 		const animationLogo = () => {
-			const preloaderLogoAnimation = new LazyLinePainter(preloaderLogoAnimationEl, {
-				"ease": "easeLinear",
-				"strokeWidth": 1,
+			const animationProperty = {
+				"ease"				 : "easeLinear",
+				"strokeWidth"	 : 1,
 				"strokeOpacity": 1,
-				"strokeColor": "#fff",
-				"strokeCap": "square"
-			});
+				"strokeColor"	 : "#fff",
+				"strokeCap"		 : "square"
+			};
+			if ( $(window).width() < breakpoints.sm ) animationProperty.strokeWidth = 3;
 
+			const preloaderLogoAnimation = new LazyLinePainter(preloaderLogoAnimationEl, animationProperty);
 			preloaderLogoAnimation.paint();
 
 			setTimeout(() => {
 		    preloaderLogo.addClass("fill-show");
-		    preloaderHide();
 		  }, animationDuration - 50);
+
+			setTimeout(() => {
+		    preloaderHide();
+		  }, animationDuration + delayAfterAnimation);
 		};
 
 		//Initialization BEGIN
