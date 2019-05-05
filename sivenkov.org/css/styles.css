@@ -524,7 +524,9 @@ body.page-fixed {
 }
 
 .menu-list__item {
-  margin-bottom: 0;
+  margin-bottom: 1.7em;
+  line-height: 0;
+  display: block;
 }
 
 .menu-list__item:last-child {
@@ -1229,7 +1231,7 @@ textarea:required:invalid {
 
   .menu-list__link {
     font-size: 10vw;
-    line-height: 12vw;
+    line-height: 13vw;
   }
 
   .menu-info__link {
@@ -1253,5 +1255,9 @@ textarea:required:invalid {
 
   .btn {
     padding: 1.1em 1.5em;
+  }
+
+  .menu-list__item {
+    margin-bottom: 1.9em;
   }
 }
