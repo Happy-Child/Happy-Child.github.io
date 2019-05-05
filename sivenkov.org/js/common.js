@@ -122,8 +122,8 @@ $(function () {
 	const initializationFunctions = () => {
 		preloader();
 		menu();
-		fixedHeader();
-		functionSetProperty();
+		// fixedHeader();
+		// functionSetProperty();
 	};
 	initializationFunctions();
 	// -- Initialization work functions END
