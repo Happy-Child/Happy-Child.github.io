@@ -1153,7 +1153,7 @@ textarea:required:invalid {
   }
 
   .header__wrap-logo {
-    max-width: 90px;
+    max-width: 110px;
   }
 
   .menu-list__link {
@@ -1343,6 +1343,6 @@ textarea:required:invalid {
   }
 
   .menu-list__item {
-    margin-bottom: 1.9em;
+    margin-bottom: 2.1em;
   }
 }
