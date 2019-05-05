@@ -76,22 +76,21 @@ $(function () {
 		const elHtml = $("html");
 		const elBody = $("body");
 		const page = $("body, html");
-		const delayHideMenu = 400;
-		const delayShowMenu = 500;
+		const delayMenu = 500;
+		const deskMenuBtnDuration = 1100;
 
 		//Functions BEGIN
 		function animationDesktopMenuBtn (ctx) {
 			const btn = $(ctx);
 
-			if ( btn.hasClass("header-menu-btn_desktop") ) {
+			if ( !btn.hasClass("active-in") ) {
+				btn.addClass("active-in");
+			} else if ( btn.hasClass("active-in") ) {
+				btn.addClass("active-out");
 
-				btn.toggleClass("active-hide");
-
-				// setTimeout(function() {
-				// 	alert("234rtgb");
-				// }, 600);
-
-
+				setTimeout(function() {
+					btn.removeClass("active-in active-out");
+				}, deskMenuBtnDuration);
 			}
 		}
 		//Functions END
@@ -100,20 +99,19 @@ $(function () {
 		function changeStateMenu () {
 			if ( header.length && menuBtns.length ) {
 				menuBtns.click(function() {
-					animationDesktopMenuBtn( this );
+					if ( $(this).hasClass("header-menu-btn_desktop") ) animationDesktopMenuBtn( this );
+					else if ( $(this).hasClass("header-menu-btn_mobile") ) $(this).toggleClass("active");
 
-					menuBtns.toggleClass("active");
+					$(this).addClass("btn-disabled");
 					header.toggleClass("active");
 
-					if ( !$(this).hasClass("active") ) {
-						setTimeout(function() {
-							page.toggleClass("page-fixed");
-						}, delayHideMenu);
-					} else {
-						setTimeout(function() {
-							page.toggleClass("page-fixed");
-						}, delayShowMenu);
-					}
+					setTimeout(function() {
+						page.toggleClass("page-fixed");
+					}, delayMenu);
+
+					setTimeout( () => {
+						$(this).removeClass("btn-disabled");
+					}, deskMenuBtnDuration);
 
 				});
 			}
