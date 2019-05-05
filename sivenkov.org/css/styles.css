@@ -524,7 +524,7 @@ body.page-fixed {
 }
 
 .menu-list__item {
-  margin-bottom: 1.4em;
+  margin-bottom: 0;
 }
 
 .menu-list__item:last-child {
@@ -868,9 +868,9 @@ body.page-fixed {
 }
 
 .header.active .menu-list {
-  -webkit-transition: .9s transform ease;
-  -o-transition: .9s transform ease;
-  transition: .9s transform ease;
+  -webkit-transition: .9s all ease;
+  -o-transition: .9s all ease;
+  transition: .9s all ease;
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
