@@ -320,7 +320,7 @@ footer {
 .footer {
   padding-bottom: +5rem;
   overflow: hidden;
-  padding-top: +1.5625rem;
+  padding-top: +1.875rem;
 }
 
 .footer__ellipse {
@@ -952,6 +952,10 @@ textarea:required:invalid {
   max-width: 640px;
 }
 
+.portfolio__title {
+  margin-bottom: +5.625rem;
+}
+
 .portfolio__content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -981,6 +985,10 @@ textarea:required:invalid {
 
 .portfolio__wrap-btn {
   text-align: center;
+}
+
+.studio__title {
+  margin-bottom: +5.625rem;
 }
 
 .feedback__title {
