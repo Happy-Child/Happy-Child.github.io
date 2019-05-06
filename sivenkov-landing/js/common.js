@@ -86,11 +86,6 @@ $(function () {
 
 
 
-		// BEGIN
-		// END
-
-
-
 		//Initialization BEGIN
 		setFieldsFocus();
 		autoHeightTextarea();
@@ -99,11 +94,40 @@ $(function () {
 	// -- Form elements END
 
 
+	//Popups BEGIN
+	const popups = () => {
+		const btnsShowPopups = $(".btn-popup");
+		const btnsHidePopups = $(".popup__close");
+		const popups = $(".popup");
+
+		if (!!btnsShowPopups && !!popups ) {
+			btnsShowPopups.click(function (e) {
+				e.preventDefault();
+
+				const key = $(this).attr("data-popup-key");
+				const popup = $(`.popup[data-popup-key=${key}]`)
+
+				if ( !!popup ) {
+					popups.removeClass("active");
+					popup.addClass("active");
+				}
+			});
+		}
+
+		if ( !!btnsHidePopups ) {
+			btnsHidePopups.click(function() {
+				popups.removeClass("active");
+			});
+		}
+	};
+	//Popups END
+
 
 	// -- Initialization work functions BEGIN
 	const initializationFunctions = () => {
 		preloader();
 		formElements()
+		popups();
 	};
 	initializationFunctions();
 	// -- Initialization work functions END
