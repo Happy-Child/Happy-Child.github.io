@@ -107,7 +107,6 @@ body {
   position: relative;
   line-height: 24px;
   color: #000;
-  height: 2000px;
   font-family: "Montserrat-Regular";
   padding-top: 100px;
 }
@@ -1057,12 +1056,46 @@ body.page-fixed {
   -o-transition: .8s opacity ease 1.4s, .5s filter ease;
   transition: .8s opacity ease 1.4s, .5s filter ease;
   opacity: 0;
-  -webkit-filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0.4));
-  filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0.4));
+  -webkit-animation: myAnimation 1.5s ease forwards;
+  animation: myAnimation 1.5s ease forwards;
 }
 
 .preloader__logo-img.fill-show path {
   fill-opacity: 1;
+}
+
+@-webkit-keyframes myAnimation {
+  0% {
+    -webkit-filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0));
+    filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0));
+  }
+
+  50% {
+    -webkit-filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0.4));
+    filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0.4));
+  }
+
+  100% {
+    -webkit-filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0));
+    filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0));
+  }
+}
+
+@keyframes myAnimation {
+  0% {
+    -webkit-filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0));
+    filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0));
+  }
+
+  50% {
+    -webkit-filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0.4));
+    filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0.4));
+  }
+
+  100% {
+    -webkit-filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0));
+    filter: drop-shadow(0px 4px 50px rgba(255, 255, 255, 0));
+  }
 }
 
 input:focus:required:invalid,
