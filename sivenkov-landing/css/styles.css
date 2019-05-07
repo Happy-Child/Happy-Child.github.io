@@ -874,6 +874,11 @@ footer {
   transition: .2s all ease;
 }
 
+input,
+textarea {
+  margin: 0 !important;
+}
+
 input:focus:required:invalid,
 textarea:focus:required:invalid {
   border: none;
