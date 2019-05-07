@@ -1105,6 +1105,10 @@ textarea:required:invalid {
   padding-right: 26px;
 }
 
+.our-plus__wrap-love {
+  display: none;
+}
+
 .our-plus__love {
   -webkit-animation: animationLove 1.5s ease infinite;
   animation: animationLove 1.5s ease infinite;
