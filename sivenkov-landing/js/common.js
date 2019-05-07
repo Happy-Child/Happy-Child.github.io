@@ -129,7 +129,7 @@ $(function () {
 		formElements()
 		popups();
 	};
-	// initializationFunctions();
+	initializationFunctions();
 	// -- Initialization work functions END
 
 });
