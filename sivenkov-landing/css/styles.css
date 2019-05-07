@@ -210,6 +210,7 @@ body.page-fixed {
 .page__ellipse {
   position: absolute;
   z-index: -1;
+  display: none;
 }
 
 .page .d-480-inline-block {
@@ -1104,10 +1105,6 @@ textarea:required:invalid {
     -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
   }
-}
-
-.services {
-  overflow-x: hidden;
 }
 
 .services__ellipse {
