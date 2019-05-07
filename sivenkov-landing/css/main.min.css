@@ -1067,9 +1067,9 @@ textarea:required:invalid {
 }
 
 .form__field.active ~ .form__placeholder {
-  -webkit-transform: translate(0, -80%) scale(0.8);
-  -ms-transform: translate(0, -80%) scale(0.8);
-  transform: translate(0, -80%) scale(0.8);
+  -webkit-transform: translate(-10%, -80%) scale(0.8);
+  -ms-transform: translate(-10%, -80%) scale(0.8);
+  transform: translate(-10%, -80%) scale(0.8);
 }
 
 .form__field.error {
@@ -1659,7 +1659,7 @@ textarea:required:invalid {
   }
 
   .popup__btn {
-    padding: 1.2em 2.2em;
+    padding: 1.2em;
   }
 
   .header {
@@ -1789,6 +1789,10 @@ textarea:required:invalid {
 
   .our-plus__title {
     white-space: nowrap;
+  }
+
+  .our-plus__btn {
+    padding: 1.2em 1.4em;
   }
 }
 
