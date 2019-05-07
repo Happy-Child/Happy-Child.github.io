@@ -103,7 +103,6 @@ body {
 
 body {
   min-width: 320px;
-  height: 100vh;
   position: relative;
   line-height: 24px;
   color: #000;
@@ -186,6 +185,7 @@ h1 {
   -o-transition: .3s background-color ease;
   transition: .3s background-color ease;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .btn:hover:before {
