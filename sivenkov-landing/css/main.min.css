@@ -900,7 +900,6 @@ footer {
   -o-transition: .6s all ease 1s;
   transition: .6s all ease 1s;
   pointer-events: none;
-  visibility: hidden;
 }
 
 .preloader__wrap-logo {
