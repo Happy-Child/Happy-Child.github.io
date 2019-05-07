@@ -294,6 +294,11 @@ body.page-fixed {
   display: none;
 }
 
+.page .d-sm-inline-block,
+.page .d-375-400-inline-block {
+  display: none;
+}
+
 .section,
 header,
 footer {
@@ -349,8 +354,8 @@ footer {
   -webkit-box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);
   padding: 6.5625em 3.4375em 7.8125em;
-  width: -webkit-calc(100% - 15px);
-  width: calc(100% - 15px);
+  width: -webkit-calc(100% - 30px);
+  width: calc(100% - 30px);
   max-width: 520px;
   min-height: 570px;
   position: relative;
@@ -529,11 +534,11 @@ footer {
 }
 
 .footer-top {
-  margin-bottom: 4.16667rem;
+  margin-bottom: 5rem;
 }
 
 .footer-top .footer-info__top {
-  margin-bottom: 3.5rem;
+  margin-bottom: 4.16667rem;
 }
 
 .footer-top .footer-info__item {
@@ -590,6 +595,10 @@ footer {
 
 .footer-social__item {
   margin-right: 5rem;
+}
+
+.footer-social__item:last-child {
+  margin-right: 0;
 }
 
 .footer-social__link {
@@ -1079,19 +1088,21 @@ textarea:required:invalid {
 
 .our-plus__title {
   margin-bottom: 3.75rem;
+  position: relative;
+}
+
+.our-plus__title br {
+  display: none;
 }
 
 .our-plus__title > span:first-child {
-  margin-right: 26px;
-}
-
-.our-plus__wrap-love {
-  width: 55px;
+  padding-right: 26px;
 }
 
 .our-plus__love {
   -webkit-animation: animationLove 1.5s ease infinite;
   animation: animationLove 1.5s ease infinite;
+  width: 55px;
 }
 
 .our-plus__list {
@@ -1282,7 +1293,7 @@ textarea:required:invalid {
 }
 
 .feedback .form__item {
-  margin-bottom: 70px;
+  margin-bottom: 4.375em;
 }
 
 .feedback__success-message {
@@ -1335,12 +1346,6 @@ textarea:required:invalid {
   .title-h1,
   h1 {
     font-size: 4.64286rem;
-    line-height: 5rem;
-  }
-
-  .title-h1,
-  h1 {
-    font-size: 4.16667rem;
     line-height: 5rem;
   }
 
@@ -1457,18 +1462,25 @@ textarea:required:invalid {
     height: 25px;
   }
 
+  .form__field.active ~ .form__placeholder {
+    font-size: 16px;
+  }
+
   .our-plus__list {
     display: block;
   }
 
   .our-plus__item {
-    padding: 0 0 0 20px;
+    padding: 0 0 0 30px;
     margin-bottom: 1.53846rem;
   }
 
   .our-plus__item:before {
     left: 0;
     top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
   }
 
   .services-list__item br {
@@ -1494,6 +1506,12 @@ textarea:required:invalid {
     font-size: 12px;
   }
 
+  .title-h1,
+  h1 {
+    font-size: 4.16667rem;
+    line-height: 5rem;
+  }
+
   .default-text {
     line-height: 2.5rem;
   }
@@ -1504,6 +1522,24 @@ textarea:required:invalid {
 
   .page__title {
     margin-bottom: 5rem;
+  }
+
+  .popup {
+    font-size: 12px;
+  }
+
+  .popup__content {
+    min-height: 480px;
+    max-width: 380px;
+    padding: 8.33333em 3.33333em;
+  }
+
+  .popup__title {
+    margin-bottom: 1.66667em;
+  }
+
+  .popup .form__item {
+    margin-bottom: 3.33333em;
   }
 
   .footer {
@@ -1528,6 +1564,10 @@ textarea:required:invalid {
     display: none;
   }
 
+  .footer-bottom__item {
+    width: 100%;
+  }
+
   .footer-bottom__item:first-child {
     display: none;
   }
@@ -1547,8 +1587,43 @@ textarea:required:invalid {
     display: none;
   }
 
+  .form__item_50 {
+    max-width: none;
+  }
+
+  .form__field.active ~ .form__placeholder {
+    font-size: 14px;
+  }
+
+  .our-plus__title br {
+    display: inline-block;
+  }
+
+  .our-plus__title {
+    display: block;
+  }
+
+  .our-plus__title > span:first-child {
+    padding-right: 0;
+  }
+
   .our-plus__wrap-love {
-    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .services__ellipse {
+    max-width: 400px;
+  }
+
+  .portfolio__ellipse {
+    max-width: 500px;
+    left: 50%;
+    top: 26.66667rem;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
   }
 
   .portfolio__title {
@@ -1558,6 +1633,10 @@ textarea:required:invalid {
   .portfolio__wrap-item {
     max-width: none;
   }
+
+  .feedback .form__item {
+    margin-bottom: 3.33333em;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1565,14 +1644,66 @@ textarea:required:invalid {
     padding: 0 15px;
   }
 
+  .title-h1,
+  h1 {
+    font-size: 9.5vw;
+    line-height: 12.3vw;
+  }
+
+  .default-text {
+    font-size: 1.5rem;
+  }
+
   .btn {
     font-size: 18px;
-    padding: 1.2em 2.4em;
+    padding: 1.2em 2.6em;
+  }
+
+  .page__title {
+    margin-bottom: 3.75rem;
+  }
+
+  .page .d-sm-inline-block {
+    display: inline-block;
+  }
+
+  .section {
+    margin: 10rem 0;
+  }
+
+  .popup__btn {
+    padding: 1.2em 2.2em;
   }
 
   .header {
     padding: 1.66667rem 0;
-    margin-bottom: 5.83333rem;
+    margin-bottom: 6.66667rem;
+  }
+
+  .footer {
+    padding-bottom: 8.33333rem;
+  }
+
+  .footer__ellipse {
+    max-width: none;
+    width: 700px;
+    bottom: 0;
+    -webkit-transform: translate(-50%, 60%);
+    -ms-transform: translate(-50%, 60%);
+    transform: translate(-50%, 60%);
+  }
+
+  .footer-bottom {
+    padding-top: 17.08333rem;
+  }
+
+  .footer-social__item {
+    margin-right: 6.25rem;
+  }
+
+  .footer-social__svg {
+    height: 30px;
+    width: 30px;
   }
 
   .row-info {
@@ -1590,6 +1721,49 @@ textarea:required:invalid {
   .progress-bar {
     height: 5px;
   }
+
+  .form__field,
+  .form__placeholder {
+    font-size: 1.5rem;
+    line-height: 2.33333rem;
+  }
+
+  .form__invalid {
+    font-size: 12px;
+  }
+
+  .our-plus__title {
+    margin-bottom: 5rem;
+  }
+
+  .our-plus__love {
+    width: 40px;
+  }
+
+  .portfolio__ellipse {
+    top: 13.33333rem;
+    max-width: 90%;
+  }
+
+  .portfolio__title {
+    margin-bottom: 5rem;
+  }
+
+  .portfolio__wrap-btn {
+    text-align: left;
+  }
+
+  .studio__title {
+    margin-bottom: 4.16667rem;
+  }
+
+  .feedback__title {
+    margin-bottom: 4.58333rem;
+  }
+
+  .feedback__btn {
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1599,7 +1773,40 @@ textarea:required:invalid {
 }
 
 @media (max-width: 375px) {
+  .title-h3,
+  h3 {
+    font-size: 1.83333rem;
+    line-height: 2.5rem;
+  }
+
   .btn {
-    padding: 1.1em 1.5em;
+    padding: 1.1em 1.7em;
+  }
+
+  .popup {
+    font-size: 10px;
+  }
+
+  .popup__content {
+    min-height: 400px;
+    padding: 8em 2em;
+  }
+
+  .popup__title {
+    margin-bottom: 1.5em;
+  }
+
+  .popup .form__item {
+    margin-bottom: 3em;
+  }
+
+  .popup__btn {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 400px) and (min-width: 375px) {
+  .page .d-375-400-inline-block {
+    display: inline-block;
   }
 }
