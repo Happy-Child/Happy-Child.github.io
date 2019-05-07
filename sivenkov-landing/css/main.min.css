@@ -1029,7 +1029,7 @@ textarea:required:invalid {
   width: 100%;
   color: #000;
   font-family: "Montserrat-Medium";
-  min-height: 41px;
+  min-height: 1.66em;
 }
 
 .form__field_area {
