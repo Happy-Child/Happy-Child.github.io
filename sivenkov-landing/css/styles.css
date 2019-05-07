@@ -874,30 +874,6 @@ footer {
   transition: .2s all ease;
 }
 
-input,
-textarea {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-input:focus:required:invalid,
-textarea:focus:required:invalid {
-  border: none;
-}
-
-input:required:valid,
-input:required:invalid,
-textarea:required:valid,
-textarea:required:invalid {
-  border: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-[disabled] {
-  cursor: not-allowed;
-}
-
 .form {
   display: -webkit-box;
   display: -webkit-flex;
