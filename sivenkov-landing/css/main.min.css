@@ -962,6 +962,7 @@ footer {
 input,
 textarea {
   margin: 0 !important;
+  padding: 0 !important;
 }
 
 input:focus:required:invalid,
