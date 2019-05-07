@@ -1571,7 +1571,7 @@ textarea:required:invalid {
 
   .btn {
     font-size: 18px;
-    padding: 1.2em 2.6em;
+    padding: 1.1em 1.7em;
   }
 
   .page__title {
@@ -1694,10 +1694,6 @@ textarea:required:invalid {
     line-height: 2.5rem;
   }
 
-  .btn {
-    padding: 1.1em 1.7em;
-  }
-
   .popup {
     font-size: 10px;
   }
@@ -1717,6 +1713,10 @@ textarea:required:invalid {
 
   .popup__btn {
     margin-top: 20px;
+  }
+
+  .our-plus__title {
+    white-space: nowrap;
   }
 }
 
