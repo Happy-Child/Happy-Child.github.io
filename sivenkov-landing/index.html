@@ -35,7 +35,8 @@
     </div>
     <!--Popups BEGIN-->
     <div class="popup popup-callback" data-popup-key="callback">
-      <div class="popup__content"><span class="popup__close"></span><span class="popup__title text-semibold title-h3">Заявка на звонок</span>
+      <div class="popup__content">
+        <div class="prelaoder-mini responsive-image"><img src="img/preloader-mini.svg" alt=""></div><span class="popup__close"></span><span class="popup__title text-semibold title-h3">Заявка на звонок</span>
         <form class="popup__form form">
           <div class="form__item form__item_100">
             <div class="form__wrap-field">
@@ -61,8 +62,7 @@
     <header class="header">
       <div class="container">
         <div class="row-info">
-          <div class="row-info__wrap-logo responsive-image"><img class="row-info__logo-img" src="img/logo-dark.svg"></div>
-          <div class="row-info__callback-btn btn-modal" data-modal-key="callback"><img src="img/icon-phone.svg" alt=""></div>
+          <div class="row-info__wrap-logo responsive-image"><img class="row-info__logo-img" src="img/logo-dark.svg"></div><a class="row-info-callback__btn btn-modal" href="tel:375291382469" data-modal-key="callback"><img class="row-info-callback__img" src="img/icon-phone.svg" alt=""></a>
           <ul class="row-info__list-links">
             <li class="row-info__list-item"><a class="row-info__link text-medium" href="tel:+375291382469"><span class="row-info__overlay" data-text="+375 29 138-24-69"></span>+375 29 138-24-69</a></li>
             <li class="row-info__list-item"><a class="row-info__link text-medium" href="mailto:info@sivenkov.by"><span class="row-info__overlay" data-text="info@sivenkov.by"></span>info@sivenkov.by</a></li>
@@ -76,7 +76,7 @@
       <!--Our plus BEGIN-->
       <section class="our-plus section section_top-0">
         <div class="container">
-          <div class="our-plus__content"><span class="our-plus__title title-h1 page__title">Мы создаём сайты с любовью<span class="our-plus__wrap-love"><img class="our-plus__love" src="img/love.svg" alt=""></span></span>
+          <div class="our-plus__content"><span class="our-plus__title title-h1 page__title"><span>Мы создаём сайты с любовью</span><span class="our-plus__wrap-love"><img class="our-plus__love" src="img/love.svg" alt=""></span></span>
             <ul class="our-plus__list">
               <li class="our-plus__item text-semibold title-h3 text-gray">Уникально</li>
               <li class="our-plus__item text-semibold title-h3 text-gray">Качественно</li>
@@ -166,6 +166,7 @@
         </div>
         <div class="container"><span class="feedback__title title-h1 page__title">Узнайте, что мы можем предложить вашему бизнесу</span>
           <div class="feedback__wrap-form form-wrap">
+            <div class="prelaoder-mini responsive-image"><img src="img/preloader-mini.svg" alt=""></div>
             <form class="feedback__form form">
               <div class="form__item form__item_50">
                 <div class="form__wrap-field">
@@ -194,6 +195,7 @@
               </div>
             </form>
             <button class="form__btn btn" data-text="Отправить заявку" data-modal-key="callback"><span class="btn__overlay"></span><span class="btn__text">Отправить заявку</span></button>
+            <p class="feedback__success-message default-text">Благодарим за вашу заявку! Мы свяжемся<br> с вами в ближайшее время.</p>
           </div>
         </div>
       </section>
@@ -215,9 +217,14 @@
 </svg>
       </div>
       <div class="container">
+        <div class="footer-top footer-info">
+          <div class="footer-info__top"><a class="link-dark footer-info__item text-medium" href="tel:375291382469">+375 29 138-24-69</a><a class="link-dark footer-info__item text-medium" href="mailto:info@sivenkov.by">info@sivenkov.by</a></div>
+          <div class="footer-info__bottom">
+            <address class="footer-info__item text-gray">Минск, ул.Янковского - 13</address><a class="link-dark footer-info__item text-medium" href="#" target="_blank">Политика Конфиденциальности</a>
+          </div>
+        </div>
         <div class="row-info">
           <div class="row-info__wrap-logo responsive-image"><img class="row-info__logo-img" src="img/logo-dark.svg"></div>
-          <div class="row-info__callback-btn btn-modal" data-modal-key="callback"><img src="img/icon-phone.svg" alt=""></div>
           <ul class="row-info__list-links">
             <li class="row-info__list-item"><a class="row-info__link text-medium" href="tel:+375291382469"><span class="row-info__overlay" data-text="+375 29 138-24-69"></span>+375 29 138-24-69</a></li>
             <li class="row-info__list-item"><a class="row-info__link text-medium" href="mailto:info@sivenkov.by"><span class="row-info__overlay" data-text="info@sivenkov.by"></span>info@sivenkov.by</a></li>
