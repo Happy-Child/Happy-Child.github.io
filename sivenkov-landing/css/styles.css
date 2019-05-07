@@ -970,16 +970,16 @@ textarea:required:invalid {
 
 .form__field {
   border-bottom: 1px solid #504E4E;
-  -webkit-transition: .2s all ease;
-  -o-transition: .2s all ease;
-  transition: .2s all ease;
+  -webkit-transition: .4s all ease;
+  -o-transition: .4s all ease;
+  transition: .4s all ease;
 }
 
 .form__placeholder {
   top: 0;
-  -webkit-transition: .2s all ease;
-  -o-transition: .2s all ease;
-  transition: .2s all ease;
+  -webkit-transition: .4s all ease;
+  -o-transition: .4s all ease;
+  transition: .4s all ease;
 }
 
 .form__invalid {
@@ -1104,6 +1104,10 @@ textarea:required:invalid {
     -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
   }
+}
+
+.services {
+  overflow-x: hidden;
 }
 
 .services__ellipse {
