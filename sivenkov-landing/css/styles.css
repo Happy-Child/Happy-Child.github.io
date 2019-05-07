@@ -81,14 +81,21 @@ h3 {
   line-height: 2.1875rem;
 }
 
-.link-dark {
-  color: #000;
+.link {
   -webkit-transition: .4s color ease;
   -o-transition: .4s color ease;
   transition: .4s color ease;
 }
 
-.link-dark:hover {
+.link-dark {
+  color: #000;
+}
+
+.link-gray {
+  color: #504E4E;
+}
+
+.link:hover {
   color: #17A5F4;
 }
 
@@ -874,13 +881,6 @@ footer {
   -webkit-transition: .2s all ease;
   -o-transition: .2s all ease;
   transition: .2s all ease;
-}
-
-input,
-textarea {
-  border: none;
-  outline: none;
-  resize: none;
 }
 
 input:focus:required:invalid,
