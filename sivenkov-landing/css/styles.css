@@ -1253,6 +1253,32 @@ footer {
   border-radius: 3px;
 }
 
+.portfolio__item:hover .portfolio__img_gif {
+  opacity: 1;
+}
+
+.portfolio__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.portfolio__img_gif {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: -webkit-calc(100% + 0px);
+  width: calc(100% + 0px);
+  height: 100%;
+  -webkit-transition: .4s all ease;
+  -o-transition: .4s all ease;
+  transition: .4s all ease;
+  opacity: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
 .portfolio__wrap-btn {
   text-align: center;
 }
