@@ -1,5 +1,7 @@
 "use strict";
 
+jQuery.fn.reverse = [].reverse;
+
 $(function () {
 	// -- Common data BEGIN
 	const breakpoints = {
@@ -193,6 +195,61 @@ $(function () {
 
 
 
+	//Portfolio section logic (show items & view gif) BEGIN
+	const portfolioSection = () => {
+		//Show items BEGIN
+		const showItems = () => {
+			const btn = $(".portfolio__btn");
+			const textStates = {
+				show: btn.attr("data-text-show-items"),
+				hide: btn.attr("data-text-hide-items")
+			};
+			const hideItems = $(".portfolio .portfolio__wrap-item_hide");
+
+			if ( btn.length && hideItems.length ) {
+				btn.click(function() {
+					//Change text BEGIN
+					const textItem = $(this).find(".btn__text");
+					const text = textItem.text();
+
+					if ( text == textStates.show ) {
+
+						textItem.text(textStates.hide);
+						$(this).attr("data-text", textStates.hide);
+
+					} else if ( text == textStates.hide ) {
+
+						textItem.text(textStates.show);
+						$(this).attr("data-text", textStates.show);
+
+					} else {
+						textItem.text(textStates.show);
+					}
+					//Change text END
+
+					let i = 0;
+
+					hideItems.reverse().each(function() {
+						const cur = $(this);
+
+						if ( text == textStates.show ) cur.slideDown(600).addClass("show");
+						else if ( text == textStates.hide ) cur.slideUp(600).removeClass("show");
+					});
+
+				});
+			}
+		};
+		//Show items END
+
+
+		//Initialization BEGIN
+		showItems();
+		//Initialization END
+	};
+	//Portfolio section logic (show items & view gif) END
+
+
+
 	// -- Initialization work functions BEGIN
 	const initializationFunctions = () => {
 		preloader();
@@ -200,6 +257,7 @@ $(function () {
 		popups();
 		progressBar();
 		wowJs();
+		portfolioSection();
 	};
 
 	if ( isIE >= 10 ) initializationFunctions();
