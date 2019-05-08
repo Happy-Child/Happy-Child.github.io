@@ -646,9 +646,8 @@ footer {
   height: 100px;
 }
 
-.row-info__wrap-logo {
-  width: 100%;
-  max-width: 250px;
+.row-info-logo {
+  width: 250px;
 }
 
 .row-info-callback__btn {
@@ -853,6 +852,10 @@ footer {
   justify-content: center;
   background: #17A5F4;
   z-index: 99;
+  visibility: visible;
+  -webkit-transition: .6s all ease 1s;
+  -o-transition: .6s all ease 1s;
+  transition: .6s all ease 1s;
 }
 
 .preloader_hide {
@@ -860,10 +863,8 @@ footer {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
-  -webkit-transition: .6s all ease 1s;
-  -o-transition: .6s all ease 1s;
-  transition: .6s all ease 1s;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .preloader__wrap-logo {
@@ -918,10 +919,7 @@ footer {
 .progress-bar__line {
   background-color: #17A5F4;
   height: 100%;
-  width: 100%;
-  -webkit-transition: .2s all ease;
-  -o-transition: .2s all ease;
-  transition: .2s all ease;
+  width: 0;
 }
 
 .form {
@@ -1297,7 +1295,7 @@ footer {
 .privacy-policy mark {
   font-size: 1.5rem;
   line-height: 2.5625rem;
-  color: #000;
+  color: #504E4E;
 }
 
 .privacy-policy p:last-child,
@@ -1414,8 +1412,8 @@ footer {
     padding: 1.25rem 0;
   }
 
-  .row-info__wrap-logo {
-    max-width: 180px;
+  .row-info-logo {
+    width: 180px;
   }
 
   .row-info__list-item {
@@ -1787,8 +1785,8 @@ footer {
     height: 60px;
   }
 
-  .row-info__wrap-logo {
-    max-width: 140px;
+  .row-info-logo {
+    width: 140px;
   }
 
   .preloader__wrap-logo {

@@ -9,10 +9,32 @@
     <meta name="theme-color" content="#fff">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.svg">
     <link rel="apple-touch-icon" sizes="57x57" href="favicon.svg">
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/main.min.css"><!--[if lt IE 10]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+<![endif]-->
+<!--[if lt IE 10]>
+<link rel='stylesheet' href='css/styles-ie.min.css'>
+<![endif]-->
   </head>
   <body><!--[if lt IE 10]>
-    <section class="ie-info"><span>IEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIE</span></section><![endif]-->
+    <div class="ie-message">
+      <div class="header">
+        <div class="container">
+          <div class="row-info">
+            <div class="row-info-logo header-logo responsive-image"><img class="header-logo__img" src="img/logo-dark.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="ie-message__content"><span class="title-h3 ie-message__title">К сожалению<br class="d-none d-sm-inline-block"> ваш бразуер устарел!</span>
+          <p class="default-text">Вы пользуетесь устаревшей версией браузера Internet Explorer. Данная версия браузера не поддреживает многие современные технологии, из-за чего многие страницы отображаются<br> некорректно, а главное - на сайтах могут работать не все функции.</p>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="container"><a class="link link_dark default-text text-medium" href="tel:375291382469">+375 29 138-24-69</a><a class="link link_dark default-text text-medium" href="mailto:info@sivenkov.by">info@sivenkov.by</a></div>
+      </div>
+    </div><![endif]-->
+<!--[if !IE]><!-->
     <!--Preloader BEGIN-->
     <section class="preloader">
       <div class="preloader__wrap-logo"><svg class="preloader__logo-img" width="608" height="258" viewBox="0 0 608 258" fill="none" xmlns="http://www.w3.org/2000/svg" data-llp-composed="true" id="Logo" class="lazy-line-painter">
@@ -42,7 +64,7 @@
     <header class="header">
       <div class="container">
         <div class="row-info row-info-3">
-          <div class="row-info__wrap-logo responsive-image"><img class="row-info__logo-img" src="img/logo-dark.svg"></div><a class="row-info-3__link row-info__link-home default-text text-medium link link_accent d-block d-sm-none" href="index.html">Вернуться на главную</a><a class="row-info-3__link row-info__link-home default-text text-medium link link_accent d-none d-sm-block" href="index.html">На главную</a>
+          <div class="row-info-logo responsive-image"><img class="row-info-logo__img" src="img/logo-dark.svg"></div><a class="row-info-3__link row-info__link-home default-text text-medium link link_accent d-block d-sm-none" href="index.html">Вернуться на главную</a><a class="row-info-3__link row-info__link-home default-text text-medium link link_accent d-none d-sm-block" href="index.html">На главную</a>
         </div>
       </div>
     </header>
@@ -81,11 +103,11 @@
     <footer class="footer-2">
       <div class="container">
         <div class="row-info row-info-3">
-          <div class="row-info__wrap-logo responsive-image"><img class="row-info__logo-img" src="img/logo-dark.svg"></div><a class="row-info-3__link row-info__link-home default-text text-medium link link_accent d-block d-sm-none" href="index.html">Вернуться на главную</a><a class="row-info-3__link row-info__link-home default-text text-medium link link_accent d-none d-sm-block" href="index.html">На главную</a>
+          <div class="row-info-logo responsive-image"><img class="row-info-logo__img" src="img/logo-dark.svg"></div><a class="row-info-3__link row-info__link-home default-text text-medium link link_accent d-block d-sm-none" href="index.html">Вернуться на главную</a><a class="row-info-3__link row-info__link-home default-text text-medium link link_accent d-none d-sm-block" href="index.html">На главную</a>
         </div>
       </div>
     </footer>
-    <!--Footer END-->
+    <!--Footer END--><!--<![endif]-->
     <!--Scripts BEGIN-->
     <script src="js/scripts.min.js"></script>
     <!--Scripts END	-->

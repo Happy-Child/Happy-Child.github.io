@@ -26,15 +26,16 @@ $(function () {
 		else if (navigator.appName == "Netscape"){                       
 			/// in IE 11 the navigator.appVersion says 'trident'
 			/// in Edge the navigator.appVersion does not say trident
-			if (navigator.appVersion.indexOf('Trident') === -1) isIE = false;
-			else isIE = true;
+			if (navigator.appVersion.indexOf('Trident') === -1) isIE = 12;
+			else isIE = 11;
 		}
 
-		if ( isIE ) {
+		if ( isIE <= 11 ) {
 			$("head").append("<link rel='stylesheet' href='css/styles-ie.min.css'>")
 		}
 	};
 	// -- Check IE version END
+	checkIeVersion();
 
 
 	// -- Preloader BEGIN
@@ -80,12 +81,31 @@ $(function () {
 		};
 
 		//Initialization BEGIN
-		if ( isIE ) animationLogoIe();
+		if ( isIE <= 11 ) animationLogoIe();
 		else animationLogo();
 		//Initialization END
 	};
 	// -- Preloader END
 
+
+
+	//Progress bar BEGIN
+	const progressBar = () => {
+		const progressIndicator = $(".progress-bar__line");
+
+		if ( !!progressIndicator ) setScrollValue();
+
+		function setScrollValue () {
+			$(window).scroll(function() {
+				const scroll = document.body.scrollTop || document.documentElement.scrollTop;
+				const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+				const result = (scroll / height) * 100;
+
+				progressIndicator.css({"width": result + "%"});
+			});
+		}
+	};
+	//Progress bar END
 
 
 
@@ -128,6 +148,7 @@ $(function () {
 	// -- Form elements END
 
 
+
 	//Popups BEGIN
 	const popups = () => {
 		const btnsShowPopups = $(".btn-popup");
@@ -157,14 +178,16 @@ $(function () {
 	//Popups END
 
 
+
 	// -- Initialization work functions BEGIN
 	const initializationFunctions = () => {
-		checkIeVersion();
 		preloader();
 		formElements()
 		popups();
+		progressBar();
 	};
-	initializationFunctions();
+
+	if ( isIE >= 10 ) initializationFunctions();
 	// -- Initialization work functions END
 
 });
