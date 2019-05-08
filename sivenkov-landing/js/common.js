@@ -7,7 +7,7 @@ $(function () {
 	const breakpoints = {
 		xl: 1200,
 		lg: 992,
-		mb: 768,
+		md: 768,
 		sm: 576
 	};
 	let isIE;
@@ -208,10 +208,11 @@ $(function () {
 
 			if ( btn.length && hideItems.length ) {
 				btn.click(function() {
-					//Change text BEGIN
 					const textItem = $(this).find(".btn__text");
 					const text = textItem.text();
 
+
+					//Change text BEGIN
 					if ( text == textStates.show ) {
 
 						textItem.text(textStates.hide);
@@ -227,14 +228,43 @@ $(function () {
 					}
 					//Change text END
 
-					let i = 0;
-
+					
+					//Show/hide items BEGIN
 					hideItems.reverse().each(function() {
 						const cur = $(this);
-
 						if ( text == textStates.show ) cur.slideDown(600).addClass("show");
 						else if ( text == textStates.hide ) cur.slideUp(600).removeClass("show");
 					});
+					//Show/hide items END
+
+
+					//Scroll on position BEGIN
+					const secPortfolioTopOffset = $(".portfolio__content").offset().top;
+					const customOffset = 70;
+
+					function scrollToBottom () {
+						const itemsLenght = hideItems.length;
+						const itemHeight = $(".portfolio .portfolio__wrap-item").eq(1).outerHeight(true);
+						const curOffset = document.body.scrollTop || document.documentElement.scrollTop;
+						const isMobile = $(window).width() <= breakpoints.sm;
+
+						const offset = !isMobile ? (Math.ceil(itemsLenght / 2) * itemHeight) : (itemsLenght * itemHeight);
+						const resultOffset = curOffset + offset;
+
+					 	$("html, body").animate({
+          		scrollTop: resultOffset - customOffset
+        		}, 800);
+					}
+
+					function scrollToTop () {
+		        $("html, body").animate({
+          		scrollTop: secPortfolioTopOffset - customOffset
+        		}, 800);
+					}
+
+					if ( text == textStates.show ) scrollToBottom();
+					else if ( text == textStates.hide ) scrollToTop();
+					//Scroll on position END
 
 				});
 			}
