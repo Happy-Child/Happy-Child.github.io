@@ -12,6 +12,7 @@ $(function () {
 	// -- Common data END
 
 
+
 	// -- Check IE version BEGIN
 	const checkIeVersion = () => {
 		if (navigator.appName == 'Microsoft Internet Explorer'){
@@ -24,8 +25,8 @@ $(function () {
 		}
 
 		else if (navigator.appName == "Netscape"){                       
-			/// in IE 11 the navigator.appVersion says 'trident'
-			/// in Edge the navigator.appVersion does not say trident
+			/// In IE 11 the navigator.appVersion says 'trident'
+			/// In Edge the navigator.appVersion does not say trident
 			if (navigator.appVersion.indexOf('Trident') === -1) isIE = 12;
 			else isIE = 11;
 		}
@@ -36,6 +37,7 @@ $(function () {
 	};
 	// -- Check IE version END
 	checkIeVersion();
+
 
 
 	// -- Preloader BEGIN
@@ -93,16 +95,20 @@ $(function () {
 	const progressBar = () => {
 		const progressIndicator = $(".progress-bar__line");
 
-		if ( !!progressIndicator ) setScrollValue();
+		if ( !!progressIndicator ) {
+			setScrollValue();
+
+			$(window).scroll(function() {
+				setScrollValue();
+			});
+		}
 
 		function setScrollValue () {
-			$(window).scroll(function() {
-				const scroll = document.body.scrollTop || document.documentElement.scrollTop;
-				const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-				const result = (scroll / height) * 100;
+			const scroll = document.body.scrollTop || document.documentElement.scrollTop;
+			const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+			const result = (scroll / height) * 100;
 
-				progressIndicator.css({"width": result + "%"});
-			});
+			progressIndicator.css({"width": result + "%"});
 		}
 	};
 	//Progress bar END
@@ -179,12 +185,21 @@ $(function () {
 
 
 
+	//WOW js animation BEGIN
+	const wowJs = () => {
+		const wow = new WOW().init();
+	};
+	//WOW js animation END
+
+
+
 	// -- Initialization work functions BEGIN
 	const initializationFunctions = () => {
 		preloader();
 		formElements()
 		popups();
 		progressBar();
+		wowJs();
 	};
 
 	if ( isIE >= 10 ) initializationFunctions();
