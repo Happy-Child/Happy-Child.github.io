@@ -8,30 +8,31 @@ $(function () {
 		mb: 768,
 		sm: 576
 	};
+	let isIE;
 	// -- Common data END
 
 
 	// -- Check IE version BEGIN
 	const checkIeVersion = () => {
-		let result = -1; // Return value assumes failure.
-
 		if (navigator.appName == 'Microsoft Internet Explorer'){
 			const userAgent = navigator.userAgent;
 			const regV	= new RegExp("MSIE ([0-9]{1,}[\\.0-9]{0,})");
 
 			if (regV.exec(userAgent) !== null){
-				result = parseFloat( RegExp.$1 );
+				isIE = parseFloat( RegExp.$1 );
 			}
 		}
 
-		else if(navigator.appName == "Netscape"){                       
+		else if (navigator.appName == "Netscape"){                       
 			/// in IE 11 the navigator.appVersion says 'trident'
 			/// in Edge the navigator.appVersion does not say trident
-			if(navigator.appVersion.indexOf('Trident') === -1) result = 12;
-			else result = 11;
+			if (navigator.appVersion.indexOf('Trident') === -1) isIE = false;
+			else isIE = true;
 		}
 
-		alert(result);
+		if ( isIE ) {
+			$("head").append("<link rel='stylesheet' href='css/styles-ie.min.css'>")
+		}
 	};
 	// -- Check IE version END
 
@@ -44,10 +45,6 @@ $(function () {
 		
 		const delayAfterAnimation = 1000;
 		const animationDuration = 1700;
-
-		const preloaderHide = () => {
-			preloaderWrapper.addClass("preloader_hide");
-		};
 
 		const animationLogo = () => {
 			const animationProperty = {
@@ -63,16 +60,28 @@ $(function () {
 			preloaderLogoAnimation.paint();
 
 			setTimeout(() => {
-		    preloaderLogo.addClass("fill-show");
+		    preloaderLogo.addClass("svg-hide");
 		  }, animationDuration - 50);
 
 			setTimeout(() => {
-		    preloaderHide();
+		    preloaderWrapper.addClass("preloader_hide");
 		  }, animationDuration + delayAfterAnimation);
 		};
 
+		const animationLogoIe = () => {
+			setTimeout(() => {
+		    preloaderLogo.addClass("svg-ie_show");
+		  }, 500);
+
+			setTimeout(() => {
+				preloaderLogo.addClass("svg-ie_hide");
+		    preloaderWrapper.addClass("preloader_hide");
+		  }, 1600);
+		};
+
 		//Initialization BEGIN
-		animationLogo();
+		if ( isIE ) animationLogoIe();
+		else animationLogo();
 		//Initialization END
 	};
 	// -- Preloader END
