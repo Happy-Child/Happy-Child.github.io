@@ -256,7 +256,7 @@ $(function () {
 					function scrollToTop () {
 		        $("html, body").animate({
           		scrollTop: secPortfolioOffset - customOffset
-        		}, 800);
+        		}, 500);
 					}
 
 					if ( text == textStates.show ) scrollToBottom();
