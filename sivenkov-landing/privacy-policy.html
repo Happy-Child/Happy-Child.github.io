@@ -9,9 +9,11 @@
     <meta name="theme-color" content="#fff">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.svg">
     <link rel="apple-touch-icon" sizes="57x57" href="favicon.svg">
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/main.min.css"><!--[if IE]><link rel="stylesheet" href="css/ie10.min.css"><![endif]-->
   </head>
-  <body>
+  <body><!--[!if lt IE 10]>
+    <section class="ie-info"><span>IEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIEIE</span></section><![endif]-->
+    <!--Preloader BEGIN-->
     <section class="preloader">
       <div class="preloader__wrap-logo"><svg class="preloader__logo-img" width="608" height="258" viewBox="0 0 608 258" fill="none" xmlns="http://www.w3.org/2000/svg" data-llp-composed="true" id="Logo" class="lazy-line-painter">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M95.6154 161.637C95.6154 161.637 94.1434 154.993 103.807 134.692C113.471 114.391 137.967 86.8974 140.159 86.1557C142.351 85.4139 143.663 86.1557 145.519 87.3167C147.375 88.4777 155.871 94.6858 155.999 95.5082C156.127 96.3306 156.607 97.5238 150.239 105.441C143.871 113.359 126.895 137.917 123.375 145.399C119.855 152.881 120.015 155.912 121.183 156.364C122.783 157.025 160.879 123.985 160.879 123.985L159.279 132.047C159.279 132.047 120.495 173.182 117.935 174.537C114.912 176.118 111.349 176.266 108.207 174.94C104.543 173.44 99.1514 167.603 98.3354 166.539C97.2664 165.002 96.3551 163.359 95.6154 161.637Z" fill="white" data-llp-id="Logo-0" data-llp-duration="1700" data-llp-delay="0" fill-opacity="0" style=""/>
@@ -30,9 +32,12 @@
 </svg>
       </div>
     </section>
+    <!--Preloader END-->
+    <!--Progress bar BEGIN-->
     <div class="progress-bar">
       <div class="progress-bar__line"></div>
     </div>
+    <!--Progress bar END-->
     <!--Header BEGIN-->
     <header class="header">
       <div class="container">

@@ -11,6 +11,31 @@ $(function () {
 	// -- Common data END
 
 
+	// -- Check IE version BEGIN
+	const checkIeVersion = () => {
+		let result = -1; // Return value assumes failure.
+
+		if (navigator.appName == 'Microsoft Internet Explorer'){
+			const userAgent = navigator.userAgent;
+			const regV	= new RegExp("MSIE ([0-9]{1,}[\\.0-9]{0,})");
+
+			if (regV.exec(userAgent) !== null){
+				result = parseFloat( RegExp.$1 );
+			}
+		}
+
+		else if(navigator.appName == "Netscape"){                       
+			/// in IE 11 the navigator.appVersion says 'trident'
+			/// in Edge the navigator.appVersion does not say trident
+			if(navigator.appVersion.indexOf('Trident') === -1) result = 12;
+			else result = 11;
+		}
+
+		alert(result);
+	};
+	// -- Check IE version END
+
+
 	// -- Preloader BEGIN
 	const preloader = () => {
 		const preloaderWrapper = $(".preloader");
@@ -30,7 +55,7 @@ $(function () {
 				"strokeWidth"	 : 1,
 				"strokeOpacity": 1,
 				"strokeColor"	 : "#fff",
-				"strokeCap"		 : "square"
+				"strokeCap"		 : "squserAgentre"
 			};
 			if ( $(window).width() < breakpoints.sm ) animationProperty.strokeWidth = 3;
 
@@ -125,6 +150,7 @@ $(function () {
 
 	// -- Initialization work functions BEGIN
 	const initializationFunctions = () => {
+		checkIeVersion();
 		preloader();
 		formElements()
 		popups();
