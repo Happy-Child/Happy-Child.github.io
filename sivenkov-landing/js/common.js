@@ -239,18 +239,15 @@ $(function () {
 
 
 					//Scroll on position BEGIN
-					const secPortfolioTopOffset = $(".portfolio__content").offset().top;
-					const customOffset = 70;
+					const secPortfolioOffset = $(".portfolio__content").offset().top;
+					const customOffset = 60;
 
 					function scrollToBottom () {
-						const itemsLenght = hideItems.length;
 						const itemHeight = $(".portfolio .portfolio__wrap-item").eq(1).outerHeight(true);
-						const curOffset = document.body.scrollTop || document.documentElement.scrollTop;
 						const isMobile = $(window).width() <= breakpoints.sm;
 
-						const offset = !isMobile ? (Math.ceil(itemsLenght / 2) * itemHeight) : (itemsLenght * itemHeight);
-						const resultOffset = curOffset + offset;
-
+						const resultOffset = !isMobile ? (secPortfolioOffset + itemHeight) : (secPortfolioOffset + itemHeight * 2);
+	
 					 	$("html, body").animate({
           		scrollTop: resultOffset - customOffset
         		}, 800);
@@ -258,7 +255,7 @@ $(function () {
 
 					function scrollToTop () {
 		        $("html, body").animate({
-          		scrollTop: secPortfolioTopOffset - customOffset
+          		scrollTop: secPortfolioOffset - customOffset
         		}, 800);
 					}
 

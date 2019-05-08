@@ -222,17 +222,14 @@ $(function () {
 
 
 					//Scroll on position BEGIN
-					var secPortfolioTopOffset = $(".portfolio__content").offset().top;
-					var customOffset = 70;
+					var secPortfolioOffset = $(".portfolio__content").offset().top;
+					var customOffset = 60;
 
 					function scrollToBottom() {
-						var itemsLenght = hideItems.length;
 						var itemHeight = $(".portfolio .portfolio__wrap-item").eq(1).outerHeight(true);
-						var curOffset = document.body.scrollTop || document.documentElement.scrollTop;
 						var isMobile = $(window).width() <= breakpoints.sm;
 
-						var offset = !isMobile ? Math.ceil(itemsLenght / 2) * itemHeight : itemsLenght * itemHeight;
-						var resultOffset = curOffset + offset;
+						var resultOffset = !isMobile ? secPortfolioOffset + itemHeight : secPortfolioOffset + itemHeight * 2;
 
 						$("html, body").animate({
 							scrollTop: resultOffset - customOffset
@@ -241,7 +238,7 @@ $(function () {
 
 					function scrollToTop() {
 						$("html, body").animate({
-							scrollTop: secPortfolioTopOffset - customOffset
+							scrollTop: secPortfolioOffset - customOffset
 						}, 800);
 					}
 
