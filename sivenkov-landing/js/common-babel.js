@@ -249,17 +249,51 @@ $(function () {
 
 
 		//Gif image restart BEGIN
+		var gifsChache = [];
+
 		var gifView = function gifView(item, state) {
+			var gifImg = item.find(".portfolio__gif");
 
 			if (state === "show") {
-				var gifImg = item.find(".portfolio__gif");
-
 				var gifSrc = gifImg.attr("data-src-gif");
-				gifImg.css({ "background-image": "url(" + gifSrc + ")" });
-			} else if (state === "hide") {
-				var _gifImg = item.find(".portfolio__gif");
 
-				_gifImg.css({ "background-image": "none" });
+				if (gifsChache.indexOf(gifSrc) !== -1) {
+
+					// gifImg.parent().prepend(`
+					// 	<div
+					// 		class="portfolio__gif_result"
+					// 		style="background-image: url('${gifSrc}')"
+					// 	></div>
+					// `);
+
+					gifImg.css({ "background-image": "url(" + gifSrc + ")" });
+				} else {
+
+					item.addClass("portfolio__item_load");
+
+					var img = new Image();
+					img.onload = function () {
+						if (gifsChache.indexOf(gifSrc) == -1) gifsChache.push(gifSrc);
+
+						// gifImg.parent().prepend(`
+						// 	<div
+						// 		class="portfolio__gif_result"
+						// 		style="background-image: url('${gifSrc}')"
+						// 	></div>
+						// `);
+						gifImg.css({ "background-image": "url(" + gifSrc + ")" });
+						console.log("load");
+						console.log(gifsChache);
+
+						item.removeClass("portfolio__item_load");
+					};
+					img.src = gifSrc;
+				}
+			} else if (state === "hide") {
+				setTimeout(function () {
+					gifImg.css({ "background-image": "url(none)" });
+				}, 300);
+				//gifImg.parent().find(".portfolio__gif_result").remove();
 			}
 		};
 		//Gif image restart END
@@ -272,10 +306,10 @@ $(function () {
 			if (items.length) {
 				items.hover(function () {
 
-					$(this).addClass("show");
+					$(this).addClass("portfolio__item_show");
 					gifView($(this), "show");
 				}, function () {
-					$(this).removeClass("show");
+					$(this).removeClass("portfolio__item_show");
 					gifView($(this), "hide");
 				});
 			}
