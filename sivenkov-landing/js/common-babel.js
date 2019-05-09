@@ -1,7 +1,5 @@
 "use strict";
 
-jQuery.fn.reverse = [].reverse;
-
 $(function () {
 	// -- Common data BEGIN
 	var breakpoints = {
@@ -214,7 +212,7 @@ $(function () {
 
 
 					//Show/hide items BEGIN
-					hideItems.reverse().each(function () {
+					hideItems.each(function () {
 						var cur = $(this);
 						if (text == textStates.show) cur.slideDown(600).addClass("show");else if (text == textStates.hide) cur.slideUp(600).removeClass("show");
 					});
@@ -250,8 +248,48 @@ $(function () {
 		//Show items END
 
 
+		//Video play/restart BEGIN
+		var videoView = function videoView(videoIndex, state) {
+			var videos = document.querySelector(".portfolio__video");
+			var video = document.getElementById("portfolio__video-" + videoIndex);
+
+			if (state === "show") {
+
+				video.play();
+				console.log(video);
+			} else if (state === "hide") {
+
+				video.currentTime = 0;
+				console.log(video);
+			}
+		};
+		//Video play/restart END
+
+
+		//Hover items BEGIN
+		var hoverItems = function hoverItems() {
+			var items = $(".portfolio__item");
+
+			if (items.length) {
+				items.hover(function () {
+					items.addClass("portfolio__item_hover");
+					var itemIndex = $(this).parent().index() + 1;
+
+					videoView(itemIndex, "show");
+				}, function () {
+					items.removeClass("portfolio__item_hover");
+					var itemIndex = $(this).parent().index() + 1;
+
+					videoView(itemIndex, "hide");
+				});
+			}
+		};
+		//Hover items END
+
+
 		//Initialization BEGIN
 		showItems();
+		hoverItems();
 		//Initialization END
 	};
 	//Portfolio section logic (show items & view gif) END
