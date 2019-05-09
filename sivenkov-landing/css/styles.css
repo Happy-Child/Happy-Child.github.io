@@ -1290,18 +1290,19 @@ footer {
 
 .portfolio__gif {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
-  width: -webkit-calc(100% + 7px);
-  width: calc(100% + 7px);
-  height: 100%;
+  width: -webkit-calc(100% + 8px);
+  width: calc(100% + 8px);
+  height: -webkit-calc(100% + 8px);
+  height: calc(100% + 8px);
   -webkit-transition: .4s all ease;
   -o-transition: .4s all ease;
   transition: .4s all ease;
   opacity: 0;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
@@ -1946,6 +1947,13 @@ footer {
 
   .portfolio__title {
     margin-bottom: 5rem;
+  }
+
+  .portfolio__gif {
+    width: -webkit-calc(100% + 6px);
+    width: calc(100% + 6px);
+    height: -webkit-calc(100% + 6px);
+    height: calc(100% + 6px);
   }
 
   .portfolio__wrap-btn {

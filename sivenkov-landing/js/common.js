@@ -270,9 +270,9 @@ $(function () {
 
 		//Gif image restart BEGIN
 		const gifView = ( item, state ) => {
-			let gifImg;
-
+			
 			if ( state === "show" ) {
+				const gifImg = item.find(".portfolio__gif")
 
 				const gifSrc = ($(window).width() > breakpoints.md) 
 					? item.attr("data-gif-src-desktop")
@@ -280,11 +280,10 @@ $(function () {
 
 				// item.prepend(`<img class="portfolio__gif" scr="${gifSrc}" alt="">`);
 
-				gifImg = item.find(".portfolio__gif");
-
 				gifImg.css({"background-image": `url(${gifSrc})`});
 
 			} else if ( state === "hide" ) {
+				const gifImg = item.find(".portfolio__gif")
 
 				gifImg.css({"background-image": "none"});
 				//gifImg.attr("src", "");
