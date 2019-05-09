@@ -1308,6 +1308,18 @@ footer {
   background-repeat: no-repeat;
 }
 
+.portfolio__gif img {
+  position: inherit;
+  top: inherit;
+  left: inherit;
+  -webkit-transform: inherit;
+  -ms-transform: inherit;
+  transform: inherit;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+
 .portfolio__wrap-btn {
   text-align: center;
 }

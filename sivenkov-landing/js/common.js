@@ -270,16 +270,26 @@ $(function () {
 
 		//Gif image restart BEGIN
 		const gifView = ( item, state ) => {
-			const gifBox = item.find(".portfolio__gif");
+			const gifImg = item.find(".portfolio__gif");
 
 			if ( state === "show" ) {
 
-				const gifSrc = item.attr("data-gif-src");
-				gifBox.css({"background-image": `url(${gifSrc})`})
+				const gifSrc = ($(window).width() > breakpoints.md) 
+					? item.attr("data-gif-src-desktop")
+					: item.attr("data-gif-src-mobile");
+
+				gifImg.attr("src", gifSrc);
+
+				gifImg.load(function() {
+					alert("sdf");
+				});
+	
+				//gifImg.css({"background-image": `url(${gifSrc})`});
 
 			} else if ( state === "hide" ) {
 
-				gifBox.css({"background-image": "none"});
+				//gifImg.css({"background-image": "none"});
+				gifImg.attr("src", "");
 
 			}
 
