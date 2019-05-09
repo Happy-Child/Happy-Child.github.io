@@ -269,8 +269,20 @@ $(function () {
 
 
 		//Gif image restart BEGIN
-		const gifRestart = () => {
-			
+		const gifView = ( item, state ) => {
+			const gifBox = item.find(".portfolio__gif");
+
+			if ( state === "show" ) {
+
+				const gifSrc = item.attr("data-gif-src");
+				gifBox.css({"background-image": `url(${gifSrc})`})
+
+			} else if ( state === "hide" ) {
+
+				gifBox.css({"background-image": "none"});
+
+			}
+
 		};
 		//Gif image restart END
 
@@ -283,10 +295,11 @@ $(function () {
 			if ( items.length ) {
 				items.hover( function() {
 					items.addClass("portfolio__item_hover");
+					gifView( $(this), "show" );
 				}, function() {
 					items.removeClass("portfolio__item_hover");
 					const itemIndex = $(this).parent().index() + 1;
-					gifRestart();
+					gifView( $(this), "hide" );
 				});
 			}
 		};
