@@ -268,25 +268,11 @@ $(function () {
 
 
 
-		//Video play/restart BEGIN
-		const videoView = (videoIndex, state) => {
-			const videos = document.querySelector(".portfolio__video");
-			const video =	document.getElementById(`portfolio__video-${videoIndex}`);
-
-			if ( state === "show" ) {
-
-				video.play();
-				console.log(video);
-
-			} else if ( state === "hide" ) {
-
-				video.currentTime = 0;
-				console.log(video);
-
-			}
-
+		//Gif image restart BEGIN
+		const gifRestart = () => {
+			
 		};
-		//Video play/restart END
+		//Gif image restart END
 
 
 
@@ -297,14 +283,10 @@ $(function () {
 			if ( items.length ) {
 				items.hover( function() {
 					items.addClass("portfolio__item_hover");
-					const itemIndex = $(this).parent().index() + 1;
-
-					videoView( itemIndex, "show" )
 				}, function() {
 					items.removeClass("portfolio__item_hover");
 					const itemIndex = $(this).parent().index() + 1;
-
-					videoView( itemIndex, "hide" )
+					gifRestart();
 				});
 			}
 		};

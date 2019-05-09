@@ -248,22 +248,9 @@ $(function () {
 		//Show items END
 
 
-		//Video play/restart BEGIN
-		var videoView = function videoView(videoIndex, state) {
-			var videos = document.querySelector(".portfolio__video");
-			var video = document.getElementById("portfolio__video-" + videoIndex);
-
-			if (state === "show") {
-
-				video.play();
-				console.log(video);
-			} else if (state === "hide") {
-
-				video.currentTime = 0;
-				console.log(video);
-			}
-		};
-		//Video play/restart END
+		//Gif image restart BEGIN
+		var gifRestart = function gifRestart() {};
+		//Gif image restart END
 
 
 		//Hover items BEGIN
@@ -273,14 +260,10 @@ $(function () {
 			if (items.length) {
 				items.hover(function () {
 					items.addClass("portfolio__item_hover");
-					var itemIndex = $(this).parent().index() + 1;
-
-					videoView(itemIndex, "show");
 				}, function () {
 					items.removeClass("portfolio__item_hover");
 					var itemIndex = $(this).parent().index() + 1;
-
-					videoView(itemIndex, "hide");
+					gifRestart();
 				});
 			}
 		};
