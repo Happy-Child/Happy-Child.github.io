@@ -1352,18 +1352,8 @@ footer {
   visibility: hidden;
 }
 
-.portfolio__item_hover:before {
-  opacity: 1;
-  visibility: visible;
-}
-
-.portfolio__item:hover:before {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.portfolio__item:hover .portfolio__gif {
-  opacity: 1;
+.portfolio__item.show .portfolio__gif {
+  display: block;
 }
 
 .portfolio__img {
@@ -1383,7 +1373,6 @@ footer {
   -webkit-transition: .4s all ease;
   -o-transition: .4s all ease;
   transition: .4s all ease;
-  opacity: 0;
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
@@ -1391,18 +1380,7 @@ footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.portfolio__gif img {
-  position: inherit;
-  top: inherit;
-  left: inherit;
-  -webkit-transform: inherit;
-  -ms-transform: inherit;
-  transform: inherit;
-  width: 100%;
-  height: 100%;
-  z-index: 9;
+  display: none;
 }
 
 .portfolio__wrap-btn {

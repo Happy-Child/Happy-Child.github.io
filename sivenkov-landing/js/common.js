@@ -274,18 +274,13 @@ $(function () {
 			if ( state === "show" ) {
 				const gifImg = item.find(".portfolio__gif")
 
-				const gifSrc = item.attr("data-gif-src-desktop");
-
-				// item.prepend(`<img class="portfolio__gif" scr="${gifSrc}" alt="">`);
-
+				const gifSrc = gifImg.attr("data-src-gif");
 				gifImg.css({"background-image": `url(${gifSrc})`});
 
 			} else if ( state === "hide" ) {
 				const gifImg = item.find(".portfolio__gif")
 
 				gifImg.css({"background-image": "none"});
-				//gifImg.attr("src", "");
-
 			}
 
 		};
@@ -299,12 +294,14 @@ $(function () {
 
 			if ( items.length ) {
 				items.hover( function() {
-					//items.addClass("portfolio__item_hover");
+
+					$(this).addClass("show");
 					gifView( $(this), "show" );
-				}, function() {
-					//items.removeClass("portfolio__item_hover");
-					const itemIndex = $(this).parent().index() + 1;
+
+				}, function () {
+					$(this).removeClass("show");
 					gifView( $(this), "hide" );
+
 				});
 			}
 		};
