@@ -274,9 +274,7 @@ $(function () {
 			if ( state === "show" ) {
 				const gifImg = item.find(".portfolio__gif")
 
-				const gifSrc = ($(window).width() > breakpoints.md) 
-					? item.attr("data-gif-src-desktop")
-					: item.attr("data-gif-src-mobile");
+				const gifSrc = item.attr("data-gif-src-desktop");
 
 				// item.prepend(`<img class="portfolio__gif" scr="${gifSrc}" alt="">`);
 
