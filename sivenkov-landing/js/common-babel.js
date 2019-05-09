@@ -266,7 +266,7 @@ $(function () {
 					// 	></div>
 					// `);
 
-					gifImg.css({ "background-image": "url(" + gifSrc + ")" });
+					gifImg.css({ "background-image": "url(" + gifSrc + "?p" + new Date().getTime() + ")" });
 				} else {
 
 					item.addClass("portfolio__item_load");
@@ -281,7 +281,7 @@ $(function () {
 						// 		style="background-image: url('${gifSrc}')"
 						// 	></div>
 						// `);
-						gifImg.css({ "background-image": "url(" + gifSrc + ")" });
+						gifImg.css({ "background-image": "url(" + gifSrc + "?p" + new Date().getTime() + ")" });
 						console.log("load");
 						console.log(gifsChache);
 
@@ -291,7 +291,7 @@ $(function () {
 				}
 			} else if (state === "hide") {
 				setTimeout(function () {
-					gifImg.css({ "background-image": "url(none)" });
+					gifImg.css({ backgroundImage: "none" });
 				}, 300);
 				//gifImg.parent().find(".portfolio__gif_result").remove();
 			}
