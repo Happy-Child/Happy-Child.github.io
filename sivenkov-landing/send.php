@@ -2,13 +2,13 @@
 
 require 'PHPMailer/PHPMailerAutoload.php';
 
-$mail = new PHPMailer;  
+$mail = new PHPMailer(true);  
 $mail->IsSMTP();
 $mail->SMTPDebug = 1;
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = 'ssl';
 $mail->Host = "smtp.gmail.com";
-$mail->Port = 465; // or 587  
+$mail->Port = 587; // or 587  
 $mail->IsHTML(true);
 $mail->Username = "sendingsivenkov@gmail.com";
 $mail->Password = "1Jfdks8Hns";
