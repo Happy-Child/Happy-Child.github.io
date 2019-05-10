@@ -155,7 +155,7 @@ $(function () {
 
 		const sendMessage = (data) => {
 			$.ajax({
-		    url: "./send.php",
+		    url: "send.php",
 		    type: "POST",
 		    data: data,
 
