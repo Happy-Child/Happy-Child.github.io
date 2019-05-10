@@ -36,5 +36,6 @@ $mail->Body .= 'Сообщение: ' . $message . "\n";
 
 $sendMail = $mail->send();
 if (!$sendMail) echo 'Mailer Error: ' . $mail->ErrorInfo;
+else echo 'Mailer SENDSENDSEND';
 
 ?>
