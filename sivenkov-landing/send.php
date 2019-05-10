@@ -4,19 +4,20 @@
 require_once 'PHPMailer/PHPMailerAutoload.php';
 
 $mail = new PHPMailer;
-$mail->CharSet = 'UTF-8';
-
 $mail->IsSMTP();
-$mail->Host = 'smtp.gmail.com';
-$mail->Port = 587;
+$mail->SMTPDebug = 1;
 $mail->SMTPAuth = true;
+$mail->SMTPSecure = 'ssl';
+$mail->Host = "smtp.gmail.com";
+$mail->Port = 465; // or 587
+$mail->IsHTML(true);
 $mail->Username = "mozerqake1999@gmail.com";
 $mail->Password = "EMassa99";
-$mail->setFrom('mozerqake1999@gmail.com', 'Заявка с сайта Sivenkov.by');
-// $mail->addAddress('sivenkovvlad@gmail.com', 'Заявка с сайта Sivenkov.by');
-$mail->addAddress('lazuka_99@mail.ru', 'Заявка с сайта Sivenkov.by');
+$mail->setFrom('mozerqake1999@gmail.com', 'Заявка с сайта sivenkov.by');
+$mail->addAddress('lazuka_99@mail.ru', 'Заявка с сайта sivenkov.by');
+$mail->addReplyTo('lazuka_99@mail.ru', 'Заявка с сайта sivenkov.by');
+$mail->isHTML(true);
 $mail->Subject = 'Заявка с сайта Sivenkov.by';
-
 
 $name = $_POST["name"];
 $company = $_POST["company"];
