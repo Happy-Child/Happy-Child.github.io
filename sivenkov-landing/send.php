@@ -11,13 +11,14 @@ $mail->SMTPSecure = 'ssl';
 $mail->Host = "smtp.gmail.com";
 $mail->Port = 465; // or 587
 $mail->IsHTML(true);
-$mail->Username = "mozerqake1999@gmail.com";
-$mail->Password = "EMassa99";
+$mail->Username = "sendingsivenkov@gmail.com";
+$mail->Password = "1Jfdks8Hns";
 $mail->setFrom('mozerqake1999@gmail.com', 'Заявка с сайта sivenkov.by');
-$mail->addAddress('lazuka_99@mail.ru', 'Заявка с сайта sivenkov.by');
-$mail->addReplyTo('lazuka_99@mail.ru', 'Заявка с сайта sivenkov.by');
+$mail->addAddress('mozerqake1999@gmail.com', 'Заявка с сайта sivenkov.by');
+$mail->addReplyTo('mozerqake1999@gmail.com', 'Заявка с сайта sivenkov.by');
 $mail->isHTML(true);
 $mail->Subject = 'Заявка с сайта Sivenkov.by';
+
 
 $name = $_POST["name"];
 $company = $_POST["company"];
