@@ -1,15 +1,40 @@
 <?php
 
-$name = $_POST['name'];
-$phone = $_POST['phone'];
+require 'PHPMailer/PHPMailerAutoload.php';
 
-$to = "lazuka_99@mail.ru";
+$mail = new PHPMailer;  
+$mail->IsSMTP();
+$mail->SMTPDebug = 1;
+$mail->SMTPAuth = true;
+$mail->SMTPSecure = 'ssl';
+$mail->Host = "smtp.gmail.com";
+$mail->Port = 465; // or 587  
+$mail->IsHTML(true);
+$mail->Username = "sendingsivenkov@gmail.com";
+$mail->Password = "1Jfdks8Hns";
+$mail->setFrom('sendingsivenkov@gmail.com', 'Заявка с сайта sivenkov.by');
+$mail->addAddress('sivenkovvlad@gmail.com', 'Заявка с сайта sivenkov.by');
+$mail->addReplyTo('sivenkovvlad@gmail.com', 'Заявка с сайта sivenkov.by');
+$mail->isHTML(true); 
+$mail->Subject = 'Заявка с сайта Sivenkov.by';
 
-$header .= "Content-type: text/html; charset=utf-8\r\n";
-$header .= "MIME-Version: 1.0\r\n";
-$sending = mail($to, $subject, $text, $headers);
+$name = $_POST["name"];
+$company = $_POST["company"];
+$email = $_POST["email"];
+$phone = $_POST["phone"];
+$message = $_POST["text"];
 
-if($sending) echo "ОК, письмо отправлено.";
-else echo "Error";
+
+$mail->Body = 'Имя: ' . $name . "\n";
+$mail->Body .= 'Название компании: ' . $company . "\n";
+$mail->Body .= 'Email: ' . $email . "\n";
+$mail->Body .= 'Телефон: ' . $phone . "\n";
+$mail->Body .= 'Сообщение: ' . $message . "\n";
+
+
+$sendMail = $mail->send();
+if (!$sendMail) echo 'Mailer Error: ' . $mail->ErrorInfo;
+else echo 'Mailer send';
 
 ?>
+
