@@ -35,6 +35,12 @@
       </div>
     </div><![endif]-->
 <!--[if !IE]><!-->
+    <!--Custom cursor BEGIN-->
+    <div class="custom-cursor">
+      <div class="custom-cursor__item custom-cursor__item-1"></div>
+      <div class="custom-cursor__item custom-cursor__item-2"></div>
+    </div>
+    <!--Custom cursor END-->
     <!--Preloader BEGIN-->
     <section class="preloader">
       <div class="preloader__wrap-logo"><svg class="preloader__logo-img" width="608" height="258" viewBox="0 0 608 258" fill="none" xmlns="http://www.w3.org/2000/svg" data-llp-composed="true" id="Logo" class="lazy-line-painter">
@@ -62,26 +68,30 @@
     <!--Progress bar END-->
     <!--Popups BEGIN-->
     <div class="popup popup-callback" data-popup-key="callback">
-      <div class="popup__content">
-        <div class="preloader-mini responsive-image"><img src="img/preloader-mini.svg" alt=""></div><span class="popup__close"></span><span class="popup__title text-semibold title-h3">Заявка на звонок</span>
-        <form class="popup__form form">
-          <div class="form__item form__item_100">
-            <div class="form__wrap-field">
-              <input class="form__field" type="text" name="name"><span class="form__placeholder">Ваше имя</span><span class="form__invalid">Введите ваше имя!</span>
+      <div class="popup__wrap-content">
+        <div class="popup__content">
+          <div class="preloader-mini responsive-image"><img src="img/preloader-mini.svg" alt=""></div><span class="popup__close"></span><span class="popup__title text-semibold title-h3">Заявка на звонок</span>
+          <form class="popup__form form">
+            <div class="form__item form__item_100">
+              <div class="form__wrap-field">
+                <input class="form__field" type="text" name="name"><span class="form__placeholder">Ваше имя</span><span class="form__invalid">Введите ваше имя!</span>
+              </div>
             </div>
-          </div>
-          <div class="form__item form__item_100">
-            <div class="form__wrap-field">
-              <input class="form__field error" type="text" name="phone"><span class="form__placeholder">Номер телефона</span><span class="form__invalid">Введите номер телефона!</span>
+            <div class="form__item form__item_100">
+              <div class="form__wrap-field">
+                <input class="form__field error" type="tel" name="phone"><span class="form__placeholder">Номер телефона</span><span class="form__invalid">Введите номер телефона!</span>
+              </div>
             </div>
-          </div>
-          <button class="popup__btn btn" data-text="Отправить заявку" data-modal-key="callback"><span class="btn__overlay"></span><span class="btn__text">Отправить заявку</span></button>
-        </form>
+            <button class="popup__btn btn" data-text="Отправить заявку" data-modal-key="callback"><span class="btn__overlay"></span><span class="btn__text">Отправить заявку</span></button>
+          </form>
+        </div>
       </div>
     </div>
     <div class="popup popup-success">
-      <div class="popup__content"><span class="popup__close"></span><span class="popup__title popup-success__title text-semibold title-h3">Благодарим<br> за вашу заявку!</span>
-        <p class="popup-success__text text-gray">Мы свяжемся с вами в ближайшее время</p>
+      <div class="popup__wrap-content">
+        <div class="popup__content"><span class="popup__close"></span><span class="popup__title popup-success__title text-semibold title-h3">Благодарим<br> за вашу заявку!</span>
+          <p class="popup-success__text text-gray">Мы свяжемся с вами в ближайшее время</p>
+        </div>
       </div>
     </div>
     <!--Popups END -->
@@ -231,12 +241,12 @@
             <form class="feedback__form form">
               <div class="form__item form__item_50 wow fadeInUp" data-wow-delay=".1s" data-wow-duration=".8s">
                 <div class="form__wrap-field">
-                  <input class="form__field" type="text" name="name"><span class="form__placeholder">Полное имя</span><span class="form__invalid">Введите полное имя!</span>
+                  <input class="form__field" type="text" name="text"><span class="form__placeholder">Полное имя</span><span class="form__invalid">Введите полное имя!</span>
                 </div>
               </div>
               <div class="form__item form__item_50 wow fadeInUp" data-wow-delay=".1s" data-wow-duration=".8s">
                 <div class="form__wrap-field">
-                  <input class="form__field error" type="text" name="company"><span class="form__placeholder">Название компании</span><span class="form__invalid">Введите название компании!</span>
+                  <input class="form__field" type="text" name="text"><span class="form__placeholder">Название компании</span><span class="form__invalid">Введите название компании!</span>
                 </div>
               </div>
               <div class="form__item form__item_50 wow fadeInUp" data-wow-delay=".1s" data-wow-duration=".8s">
@@ -246,16 +256,18 @@
               </div>
               <div class="form__item form__item_50 wow fadeInUp" data-wow-delay=".1s" data-wow-duration=".8s">
                 <div class="form__wrap-field">
-                  <input class="form__field error" type="tel" name="phone"><span class="form__placeholder">Номер телефона</span><span class="form__invalid">Введите номер телефона</span>
+                  <input class="form__field" type="tel" name="phone"><span class="form__placeholder">Номер телефона</span><span class="form__invalid">Введите номер телефона</span>
                 </div>
               </div>
               <div class="form__item form__item_100 wow fadeInUp" data-wow-delay=".1s" data-wow-duration=".8s">
                 <div class="form__wrap-field">
-                  <textarea class="form__field form__field_area" rows="1" name="message"></textarea><span class="form__placeholder">Сообщение</span><span class="form__invalid">Введите ваше сообщение!</span>
+                  <textarea class="form__field form__field_area" rows="1" name="text"></textarea><span class="form__placeholder">Сообщение</span><span class="form__invalid">Введите ваше сообщение!</span>
                 </div>
               </div>
+              <div class="feedback__wrap-btn form__item form__item_100">
+                <button class="feedback__btn form__btn btn wow fadeInUp" data-text="Отправить заявку" data-modal-key="callback" data-wow-delay=".3s" data-wow-duration=".8s"><span class="btn__overlay"></span><span class="btn__text">Отправить заявку</span></button>
+              </div>
             </form>
-            <button class="feedback__btn form__btn btn wow fadeInUp" data-text="Отправить заявку" data-modal-key="callback" data-wow-delay=".3s" data-wow-duration=".8s"><span class="btn__overlay"></span><span class="btn__text">Отправить заявку</span></button>
             <p class="feedback__success-message default-text">Благодарим за вашу заявку! Мы свяжемся<br> с вами в ближайшее время.</p>
           </div>
         </div>

@@ -106,19 +106,110 @@ $(function () {
 	//Progress bar END
 
 
-	// -- Form elements BEGIN
+	// -- Form BEGIN
 	var formElements = function formElements() {
+		var fields = $(".form__field");
+		var forms = $("form");
+		var countInvalidFields = 0;
+
+		var regObj = {
+			phone: /(\+)?([-\._\(\) ]?[\d]{2,20}[-\._\(\) ]?){2,10}/,
+			email: /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/,
+			text: /./,
+			name: /^[а-яА-ЯёЁa-zA-Z -]+$/
+
+			//Functions BEGIN
+		};var curLetters = function curLetters(field) {
+			var newStr = '';
+			var curVal = field.val();
+			var curValLength = field.val().length;
+			var control = 0;
+
+			for (var i = 0; i < curValLength; i++) {
+				var curValPart = curVal.substring(i, i + 1);
+
+				if (/[+, ,\-,0-9]/.test(curValPart)) {
+					newStr = newStr + curValPart;
+				} else {
+					if (!control) {
+						control = 1;
+					}
+				}
+			}
+
+			field.val(newStr);
+			field.focus();
+		};
+
+		var sendMessage = function sendMessage(data) {
+			$.ajax({
+				url: "./send.php",
+				type: "POST",
+				data: data,
+
+				success: function success(response) {
+					console.log(response);
+				},
+
+				error: function error(response) {
+					console.log(response);
+				}
+
+			});
+		};
+		//Functions END
+
+
+		//Validation BEGIN
+		var validation = function validation() {
+			if (forms.length) {
+				forms.submit(function (e) {
+					e.preventDefault();
+
+					var curFormFields = $(this).find(".form__field");
+
+					curFormFields.parent().removeClass("error");
+					countInvalidFields = 0;
+
+					curFormFields.each(function () {
+						var field = $(this);
+						var type = field.attr("name");
+						var val = field.val();
+
+						if (val.length < 1 || !regObj[type].test(val)) {
+							field.parent().addClass("error");
+							countInvalidFields++;
+						}
+					});
+
+					if (countInvalidFields == 0) sendMessage($(this).serialize());
+				});
+			}
+		};
+		//Validation END
+
+
+		//Set phone mask BEGIN
+		$("input[type='tel']").mask('+375-__-___-__-__', {
+			translation: {
+				'_': {
+					pattern: /[0-9]/,
+					optional: true
+				}
+			}
+		});
+		//Set phone mask END
+
+
 		//Set fields states BEGIN
 		var setFieldsFocus = function setFieldsFocus() {
-			var fields = $(".form__field");
-
 			if (fields.length) {
 				fields.focus(function () {
-					$(this).addClass("active");
+					$(this).parent().addClass("active");
 				});
 
 				fields.blur(function () {
-					if (!$(this).val()) $(this).removeClass("active");
+					if (!$(this).val()) $(this).parent().removeClass("active");
 				});
 			}
 		};
@@ -139,9 +230,10 @@ $(function () {
 		//Initialization BEGIN
 		setFieldsFocus();
 		autoHeightTextarea();
+		validation();
 		//Initialization END
 	};
-	// -- Form elements END
+	// -- Form END
 
 
 	//Popups BEGIN
@@ -149,6 +241,7 @@ $(function () {
 		var btnsShowPopups = $(".btn-popup");
 		var btnsHidePopups = $(".popup__close");
 		var popups = $(".popup");
+		var page = $("html, body");
 
 		if (!!btnsShowPopups && !!popups) {
 			btnsShowPopups.click(function (e) {
@@ -161,12 +254,15 @@ $(function () {
 					popups.removeClass("active");
 					popup.addClass("active");
 				}
+
+				page.toggleClass("page-fixed");
 			});
 		}
 
 		if (!!btnsHidePopups) {
 			btnsHidePopups.click(function () {
 				popups.removeClass("active");
+				page.toggleClass("page-fixed");
 			});
 		}
 	};
@@ -176,6 +272,35 @@ $(function () {
 	//WOW js animation BEGIN
 	var wowJs = function wowJs() {
 		var wow = new WOW().init();
+
+		//Functions BEGIN
+		var removeDelayOnFirstSection = function removeDelayOnFirstSection() {
+			var allAnimationItems = $(".our-plus .wow");
+			var listAnimationItems = $(".our-plus .our-plus__item");
+
+			if (allAnimationItems.length) {
+				allAnimationItems.attr("data-wow-delay", ".1s");
+
+				var delay = 1;
+				listAnimationItems.each(function () {
+					$(this).attr("data-wow-delay", "." + delay + "s");
+					delay++;
+				});
+			}
+		};
+		//Functions END
+
+
+		var prevOffset = $(window).scrollTop();
+		$(window).scroll(function () {
+			var curOffset = $(this).scrollTop();
+
+			if (curOffset < prevOffset) {
+				removeDelayOnFirstSection();
+			}
+
+			prevOffset = curOffset;
+		});
 	};
 	//WOW js animation END
 
@@ -282,8 +407,6 @@ $(function () {
 						// 	></div>
 						// `);
 						gifImg.css({ "background-image": "url(" + gifSrc + "?p" + new Date().getTime() + ")" });
-						console.log("load");
-						console.log(gifsChache);
 
 						item.removeClass("portfolio__item_load");
 					};
@@ -325,6 +448,56 @@ $(function () {
 	//Portfolio section logic (show items & view gif) END
 
 
+	//Custom cursor BEGIN
+	var customCursor = function customCursor() {
+		var cursor = $(".custom-cursor");
+		var hoverElements = $("a, .btn, input, textarea, .portfolio__item, .popup__close");
+
+		//Functions BEGIN
+		var mouseX = function mouseX(e) {
+			return e.clientX;
+		};
+
+		var mouseY = function mouseY(e) {
+			return e.clientY;
+		};
+
+		var positionElement = function positionElement(e) {
+			var mouse = {
+				x: mouseX(e),
+				y: mouseY(e)
+			};
+
+			cursor.css({
+				"top": mouse.y + "px",
+				"left": mouse.x + "px"
+			});
+		};
+		//Functions END
+
+		if (cursor.length) {
+			var timerMouse = false;
+
+			$(document).mousemove(function (e) {
+				cursor.addClass("custom-cursor_visible");
+
+				timerMouse = setTimeout(function () {
+					positionElement(e);
+				}, 1);
+			});
+		}
+
+		if (hoverElements.length) {
+			hoverElements.hover(function () {
+				cursor.addClass("custom-cursor_hover");
+			}, function () {
+				cursor.removeClass("custom-cursor_hover");
+			});
+		}
+	};
+	//Custom cursor END
+
+
 	// -- Initialization work functions BEGIN
 	var initializationFunctions = function initializationFunctions() {
 		preloader();
@@ -333,6 +506,7 @@ $(function () {
 		progressBar();
 		wowJs();
 		portfolioSection();
+		if ($(window).width() > breakpoints.lg) customCursor();
 	};
 
 	if (isIE >= 10) initializationFunctions();

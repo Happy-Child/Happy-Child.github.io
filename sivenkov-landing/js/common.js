@@ -115,19 +115,113 @@ $(function () {
 
 
 
-	// -- Form elements BEGIN
+	// -- Form BEGIN
 	const formElements = () => {
+		const fields = $(".form__field");
+		const forms = $("form");
+		let countInvalidFields = 0;
+
+		const regObj = {
+			phone: /(\+)?([-\._\(\) ]?[\d]{2,20}[-\._\(\) ]?){2,10}/,
+			email: /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/,
+			text: /./,
+			name: /^[а-яА-ЯёЁa-zA-Z -]+$/,
+		}
+
+
+		//Functions BEGIN
+		const curLetters = (field) => {
+			let newStr = '';
+			const curVal = field.val();
+			const curValLength = field.val().length;
+			let control = 0;
+
+			for (let i = 0; i < curValLength; i++) {
+				const curValPart = curVal.substring(i, i+1);
+
+				if (/[+, ,\-,0-9]/.test(curValPart)) {   
+					newStr = newStr + curValPart;
+				}
+				else {
+					if (!control) {
+						control = 1;
+					}
+				}
+			}
+			
+			field.val(newStr);
+			field.focus();
+		};
+
+		const sendMessage = (data) => {
+			$.ajax({
+		    url: "./send.php",
+		    type: "POST",
+		    data: data,
+
+		    success: function(response) {
+	      	console.log(response);
+				},
+
+				error: function(response) {
+					console.log(response);
+				}
+
+			});
+		};
+		//Functions END
+
+
+		//Validation BEGIN
+		const validation = () => {
+			if ( forms.length ) {
+				forms.submit(function(e) {
+					e.preventDefault();
+
+					const curFormFields = $(this).find(".form__field");
+					
+					curFormFields.parent().removeClass("error");
+					countInvalidFields = 0;
+
+					curFormFields.each(function() {
+						const field = $(this);
+						const type = field.attr("name");
+						const val = field.val();
+
+						if ( (val.length < 1) || (!regObj[type].test(val)) ) {
+							field.parent().addClass("error");
+							countInvalidFields++;
+						}
+					});
+
+					if ( countInvalidFields == 0 ) sendMessage( $(this).serialize() );
+				});
+			}
+		};
+		//Validation END
+
+
+		//Set phone mask BEGIN
+		$("input[type='tel']").mask('+375-__-___-__-__', {
+    	translation: {
+	      '_': {
+	        pattern: /[0-9]/,
+	        optional: true
+      	}
+      }
+    });
+		//Set phone mask END
+
+
 		//Set fields states BEGIN
 		const setFieldsFocus = () => {
-			const fields = $(".form__field");
-
 			if ( fields.length ) {
 				fields.focus(function() {
-					$(this).addClass("active");
+					$(this).parent().addClass("active");
 				});
 
 				fields.blur(function() {
-					if ( !$(this).val() ) $(this).removeClass("active");
+					if ( !$(this).val() ) $(this).parent().removeClass("active");
 				});
 			}
 		};
@@ -149,9 +243,10 @@ $(function () {
 		//Initialization BEGIN
 		setFieldsFocus();
 		autoHeightTextarea();
+		validation();
 		//Initialization END
 	};
-	// -- Form elements END
+	// -- Form END
 
 
 
@@ -160,6 +255,7 @@ $(function () {
 		const btnsShowPopups = $(".btn-popup");
 		const btnsHidePopups = $(".popup__close");
 		const popups = $(".popup");
+		const page = $("html, body");
 
 		if (!!btnsShowPopups && !!popups ) {
 			btnsShowPopups.click(function (e) {
@@ -172,12 +268,15 @@ $(function () {
 					popups.removeClass("active");
 					popup.addClass("active");
 				}
+
+				page.toggleClass("page-fixed");
 			});
 		}
 
 		if ( !!btnsHidePopups ) {
 			btnsHidePopups.click(function() {
 				popups.removeClass("active");
+				page.toggleClass("page-fixed");
 			});
 		}
 	};
@@ -188,6 +287,36 @@ $(function () {
 	//WOW js animation BEGIN
 	const wowJs = () => {
 		const wow = new WOW().init();
+
+		
+		//Functions BEGIN
+		const removeDelayOnFirstSection = () => {
+			const allAnimationItems = $(".our-plus .wow");
+			const listAnimationItems = $(".our-plus .our-plus__item");
+
+			if ( allAnimationItems.length ) {
+				allAnimationItems.attr("data-wow-delay", ".1s");
+				
+				let delay = 1;
+				listAnimationItems.each(function() {
+					$(this).attr("data-wow-delay", `.${delay}s`);
+					delay++;
+				});
+			}
+		};
+		//Functions END
+
+
+		let prevOffset = $(window).scrollTop();
+		$(window).scroll(function() {
+			const curOffset = $(this).scrollTop();
+			
+			if ( curOffset < prevOffset ) {
+				removeDelayOnFirstSection();
+			}
+
+			prevOffset = curOffset;
+		});
 	};
 	//WOW js animation END
 
@@ -303,8 +432,6 @@ $(function () {
 						// 	></div>
 						// `);
 						gifImg.css({"background-image": `url(${gifSrc}?p${new Date().getTime()})`});
-						console.log("load");
-						console.log(gifsChache);
 
 						item.removeClass("portfolio__item_load");
 					};
@@ -354,6 +481,57 @@ $(function () {
 
 
 
+	//Custom cursor BEGIN
+	const customCursor = () => {
+		const cursor = $(".custom-cursor");
+		const hoverElements = $("a, .btn, input, textarea, .portfolio__item, .popup__close");
+
+		//Functions BEGIN
+		const mouseX = (e) => {
+			return e.clientX;
+  	};
+
+		const mouseY = (e) => {
+			return e.clientY;
+		};
+		
+		const positionElement = (e) => {
+			const mouse = {
+		    x: mouseX(e),
+		    y: mouseY(e)
+		  };
+
+		  cursor.css({
+		  	"top": mouse.y + "px",
+		  	"left": mouse.x + "px",
+		  })
+		};
+		//Functions END
+
+		if ( cursor.length ) {
+			let timerMouse = false;
+
+			$(document).mousemove(function(e) {
+				cursor.addClass("custom-cursor_visible");
+
+			  timerMouse = setTimeout(() => {
+			    positionElement(e);
+			  }, 1);
+			});
+		}
+
+		if ( hoverElements.length ) {
+			hoverElements.hover(function() {
+				cursor.addClass("custom-cursor_hover");
+			}, function() {
+				cursor.removeClass("custom-cursor_hover");
+			});
+		}
+	};
+	//Custom cursor END
+
+
+
 	// -- Initialization work functions BEGIN
 	const initializationFunctions = () => {
 		preloader();
@@ -362,6 +540,7 @@ $(function () {
 		progressBar();
 		wowJs();
 		portfolioSection();
+		if ( $(window).width() > breakpoints.lg ) customCursor();
 	};
 
 	if ( isIE >= 10 ) initializationFunctions();
