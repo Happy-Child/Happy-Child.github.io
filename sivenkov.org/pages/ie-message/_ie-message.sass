@@ -1,0 +1,85 @@
+.ie-message
+
+	.header
+		margin-bottom: 92px
+		padding: 30px 0
+
+		.row-info
+			+media(xl)
+				height: 80px
+
+		+media(xl)
+			padding: 20px 0
+
+		+media(lg)
+			margin-bottom: 65px
+
+		+media(sm)
+			margin-bottom: 45px
+			.row-info
+				+media(lg)
+					height: 80px
+
+
+
+	&__title
+		margin-bottom: 75px
+		display: block
+		font-size: 36px
+		line-height: 48px
+
+		+media(lg)
+			font-size: 30px
+			line-height: 38px
+			margin-bottom: 50px	
+
+		+media(sm)
+			font-size: 24px
+			line-height: 29px
+			margin-bottom: 60px
+
+	&__content
+		padding-right: 7%
+
+		+media(xxl)
+			padding-right: 0
+		
+		+media(xl)
+			br
+				display: none
+
+	p
+		color: $emperor
+		font-size: 24px
+		line-height: 35px
+
+		+media(lg)
+			font-size: 20px
+			line-height: 30px
+
+		+media(sm)
+			font-size: 18px
+			line-height: 26px
+			color: #000
+
+	.footer
+		padding-top: 0
+		padding-bottom: 110px
+		margin-top: 60px
+
+		.link
+			display: block
+			font-size: 24px
+			line-height: 35px
+
+			+media(lg)
+				font-size: 20px
+				line-height: 30px
+				margin-bottom: 6px
+
+				&:last-child
+					margin-bottom: 0
+
+			+media(sm)
+				font-size: 18px
+				line-height: 26px

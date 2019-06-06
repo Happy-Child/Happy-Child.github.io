@@ -1,0 +1,13 @@
+.row-info__link {
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+.row-info__link:hover {
+  color: #17A5F4;
+}
+
+.row-info__overlay {
+  display: none;
+}

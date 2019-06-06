@@ -47,8 +47,8 @@ $(function () {
 		};
 
 		//Initialization BEGIN
-		animationLogo();
-		//Initialization END
+		if ( preloaderWrapper.length && preloaderLogo.length ) animationLogo();
+ 		//Initialization END
 	};
 	// -- Preloader END
 
@@ -66,16 +66,16 @@ $(function () {
 				const curOffset = $(window).scrollTop();
 
 				if ( curOffset > windowHeight ) {
-					header.addClass("scroll");
+					header.addClass("header_scroll");
 
 					if ( !!prevOffset && prevOffset >= curOffset ) { //scroll top
-						header.addClass("scroll-show");
+						header.addClass("header_scroll-show");
 					} else if ( !!prevOffset && prevOffset < curOffset ) { //scroll bottom
-						header.removeClass("scroll-show");
+						header.removeClass("header_scroll-show");
 					}
 				} else {
 					if ( curOffset <= 1 ){
-						header.removeClass("scroll scroll-show");
+						header.removeClass("header_scroll header_scroll-show");
 					}
 				}
 
@@ -92,9 +92,9 @@ $(function () {
 
 
 	// -- Menu BEGIN
-	const menu = () => {
+	const mainMenu = () => {
 		const header = $(".header");
-		const menuBtns = $(".header-menu-btn");
+		const $menuBtn = $(".header__menu-btn");
 		const elHtml = $("html");
 		const elBody = $("body");
 		const page = $("body, html");
@@ -108,41 +108,47 @@ $(function () {
 
 		const isDesktop = $(window).width() > breakpoints.lg;
 
-
 		function changeStateMenu () {
-			if ( header.length && menuBtns.length ) {
-				menuBtns.click(function() {
+			if ( header.length && $menuBtn.length ) {
+				$menuBtn.click(function() {
 
-					$(this).toggleClass("active");
-					$(this).addClass("btn-disabled");
-					header.toggleClass("active");
+					$(this).toggleClass("header__menu-btn_active");
+					$(this).addClass("header__menu-btn_disabled");
+					header.toggleClass("header_active");
+					widthBodyAfterFixed = $("body").width();
+					console.log(widthBodyAfterFixed);
+					console.log(widthBodyBeforeFixed);
 
 					if ( isDesktop ) {
-						if ( !$(this).hasClass("active") ) { // If menu show
+						if ( !$(this).hasClass("header__menu-btn_active") ) { // If menu show
+
 							setTimeout(function() {
-								page.toggleClass("page-fixed");
+								page.removeClass("page-fixed");
 								header.css({"padding-right": "0px"});
 							}, delayMenu + 200);
+
 						} else { // If menu hide
+
 							setTimeout(function() {
-								page.toggleClass("page-fixed");
+								if ( (widthBodyBeforeFixed - widthBodyAfterFixed) !== 0 ) { // if page has scroll
+									page.addClass("page-fixed");
 
-								widthBodyAfterFixed = $("body").width();
-
-								if ( header.hasClass("scroll") ) {
-									header.css({"padding-right": (widthBodyAfterFixed - widthBodyBeforeFixed) + "px"});
+									if ( header.hasClass("header_scroll") ) {
+										header.css({"padding-right": (widthBodyAfterFixed - widthBodyBeforeFixed) + "px"});
+									}
 								}
 							}, delayMenu);
+
 						}
 
 						setTimeout( () => {
-							$(this).removeClass("btn-disabled");
+							$(this).removeClass("header__menu-btn_disabled");
 						}, deskMenuBtnDuration);
 					} else {
 						page.toggleClass("page-fixed");
 
 						setTimeout( () => {
-							$(this).removeClass("btn-disabled");
+							$(this).removeClass("header__menu-btn_disabled");
 						}, mobileMenuBtnDuration);
 					}
 
@@ -157,35 +163,56 @@ $(function () {
 	// -- Menu END
 
 
-	// -- Function set property depending on the page BEGIN
-	const functionSetProperty = () => {
-		//Check page scrollbar & set header margin-right BEGIN
-		const checkPageScrollbar = () => {
-			const header = $(".header");
-			const windowHeight = $(window).outerHeight(true);
-			const pageHeight = $(document).outerHeight(true);
 
-			if ( windowHeight < pageHeight && $(window).width() > 992 ) {
-				header.css({"width": "calc(100% - 15px)"});
-			}
-		};
-		//Check page scrollbar & set header margin-right END
-
-
-		//Initialization BEGIN
-		checkPageScrollbar();
-		//Initialization END
+	// -- Init lazy load BEGIN
+	const initLazyLoad = () => {
+		const lazy = new LazyLoad({
+    	elements_selector: ".lazy"
+		});
 	};
-	// -- Function set property depending on the page END
+	// -- Init lazy load END
+
+
+
+	// -- Set width technologies images loop BEGIN
+	const setWidthTechnologiesImagesLoop = () => {
+		const $wrapperLoop = $(".technologies__wrap-list"),
+					wrapperLoopWidth = parseInt( $wrapperLoop.outerWidth(true) ),
+					$loop = $wrapperLoop.find(".technologies__list"),
+					$loopItems = $wrapperLoop.find(".technologies__list-item");
+
+		
+		// -- Functions BEGIN
+		const setWidth = () => {
+			let resultWidth = 0;
+
+			$loopItems.each(function() {
+				resultWidth += $(this).outerWidth();
+			});
+
+
+			resultWidth = resultWidth - wrapperLoopWidth;
+			$loop.width( resultWidth );
+		};
+		// -- Functions END
+
+
+		if (
+			$wrapperLoop.length &&
+			$loop.length &&
+			$loopItems.length) setWidth();
+	};
+	// -- Set width technologies images loop END
 
 
 
 	// -- Initialization work functions BEGIN
 	const initializationFunctions = () => {
 		preloader();
-		menu();
+		mainMenu();
 		fixedHeader();
-		// functionSetProperty();
+		initLazyLoad();
+		setWidthTechnologiesImagesLoop();
 	};
 	initializationFunctions();
 	// -- Initialization work functions END

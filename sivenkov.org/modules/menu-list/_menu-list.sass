@@ -1,0 +1,60 @@
+.menu-list
+	&__item
+		line-height: 0
+		display: block
+
+		&:last-child
+			margin-bottom: 0
+
+		&.active
+			.menu-list__link
+				color: $accent
+				pointer-events: none
+
+	&__link
+		display: inline-block
+		color: #000
+		overflow: hidden
+		position: relative
+		+M-ExtraBold
+
+		+media(xl)
+			font-size: px-to-rem(49.6, 24)
+			line-height: px-to-rem(60.8, 24)
+
+		+media(md)
+			font-size: px-to-rem(40.6, 18)
+
+		+media(none, 480px)
+			font-size: 10vw
+			line-height: 13vw
+
+		+media(none, 380px)
+			line-height: 12vw
+
+		&:hover
+			.menu-list__overlay
+				animation: anim-in-layer .3s ease forwards
+				&:before
+					animation: anim-in-text .3s ease forwards
+
+	&__overlay
+		position: absolute
+		left: 0
+		overflow: hidden
+		background-color: #fff
+		width: 100%
+		display: block
+		transform: translate3d(-100%, 0, 0)
+		animation: anim-out-layer .3s ease-out
+		backface-visibility: hidden
+
+		&:before
+			background-color: #fff
+			content: attr(data-text)
+			width: 100%
+			display: block
+			transform: translate3d(100%, 0, 0)
+			color: $accent
+			animation: anim-out-text .3s ease-out
+			backface-visibility: hidden

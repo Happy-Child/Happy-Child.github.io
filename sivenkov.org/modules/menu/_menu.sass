@@ -1,0 +1,395 @@
+.menu
+	width: 100%
+	height: 100vh
+	display: flex
+	align-items: stretch
+	justify-content: center
+	top: 0
+	right: 0
+	left: 0
+	z-index: 8
+	background-color: #fff
+
+	.contianer
+		height: 100%
+
+	&-content
+		z-index: 1
+		margin-top: 4vh
+		width: 100%
+		height: 100%
+		display: flex
+		align-items: stretch
+		justify-content: space-between
+
+		+media(sm)
+			display: block
+			margin-top: 0
+
+
+		&__item
+			width: 50%
+			display: flex
+			align-items: center
+
+			+media(sm)
+				width: 100%
+				position: relative
+
+
+		&__left
+			+media(sm)
+				padding: 3.6em 0 6em
+
+		&__right
+			justify-content: center
+			background: $blue-dark-gradient
+
+			+media-min(sm)
+				position: absolute
+				top: 0
+				right: 0
+				height: 100%
+
+			+media(sm)
+				padding: 7em 0 5.5em
+				display: block
+				background: none
+
+				&:before
+					content: ""
+					position: absolute
+					top: 0
+					left: 50%
+					width: 105vw
+					height: 100%
+					transform: translate(-50%, 0)
+					background: $blue-dark-gradient
+
+				> *
+					position: relative
+					z-index: 1
+
+			+media(none, 380px)
+				padding: 6em 0 5em
+
+
+	&-list
+		width: 100%
+
+		&__item
+			margin-bottom: 1.7em
+			line-height: 0
+			display: block
+
+			+media(xm)
+				margin-bottom: 2.1em
+
+			&:last-child
+				margin-bottom: 0
+
+			&.active
+				.menu-list__link
+					color: $accent
+					pointer-events: none
+
+		&__link
+			display: inline-block
+			font-size: px-to-rem(64, 24)
+			line-height: px-to-rem(78, 24)
+			color: #000
+			overflow: hidden
+			position: relative
+			+M-ExtraBold
+
+			+media(xl)
+				font-size: px-to-rem(43, 20)
+				line-height: px-to-rem(53.2, 20)
+
+			+media(md)
+				font-size: px-to-rem(34.5, 18)
+
+			+media(none, 480px)
+				font-size: 10vw
+				line-height: 13vw
+
+			+media(none, 380px)
+				line-height: 12vw
+
+			&:hover
+				.menu-list__overlay
+					animation: anim-in-layer .3s ease forwards
+					&:before
+						animation: anim-in-text .3s ease forwards
+
+		&__overlay
+			position: absolute
+			left: 0
+			overflow: hidden
+			background-color: #fff
+			width: 100%
+			display: block
+			transform: translate3d(-100%, 0, 0)
+			animation: anim-out-layer .3s ease-out
+			backface-visibility: hidden
+
+			&:before
+				background-color: #fff
+				content: attr(data-text)
+				width: 100%
+				display: block
+				transform: translate3d(100%, 0, 0)
+				color: $accent
+				animation: anim-out-text .3s ease-out
+				backface-visibility: hidden
+
+
+	&-info
+		text-align: center
+
+		+media(sm)
+			margin-left: auto
+			margin-right: auto
+
+		&__link
+			display: block
+			color: #fff
+			overflow: hidden
+			position: relative
+			margin-bottom: .7em
+			margin-left: auto
+			margin-right: auto
+			font-size: 2.25rem
+			line-height: 2.5rem
+			+media(xl)
+				font-size: 2rem
+				line-height: 2.3rem
+			+media(md)
+				margin-bottom: .5em
+				font-size: 1.8rem
+				line-height: 2.2rem
+			+media(none, 480px)
+				text-align: left
+				font-size: 7vw
+				line-height: 7.8vw
+				margin-bottom: .8em
+
+			&:hover
+				.menu-info__overlay
+					animation: anim-in-layer .3s ease forwards
+					&:before
+						animation: anim-in-text .3s ease forwards
+
+		&__overlay
+			position: absolute
+			left: 0
+			overflow: hidden
+			background: linear-gradient(241.63deg, #173F59 9.24%, #1C3D53 95.22%)
+			width: 100%
+			display: block
+			transform: translate3d(-100%, 0, 0)
+			animation: anim-out-layer .3s ease-out
+			backface-visibility: hidden
+			&:before
+				background: linear-gradient(241.63deg, #173F59 9.24%, #1C3D53 95.22%)
+				content: attr(data-text)
+				width: 100%
+				display: block
+				transform: translate3d(100%, 0, 0)
+				color: $accent
+				animation: anim-out-text .3s ease-out
+				backface-visibility: hidden
+
+		&__btn
+			margin-top: 1.5em
+			width: 365px
+			max-width: 365px
+			+media(xl)
+				margin-top: 2em
+				width: 100%
+
+			+media(md)
+				margin-top: 1.5em
+				font-size: 16px
+			+media(sm)
+				margin-bottom: 4.2em
+				margin-top: 1.7em
+
+
+	&-social
+		position: absolute
+		bottom: 50px
+		left: 50%
+		display: flex
+		align-items: center
+
+		+media(xl)
+			bottom: 30px
+
+		+media(md)
+			bottom: 15px
+
+		+media(sm)
+			position: static
+			justify-content: center
+			margin-left: auto
+			margin-right: auto
+
+		&__item
+			margin-right: 75px
+			+media(md)
+				margin-right: 40px
+			+media(sm)
+				margin-right: 60px
+			&:last-child
+				margin-right: 0
+
+		&__link
+			display: block
+			height: 30px	
+			width: 30px
+			+media(md)
+				width: 25px
+				height: 25px
+			+media(sm)
+				width: 20px
+				height: 20px
+			svg
+				max-width: 100%
+				max-height: 100%
+				transition: .4s all ease
+
+		&__svg
+			path
+				transition: .4s all ease
+
+			&_inst
+				&-3, &-5, &-4
+					fill: #1E3D51
+				&-1,  &-2
+					fill: #fff
+	
+				&:hover
+					.menu-social__svg_inst-1
+						fill: #FF5E95
+					.menu-social__svg_inst-2
+						fill: #FF3980
+					.menu-social__svg_inst-3,
+					.menu-social__svg_inst-4,
+					.menu-social__svg_inst-5
+						fill: #fff
+
+			&_twitter
+				&-1
+					fill: #ADAEAF
+				&-2
+					fill: #fff
+				&-3
+					fill: #A1A2A3
+				&:hover
+					.menu-social__svg_twitter-1
+						fill: #009AE4
+					.menu-social__svg_twitter-2
+						fill: #25D9F8
+					.menu-social__svg_twitter-3
+						fill: #00C0F1
+
+			&_facebook
+				&-1
+					fill: #fff
+				&:hover
+					.menu-social__svg_facebook-1
+						fill: #385C8E
+
+
+
+//Keyframes BEGIN
+@keyframes anim-in-layer 
+	0%
+		transform: translate3d(-100%, 0, 0)
+	to 
+		transform: translateZ(0)
+
+@keyframes anim-out-layer 
+	0%
+		transform: translateZ(0)
+	to 
+		transform: translate3d(100%, 0, 0)
+
+@keyframes anim-in-text 
+	0%
+		transform: translate3d(100%, 0, 0)
+	to 
+		transform: translateZ(0)
+
+@keyframes anim-out-text 
+	0%
+		transform: translateZ(0)
+	to 
+		transform: translate3d(-100%, 0, 0)
+//Keyframes END
+
+
+
+//Animations BEGIN
+.menu
+	transition: opacity .3s ease, visibility .3s ease
+	visibility: hidden
+	opacity: 0
+	position: fixed
+
+	+media(sm)
+		position: static
+		visibility: visible
+
+
+	&-list, &-info, &-social
+		opacity: 0
+		transition: .3s all ease .6s
+
+	&-list 
+		transform: translate(0, -10%)
+
+	&-info
+		transform: translate(0, -20%)
+		
+	&-social
+		transform: translate(-50%, -80%)
+		+media(sm)
+			transform: translate(0, -70%)
+
+	+media-min(lg)
+		transition: opacity .3s ease .35s, visibility .3s ease .35s
+
+.header_active
+	.menu
+		opacity: 1
+		visibility: visible
+		transition: opacity .5s ease, visibility .5s ease
+
+		+media-min(lg)
+			transition: opacity .5s ease .5s, visibility .5s ease
+
+		&-list, &-info, &-social
+			opacity: 1
+
+		&-list
+			transition: .9s all ease .1s
+			transform: translate(0, 0)
+			+media-min(lg)
+				transition: .9s all ease .7s
+
+		&-info
+			transition: .9s all ease .3s
+			transform: translate(0, 0)
+			+media-min(lg)
+				transition: .9s all ease .9s
+
+		&-social
+			transition: .9s all ease .5s
+			transform: translate(-50%, 0)
+			+media-min(lg)
+				transition: .9s all ease 1.1s
+			+media(sm)
+				transform: translate(0, 0)
+//Animations END

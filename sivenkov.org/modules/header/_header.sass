@@ -1,0 +1,237 @@
+.header
+	top: 0
+	left: 0
+	width: 100%
+	overflow: hidden
+	z-index: 10
+	height: 90px
+	background-color: #fff
+
+	+media(sm)
+		background-color: transparent
+		height: 70px
+
+	&__content
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 0 75px
+		position: relative
+		height: 90px
+		width: 100%
+		z-index: 10
+
+		+media(xl)
+			padding: 0 30px
+
+		+media(sm)
+			height: 70px
+			background-color: #fff
+			padding: 0 15px
+
+
+	&__wrap-logo
+		max-width: 135px
+		+media(md)
+			max-width: 115px
+
+	&__logo-img
+
+	&__menu-btn
+		cursor: pointer
+		display: flex
+		width: 48px
+		height: 40px
+		position: relative
+
+		&-line
+			height: 4px
+			border-radius: 3px
+			position: absolute
+			right: 0
+			background-color: #000000
+			transition: 1.1s all $slow-to-fast
+
+			&_first
+				width: 100%
+				top: calc(50% - 5px)
+
+			&_second
+				width: 70%
+				top: calc(50% + 5px)
+
+
+		&_active
+			.header__menu-btn-line
+				width: 100%
+				top: 50%
+				background-color: #fff
+
+			.header__menu-btn-line_first
+				transform: rotate(-45deg)
+
+			.header__menu-btn-line_second
+				transform: rotate(45deg)
+
+		&:hover
+			> span
+				width: 100%
+
+		&_disabled
+			pointer-events: none
+
+
+		// &_desktop
+		// 	position: relative
+		// 	display: flex
+		// 	align-items: center
+		// 	justify-content: center
+		// 	z-index: 1
+
+		// 	.header__menu-btn-text
+		// 		font-size: 1rem
+		// 		display: block
+		// 		overflow: hidden
+		// 		user-select: none
+		// 		color: transparent
+
+		// 		&:before
+		// 			content: attr(data-text)
+		// 			position: absolute
+		// 			top: 50%
+		// 			left: 50%
+		// 			z-index: 0
+		// 			color: #000
+		// 			transform: translate(-50%, -50%)
+		// 			overflow: hidden
+
+
+		// 	+media(lg)
+		// 		display: none
+
+		// 	&:before, &:after
+		// 		content: ''
+		// 		position: absolute
+		// 		z-index: 1
+
+
+//Header animation BEGIN
+$header-anim-height			 : .6s height ease
+$header-anim-height-delay: .6s height ease .35s
+$header-anim-transform	 : .6s transform ease
+$header-anim-shabow			 : .6s box-shadow ease
+
+.header
+	transition: $header-anim-height-delay, 0s transform ease, $header-anim-shabow
+	position: absolute
+	z-index: 999
+
+	&_scroll
+		position: fixed
+		top: auto
+		bottom: 100%
+		background-color: #fff
+		transform: translate3d(0, 0%, 0)
+		transition: $header-anim-height-delay, $header-anim-transform, $header-anim-shabow
+		+media(sm)
+			transition: $header-anim-height, $header-anim-transform, $header-anim-shabow
+		
+		&.header_active
+			height: 100%
+			+media(sm)
+				transition: $header-anim-height, $header-anim-transform, $header-anim-shabow
+
+	&_scroll-show
+		transform: translate3d(0, 100%, 0)
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+	&_active
+		+media(sm)
+			transition: 0s height ease, $header-anim-transform, $header-anim-shabow
+			position: fixed
+			max-height: 100%
+			height: 100%
+			overflow-y: auto
+//Header animation END
+
+
+
+//Animation header btn BEGIN
+//Animation desktop btn common variables BEGIN
+$desk-menu-btn-duration		: 0.3
+$desk-menu-btn-anim-left	:	$desk-menu-btn-duration + 0s			left 				 		 $slow-to-fast $desk-menu-btn-duration * 2 + 0s
+$desk-menu-btn-anim-right	:	$desk-menu-btn-duration + 0s			right						 $slow-to-fast $desk-menu-btn-duration * 2 + 0s
+$desk-menu-btn-anim-top		:	$desk-menu-btn-duration + 0s			top 				 		 $slow-to-fast $desk-menu-btn-duration + 0s
+$desk-menu-btn-anim-bottom: $desk-menu-btn-duration + 0s			bottom 			 		 $slow-to-fast $desk-menu-btn-duration + 0s
+$transition-text					:	$desk-menu-btn-duration - 0.1s 		height 			 		 ease					 $desk-menu-btn-duration + 0.1s
+//Animation desktop btn common variables END
+
+
+//Animation desktop btn IN BEGIN
+$desk-menu-btn-anim-in-width			 : $desk-menu-btn-duration + .2s		width 			 $slow-to-fast
+$desk-menu-btn-anim-in-transform	 : $desk-menu-btn-duration + 0s 		transform		 $slow-to-fast $desk-menu-btn-duration * 2 + 0s
+$desk-menu-btn-anim-in-border-color: $desk-menu-btn-duration + 0s 		border-color $slow-to-fast $desk-menu-btn-duration + .2s
+
+$transition-in: $desk-menu-btn-anim-in-width, $desk-menu-btn-anim-top, $desk-menu-btn-anim-bottom, $desk-menu-btn-anim-in-border-color, $desk-menu-btn-anim-left, $desk-menu-btn-anim-right, $desk-menu-btn-anim-in-transform
+//Animation desktop btn IN END
+
+
+//Animation desktop btn OUT BEGIN
+$desk-menu-btn-anim-out-transform		: $desk-menu-btn-duration + 0s 	transform 	 $slow-to-fast
+$desk-menu-btn-anim-out-width				: $desk-menu-btn-duration + .2s width 			 $slow-to-fast $desk-menu-btn-duration * 2 + 0s
+$desk-menu-btn-anim-out-border-color: $desk-menu-btn-duration + 0s 	border-color $slow-to-fast $desk-menu-btn-duration + 0s
+
+$transition-out: $desk-menu-btn-anim-out-transform, $desk-menu-btn-anim-out-width, $desk-menu-btn-anim-top, $desk-menu-btn-anim-bottom, $desk-menu-btn-anim-out-border-color
+//Animation desktop btn OUT END
+
+
+// .header
+// 	&-menu-btn
+
+// 		&_desktop
+// 			.header__menu-btn-text
+// 				&:before
+// 					transition: $transition-text
+// 					height: 100%
+
+// 			&:before, &:after
+// 				width: 0
+// 				border-color: #000
+// 				transition: $transition-out
+
+// 			&:before
+// 				top: 100%
+// 				transform: rotate(0deg) scale(1, 1)
+// 				left: 0
+// 				right: auto
+// 				border-top: 4px solid #000
+			
+// 			&:after
+// 				bottom: 100%
+// 				transform: rotate(0deg) scale(1, 1)
+// 				left: auto
+// 				right: 0
+// 				border-bottom: 4px solid #000
+
+// 			&.active
+// 				.header__menu-btn-text
+// 					&:before
+// 						height: 0
+
+// 				&:before, &:after
+// 					width: 100%
+// 					border-color: #fff
+// 					transition: $transition-in
+			
+// 				&:before
+// 					top: calc(50% - 2px)
+// 					transform: rotate(-45deg) scale(.5, 1)
+// 					right: 0
+// 					left: auto
+				
+// 				&:after
+// 					bottom: calc(50% - 2px)
+// 					transform: rotate(45deg) scale(.5, 1)
+// 					left: 0
+// 					right: auto
+//Animation header btn END

@@ -1,0 +1,65 @@
+//Mixins START
+@import "_mixins/media"
+//Mixins END
+
+
+//Accessory START
+@import "vars"
+//Accessory END
+
+
+//Internet explorer BEGIN
+@import "../pages/ie-message/ie-message"
+//Internet explorer END
+
+
+
+//Preloader BEGIN
+.preloader
+	&_hide
+		transition: .6s all ease .8s
+
+	&__logo-img
+		opacity: 0
+		transition: 1s all ease
+
+		path
+			transition: fill-opacity .8s ease
+			fill-opacity: 0
+		
+		&.svg-ie_show
+			opacity: 1
+			path
+				fill-opacity: 1
+
+		&.svg-ie_hide
+			opacity: 0
+
+.preloader-mini
+	display: none
+	
+	&_ie
+		display: block
+		img
+			animation: preloader-mini-rotate 3s ease alternate infinite
+
+@keyframes preloader-mini-rotate
+	from
+		transform: rotate(0deg)
+	to
+		transform: rotate(360deg)
+//Preloader END
+
+
+
+//Row info hover link BEGIN
+.row-info
+	&__link
+		transition: .3s all ease
+		&:hover
+			color: $accent
+	&__overlay
+		display: none
+//Row info hover link END
+
+

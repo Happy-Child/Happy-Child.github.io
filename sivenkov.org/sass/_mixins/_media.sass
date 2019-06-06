@@ -1,0 +1,63 @@
+$xm: 375px
+$sm: 576px
+$md: 768px
+$lg: 992px
+$xl: 1200px
+$xxl: 1439px
+
+
+@mixin media ( $size, $custom: none )
+	@if ( $size == none )
+		@media (max-width: $custom)
+			@content
+
+	@if ( $size == xm )
+		@media (max-width: $xm)
+			@content
+
+	@if ( $size == sm )
+		@media (max-width: $sm)
+			@content
+
+	@else if ( $size == md )
+		@media (max-width: $md)
+			@content
+
+	@else if ( $size == lg )
+		@media (max-width: $lg)
+			@content
+
+	@else if ( $size == xl )
+		@media (max-width: $xl)
+			@content
+
+	@else if ( $size == xxl )
+		@media (max-width: $xxl)
+			@content
+
+
+
+@mixin media-min ( $size )
+	@if ( $size == xs )
+		@media (min-width: 0)
+			@content
+
+	@if ( $size == sm )
+		@media (min-width: $sm)
+			@content
+
+	@else if ( $size == md )
+		@media (min-width: $md)
+			@content
+
+	@else if ( $size == lg )
+		@media (min-width: $lg)
+			@content
+
+	@else if ( $size == xl )
+		@media (min-width: $xl)
+			@content
+
+	@else if ( $size == xxl )
+		@media (min-width: $xxl)
+			@content

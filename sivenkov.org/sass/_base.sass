@@ -1,0 +1,39 @@
+*
+	box-sizing: border-box
+	
+html, body
+	font-size: 24px
+	overflow-x: hidden
+
+	+media(xxl)
+		font-size: 22px
+
+	+media(xl)
+		font-size: 20px
+
+	+media(md)
+		font-size: 18px
+
+	+media(xm)
+		font-size: 12px
+		
+
+body
+	min-width: 320px
+	position: relative
+	line-height: 35px
+	min-height: 100vh
+	color: #000
+	+M-Regular
+	padding-top: 90px
+
+	+media(lg)
+		padding-top: 70px
+
+	+media(md)
+		line-height: 26px
+
+
+::selection
+	background-color: $accent
+	color: #fff
