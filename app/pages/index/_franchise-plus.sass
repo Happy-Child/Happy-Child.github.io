@@ -1,0 +1,140 @@
+.franchise-plus
+	padding: px-to-rem(67, 25) 0 0
+
+	+media(lg)
+		padding: px-to-rem(40, 20) 0 0
+	
+	&__title
+		margin-bottom: px-to-rem(80, 25)
+
+	&__content
+		display: flex
+
+	&__wrap-img
+		width: 475px
+		flex-shrink: 0
+		margin: 0 100px 0 -190px
+
+		+media(xxl)
+			width: 400px
+			margin: 0 70px 0 -120px
+	
+		+media(none, 1440px)
+			width: 380px
+			margin: 0 60px 0 0
+	
+		+media(lg)
+			display: none
+
+	&__wrap-list
+		width: calc(100% - 427px)
+
+		+media(xxl)
+			width: calc(100% - 390px)
+
+		+media(none, 1440px)
+			width: calc(100% - 440px)
+
+		+media(xl)
+			width: 100%
+
+
+	&__list
+		padding-top: px-to-rem(60, 25)
+		display: flex
+		flex-wrap: wrap
+		counter-reset: list-count
+
+		+media(lg)
+			padding-top: 0
+			padding-left: 30px
+
+		+media(md)
+			display: block
+			width: 100%
+			padding-left: 0
+
+		&-item
+			width: 100%
+			max-width: 50%
+			margin-bottom: px-to-rem(80, 25)
+			padding-right: 50px
+			position: relative
+
+			+media(none, 1440px)
+				margin-bottom: px-to-rem(65, 22)
+
+			+media(md)
+				margin: 0 auto px-to-rem(65, 20)
+				text-align: center
+				max-width: none
+				padding: 0
+
+			&:before, &:after
+				position: absolute
+
+			&:before
+				counter-increment: list-count
+				content: "0" counter(list-count)
+				color: $mongoose
+				font-size: px-to-rem(30, 25)
+				line-height: px-to-rem(36, 25)
+				top: 0
+				left: 0
+				transform: translate(-140%, -130%)
+				+Cor-BoldItalic
+
+				+media(md)
+					font-size: px-to-rem(30, 20)
+					line-height: px-to-rem(36, 20)
+					left: 50%
+					transform: translate(-90%, -105%)
+
+
+			&:after
+				content: ''
+				background-color: $mongoose
+				width: 2px
+				height: 21px
+				transform: rotate(15deg) translate(-20%, -150%)
+				left: 0
+				top: 0
+
+				+media(md)
+					left: 50%
+					transform: rotate(15deg) translate(5px, -120%)
+
+			&:nth-child(even)
+				padding-right: 0
+
+			> *
+				display: block
+
+
+		&-title
+			font-size: px-to-rem(40, 25)
+			line-height: px-to-rem(44, 25)
+			margin-bottom: 15px
+
+			+media(md)
+				font-size: px-to-rem(30, 20)
+				line-height: px-to-rem(36, 20)
+				margin-bottom: 6px
+
+
+		&-text
+			font-size: px-to-rem(22, 25)
+			line-height: px-to-rem(33, 25)
+
+			+media(md)
+				font-size: px-to-rem(18, 20)
+				line-height: px-to-rem(26, 20)
+
+	
+	&__wrap-btn
+		+media(lg)
+			text-align: center
+
+		+media(md)
+			margin-top: -20px
+

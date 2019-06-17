@@ -1,0 +1,29 @@
+*
+	box-sizing: border-box
+	
+html, body
+	font-size: 25px
+	overflow-x: hidden
+
+	+media(none, 1540px)
+		font-size: 22px
+
+	+media(lg)
+		font-size: 20px
+
+body
+	min-width: 320px
+	position: relative
+	line-height: 32px
+	color: #000
+	+Qan-Regular
+	font-kerning: normal
+
+.body-visible
+	opacity: 1
+	transition: 1.2s opacity ease
+
+::selection
+	background-color: $accent
+	color: #fff
+

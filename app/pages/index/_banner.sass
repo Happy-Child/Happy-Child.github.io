@@ -1,0 +1,183 @@
+.main-banner
+	position: relative
+	
+	&__slide
+		&_active
+			.main-banner__slide-img
+				opacity: 1
+
+		&-img
+			transition: .6s all ease
+			display: none
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			z-index: 0
+			width: 100%
+			height: 100%
+			opacity: 0
+
+			&_desktop
+				+media-min(sm)
+					display: block
+
+			&_mobile
+				+media(sm)
+					display: block
+
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background-color: rgba(#F5F1EB, .5)
+		z-index: 1
+
+	&__content
+		position: relative
+		z-index: 2
+		display: flex
+		justify-content: space-between
+		padding: px-to-rem(78, 25) 0 px-to-rem(138, 25)
+
+		+media(none, 1440px)
+			padding: px-to-rem(85, 22) 0 px-to-rem(120, 22)
+		
+		+media(lg)
+			padding: px-to-rem(75, 20) 0 0
+			display: block
+			text-align: center
+
+		&-left
+			width: 100%
+			max-width: 66%
+
+			+media(lg)
+				max-width: none
+				
+
+		&-right
+			width: 100%
+			max-width: 34%
+			display: flex
+			align-items: flex-end
+			justify-content: flex-end
+
+			+media(lg)
+				display: block
+				margin: px-to-rem(48, 20) auto 0
+				position: relative
+				top: 30px
+				max-width: none
+
+	&__title
+		font-size: px-to-rem(50, 25)
+		line-height: px-to-rem(65, 25)
+		text-transform: uppercase
+		margin-bottom: px-to-rem(35, 25)
+
+		+media(md)
+			font-size: px-to-rem(36, 20)
+			line-height: px-to-rem(45, 20)
+			margin-bottom: 1rem
+			br
+				display: none
+
+		+media(xm)
+			font-size: 9vw
+			line-height: 13vw
+	
+	&__subtext
+		line-height: px-to-rem(40, 25)
+		margin-bottom: px-to-rem(55, 25)
+
+		+media(md)
+			margin-bottom: px-to-rem(28, 20)
+			br
+				display: none
+
+	&__btn-video
+		display: flex
+		align-items: center
+
+		+media(lg)
+			display: block
+
+		&:hover
+			.main-banner__btn-video-text
+				color: $light
+				transform: translate(10px, 0)
+
+			.main-banner__btn-video-icon
+				background-color: $light
+
+				&:after
+					border-left-color: $accent
+
+				&-animation
+					&:before, &:after
+						border-color: $light
+
+
+		&-text
+			font-size: px-to-rem(30, 25)
+			line-height: px-to-rem(36, 25)
+			transition: .6s all ease
+
+		&-icon
+			width: 60px
+			height: 60px
+			border-radius: 50%
+			background-color: $accent
+			transition: .6s all ease
+			margin-left: 35px
+			position: relative
+
+			+media(lg)
+				margin: 25px auto 0
+
+			&:after
+				content: ''
+				position: absolute
+				top: 50%
+				left: calc(50% + 8px)
+				transform: translate(-50%, -50%) scale(1, .8)
+				border: 12px solid transparent
+				border-left-color: $light
+				transition: inherit
+
+			&-animation
+				&:before, &:after
+					content: ''
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					width: 100%
+					height: 100%
+					border-radius: 50%
+					border: 1px solid $accent
+					transition: .6s border-color ease
+
+				&:before
+					animation: btn-pulse 3s ease .8s infinite
+
+				&:after
+					animation: btn-pulse 3s ease 0s infinite
+				
+
+
+//Keyframes BEGIN
+@keyframes btn-pulse
+	from
+		width: 100%
+		height: 100%
+		opacity: .3
+	to
+		width: 200%
+		height: 200%
+		opacity: 0
+//Keyframes END

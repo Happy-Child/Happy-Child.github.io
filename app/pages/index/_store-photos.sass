@@ -1,0 +1,58 @@
+.store-photos
+	text-align: center
+	padding: px-to-rem(125, 25) 0 px-to-rem(90, 25)
+
+	+media(lg)
+		padding: px-to-rem(100, 20) 0 px-to-rem(90, 20)
+
+	+media(md)
+		padding: px-to-rem(60, 20) 0 px-to-rem(65, 20)
+
+	&__wrap-title
+		+media(sm)
+			padding: 0 10px
+
+	&__title
+		margin-bottom: px-to-rem(70, 25)
+
+		+media(md)
+			margin-bottom: px-to-rem(45, 20)
+
+	&__wrap-list
+		max-width: 1700px
+		margin: 0 auto
+		
+	&__list
+		display: flex
+		align-items: stretch
+		flex-wrap: wrap
+		margin: 0 6px
+
+		+media(lg)
+			margin: 0 4px
+
+		+media(md)
+			margin: 0
+
+	&__item
+		width: 25%
+		font-size: 0
+		padding: 0 6px
+		position: relative
+
+		+media(lg)
+			width: 50%
+			padding: 0 9px
+
+		+media(sm)
+			width: 295px
+
+		&:before
+			+stretchHeight(100%)
+
+		&-img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: calc(100% - 12px)

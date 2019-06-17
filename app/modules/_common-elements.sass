@@ -1,0 +1,86 @@
+html.page-fixed
+	overflow: hidden
+
+body.page-fixed
+	overflow-y: scroll
+
+img
+	-ms-interpolation-mode: bicubic
+	
+.responsive-image
+	img, svg
+		display: block
+		width: 100%
+		height: auto
+
+img.lazy
+	opacity: 0
+	transition: .4s opacity ease
+
+	&.loaded
+		opacity: 1
+
+p
+	hyphens: auto
+
+.background-image
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+
+.logo
+	width: 120px
+	height: 90px
+	display: block
+
+	+media(sm)
+		width: 90px
+		height: 67px
+
+.sec-title
+	font-size: px-to-rem(55, 25)
+	line-height: px-to-rem(62, 25)
+	color: $accent
+	display: block
+	+Cor-Bold
+
+	&_mb0
+		margin-bottom: 0 !important
+
+	&_light
+		color: $light
+
+	+media(md)
+		text-align: center
+		font-size: px-to-rem(36, 20)
+		line-height: px-to-rem(40, 20)
+
+.section, header, footer
+	position: relative
+
+
+.d-block
+	display: block !important
+
+.d-none
+	display: none !important
+
+.d-xm-block
+	+media(xm)
+		display: block !important
+
+.d-sm-block
+	+media(sm)
+		display: block !important
+
+.d-sm-none
+	+media(sm)
+		display: none !important
+
+.d-md-none
+	+media(md)
+		display: none !important
+
+.d-md-block
+	+media(md)
+		display: block !important

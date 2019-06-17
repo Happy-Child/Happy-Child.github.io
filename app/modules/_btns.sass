@@ -1,0 +1,47 @@
+.wrap-btn
+	display: block
+
+.btn
+	display: inline-block
+	background-color: $accent
+	+Qan-Medium
+	color: $light
+	font-size: 20px
+	line-height: px-to-em(24, 20)
+	padding: px-to-em(18, 20) px-to-em(30, 20)
+	cursor: pointer
+	border-radius: 3px
+	transition: .3s all ease
+	-moz-user-select: none
+	-khtml-user-select: none
+	user-select: none
+
+	&:hover
+		box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.25)
+
+	&:active
+		box-shadow: none
+		background-color: darken($accent, 10%)
+
+	&_light
+		background-color: $light
+		color: $accent
+
+		&:active
+			box-shadow: none
+			background-color: darken($light, 10%)
+
+
+.wrap-btn_above-text
+	.wrap-btn
+		&__text
+			font-size: px-to-rem(30, 25)
+			line-height: px-to-rem(34, 25)
+			margin-bottom: 18px
+			display: block
+			+Cor-BoldItalic
+
+			+media(md)
+				font-size: 1rem
+				line-height: px-to-rem(24, 20)
+				margin-bottom: 12px

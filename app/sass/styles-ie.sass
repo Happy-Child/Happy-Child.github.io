@@ -1,0 +1,54 @@
+//Mixins START
+@import "_mixins/media"
+//Mixins END
+
+
+//Accessory START
+@import "vars"
+//Accessory END
+
+
+//Internet explorer BEGIN
+@import "../pages/ie-message/ie-message"
+//Internet explorer END
+
+
+
+//Forms elements BEGIN
+.form
+	&__wrap-field_select
+		.select2
+			&-container
+				top: 64% !important
+
+				+media(lg)
+					top: 61% !important
+
+				+media(md)
+					top: 55% !important
+//Forms elements END
+
+
+//Header BEGIN
+.header
+	&__item
+		&-wrap-icon
+			display: block
+//Header END
+
+
+//Store photos BEGIN
+.store-photos
+	&__list
+		display: block
+		position: relative
+
+		&:after
+			content: ''
+			clear: both
+			width: 100%
+			display: block
+
+	&__item
+		float: left
+//Store photos END

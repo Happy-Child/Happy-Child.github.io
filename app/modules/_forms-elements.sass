@@ -1,0 +1,227 @@
+.wrap-form
+	position: relative
+
+	&__loader, &__error-message, &__success-message
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		opacity: 0
+		visibility: hidden
+		transition: .3s all ease
+		pointer-events: none
+		width: 100%
+		text-align: center
+
+	&__loader
+		width: 100%
+		max-width: 200px
+
+		+media(md)
+			max-width: 140px
+
+	&__error-message
+		color: $red
+
+	&_loading, &_error, &_success
+		pointer-events: none
+		.form
+			opacity: 0
+
+	&_loading
+		.wrap-form__loader
+			opacity: 1
+			visibility: visible
+	
+	&_error
+		.wrap-form__error-message
+			opacity: 1
+			visibility: visible
+
+	&_success
+		.wrap-form__success-message
+			opacity: 1
+			visibility: visible
+
+.form
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+	transition: .3s all ease
+
+	&__wrap-field_select
+		.select2
+			&-search
+				display: none
+
+			span
+				width: 100%
+				display: block
+
+			&-selection
+				display: flex
+				align-items: center
+				line-height: 60px
+				cursor: pointer
+				font-size: px-to-rem(22, 25)
+				position: relative
+
+				+media(lg)
+					line-height: 50px
+
+				+media(md)
+					line-height: 40px
+
+				.select2-selection__arrow
+					position: absolute
+					top: calc(50% + 4px)
+					right: 0
+					border: 8px solid transparent
+					transform: translate(0, -50%) scale(.75, 1)
+					border-top-color: $accent
+					width: 5px
+					height: 5px
+					transition: .3s all ease
+
+			&-container
+				width: calc(100% - 100px)
+				z-index: 9
+				border-bottom: 1px solid $accent
+				top: 98% !important
+				animation: dropdown-show .6s ease 0s
+				transform-origin: 0 0
+
+				+media(none, 1440px)
+					width: calc(100% - 50px)
+
+				+media(lg)
+					width: calc(100% - 45px)
+
+
+			&-dropdown
+				width: 100%
+				background-color: #fff
+
+			&-results__options
+				background-color: #fff
+				padding: 15px 20px 30px
+
+			&-results__option
+				color: $accent
+				font-size: px-to-rem(22, 25)
+				line-height: px-to-rem(26, 25)
+				margin-bottom: px-to-rem(20, 25)
+				cursor: pointer
+				transition: transform .3s ease
+
+				&:hover
+					transform: translate(5px, 0)
+
+				&:last-child
+					margin-bottom: 0
+
+			&-container--open
+				.select2-selection
+					.select2-selection__arrow
+						top: calc(50% - 4px)
+						transform: translate(0, -50%) scale(.75, 1) rotate(180deg)
+
+	&__select
+		pointer-events: none
+		opacity: 0
+		position: absolute
+		visibility: hidden
+
+		&_error
+			& + .select2 .select2-selection
+				border-bottom-color: $red
+
+	&__wrap-field
+		position: relative
+		width: 100%
+		display: block
+
+	&__field,
+	&__wrap-field_select .select2-selection
+		display: block
+		width: 100%
+		border-bottom: 1px solid rgba($accent, .3)
+		transition: .3s all ease
+		+Qan-Regular
+	
+	&__field
+		height: 60px
+		padding-top: 5px
+
+		+media(lg)
+			height: 50px
+
+		+media(md)
+			height: 40px
+
+		&_error
+			border-color: $red
+
+		&:focus
+			border-bottom: 1px solid rgba($accent, 1)
+
+
+	&__placeholder
+		font-size: px-to-rem(30, 25)
+		line-height: px-to-rem(36, 25)
+		width: 100%
+		pointer-events: none
+		white-space: nowrap
+		text-overflow: ellipsis
+		max-width: 100%
+		overflow: hidden
+
+		+media(md)
+			font-size: px-to-rem(22, 20)
+			line-height: px-to-rem(26, 20)
+
+
+	&__invalid
+		border-color: $red
+
+	&__wrap-field_static
+		.form__field
+			font-size: px-to-rem(22, 25)
+			padding-bottom: 10px
+
+	&__wrap-field_dynamic
+		.form__field
+			font-size: 1rem
+
+		.form__placeholder
+			position: absolute
+			top: 0
+			left: 0
+			transition: .4s all ease
+
+		&_focus
+			.form__field
+				border-bottom: 1px solid rgba($accent, 1)
+
+			.form__field_error
+				border-bottom-color: $red
+
+			.form__placeholder
+				transform: scale(.7) translate(0, -65%)
+				left: -15%
+
+				+media(md)
+					transform: scale(.7) translate(0, -75%)
+
+
+
+//Keyframes BEGIN
+@keyframes dropdown-show
+	from
+		opacity: 0
+		transform: translate(0, 15px)
+
+	to
+		opacity: 1
+		transform: translate(0)
+//Keyframes END

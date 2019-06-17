@@ -1,0 +1,171 @@
+.cost-shop
+	position: relative
+
+	+media(md)
+		padding: 60px 0
+		margin: px-to-rem(60, 20) 0 0
+
+		&:before
+			content: ''
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			background-color: rgba(7, 28, 56, 0.4)
+
+	&__wrap-img
+		position: absolute
+		top: 50%
+		right: 0
+		transform: translate(0, -50%)
+		width: 100%
+		max-width: 750px
+
+		+media(xxl)
+			max-width: 600px
+
+		+media(none, 1440px)
+			max-width: 560px
+
+		+media(lg)
+			max-width: 520px
+
+		+media(md)
+			display: none
+
+
+	&__content
+		position: relative
+		padding: px-to-rem(100, 25) 0
+		margin: px-to-rem(195, 25) 0
+		height: 730px
+
+		+media(xl)
+			margin: px-to-rem(150, 22) 0
+		
+		+media(xxl)
+			padding: px-to-rem(60, 25) 0
+			height: 630px
+			display: flex
+			justify-content: center
+			flex-direction: column
+			width: 82%
+
+		+media(none, 1440px)
+			height: 580px
+			padding: px-to-rem(40, 22) px-to-rem(80, 22)
+			width: 70%
+
+		+media(lg)
+			width: 100%
+			margin: px-to-rem(90, 20) 0
+
+		+media(md)
+			margin: 0
+			z-index: 1
+			height: auto
+			padding: px-to-rem(50, 20)
+
+		+media(sm)
+			padding: px-to-rem(45, 20) 1rem
+
+		> *
+			z-index: 1
+			position: relative
+
+		&:before
+			content: ''
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			background-color: $bg-gray
+			margin-left: -190px
+
+			+media(xxl)
+				margin-left: -120px
+
+			+media(none, 1440px)
+				margin-left: 0
+
+
+
+	&__title
+		margin-bottom: px-to-rem(75, 25)
+		
+		+media(xl)
+			margin-bottom: px-to-rem(40, 22)
+
+		+media(xm)
+			font-size: px-to-rem(30, 20)
+			line-height: px-to-rem(34, 20)
+
+	&__wrap-form
+		margin-left: px-to-rem(-50, 25)
+		margin-right: px-to-rem(-50, 25)
+		max-width: 70%
+
+		+media(none, 1440px)
+			max-width: none
+			margin-left: px-to-rem(-25, 22)
+			margin-right: px-to-rem(-25, 22)
+
+		+media(lg)
+			max-width: none
+
+
+	&__form
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+
+		+media(md)
+			display: block
+
+		.form__wrap-field
+			max-width: 50%
+			margin-bottom: px-to-rem(65, 25)
+
+			+media(xxl)
+				margin-bottom: px-to-rem(40, 22)
+
+			+media(md)
+				max-width: none
+				margin-bottom: px-to-rem(36, 20)
+
+			+media(xm)
+				margin-bottom: px-to-rem(26, 20)
+
+	&__wrap-form-btn
+		width: 100%
+		display: block
+
+		+media(lg)
+			margin: px-to-rem(20, 20) auto 0
+
+		+media(sm)
+			margin: px-to-rem(50, 20) auto 0
+		
+		+media(xm)
+			margin: px-to-rem(40, 20) auto 0
+
+	&__btn
+		max-width: 265px
+		width: 100%
+		display: block
+
+		+media(lg)
+			margin-left: auto
+			margin-right: auto
+	
+	&__form .form__wrap-field,
+	&__wrap-form-btn
+		padding: 0 px-to-rem(50, 25) 0
+		
+		+media(none, 1440px)
+			padding: 0 px-to-rem(25, 22) 0
+
+
+

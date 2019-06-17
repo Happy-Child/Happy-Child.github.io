@@ -1,0 +1,55 @@
+.our-plus
+	&__content
+		display: flex
+		justify-content: center
+		padding: px-to-rem(40, 25) 0 px-to-rem(55, 25)
+		border-bottom: 1px solid $accent
+
+		+media(lg)
+			padding: px-to-rem(65, 20) 0 px-to-rem(45, 20)
+			margin-left: -15px
+			margin-right: -15px
+
+		+media(md)
+			display: block
+			text-align: center
+			margin: 0
+			padding: px-to-rem(85, 20) 0 px-to-rem(50, 20)
+
+	&__item
+		margin: 0 25px
+		width: 100%
+		max-width: 250px
+		font-size: 30px
+
+		> *
+			display: block
+
+		+media(lg)
+			max-width: calc(100% / 3)
+			margin: 0
+			padding: 0 15px
+			font-size: 25px
+
+		+media(md)
+			margin: 0 auto px-to-em(40, 25)
+			max-width: 290px
+
+			&:last-child
+				margin-bottom: 0
+
+
+	&__number
+		font-size: px-to-em(50, 30)
+		line-height: px-to-em(35, 30)
+
+		+media(md)
+			font-size: px-to-em(50, 25)
+			line-height: px-to-em(35, 25)
+
+	&__text
+		font-size: 1em
+		line-height: px-to-em(36, 30)
+
+		+media(md)
+			font-size: px-to-em(30, 25)

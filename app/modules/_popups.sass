@@ -1,0 +1,241 @@
+.popup-layer, .popup
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100vh
+	opacity: 0
+	visibility: hidden
+
+	&_visible
+		opacity: 1
+		visibility: visible
+
+
+.popup-layer
+	background-color: rgba(#fff, .65)
+	transition: .3s all ease
+	z-index: 9
+
+
+.popup
+	max-height: 100vh
+	overflow-y: auto
+	transition: .6s all ease
+	font-size: 16px
+	z-index: 99
+	display: flex
+	align-items: center
+	justify-content: center
+	pointer-events: none
+
+	&_visible
+		pointer-events: auto
+		
+		.popup__content
+			transform: translate(0)
+			opacity: 1
+
+	&-message
+		&_success
+			.popup-message__text_success
+				opacity: 1
+
+		&_error
+			.popup-message__text_error
+				opacity: 1
+
+	+media(md)
+		font-size: 12px
+
+	+media(xm)
+		font-size: 10px
+
+	&__wrap-content
+		height: 100vh
+		width: 100%
+		overflow-y: scroll
+
+	&__content
+		border-radius: 3px
+		box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5)
+		padding: px-to-em(95, 16) px-to-em(95, 16) px-to-em(110, 16)
+		width: calc(100% - 30px)
+		max-width: 590px
+		min-height: 350px
+		transition: .8s all ease
+		transform: translate(0, 40px)
+		opacity: 0
+		margin: px-to-em(80, 16) auto
+		position: relative
+		background-color: #F6F2ED
+
+		+media(xxl)
+			padding: px-to-em(80, 16) px-to-em(80, 16) px-to-em(90, 16)
+			max-width: 540px
+			margin: px-to-em(50, 16) auto
+
+		+media(lg)
+			padding: px-to-em(70, 16) px-to-em(60, 16) px-to-em(70, 16)
+			max-width: 500px
+
+		+media(md)
+			max-width: 380px
+			min-height: 300px
+			padding: px-to-em(60, 12) px-to-em(40, 12)
+			margin: px-to-em(40, 12) auto
+
+		+media(sm)
+			min-height: 280px
+
+		+media(xm)
+			padding: px-to-em(50, 10) px-to-em(25, 10)
+
+	&__title
+		text-align: center
+		margin-bottom: px-to-rem(55, 25)
+
+		+media(xxl)
+			margin-bottom: px-to-rem(45, 25)
+
+		+media(md)
+			margin-bottom: px-to-rem(15, 12)
+
+	&__close
+		&:hover
+			&:before, &:after
+				background-color: $accent
+
+		+media(md)
+			width: 20px
+			height: 20px
+			right: 20px
+			top: 20px
+
+		+media(xm)
+			top: 15px
+			right: 15px
+
+		&:before, &:after
+			+media(md)
+				width: 20px
+
+	&__form
+		.form__wrap-field
+			margin-bottom: px-to-em(40, 16)
+			+media(xxl)
+				margin-bottom: px-to-em(35, 16)
+
+	&__btn
+		display: block
+		width: 100%
+		margin-top: px-to-rem(10, 25)
+
+
+	&-message
+		.popup__content
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-direction: column
+			text-align: center
+
+		&__title
+			font-size: px-to-rem(40, 25)
+			padding: 0 20px
+
+			+media(xxl)
+				font-size: px-to-rem(40, 22)
+				line-height: px-to-rem(46, 22)
+
+			+media(md)
+				font-size: px-to-rem(30, 20)
+				line-height: px-to-rem(34, 20)
+		
+		&__text
+			opacity: 0
+			transition: .3s opacity ease
+			transform: translate(-50%, -50%)
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 100%
+
+		&__subtext
+			font-size: px-to-rem(25, 25)
+			line-height: px-to-rem(37, 25)
+
+			+media(sm)
+				font-size: px-to-rem(16, 20)
+				line-height: px-to-rem(24, 20)
+
+
+.btn-close
+	position: absolute
+	top: 28px
+	right: 28px
+	width: 13px
+	height: 13px
+	cursor: pointer
+
+	&:before, &:after
+		content: ''
+		position: absolute
+		top: 40%
+		left: 0%
+		background-color: #000
+		height: 3px
+		width: 15px
+		transition: .3s all ease
+		transform-origin: 50% 50%
+	
+	&:hover
+		&:before
+			transform: rotate(45deg)
+
+		&:after
+			transform: rotate(-45deg)
+
+
+	&:before
+		transform: rotate(-45deg)
+
+	&:after
+		transform: rotate(45deg)
+
+
+//Magnific popup custom BEGIN
+.mfp-close__custom
+	top: 0
+	right: 0
+	transform: translate(0, -180%)
+	&:hover
+		&:before, &:after
+			background-color: $light
+
+.mfp-ready
+	cursor: pointer
+//Magnific popup custom END
+
+
+//Magnific popup animation BEGIN
+.mfp-fade.mfp-bg
+	opacity: 0
+	transition: all 0.4s ease-out
+
+.mfp-fade.mfp-bg.mfp-ready 
+	opacity: 0.8
+
+.mfp-fade.mfp-bg.mfp-removing 
+	opacity: 0
+
+.mfp-fade.mfp-wrap .mfp-content 
+	opacity: 0
+	transition: all 0.4s ease-out
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content 
+	opacity: 1
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content 
+	opacity: 0
+//Magnific popup animation END

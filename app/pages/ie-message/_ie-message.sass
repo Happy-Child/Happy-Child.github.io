@@ -1,0 +1,101 @@
+.ie-message
+
+	.header
+		&_content
+			display: inline-block
+			width: 100%
+		
+		&__logo
+			transform: translate(0)
+			margin: -45px 0 0 -60px
+
+			+media(sm)
+				margin: -33px 0 0 -45px
+
+
+		&__item-text, &__item, &__item-wrap-icon, &__logo
+			line-height: 80px
+	
+			+media(sm)
+				line-height: 65px
+
+
+		&__item
+			display: block
+
+			&-wrap-icon
+				+media(md)
+					position: absolute
+					top: 50%
+					margin-top: -18px
+					right: 0
+
+			&-text
+				+media(lg)
+					font-size: .8em
+
+			&-text, &-wrap-icon
+				display: block
+
+			&_address
+				float: left
+
+			&_phone
+				text-align: right
+				float: right
+
+				.header__item-wrap-icon
+					margin-left: auto
+
+
+	&__content
+		padding-top: 100px
+
+		+media(xxl)
+			padding-right: 0
+		
+		+media(xl)
+			br
+				display: none
+
+		+media(md)
+			padding-top: 65px
+
+
+	&__title
+		margin-bottom: 60px
+		display: block
+		font-size: 48px
+		line-height: 58px
+
+		+media(lg)
+			font-size: 36px
+			line-height: 42px
+			margin-bottom: 45px	
+
+	&__text, .footer__link, .footer__text-item
+		color: #000
+		font-size: 25px
+		line-height: 37px
+		display: block
+
+		+media(lg)
+			font-size: 20px
+			line-height: 30px
+
+		+media(sm)
+			font-size: 18px
+			line-height: 26px
+
+	.footer
+		padding-top: 0
+		padding-bottom: 110px
+		margin-top: 60px
+
+		&__link
+			+media(md)
+				margin-bottom: 15px
+
+			&:hover
+				color: $accent
+
