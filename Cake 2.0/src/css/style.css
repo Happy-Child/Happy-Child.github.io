@@ -1,0 +1,45 @@
+.bottom-plate{
+	margin-top: -28px;
+	width: 100%;
+	position: relative;
+	z-index: -1;
+}
+.bottom-plate:after{
+	background: url("../../dist/подставка.jpg") no-repeat center center;
+	background-size: 100%;	
+	content: "";
+	position: absolute;
+	top: -0px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 100%;
+	height: 90px;
+	z-index: -1;
+}
+.layer-biskvit{
+	background: url("../../dist/biskvit.png") no-repeat center center;
+}
+.layer-crease{
+	background: url("../../dist/crease.png") no-repeat center center;
+}
+.layer-milk{
+	background: url("../../dist/milk.png") no-repeat center center;
+}
+.layer-raspberries{
+	background: url("../../dist/raspberries.png") no-repeat center center;
+}
+.layer-cocao{
+	background: url("../../dist/cocao.png") no-repeat center center;
+}
+
+@media screen and (max-width: 991px){
+  table th{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 576px){
+  table th{
+    padding: 5px !important;
+    font-size: 12px;
+  }
+}
