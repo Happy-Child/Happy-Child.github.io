@@ -1,0 +1,29 @@
+.background-slider
+	&__slide, &__slide-img
+		+media-min(lg)
+			min-height: 620px
+			height: 100vh
+	&__slide
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		z-index: 0
+		overflow: hidden
+		&-img
+			position: inherit
+			width: 100vw
+			background-size: cover
+			background-position: center
+			background-repeat: no-repeat
+			transform: scale(1.2)
+			transition: .8s transform ease .8s, .8s clip-path ease 1.2s
+			clip-path: circle(5% at 100% 50%)
+		&_current
+			z-index: 1
+			.background-slider__slide-img
+				transform: scale(1)
+				clip-path: circle(120% at 50% 50%)
+				transition: 1.3s transform ease, 1.3s clip-path ease

@@ -1,0 +1,61 @@
+.content
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	height: calc(100% - 120px - 110px) // Without header & footer
+	color: #fff
+	padding-bottom: 70px
+
+	&__top
+		margin-bottom: px-to-rem(50, 14)
+		&-item
+			border-bottom: 1px solid $gray-border
+			border-right: 1px solid $gray-border
+			width: px-to-rem(635, 14)
+			display: flex
+			flex-direction: column
+			justify-content: center
+			&_first
+				padding: px-to-rem(55, 14) px-to-rem(55, 14) px-to-rem(35, 14) px-to-rem(95, 14)
+			&_second
+				padding: px-to-rem(25, 14) px-to-rem(55, 14) px-to-rem(35, 14) px-to-rem(95, 14)
+			&-title
+				margin-bottom: px-to-rem(15, 14)
+				display: block
+				font-size: px-to-rem(24, 14)
+				line-height: px-to-rem(36, 14)
+				+CE-Bold()
+			&-text
+				opacity: .6
+				font-size: 15px
+				&_center
+					text-align: center
+					+MisterBrown
+					font-size: px-to-rem(22, 14)
+
+	&__bottom
+		display: flex
+		align-items: flex-end
+		padding: 0 px-to-rem(120, 14) 0 px-to-rem(95, 14)
+		&-title
+			font-size: 3.1vw
+			line-height: 3.7vw
+			width: 40%
+			+CE-Bold()
+		&-text
+			font-size: 18px
+			line-height: 34px
+			width: 42%
+			padding-left: px-to-rem(50, 14)
+		&-link
+			padding-left: px-to-rem(30, 14)
+			margin-left: auto
+			+CE-Bold()
+			font-size: 24px
+			line-height: 34px
+			color: #fff
+			transition: .2s all ease
+			margin-bottom: 20px
+			&:hover
+				opacity: .8
+

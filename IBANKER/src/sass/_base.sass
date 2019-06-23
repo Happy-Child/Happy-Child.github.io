@@ -1,0 +1,32 @@
+/* -- Base BEGIN -- */
+*
+	box-sizing: border-box
+	
+html
+	font-size: 14px
+	+media(sm)
+		font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400))
+	&.page-fixed
+		overflow: hidden
+
+body
+	position: relative
+	overflow-x: hidden
+	color: #000
+	+CE-Regular
+	line-height: px-to-rem(24, 14)
+	min-width: 320px
+	+media-min(lg)
+		min-height: 620px
+		height: 100vh
+	&.body-visible
+		opacity: 1
+		transition: 1.2s opacity ease
+	&.page-fixed
+		overflow-y: scroll
+
+
+::selection
+	background-color: $accent
+	color: #fff
+/* -- Base END -- */

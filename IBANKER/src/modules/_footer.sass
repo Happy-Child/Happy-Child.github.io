@@ -1,0 +1,125 @@
+.footer
+	display: flex
+	align-items: stretch
+	background-color: $accent
+	min-height: 110px
+	z-index: 3
+	position: relative
+	overflow: hidden
+
+	&__social
+		display: flex
+		align-items: center
+		padding-left: px-to-rem(95, 14)
+		&-item
+			padding: 15px
+			margin-right: px-to-rem(75, 14)
+		&-link
+			display: inherit
+			align-items: inherit
+			justify-content: center
+			transition: .2s all ease
+			&:hover
+				opacity: .8
+			&:last-child
+				margin-right: 0
+		&-icon
+			width: 14px
+			height: auto
+	
+	&__slider-control
+		transition: .4s all ease
+		&_disabled
+			pointer-events: none
+			&_hidden
+				opacity: 0
+
+	&__slider-dots
+		margin-left: auto
+		padding-right: px-to-rem(60, 14)
+		width: 100%
+		max-width: 420px
+		display: flex
+		align-items: center
+		&-btn
+			border-bottom: 2px solid rgba(255, 255, 255, 0.1)
+			width: calc(100% / 3)
+			transition: .6s all ease
+			cursor: pointer
+			&:first-child
+				text-align: left
+			&:last-child
+				text-align: right
+			&:hover
+				width: 50%
+			&_current
+				border-bottom-color: #fff
+				width: calc(100% / 3 * 2)
+				pointer-events: none
+				&:hover
+					width: calc(100% / 3 * 2)
+				.footer__slider-dots-count
+					font-size: px-to-rem(24, 14)
+					color: #fff
+		&-count
+			transition: .3s all ease
+			display: block
+			margin: 0 auto
+			+CE-Bold()
+			font-size: px-to-rem(18, 14)
+			line-height: px-to-rem(36, 14)
+			color: rgba(255, 255, 255, 0.3)
+			pointer-events: none
+
+	&__slider-navs
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 0 px-to-rem(30, 14) 0 px-to-rem(50, 14)
+		position: relative
+		top: 5px
+		&-btn
+			cursor: pointer
+			display: flex
+			align-items: center
+			outline: none
+			user-select: none
+			transition: .3s all ease
+			&_prev
+				margin-right: px-to-rem(70, 14)
+				.footer__slider-navs-btn-text
+					margin-left: 10px
+			&_next
+				.footer__slider-navs-btn-text
+					margin-right: 10px
+			&-icon
+				width: 6px	
+				height: auto
+				path
+					stroke: #fff
+			&-text
+				color: #fff
+				+CE-Bold()
+			&_disabled
+				opacity: .6
+				pointer-events: none
+			
+	&__call
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: #fff
+		padding: 0 px-to-rem(130, 14) 0 px-to-rem(125, 14)
+		&-icon
+			width: 14px
+			height: auto
+			margin-right: 18px
+		&-text
+			color: #000
+			font-size: 18px
+			line-height: 24px
+			transition: .3s all ease
+			+CE-Bold()
+		&:hover
+			.footer__call-text
+				transform: translate(-5px, 0)

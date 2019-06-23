@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "CenturyExpanded-Bold";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/CenturyExpanded-Bold/CenturyExpanded-Bold.eot");
+  src: url("../fonts/CenturyExpanded-Bold/CenturyExpanded-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/CenturyExpanded-Bold/CenturyExpanded-Bold.woff2") format("woff2"), url("../fonts/CenturyExpanded-Bold/CenturyExpanded-Bold.woff") format("woff"), url("../fonts/CenturyExpanded-Bold/CenturyExpanded-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CenturyExpanded-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/CenturyExpanded-Regular/CenturyExpanded-Regular.eot");
+  src: url("../fonts/CenturyExpanded-Regular/CenturyExpanded-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/CenturyExpanded-Regular/CenturyExpanded-Regular.woff2") format("woff2"), url("../fonts/CenturyExpanded-Regular/CenturyExpanded-Regular.woff") format("woff"), url("../fonts/CenturyExpanded-Regular/CenturyExpanded-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ProximaNova-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/ProximaNova-Regular/ProximaNova-Regular.eot");
+  src: url("../fonts/ProximaNova-Regular/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Regular/ProximaNova-Regular.woff2") format("woff2"), url("../fonts/ProximaNova-Regular/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova-Regular/ProximaNova-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MisterBrown";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/MisterBrown/MisterBrown.eot");
+  src: url("../fonts/MisterBrown/MisterBrown.eot?#iefix") format("embedded-opentype"), url("../fonts/MisterBrown/MisterBrown.woff2") format("woff2"), url("../fonts/MisterBrown/MisterBrown.woff") format("woff"), url("../fonts/MisterBrown/MisterBrown.ttf") format("truetype");
+}
