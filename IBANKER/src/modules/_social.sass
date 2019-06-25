@@ -1,0 +1,21 @@
+.social
+	align-items: center
+	&__item
+		margin-right: px-to-rem(75, 14)
+		+media(xxl)
+			margin-right: px-to-rem(30, 12)
+		+media(sm)
+			margin-right: 2rem
+	&__link
+		display: flex
+		align-items: center
+		justify-content: center
+		transition: .2s all ease
+		padding: 15px
+		&:hover
+			opacity: .8
+		&:last-child
+			margin-right: 0
+	&__icon
+		width: 14px
+		height: auto

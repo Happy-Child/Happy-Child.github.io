@@ -13,6 +13,16 @@
 	visibility: hidden
 	overflow: hidden
 	transition: .9s all ease
+	+media(xxxl)
+		padding: px-to-rem(30, 12) px-to-rem(30, 12) px-to-rem(30, 12) px-to-rem(100, 12)
+	+media(sm)
+		padding: calc(4rem + 70px) 2rem 2rem
+		display: block
+		height: 100vh
+		overflow-y: auto
+		background-color: rgba(0, 0, 0, 0.9)
+		opacity: 0
+		transition: .4s all ease
 	&:before
 		content: ''
 		position: absolute
@@ -26,11 +36,27 @@
 		opacity: 0
 		transition: .6s transform ease, .1s opacity ease .6s
 		z-index: 3
-	&__nav
+		+media(sm)
+			display: none
+
+	> *
 		z-index: 4
 		position: relative
+
+	&__animation-element
+		opacity: 0
+		transform: translate(0, -20%)
+		transition: .2s all ease
+
+	&__nav
+		+media(sm)
+			margin-bottom: 2rem
 		&-item
 			margin-bottom: px-to-rem(45, 14)
+			+media(xxl)
+				margin-bottom: px-to-rem(30, 10)
+			+media(sm)
+				margin-bottom: 1.5rem
 			&:last-child
 				margin-bottom: 0
 		&-link
@@ -39,22 +65,57 @@
 			font-size: px-to-rem(60, 14)
 			line-height: px-to-rem(70, 14)
 			display: inline-block
-			opacity: 0
-			transform: translate(0, -20%)
 			position: relative
-			transition: .2s all ease
 			&_active
 				border-bottom: 5px solid #fff
+				+media(xxl)
+					border-bottom-width: 3px
 				&:hover
 					transform: translate(0)
+			+media(xxxl)
+				font-size: px-to-rem(45, 12)
+				line-height: px-to-rem(55, 12)
+			+media(xxl)
+				font-size: px-to-rem(35, 10)
+				line-height: px-to-rem(45, 10)
+			+media(sm)
+				font-size: 1.8rem
+				line-height: 2.4rem
+
+	.lang
+		&__link
+			color: #fff
+			padding: 8px 0
+			margin-right: 2rem
+
+	&__contacts
+		display: none
+		+media(sm)
+			display: block
+		.contacts__item
+			display: block
+			margin-bottom: 1rem
+
+	&__lang, &__social
+		display: none
+		+media(sm)
+			display: flex
+			align-items: center
+			margin-bottom: 2rem
+
+
 	&_visible
 		visibility: visible
+		+media(sm)
+			opacity: 1
 		&:before
 			transform: translate(-50%, -50%) scale(600)
 			opacity: 1
 			transition: 1.2s transform ease, .1s opacity ease
-		.menu__nav-link
+		.menu__animation-element
 			opacity: 1
 			transform: translate(0)
 			transition: .4s all ease .4s
+			+media(sm)
+				transition: .4s all ease .2s
 	

@@ -1,17 +1,27 @@
 .background-slider
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+	height: 100%
+	z-index: 0
+	+media-min(lg)
+		height: 100vh
+		min-height: 620px
+	+media-min(xxl)
+		min-height: 920px
 	&__slide, &__slide-img
-		+media-min(lg)
-			min-height: 620px
-			height: 100vh
+		height: inherit
+		min-height: inherit
 	&__slide
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		width: 100%
-		z-index: 0
 		overflow: hidden
+		position: inherit
+		top: inherit
+		left: inherit
+		right: inherit
+		bottom: inherit
 		&-img
 			position: inherit
 			width: 100vw

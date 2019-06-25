@@ -6,29 +6,26 @@
 	z-index: 3
 	position: relative
 	overflow: hidden
+	+media(xxl)
+		min-height: 90px
+	+media(xl)
+		min-height: 70px
+	+media(sm)
+		display: block
+		padding: 15px 20px 20px
 
 	&__social
-		display: flex
-		align-items: center
 		padding-left: px-to-rem(95, 14)
-		&-item
-			padding: 15px
-			margin-right: px-to-rem(75, 14)
-		&-link
-			display: inherit
-			align-items: inherit
-			justify-content: center
-			transition: .2s all ease
-			&:hover
-				opacity: .8
-			&:last-child
-				margin-right: 0
-		&-icon
-			width: 14px
-			height: auto
+		display: flex
+		+media(xxl)
+			padding-left: px-to-rem(35, 12)
+		+media(lg)
+			display: none
 	
 	&__slider-control
 		transition: .4s all ease
+		+media(sm)
+			margin: 0 auto
 		&_disabled
 			pointer-events: none
 			&_hidden
@@ -41,6 +38,18 @@
 		max-width: 420px
 		display: flex
 		align-items: center
+		+media(xxl)
+			max-width: 360px
+		+media(xl)
+			padding-right: 0
+			max-width: 280px
+		+media(lg)
+			margin-left: 0
+			padding-left: px-to-rem(45, 10)
+		+media(sm)
+			margin-bottom: 1.5rem
+			max-width: none
+			padding: 0
 		&-btn
 			border-bottom: 2px solid rgba(255, 255, 255, 0.1)
 			width: calc(100% / 3)
@@ -61,6 +70,8 @@
 				.footer__slider-dots-count
 					font-size: px-to-rem(24, 14)
 					color: #fff
+					+media(sm)
+						font-size: 1.2rem
 		&-count
 			transition: .3s all ease
 			display: block
@@ -70,6 +81,8 @@
 			line-height: px-to-rem(36, 14)
 			color: rgba(255, 255, 255, 0.3)
 			pointer-events: none
+			+media(sm)
+				font-size: .9rem
 
 	&__slider-navs
 		display: flex
@@ -78,6 +91,12 @@
 		padding: 0 px-to-rem(30, 14) 0 px-to-rem(50, 14)
 		position: relative
 		top: 5px
+		+media(lg)
+			margin-left: auto
+			top: 3px
+		+media(sm)
+			padding: 0
+			top: 0
 		&-btn
 			cursor: pointer
 			display: flex
@@ -109,7 +128,12 @@
 		align-items: center
 		justify-content: center
 		background-color: #fff
-		padding: 0 px-to-rem(130, 14) 0 px-to-rem(125, 14)
+		padding: 0 2rem 0 calc(2rem - 5px)
+		width: 20%
+		+media(xxl)
+			width: 25%
+		+media(lg)
+			display: none
 		&-icon
 			width: 14px
 			height: auto

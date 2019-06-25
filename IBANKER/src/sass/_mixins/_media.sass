@@ -3,12 +3,17 @@ $sm: 576px
 $md: 768px
 $lg: 992px
 $xl: 1200px
-$xxl: 1500px
+$xxl: 1439px
+$xxxl: 1599px
 
 
 
 @mixin media ( $size )
-	@if $size == xxl
+	@if $size == xxxl
+		@media (max-width: $xxxl)
+			@content
+
+	@else if $size == xxl
 		@media (max-width: $xxl)
 			@content
 
@@ -39,6 +44,10 @@ $xxl: 1500px
 
 
 @mixin media-min ( $size )
+	@if $size == xxxl
+		@media (min-width: $xxxl)
+			@content
+
 	@if $size == xxl
 		@media (min-width: $xxl)
 			@content

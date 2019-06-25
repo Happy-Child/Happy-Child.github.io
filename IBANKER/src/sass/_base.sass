@@ -1,9 +1,12 @@
-/* -- Base BEGIN -- */
 *
 	box-sizing: border-box
 	
 html
 	font-size: 14px
+	+media(1620px)
+		font-size: 12px
+	+media(xxl)
+		font-size: 10px
 	+media(sm)
 		font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400))
 	&.page-fixed
@@ -24,9 +27,10 @@ body
 		transition: 1.2s opacity ease
 	&.page-fixed
 		overflow-y: scroll
+		.header
+			background-color: rgba(0,0,0,.8)
 
 
 ::selection
 	background-color: $accent
 	color: #fff
-/* -- Base END -- */

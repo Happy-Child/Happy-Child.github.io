@@ -5,13 +5,27 @@
 	height: calc(100% - 120px - 110px) // Without header & footer
 	color: #fff
 	padding-bottom: 70px
+	+media(xxxl)
+		height: calc(100% - 110px - 110px) // Without header & footer
+	+media(xxl)
+		height: calc(100% - 90px - 90px) // Without header & footer
+		padding-bottom: 30px
+	+media(xl)
+		height: calc(100% - 70px - 70px) // Without header & footer
+	+media(lg)
+		height: auto
 
 	&__top
 		margin-bottom: px-to-rem(50, 14)
+		+media(xxl)
+			margin-bottom: px-to-rem(20, 10)
+		+media(sm)
+			margin-bottom: 20px
 		&-item
 			border-bottom: 1px solid $gray-border
 			border-right: 1px solid $gray-border
-			width: px-to-rem(635, 14)
+			width: 100%
+			max-width: px-to-rem(635, 14)
 			display: flex
 			flex-direction: column
 			justify-content: center
@@ -19,12 +33,19 @@
 				padding: px-to-rem(55, 14) px-to-rem(55, 14) px-to-rem(35, 14) px-to-rem(95, 14)
 			&_second
 				padding: px-to-rem(25, 14) px-to-rem(55, 14) px-to-rem(35, 14) px-to-rem(95, 14)
+			+media(xxl)
+				padding: px-to-rem(25, 12) px-to-rem(40, 12) px-to-rem(25, 12) px-to-rem(50, 12)
+			+media(sm)
+				padding: 20px
 			&-title
 				margin-bottom: px-to-rem(15, 14)
 				display: block
 				font-size: px-to-rem(24, 14)
 				line-height: px-to-rem(36, 14)
 				+CE-Bold()
+				+media(sm)
+					font-size: 1.5rem
+					line-height: 2rem
 			&-text
 				opacity: .6
 				font-size: 15px
@@ -37,16 +58,43 @@
 		display: flex
 		align-items: flex-end
 		padding: 0 px-to-rem(120, 14) 0 px-to-rem(95, 14)
+		+media(xxl)
+			padding-left: px-to-rem(50, 12)
+		+media(lg)
+			display: block
+		+media(sm)
+			padding: 20px
 		&-title
 			font-size: 3.1vw
 			line-height: 3.7vw
 			width: 40%
 			+CE-Bold()
+			+media(xxl)
+				font-size: 2.9vw
+				line-height: 3.8vw
+			+media(lg)
+				margin-bottom: 2rem
+				width: 100%
+				font-size: 3.2rem
+				line-height: 4.2rem
+			+media(sm)
+				font-size: 2rem
+				line-height: 2.7rem
+				margin-bottom: 1rem
 		&-text
 			font-size: 18px
 			line-height: 34px
 			width: 42%
 			padding-left: px-to-rem(50, 14)
+			+media(xxl)
+				font-size: 14px
+				line-height: 28px
+			+media(lg)
+				margin-bottom: 2rem
+				padding-left: 0
+				width: 100%
+			+media(sm)
+				margin-bottom: 1rem
 		&-link
 			padding-left: px-to-rem(30, 14)
 			margin-left: auto
@@ -58,4 +106,8 @@
 			margin-bottom: 20px
 			&:hover
 				opacity: .8
+			+media(xxl)
+				font-size: 20px
+			+media(lg)
+				padding: 0
 

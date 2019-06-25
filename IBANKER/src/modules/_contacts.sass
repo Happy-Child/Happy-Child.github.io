@@ -1,0 +1,17 @@
+.contacts
+	&__item
+		display: flex
+		align-items: center
+		justify-content: center
+	&__link
+		color: #fff
+		font-size: px-to-rem(18, 14)
+		line-height: px-to-rem(28, 14)
+		transition: prop time
+		+PM-Regular
+		transition: .2s all ease
+		&:hover
+			opacity: .8
+		+media(xxxl)
+			font-size: px-to-rem(14, 12)
+			line-height: px-to-rem(20, 12)

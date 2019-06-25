@@ -101,17 +101,17 @@
 			dotsButton (count) {
 				const resultCount = (count < 10) ? ("0" + count) : count,
 							resultElement = (count !== 1)
-																? `<button class='footer__slider-dots-btn'>
+																? `<div class='footer__slider-dots-btn'>
 																		<span class='footer__slider-dots-count'>
 																			${resultCount}
 																		</span>
-																	</button>`
+																	</div>`
 
-																: `<button class='footer__slider-dots-btn footer__slider-dots-btn_current'>
+																: `<div class='footer__slider-dots-btn footer__slider-dots-btn_current'>
 																		<span class='footer__slider-dots-count'>
 																			${resultCount}
 																		</span>
-																	</button>`;
+																	</div>`;
 
 				return resultElement;
 			}
@@ -245,6 +245,7 @@
 		const $menuBtn = $(".header__menu-btn"),
 					$menu = $(".menu"),
 					$menuItems = $menu.find(".menu__nav-link")
+					$page = $("body, html")
 					$backgroundSliderControls = $(".footer__slider-control");
 
 
@@ -258,6 +259,8 @@
 				$menu.toggleClass("menu_visible");
 
 				$backgroundSliderControls.toggleClass("footer__slider-control_disabled_hidden");
+
+				if ( $(window).width() <= breakpoints.sm && $page.length ) $page.toggleClass("page-fixed");
 
 				setTimeout(function() {
 					$menuBtn.removeClass("header__menu-btn_disabled");

@@ -6,6 +6,18 @@
 	align-items: stretch
 	min-height: 120px
 	border-bottom: 1px solid $gray-border
+	transition: .4s background-color ease
+	+media(1620px)
+		font-size: 12px
+	+media(xxxl)
+		min-height: 110px
+	+media(xxl)
+		font-size: 10px
+		min-height: 90px
+	+media(xl)
+		min-height: 70px
+	+media(sm)
+		min-height: 60px
 
 	&__item
 		display: flex
@@ -17,6 +29,11 @@
 
 	&-list-item
 		margin: 0 px-to-em(20, 14)
+		+media(xxxl)
+			margin: 0 1em
+			font-size: px-to-em(14, 12)
+		+media(xxl)
+			font-size: px-to-em(14, 10)
 
 	&-list-link
 		color: #fff
@@ -29,26 +46,30 @@
 		justify-content: center
 		flex-shrink: 0
 		padding: 0 35px 0 40px
+		+media(xxl)
+			width: px-to-rem(140, 10)
+			padding: 0 20px 0 30px
+		+media(sm)
+			width: 110px
+			padding: 0 15px
 		&-img
 			width: 100%
 			height: auto
 	
 	&__lang
-		padding: 0 px-to-em(40, 14) 0 px-to-em(55, 14)
-
-		&-link
-			opacity: .5
-			transition: .2s all ease
-			&_active
-				opacity: 1
-			&:hover
-				opacity: 1
+		padding-left: px-to-em(55, 14)
+		+media(xxxl)
+			padding-left: px-to-em(20, 12)
+		+media(lg)
+			display: none
 
 	&__nav
 		margin-left: auto
 		padding-right: px-to-em(40, 14)
 		display: flex
 		align-items: center
+		+media(xxl)
+			display: none
 
 		&-link
 			+PM-Regular
@@ -71,27 +92,30 @@
 
 	&__contacts
 		align-items: stretch
-		&-item
-			display: inherit
-			align-items: center
-			justify-content: center
-			padding: 0 10px
+		+media(xxl)
+			margin-left: auto
+			border-left: 1px solid $gray-border
+		+media(lg)
+			display: none
+		.contacts__item
 			width: px-to-em(252, 14)
-		&-link
-			color: #fff
-			font-size: px-to-rem(18, 14)
-			line-height: px-to-rem(28, 14)
-			transition: prop time
-			+PM-Regular
-			transition: .2s all ease
-			&:hover
-				opacity: .8
+			padding: 0 10px
+			+media(xxxl)
+				width: px-to-em(210, 12)
 
 	&__wrap-menu-btn
 		padding: 0 px-to-em(70, 14) 0 px-to-em(75, 14)
 		display: flex
 		align-items: center
 		justify-content: center
+		+media(xl)
+			padding: 0 px-to-em(30, 10)
+		+media(lg)
+			margin-left: auto
+			border-left: 1px solid $gray-border
+		+media(sm)
+			padding: 0
+			width: 65px
 
 	&__menu-btn
 		display: inherit
@@ -101,6 +125,9 @@
 		cursor: pointer
 		height: 18px
 		width: 30px
+		+media(sm)
+			width: 25px
+			height: 14px
 		&-line
 			width: 100%
 			height: 2px
@@ -108,25 +135,35 @@
 			transition: .4s all ease
 			&_center
 				margin: 6px 0
+			+media(sm)
+				height: 1px
 		&:hover
 			.header__menu-btn-line
 				&_top
 					margin-bottom: -2px
+					+media(sm)
+						margin-bottom: -1px
 				&_center
 					margin: 0
 				&_bottom
 					margin-top: -2px
+					+media(sm)
+						margin-top: -1px
 		&_active
 			.header__menu-btn-line
 				margin: 0
 				&_top
 					transform: rotate(45deg)
 					margin-bottom: -2px
+					+media(sm)
+						margin-bottom: -1px
 				&_center
 					opacity: 0
 					transform: translate(-50%, 0)
 				&_bottom
 					transform: rotate(-45deg)
 					margin-top: -2px
+					+media(sm)
+						margin-top: -1px
 		&_disabled
 			pointer-events: none
