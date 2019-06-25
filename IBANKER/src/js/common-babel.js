@@ -253,11 +253,35 @@
 	// -- Menu END
 
 
+	// -- Load responsive background images BEGIN
+	var loadResponsiveBgImages = function loadResponsiveBgImages() {
+		var $respsonsiveBgElements = $(".responsive-bg-element");
+
+		// -- Functions BEGIN
+		var responsiveSetBgImages = function responsiveSetBgImages() {
+			var deviceType = $(window).width() > breakpoints.sm ? "desktop" : "mobile";
+
+			$respsonsiveBgElements.each(function () {
+				var bgImageUrl = $(this).attr('data-bg-' + deviceType);
+				if (!!bgImageUrl) {
+					$(this).css({ "background-image": 'url(' + bgImageUrl + ')' });
+				}
+			});
+		};
+		// -- Functions END
+
+
+		if ($respsonsiveBgElements.length) responsiveSetBgImages();
+	};
+	// -- Load responsive background images END
+
+
 	// -- Initialization work functions BEGIN
 	var initializationFunctions = function initializationFunctions() {
 		reloadPage();
 		backgroundSliderInit();
 		menuInit();
+		loadResponsiveBgImages();
 	};
 
 	if (IEVersion >= 10) initializationFunctions();

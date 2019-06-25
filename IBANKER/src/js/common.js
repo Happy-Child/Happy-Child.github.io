@@ -278,11 +278,37 @@
 
 
 
+	// -- Load responsive background images BEGIN
+	const loadResponsiveBgImages = () => {
+		let $respsonsiveBgElements = $(".responsive-bg-element");
+
+
+		// -- Functions BEGIN
+		const responsiveSetBgImages = () => {
+			const deviceType = ($(window).width() > breakpoints.sm) ? "desktop" : "mobile";
+
+			$respsonsiveBgElements.each(function() {
+				const bgImageUrl = $(this).attr(`data-bg-${deviceType}`);
+				if ( !!bgImageUrl ){
+					$(this).css({"background-image": `url(${bgImageUrl})`});
+				}
+			});
+		};
+		// -- Functions END
+
+
+		if ( $respsonsiveBgElements.length ) responsiveSetBgImages();
+	};
+	// -- Load responsive background images END
+
+
+
 	// -- Initialization work functions BEGIN
 	const initializationFunctions = () => {
 		reloadPage();
 		backgroundSliderInit();
 		menuInit();
+		loadResponsiveBgImages();
 	};
 
 	if ( IEVersion >= 10 ) initializationFunctions();
