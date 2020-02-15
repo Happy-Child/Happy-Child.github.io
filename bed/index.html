@@ -28,7 +28,7 @@
   </head>
   <body class="home page">
     <!--Header BEGIN-->
-    <div class="cart"><img class="cart__icon" src="img/cart.png" alt=""><span class="cart__count">5</span></div>
+    <div class="cart modal-btn" data-popup-key="cart"><img class="cart__icon" src="img/cart.png" alt=""><span class="cart__count">5</span></div>
     <nav class="navbar">
       <ul class="navbar__list">
         <li class="navbar__list-item"><a class="navbar__list-link" href="#products"><img class="navbar__list-link-icon" src="img/menu-1.png" alt=""><span class="navbar__list-link-text">Каркасы</span></a></li>
@@ -402,18 +402,19 @@
         </div>
       </div>
       <!--Contacts END-->
+      <!--Callback-->
       <div class="popup" data-popup-key="callback" role="dialog">
         <div class="popup__wrap-content">
           <div class="popup__content">
-            <button class="popup__close" aria-label="Закрыть модальное окно"></button>
+            <button class="popup__close close-modal" aria-label="Закрыть модальное окно"></button>
             <form class="form" data-form-type="callback">
               <div class="titles"><span class="form__title">Заказать звонок</span><span class="form__subtitle">Напишите, когда вам будет удобно поговорить,<br> и мы свяжемся с вами</span></div>
               <div class="form__wrap-fields"><span class="form__label">Ваше имя <span>*</span></span>
                 <label class="form__wrap-field">
-                  <input class="form__field" type="text" placeholder="Дмитрий Александров" name="name">
+                  <input class="form__field" type="text" placeholder="Дмитрий Александров" required name="name">
                 </label><span class="form__label">Ваш номер телефона <span>*</span></span>
                 <label class="form__wrap-field">
-                  <input class="form__field" type="tel" placeholder="+375 99 999-99-99" name="phone">
+                  <input class="form__field" type="tel" placeholder="+375 99 999-99-99" required name="phone">
                 </label><span class="form__label">Время звонка</span>
                 <div class="form__fields">
                   <label class="form__wrap-field">
@@ -449,18 +450,19 @@
           </div>
         </div>
       </div>
+      <!--Message-->
       <div class="popup" data-popup-key="message" role="dialog">
         <div class="popup__wrap-content">
           <div class="popup__content">
-            <button class="popup__close" aria-label="Закрыть модальное окно"></button>
+            <button class="popup__close close-modal" aria-label="Закрыть модальное окно"></button>
             <form class="form" data-form-type="callback">
               <div class="titles"><span class="form__title">Напишите нам</span></div>
               <div class="form__wrap-fields"><span class="form__label">Ваше имя <span>*</span></span>
                 <label class="form__wrap-field">
-                  <input class="form__field" type="text" placeholder="Дмитрий Александров" name="name">
+                  <input class="form__field" type="text" placeholder="Дмитрий Александров" required name="name">
                 </label><span class="form__label">Ваш E-mail <span>*</span></span>
                 <label class="form__wrap-field">
-                  <input class="form__field" type="text" placeholder="example@gmail.com" name="mail">
+                  <input class="form__field" type="text" placeholder="example@gmail.com" required name="mail">
                 </label><span class="form__label">Ваше сообщение</span>
                 <label class="form__wrap-field">
                   <textarea class="form__field form__field_textarea" placeholder="Текст сообщения" name="message"></textarea>
@@ -471,11 +473,12 @@
           </div>
         </div>
       </div>
+      <!--Products-->
       <div class="popup popup_right" data-popup-key="products" role="dialog">
         <div class="popup__wrap-content">
           <div class="popup__content">
-            <div class="cart"><img class="cart__icon" src="img/cart.png" alt=""><span class="cart__count">5</span></div>
-            <button class="popup__close" aria-label="Закрыть модальное окно"></button>
+            <div class="cart modal-btn" data-popup-key="cart"><img class="cart__icon" src="img/cart.png" alt=""><span class="cart__count">5</span></div>
+            <button class="popup__close close-modal" aria-label="Закрыть модальное окно"></button>
             <div class="titles"><span class="form__title">Тип каркаса</span></div>
             <ul class="popup__tabs block-tabs">
               <div class="popup__tabs-btns">
@@ -506,8 +509,10 @@
                 <div class="tab-content" data-tab-key="Ромашка">
                   <div class="tab-content__inner">
                     <div class="left">
-                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
-                      <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      <div class="left__top">
+                        <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                        <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      </div>
                       <ul class="product__info">
                         <li class="product__info-item"><strong class="product__info-item-label">Размер (В*Ш*Г),мм:</strong><span class="product__info-item-value">1660*790*1700</span></li>
                         <li class="product__info-item"><strong class="product__info-item-label">Материал каркаса:</strong><span class="product__info-item-value">Металл</span></li>
@@ -522,8 +527,10 @@
                 <div class="tab-content" data-tab-key="Облако">
                   <div class="tab-content__inner">
                     <div class="left">
-                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
-                      <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      <div class="left__top">
+                        <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                        <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      </div>
                       <ul class="product__info">
                         <li class="product__info-item"><strong class="product__info-item-label">Материал каркаса:</strong><span class="product__info-item-value">Металл</span></li>
                         <li class="product__info-item"><strong class="product__info-item-label">Размер (В*Ш*Г),мм:</strong><span class="product__info-item-value">1660*790*1700</span></li>
@@ -535,8 +542,10 @@
                 <div class="tab-content" data-tab-key="Чайка">
                   <div class="tab-content__inner">
                     <div class="left">
-                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
-                      <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      <div class="left__top">
+                        <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                        <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      </div>
                       <ul class="product__info">
                         <li class="product__info-item"><strong class="product__info-item-label">Материал каркаса:</strong><span class="product__info-item-value">Металл</span></li>
                         <li class="product__info-item"><strong class="product__info-item-label">Размер спального места, см:</strong><span class="product__info-item-value">70х160</span></li>
@@ -549,8 +558,10 @@
                 <div class="tab-content" data-tab-key="Апельсин">
                   <div class="tab-content__inner">
                     <div class="left">
-                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
-                      <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      <div class="left__top">
+                        <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                        <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      </div>
                       <ul class="product__info">
                         <li class="product__info-item"><strong class="product__info-item-label">Материал каркаса:</strong><span class="product__info-item-value">Металл</span></li>
                         <li class="product__info-item"><strong class="product__info-item-label">Доп. информация:</strong><span class="product__info-item-value">Реечное основание под матрас, дымоход (труба), защитные съемные бортики. Выдерживает до 150-180кг веса на основание и до 80 кг на перекладинах и бортиках</span></li>
@@ -562,8 +573,10 @@
                 <div class="tab-content" data-tab-key="Черника">
                   <div class="tab-content__inner">
                     <div class="left">
-                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
-                      <button class="products__list-item-cart disabled"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      <div class="left__top">
+                        <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                        <button class="products__list-item-cart disabled"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      </div>
                       <ul class="product__info">
                         <li class="product__info-item"><strong class="product__info-item-label">Материал каркаса:</strong><span class="product__info-item-value">Металл</span></li>
                         <li class="product__info-item"><strong class="product__info-item-label">Размер (В*Ш*Г),мм:</strong><span class="product__info-item-value">1660*790*1700</span></li>
@@ -578,8 +591,10 @@
                 <div class="tab-content" data-tab-key="Бирюза">
                   <div class="tab-content__inner">
                     <div class="left">
-                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
-                      <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      <div class="left__top">
+                        <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                        <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      </div>
                       <ul class="product__info">
                         <li class="product__info-item"><strong class="product__info-item-label">Размер (В*Ш*Г),мм:</strong><span class="product__info-item-value">1660*790*1700</span></li>
                         <li class="product__info-item"><strong class="product__info-item-label">Размер спального места, см:</strong><span class="product__info-item-value">70х160</span></li>
@@ -643,13 +658,13 @@
               <div class="titles"><span class="form__title">Задавайте вопросы!</span></div>
               <div class="form__wrap-fields"><span class="form__label">Ваше имя <span>*</span></span>
                 <label class="form__wrap-field">
-                  <input class="form__field" type="text" placeholder="Дмитрий Александров" name="name">
+                  <input class="form__field" type="text" placeholder="Дмитрий Александров" required name="name">
                 </label><span class="form__label">Ваш E-mail <span>*</span></span>
                 <label class="form__wrap-field">
-                  <input class="form__field" type="text" placeholder="example@gmail.com" name="mail">
+                  <input class="form__field" type="text" placeholder="example@gmail.com" required name="mail">
                 </label><span class="form__label">Ваш телефон <span>*</span></span>
                 <label class="form__wrap-field">
-                  <input class="form__field" type="tel" placeholder="+375 99 999-99-99" name="phone">
+                  <input class="form__field" type="tel" placeholder="+375 99 999-99-99" required name="phone">
                 </label><span class="form__label">Ваше сообщение</span>
                 <label class="form__wrap-field">
                   <textarea class="form__field form__field_textarea" placeholder="Текст сообщения" name="message"></textarea>
@@ -670,10 +685,11 @@
           </div>
         </div>
       </div>
+      <!--Pay-->
       <div class="popup popup_right" data-popup-key="pay" role="dialog">
         <div class="popup__wrap-content">
           <div class="popup__content">
-            <button class="popup__close" aria-label="Закрыть модальное окно"></button>
+            <button class="popup__close close-modal" aria-label="Закрыть модальное окно"></button>
             <div class="titles"><span class="form__title">Способы оплаты</span></div>
             <div class="pay__content"><span class="pay__title">Подзаголовок, например</span>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
@@ -690,13 +706,13 @@
               <div class="titles"><span class="form__title">Задавайте вопросы!</span></div>
               <div class="form__wrap-fields"><span class="form__label">Ваше имя <span>*</span></span>
                 <label class="form__wrap-field">
-                  <input class="form__field" type="text" placeholder="Дмитрий Александров" name="name">
+                  <input class="form__field" type="text" placeholder="Дмитрий Александров" required name="name">
                 </label><span class="form__label">Ваш E-mail <span>*</span></span>
                 <label class="form__wrap-field">
-                  <input class="form__field" type="text" placeholder="example@gmail.com" name="mail">
+                  <input class="form__field" type="text" placeholder="example@gmail.com" required name="mail">
                 </label><span class="form__label">Ваш телефон <span>*</span></span>
                 <label class="form__wrap-field">
-                  <input class="form__field" type="tel" placeholder="+375 99 999-99-99" name="phone">
+                  <input class="form__field" type="tel" placeholder="+375 99 999-99-99" required name="phone">
                 </label><span class="form__label">Ваше сообщение</span>
                 <label class="form__wrap-field">
                   <textarea class="form__field form__field_textarea" placeholder="Текст сообщения" name="message"></textarea>
@@ -714,6 +730,85 @@
                 <li class="contacts-list__item"><img class="contacts-list__item-icon" src="img/weather.png" alt=""><span class="contacts-list__item-title">Режим работы</span><span class="contacts-list__item-text"><small>пн.-сб.:</small><span>09:00 - 17:00</span></span><span class="contacts-list__item-text"><small>вс.:</small><span>выходной</span></span></li>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+      <!--Cart-->
+      <div class="popup popup_right" data-popup-key="cart" role="dialog">
+        <div class="popup__wrap-content">
+          <div class="popup__content">
+            <button class="popup__close close-modal" aria-label="Закрыть модальное окно"></button>
+            <div class="titles"><span class="form__title">Корзина</span></div>
+            <ul class="cart__content">
+              <li class="cart__content-item"><img class="cart__content-item-remove" src="img/trash.svg" alt="">
+                <div class="cart__content-item-wrap-img"><img src="img/case_4.png" alt=""></div><span class="cart__content-item-name">Чехол (без окон)</span>
+                <div class="cart__content-item-counter">
+                  <div class="cart__content-item-counter-btn cart__content-item-counter-less"><img src="img/arrow-black.svg" alt=""></div><span class="cart__content-item-counter-result">3</span>
+                  <div class="cart__content-item-counter-btn cart__content-item-counter-more"><img src="img/arrow-black.svg" alt=""></div>
+                </div><span class="cart__content-item-result"><span class="price">220</span><span class="type">руб</span></span>
+              </li>
+              <li class="cart__content-item"><img class="cart__content-item-remove" src="img/trash.svg" alt="">
+                <div class="cart__content-item-wrap-img"><img src="img/case_4.png" alt=""></div><span class="cart__content-item-name">Чехол (без окон)</span>
+                <div class="cart__content-item-counter">
+                  <div class="cart__content-item-counter-btn cart__content-item-counter-less"><img src="img/arrow-black.svg" alt=""></div><span class="cart__content-item-counter-result">3</span>
+                  <div class="cart__content-item-counter-btn cart__content-item-counter-more"><img src="img/arrow-black.svg" alt=""></div>
+                </div><span class="cart__content-item-result"><span class="price">220</span><span class="type">руб</span></span>
+              </li>
+              <li class="cart__content-item"><img class="cart__content-item-remove" src="img/trash.svg" alt="">
+                <div class="cart__content-item-wrap-img"><img src="img/case_4.png" alt=""></div><span class="cart__content-item-name">Чехол (без окон)</span>
+                <div class="cart__content-item-counter">
+                  <div class="cart__content-item-counter-btn cart__content-item-counter-less"><img src="img/arrow-black.svg" alt=""></div><span class="cart__content-item-counter-result">3</span>
+                  <div class="cart__content-item-counter-btn cart__content-item-counter-more"><img src="img/arrow-black.svg" alt=""></div>
+                </div><span class="cart__content-item-result"><span class="price">220</span><span class="type">руб</span></span>
+              </li>
+            </ul>
+            <div class="cart__content-result">
+              <div class="cart__content-text">Итого:</div><span class="cart__content-price">460</span><span class="cart__content-price-type">руб</span>
+            </div>
+            <form class="form form-cart" data-form-type="cart">
+              <div class="titles"><span class="form__title">Оформление заказа</span></div>
+              <div class="form__wrap-fields"><span class="form__label">Ваше имя <span>*</span></span>
+                <label class="form__wrap-field">
+                  <input class="form__field" type="text" placeholder="Дмитрий Александров" required name="name">
+                </label><span class="form__label">Ваш E-mail</span>
+                <label class="form__wrap-field">
+                  <input class="form__field" type="text" placeholder="example@gmail.com" name="mail">
+                </label><span class="form__label">Ваш телефон <span>*</span></span>
+                <label class="form__wrap-field">
+                  <input class="form__field" type="tel" placeholder="+375 99 999-99-99" required name="phone">
+                </label><span class="form__label">Ваш город <span>*</span></span>
+                <label class="form__wrap-field">
+                  <input class="form__field" type="text" placeholder="Минск" required name="city">
+                </label><span class="form__label">Ваш адрес <span>*</span></span>
+                <label class="form__wrap-field">
+                  <input class="form__field" type="text" placeholder="Улица, дом, квартира" required name="address">
+                </label>
+                <div class="form__fields">
+                  <label class="form__radio" for="radio1">
+                    <input type="radio" id="radio1" checked name="type_pay" value="cash">
+                    <div class="form__radio-box"></div><span class="form__radio-text">Оплата наличными</span>
+                  </label>
+                  <label class="form__radio" for="radio2">
+                    <input type="radio" id="radio2" name="type_pay" value="card">
+                    <div class="form__radio-box"></div><span class="form__radio-text">Оплата картой</span>
+                  </label>
+                </div><span class="form__label">Ваше сообщение</span>
+                <label class="form__wrap-field">
+                  <textarea class="form__field form__field_textarea" placeholder="Текст сообщения" name="message"></textarea>
+                </label>
+              </div>
+              <button class="form__btn btn modal-btn" type="submit" data-popup-key="success">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--Success-->
+      <div class="popup" data-popup-key="success" role="dialog">
+        <div class="popup__wrap-content">
+          <div class="popup__content">
+            <button class="popup__close close-modal" aria-label="Закрыть модальное окно"></button><img class="popup-icon" src="img/baby.svg" alt="">
+            <div class="titles"><span class="form__title">Ура! Все готово!</span><span class="form__subtitle">Большущее спасибо<br> за ваш заказ!<br> Наши менеджеры очень скоро <br> с вами свяжутся!</span></div>
+            <button class="form__btn btn close-modal" type="submit">Вернёмся на главную?</button>
           </div>
         </div>
       </div>
