@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="description" content="Описание">
+    <!--Favicons BEGIN-->
+    <!-- https://realfavicongenerator.net-->
+    <!--Favicons END-->
+    <meta property="og:title" content="Заголовок">
+    <meta property="og:site_name" content="Название сайта">
+    <meta property="og:url" content="https://site-url.com">
+    <meta property="og:description" content="Описание сайта">
+    <meta property="og:image" content="img/preview-social-link/preview-social-link.png">
+    <meta property="vk:image" content="img/preview-social-link/preview-vk-link.png">
+    <!--Critical styles BEGIN-->
+    <style>.cart{position:fixed;top:0;right:0;width:90px;height:50px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background-color:#ff7c3b;font-size:16px;cursor:pointer;-webkit-transition:.3s;-o-transition:.3s;transition:.3s;z-index:5}.cart:hover,.navbar__list-link:hover{background-color:#ff5a08}.cart__icon{width:23px;height:auto}.cart__count{color:#fff;margin-left:8px}.navbar{position:fixed;top:0;left:0;height:100%;font-size:14px;width:8.125em;background-color:#ff7c3b;text-align:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;z-index:5}.navbar_visible{opacity:1!important;visibility:visible!important}.navbar__list-item{margin-bottom:16px}.navbar__list-link{padding:18px 10px;background-color:#ff7c3b;display:block;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.navbar__list-link-icon{display:block;margin:0 auto 6px;width:28px;height:28px;-o-object-fit:contain;object-fit:contain;-o-object-position:center;object-position:center}.navbar__list-link-text{display:block;color:#fff;font-family:Geometria-B,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";line-height:1.2}.header{font-size:16px;padding-top:3.5em;position:relative;z-index:1}.header .header__logo,.header__nav{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.header .header__logo,.header__inner,.header__nav{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.header__inner,.header__nav{-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.header__nav{margin-left:auto;padding-top:.5em}.header__nav-item{margin-left:1.5em}.header__nav-item:first-child{margin-left:0}.header__nav-link{color:#ff7c3b;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.header__nav-link:hover{color:#000}.header__btn{width:34px;height:24px;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;display:none;cursor:pointer;position:relative}.header__btn-line{width:100%;height:3px;background-color:#ff7c3b;-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;position:absolute;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transition:.4s;-o-transition:.4s;transition:.4s}.header__btn-line:nth-child(1){top:0}.header__btn-line:nth-child(2){top:calc(50% - 1px)}.header__btn-line:nth-child(3){bottom:0}.header__btn_active .header__btn-line:nth-child(1){top:calc(50% - 2px);-webkit-transform:translate(-50%,0) rotate(-45deg);-ms-transform:translate(-50%,0) rotate(-45deg);transform:translate(-50%,0) rotate(-45deg)}.header__btn_active .header__btn-line:nth-child(3){bottom:calc(50% - 1px);-webkit-transform:translate(-50%,0) rotate(45deg);-ms-transform:translate(-50%,0) rotate(45deg);transform:translate(-50%,0) rotate(45deg)}.header__btn_active .header__btn-line:nth-child(2){opacity:0}@media (min-width:768px){body{opacity:0}}@media (max-width:1500px){.navbar{width:7.5em;font-size:12px}.navbar__list-link{padding:12px 8px}.navbar__list-link-icon{width:24px;height:24px}}@media (max-width:1440px){.header .header__logo-img{width:260px;height:auto}}@media (max-width:1170px){.cart,.navbar{top:auto;bottom:0}.navbar{width:100%;height:calc(100% - 90px);visibility:hidden;opacity:0;-webkit-transition:.5s;-o-transition:.5s;transition:.5s}.navbar__list-item:last-child{margin-bottom:0}.navbar__list-link{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;background-color:transparent;padding:0}.navbar__list-link-icon{margin:0 8px 0 0}.header{padding:15px 0;position:fixed;top:0;left:0;width:100%;z-index:9;-webkit-box-shadow:0 10px 55px rgba(0,92,199,.07);box-shadow:0 10px 55px rgba(0,92,199,.07);background-color:#fff}.header__inner{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.header__nav{display:none}.header .header__logo-img{width:220px}.header__btn{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}}@media (max-width:767px){.navbar{height:calc(100% - 70px)}.header .header__logo-img{width:160px}}</style>
+    <!--Critical styles END-->
+    <!--Critical scripts BEGIN-->
+    <script>!function(e){var n={};function t(o){if(n[o])return n[o].exports;var r=n[o]={i:o,l:!1,exports:{}};return e[o].call(r.exports,r,r.exports,t),r.l=!0,r.exports}t.m=e,t.c=n,t.d=function(e,n,o){t.o(e,n)||Object.defineProperty(e,n,{enumerable:!0,get:o})},t.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},t.t=function(e,n){if(1&n&&(e=t(e)),8&n)return e;if(4&n&&"object"==typeof e&&e&&e.__esModule)return e;var o=Object.create(null);if(t.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:e}),2&n&&"string"!=typeof e)for(var r in e)t.d(o,r,function(n){return e[n]}.bind(null,r));return o},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},t.p="/",t(t.s=17)}({17:function(e,n,t){function o(e){document.documentElement.classList.add(e)}t(18)(function(){document.querySelector("body").classList.add("visible")}),document.documentElement.className=document.documentElement.className.replace("no-js","js"),"ontouchstart"in window?o("touch"):o("no-touch"),"undefined"!=typeof InstallTrigger&&o("firefox"),(/constructor/i.test(window.HTMLElement)||"[object SafariRemoteNotification]"===(!window.safari||"undefined"!=typeof safari&&safari.pushNotification).toString())&&o("safari"),document.documentMode&&o("ie"),!document.documentMode&&window.StyleMedia&&o("edge"),window.chrome&&(window.chrome.webstore||window.chrome.runtime)&&o("chrome"),~navigator.appVersion.indexOf("Win")&&o("windows"),~navigator.appVersion.indexOf("Mac")&&o("osx"),~navigator.appVersion.indexOf("Linux")&&o("linux")},18:function(e,n){e.exports=function(e){window.addEventListener("load",function(){e()})}}});</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBctr_1U3qL7kuTPAg0qIpT8ylXBJHwSZY"></script>
+    <!--Critical scripts END-->
+    <!--Styles BEGIN-->
+    <link rel="stylesheet" href="styles/bundle.min.css">
+    <!--Styles END-->
+  </head>
+  <body class="home page">
+    <!--Header BEGIN-->
+    <div class="cart"><img class="cart__icon" src="img/cart.png" alt=""><span class="cart__count">5</span></div>
+    <nav class="navbar">
+      <ul class="navbar__list">
+        <li class="navbar__list-item"><a class="navbar__list-link" href="#products"><img class="navbar__list-link-icon" src="img/menu-1.png" alt=""><span class="navbar__list-link-text">Каркасы</span></a></li>
+        <li class="navbar__list-item"><a class="navbar__list-link" href="#case"><img class="navbar__list-link-icon" src="img/menu-2.png" alt=""><span class="navbar__list-link-text">Чехлы</span></a></li>
+        <li class="navbar__list-item"><a class="navbar__list-link" href="#plus"><img class="navbar__list-link-icon" src="img/menu-3.png" alt=""><span class="navbar__list-link-text">Качество</span></a></li>
+        <li class="navbar__list-item"><a class="navbar__list-link" href="#slider"><img class="navbar__list-link-icon" src="img/menu-4.png" alt=""><span class="navbar__list-link-text">Смотрите, что!</span></a></li>
+        <li class="navbar__list-item"><a class="navbar__list-link" href="#after"><img class="navbar__list-link-icon" src="img/menu-6.png" alt=""><span class="navbar__list-link-text">Что потом?</span></a></li>
+        <li class="navbar__list-item"><a class="navbar__list-link" href="#light"><img class="navbar__list-link-icon" src="img/menu-5.png" alt=""><span class="navbar__list-link-text">Подарки</span></a></li>
+        <li class="navbar__list-item"><a class="navbar__list-link" href="#dealers"><img class="navbar__list-link-icon" src="img/menu-7.png" alt=""><span class="navbar__list-link-text">Дилерам</span></a></li>
+        <li class="navbar__list-item"><a class="navbar__list-link" href="#contacts"><img class="navbar__list-link-icon" src="img/menu-8.png" alt=""><span class="navbar__list-link-text">Где купить</span></a></li>
+      </ul>
+    </nav>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header__inner"><a class="header__logo" href="index.html" target="_blank" rel="noreferrer"><img class="header__logo-img" src="img/logo.png" alt=""></a>
+          <ul class="header__nav">
+            <li class="header__nav-item"><a class="header__nav-link" href="#dealers">Дилерам</a></li>
+            <li class="header__nav-item">
+              <button class="header__nav-link modal-btn" data-popup-key="callback">Заказать звонок</button>
+            </li>
+            <li class="header__nav-item"><a class="header__nav-link" href="#contacts">Контакты</a></li>
+          </ul>
+          <button class="header__btn"><span class="header__btn-line"></span><span class="header__btn-line"></span><span class="header__btn-line"></span></button>
+        </div>
+      </div>
+    </header>
+    <!--Header END-->
+    <!--Main BEGIN-->
+    <main class="home__main">
+      <!--Banner BEGIN-->
+      <div class="banner">
+        <div class="wrapper">
+          <div class="banner__inner">
+            <div class="banner__wrap-videos">
+              <video class="banner__video first active" autoplay loop>
+                <source src="img/banner_video_1.mp4" type="video/mp4">
+              </video>
+              <video class="banner__video second" autoplay loop>
+                <source src="img/banner_video_2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <button class="banner__btn btn" data-text-first="Одеть чехол" data-text-second="Снять чехол" data-cur-video="first">Одеть чехол</button>
+          </div>
+        </div>
+      </div>
+      <!--Banner END-->
+      <!--Products BEGIN-->
+      <div class="products sec" id="products">
+        <div class="wrapper">
+          <div class="products__inner">
+            <div class="sec__titles sec__titles_black"><span class="sec__title">Каркасы домиков</span></div>
+            <ul class="products__list">
+              <li class="products__list-item">
+                <div class="products__list-item-content modal-btn" data-popup-key="products"><span class="products__list-item-title">Снежок</span><img class="products__list-item-img" src="img/prod_1.png" alt="">
+                  <div class="products__list-item-bottom">
+                    <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                    <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                  </div>
+                </div>
+              </li>
+              <li class="products__list-item">
+                <div class="products__list-item-content modal-btn" data-popup-key="products"><span class="products__list-item-title">Ромашка</span><img class="products__list-item-img" src="img/prod_2.png" alt="">
+                  <div class="products__list-item-bottom">
+                    <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                    <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                  </div>
+                </div>
+              </li>
+              <li class="products__list-item">
+                <div class="products__list-item-content modal-btn" data-popup-key="products"><span class="products__list-item-title">Облако</span><img class="products__list-item-img" src="img/prod_3.png" alt="">
+                  <div class="products__list-item-bottom">
+                    <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                    <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                  </div>
+                </div>
+              </li>
+              <li class="products__list-item">
+                <div class="products__list-item-content modal-btn" data-popup-key="products"><span class="products__list-item-title">Чайка</span><img class="products__list-item-img" src="img/prod_4.png" alt="">
+                  <div class="products__list-item-bottom">
+                    <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                    <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                  </div>
+                </div>
+              </li>
+              <li class="products__list-item">
+                <div class="products__list-item-content modal-btn" data-popup-key="products"><span class="products__list-item-title">Апельсин</span><img class="products__list-item-img" src="img/prod_5.png" alt="">
+                  <div class="products__list-item-bottom">
+                    <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                    <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                  </div>
+                </div>
+              </li>
+              <li class="products__list-item">
+                <div class="products__list-item-content modal-btn" data-popup-key="products"><span class="products__list-item-title">Черника</span><img class="products__list-item-img" src="img/prod_6.png" alt="">
+                  <div class="products__list-item-bottom">
+                    <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                    <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                  </div>
+                </div>
+              </li>
+              <li class="products__list-item">
+                <div class="products__list-item-content modal-btn" data-popup-key="products"><span class="products__list-item-title">Бирюза</span><img class="products__list-item-img" src="img/prod_7.png" alt="">
+                  <div class="products__list-item-bottom">
+                    <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                    <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <button class="products__btn btn" data-text-first="Посмотреть все" data-text-second="Свернуть">Посмотреть все</button>
+          </div>
+        </div>
+      </div>
+      <!--Products END-->
+      <!--Case BEGIN-->
+      <div class="case sec" id="case">
+        <div class="wrapper">
+          <div class="case__inner">
+            <div class="sec__titles sec__titles_black"><span class="sec__title">Чехол и комплектующие</span></div>
+            <ul class="case__tabs block-tabs">
+              <div class="case__tabs-btns">
+                <button class="tab-btn tab-btn_cur" data-tab-key="kit">Комплект</button>
+                <button class="tab-btn" data-tab-key="elements">Элементы</button>
+              </div>
+              <div class="case__tabs-contents">
+                <div class="tab-content tab-content_cur" data-tab-key="kit">
+                  <ul class="products__list">
+                    <li class="products__list-item">
+                      <div class="products__list-item-content"><span class="products__list-item-title"><span>Комплект с окном</span><span class="label">
+                            <div class="label__content"><span class="label__content-title">В комплект входят:</span>
+                              <ul class="label__content-list">
+                                <li class="label__content-list-item">- Боковины</li>
+                                <li class="label__content-list-item">- Крыша</li>
+                                <li class="label__content-list-item">- Шотры с окнами</li>
+                              </ul>
+                            </div><img class="label__icon" src="img/question.svg" alt=""></span></span><img class="products__list-item-img" src="img/case_4.png" alt="">
+                        <div class="products__list-item-bottom">
+                          <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                          <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="products__list-item">
+                      <div class="products__list-item-content"><span class="products__list-item-title"><span>Комплект без окна</span><span class="label">
+                            <div class="label__content"><span class="label__content-title">В комплект входят:</span>
+                              <ul class="label__content-list">
+                                <li class="label__content-list-item">- Боковины</li>
+                                <li class="label__content-list-item">- Крыша</li>
+                                <li class="label__content-list-item">- Шотры с окнами</li>
+                              </ul>
+                            </div><img class="label__icon" src="img/question.svg" alt=""></span></span><img class="products__list-item-img" src="img/case_5.png" alt="">
+                        <div class="products__list-item-bottom">
+                          <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                          <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul><img class="tab-content-light" src="img/light-small.png" alt="">
+                </div>
+                <div class="tab-content" data-tab-key="elements">
+                  <ul class="products__list">
+                    <li class="products__list-item">
+                      <div class="products__list-item-content"><span class="products__list-item-title">Занавеска с окном</span><img class="products__list-item-img" src="img/case_1.png" alt="">
+                        <div class="products__list-item-bottom">
+                          <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                          <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="products__list-item">
+                      <div class="products__list-item-content"><span class="products__list-item-title">Занавеска без окна</span><img class="products__list-item-img" src="img/case_2.png" alt="">
+                        <div class="products__list-item-bottom">
+                          <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                          <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="products__list-item products__list-item_small-img">
+                      <div class="products__list-item-content"><span class="products__list-item-title">Карман (1 шт.)</span><img class="products__list-item-img" src="img/case_3.png" alt="">
+                        <div class="products__list-item-bottom">
+                          <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                          <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--Case END-->
+      <!--Plus BEGIN-->
+      <div class="plus sec" id="plus">
+        <div class="wrapper">
+          <div class="plus__inner">
+            <div class="sec__titles sec__titles_black"><span class="sec__title">Чем домики замечательны?</span></div>
+            <ul class="case__tabs block-tabs">
+              <div class="case__tabs-btns">
+                <button class="tab-btn tab-btn_cur" data-tab-key="pluses">Преимущества</button>
+                <button class="tab-btn" data-tab-key="details" data-sec-class="sec_yellow">Домик в разборе</button>
+              </div>
+              <div class="plus__tabs-contents">
+                <div class="tab-content tab-content_cur" data-tab-key="pluses">
+                  <div class="plus__pluses">
+                    <ul class="plus__pluses-col">
+                      <li class="plus__pluses-col-item"><img class="plus__pluses-col-item-icon" src="img/pluses_icon_1.svg" alt="">
+                        <p class="plus__pluses-col-item-text">Каркас можно<br> прикрепить к стене<img class="line-icon" src="img/1-1.svg" alt=""></p>
+                      </li>
+                      <li class="plus__pluses-col-item"><img class="plus__pluses-col-item-icon" src="img/pluses_icon_2.svg" alt="">
+                        <p class="plus__pluses-col-item-text">Кровать полностью<br> разбирается<br> (одним ключом)<img class="line-icon" src="img/2-1.svg" alt=""></p>
+                      </li>
+                      <li class="plus__pluses-col-item"><img class="plus__pluses-col-item-icon" src="img/pluses_icon_3.svg" alt="">
+                        <p class="plus__pluses-col-item-text">Мы сделали кровать<br> полностью экологически чистой.<br> Дерево и металл. Никаких токсинов<img class="line-icon" src="img/3-1.svg" alt=""></p>
+                      </li>
+                      <li class="plus__pluses-col-item"><img class="plus__pluses-col-item-icon" src="img/pluses_icon_4.svg" alt="">
+                        <p class="plus__pluses-col-item-text">Тело вашего ребенка<br> нигде не соприкасается<br> с металлом.<img class="line-icon" src="img/4-1.svg" alt=""></p>
+                      </li>
+                    </ul>
+                    <div class="plus__pluses-col plus__pluses-col-wrap-img"><img class="plus__pluses-col-img" src="img/pluses_1.png" alt=""></div>
+                    <ul class="plus__pluses-col">
+                      <li class="plus__pluses-col-item"><img class="plus__pluses-col-item-icon" src="img/pluses_icon_5.svg" alt="">
+                        <p class="plus__pluses-col-item-text">Если ребенок<br> не хочет спать на матрасе —<br> давайте повесим гамак!<img class="line-icon" src="img/7-1.svg" alt=""></p>
+                      </li>
+                      <li class="plus__pluses-col-item"><img class="plus__pluses-col-item-icon" src="img/pluses_icon_6.svg" alt="">
+                        <p class="plus__pluses-col-item-text">Перекладина съемная<br> и не влияет<br> на прочность конструкции<img class="line-icon" src="img/8-1.svg" alt=""></p>
+                      </li>
+                      <li class="plus__pluses-col-item"><img class="plus__pluses-col-item-icon" src="img/pluses_icon_7.svg" alt="">
+                        <p class="plus__pluses-col-item-text">Для здорового сна<br> мы применяем<br>  ортопедические<br>  матрасы и основания<br> Baby Balance или Baby Optima<img class="line-icon" src="img/7-1.svg" alt=""></p>
+                      </li>
+                      <li class="plus__pluses-col-item"><img class="plus__pluses-col-item-icon" src="img/pluses_icon_8.svg" alt="">
+                        <p class="plus__pluses-col-item-text">Мы сделали бортики,<br> чтобы ребенок<br> не выпал во сне<img class="line-icon" src="img/6-1.svg" alt=""></p>
+                      </li>
+                      <li class="plus__pluses-col-item"><img class="plus__pluses-col-item-icon" src="img/pluses_icon_9.svg" alt="">
+                        <p class="plus__pluses-col-item-text">Мы подобрали идеальное расстояние от пола до матраса<br> Матрас проветривается, ребенок легко забирается,<br> а под кроваткой помещается ящик с игрушками<img class="line-icon" src="img/9-1.svg" alt=""></p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-content" data-tab-key="details">
+                  <div class="plus__pluses">
+                    <div class="plus__pluses-col plus__pluses-col-wrap-img"><img class="plus__pluses-col-img" src="img/pluses_2.png" alt=""><img class="plus__pluses-col-img_text" src="img/pluses_2_text.png" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--Plus END-->
+      <!--Slider BEGIN-->
+      <div class="slider sec" id="slider">
+        <div class="wrapper">
+          <div class="swiper-container slider__inner">
+            <div class="swiper-wrapper">
+              <div class="slider__item swiper-slide">
+                <video class="slider__item-video" autoplay loop>
+                  <source src="img/slider_1.mp4" type="video/mp4">
+                </video>
+                <p class="slider__item-text">Мы долго думали, как убедить вас<br> купить своему ребенку кроватку-домик.</p>
+              </div>
+              <div class="slider__item swiper-slide">
+                <video class="slider__item-video" autoplay loop>
+                  <source src="img/slider_2.mp4" type="video/mp4">
+                </video>
+                <p class="slider__item-text">Мы долго думали, как убедить вас<br> купить своему ребенку кроватку-домик. Мы долго думали, как убедить вас<br> купить своему ребенку кроватку-домик.</p>
+              </div>
+              <div class="slider__item swiper-slide">
+                <video class="slider__item-video" autoplay loop>
+                  <source src="img/slider_3.mp4" type="video/mp4">
+                </video>
+                <p class="slider__item-text">Мы долго думали, как убедить вас<br> купить своему ребенку кроватку-домик купить своему ребенку кроватку-домик.</p>
+              </div>
+              <div class="slider__item swiper-slide">
+                <video class="slider__item-video" autoplay loop>
+                  <source src="img/slider_4.mp4" type="video/mp4">
+                </video>
+                <p class="slider__item-text">Мы долго думали, как убедить вас<br> купить своему ребенку кроватку-домик. Мы долго думали, как убедить вас<br> купить своему ребенку кроватку-домик.</p>
+              </div>
+              <div class="slider__item swiper-slide">
+                <video class="slider__item-video" autoplay loop>
+                  <source src="img/slider_5.mp4" type="video/mp4">
+                </video>
+                <p class="slider__item-text">Мы долго думали, как убедить вас<br> купить своему ребенку кроватку-домик.</p>
+              </div>
+              <div class="slider__item swiper-slide">
+                <video class="slider__item-video" autoplay loop>
+                  <source src="img/slider_6.mp4" type="video/mp4">
+                </video>
+                <p class="slider__item-text">Мы долго думали, как убедить вас<br> купить своему ребенку кроватку-домик купить своему ребенку кроватку-домик купить своему ребенку кроватку-домик</p>
+              </div>
+            </div>
+            <div class="slider__navs">
+              <button class="btn slider__btn slider__btn_prev">Назад</button>
+              <button class="btn slider__btn slider__btn_next">Вперед</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Slider END-->
+      <!--After BEGIN-->
+      <div class="after sec" id="after">
+        <div class="wrapper">
+          <div class="after__inner">
+            <div class="after__left"><img class="after__left-img" src="img/after.png" alt=""></div>
+            <div class="after__right">
+              <div class="sec__titles sec__titles_black"><span class="sec__title">Дети вырастут. И что?</span></div>
+              <p class="after__text">Если ваш ребенок <strong>не согнет металлическую трубу, <br> не сгрызет дерево и не разорвет голыми руками<br> брезент</strong> — с домиком ничего не случится!</p>
+              <p class="after__text">Вы ведь продавали детскую коляску?<br> И домик прекрасно продадите!</p>
+              <p class="after__text">Самые ценные дома — это дома в которых <br> уже обжились!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--After END-->
+      <!--Light BEGIN-->
+      <div class="light sec" id="light">
+        <div class="wrapper">
+          <div class="light__inner">
+            <div class="light__left">
+              <div class="light__img active"><img src="img/light-img.png" alt=""></div>
+              <div class="light__slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/light-slider.png" alt=""></div>
+                  <div class="swiper-slide"><img src="img/light-slider.png" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="light__right">
+              <div class="sec__titles sec__titles_black"><span class="sec__title">Бесплатно<br> электрифицируем<br> домик!</span></div>
+              <p class="light__right-text">Для защиты от монстров, живущих под кроватью,<br> мы дарим волшебный ночник для домика!</p>
+              <button class="light__btn btn" data-text-first="Включить свет" data-text-second="Выключить свет" data-cur-el="light__img">Включить свет</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Light END-->
+      <!--Dealers BEGIN-->
+      <div class="dealers sec" id="dealers">
+        <div class="wrapper">
+          <div class="dealers__inner"><img class="dealers__decor" src="img/trumpet.png" alt="">
+            <div class="sec__titles sec__titles_black"><span class="sec__title">Ищем дилеров!</span><span class="sec__subtitle">Мы предлагаем:</span></div>
+            <ul class="dealers__list">
+              <li class="dealers__list-item"><img class="dealers__list-item-icon" src="img/rabota.svg" alt=""><span class="dealers__list-item-text">Работа<br> без посредников</span></li>
+              <li class="dealers__list-item"><img class="dealers__list-item-icon" src="img/sklad.svg" alt=""><span class="dealers__list-item-text">Складская<br> программа</span></li>
+              <li class="dealers__list-item"><img class="dealers__list-item-icon" src="img/oplata.svg" alt=""><span class="dealers__list-item-text">Удобная <br> форма оплаты</span></li>
+            </ul>
+            <button class="btn dealers__btn btn_dark modal-btn" data-popup-key="callback">Связаться с нами</button>
+          </div>
+        </div>
+      </div>
+      <!--Dealers END-->
+      <!--Contacts BEGIN-->
+      <div class="contacts sec" id="contacts">
+        <div class="wrapper">
+          <div class="contacts__inner">
+            <div class="sec__titles sec__titles_black"><span class="sec__title">Где купить?</span></div>
+            <ul class="contacts-list">
+              <li class="contacts-list__item"><img class="contacts-list__item-icon" src="img/address.png" alt=""><span class="contacts-list__item-title">Наш адрес</span>
+                <p class="contacts-list__item-text">г. Минск, ул. Машиностроителей 29А, пом. 33</p>
+              </li>
+              <li class="contacts-list__item"><img class="contacts-list__item-icon" src="img/msg.png" alt=""><span class="contacts-list__item-title">Телефоны / почта</span><span class="contacts-list__item-text">+375 (29) 388-66-96</span><span class="contacts-list__item-text">+375 (17) 388-66-30</span><a class="contacts-list__item-text" href="mailto:roznica@elporta.by">roznica@elporta.by</a></li>
+              <li class="contacts-list__item"><img class="contacts-list__item-icon" src="img/weather.png" alt=""><span class="contacts-list__item-title">Режим работы</span><span class="contacts-list__item-text"><small>пн.-сб.:</small><span>09:00 - 17:00</span></span><span class="contacts-list__item-text"><small>вс.:</small><span>выходной</span></span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="contacts__map">
+          <div id="map"></div>
+        </div>
+      </div>
+      <!--Contacts END-->
+      <div class="popup" data-popup-key="callback" role="dialog">
+        <div class="popup__wrap-content">
+          <div class="popup__content">
+            <button class="popup__close" aria-label="Закрыть модальное окно"></button>
+            <form class="form" data-form-type="callback">
+              <div class="titles"><span class="form__title">Заказать звонок</span><span class="form__subtitle">Напишите, когда вам будет удобно поговорить,<br> и мы свяжемся с вами</span></div>
+              <div class="form__wrap-fields"><span class="form__label">Ваше имя <span>*</span></span>
+                <label class="form__wrap-field">
+                  <input class="form__field" type="text" placeholder="Дмитрий Александров" name="name">
+                </label><span class="form__label">Ваш номер телефона <span>*</span></span>
+                <label class="form__wrap-field">
+                  <input class="form__field" type="tel" placeholder="+375 99 999-99-99" name="phone">
+                </label><span class="form__label">Время звонка</span>
+                <div class="form__fields">
+                  <label class="form__wrap-field">
+                    <select class="form__field form__select" name="time-from">
+                      <option value="9.00">9.00</option>
+                      <option value="10.00">10.00</option>
+                      <option value="12.00">12.00</option>
+                      <option value="13.00">13.00</option>
+                      <option value="14.00">14.00</option>
+                      <option value="15.00">15.00</option>
+                      <option value="16.00">16.00</option>
+                      <option value="17.00">17.00</option>
+                      <option value="18.00">18.00</option>
+                    </select>
+                  </label><span>–</span>
+                  <label class="form__wrap-field">
+                    <select class="form__field form__select" name="time-to">
+                      <option value="9.00">9.00</option>
+                      <option value="10.00">10.00</option>
+                      <option value="12.00">12.00</option>
+                      <option value="13.00">13.00</option>
+                      <option value="14.00">14.00</option>
+                      <option value="15.00">15.00</option>
+                      <option value="16.00">16.00</option>
+                      <option value="17.00">17.00</option>
+                      <option value="18.00" selected>18.00</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+              <button class="form__btn btn" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="popup" data-popup-key="message" role="dialog">
+        <div class="popup__wrap-content">
+          <div class="popup__content">
+            <button class="popup__close" aria-label="Закрыть модальное окно"></button>
+            <form class="form" data-form-type="callback">
+              <div class="titles"><span class="form__title">Напишите нам</span></div>
+              <div class="form__wrap-fields"><span class="form__label">Ваше имя <span>*</span></span>
+                <label class="form__wrap-field">
+                  <input class="form__field" type="text" placeholder="Дмитрий Александров" name="name">
+                </label><span class="form__label">Ваш E-mail <span>*</span></span>
+                <label class="form__wrap-field">
+                  <input class="form__field" type="text" placeholder="example@gmail.com" name="mail">
+                </label><span class="form__label">Ваше сообщение</span>
+                <label class="form__wrap-field">
+                  <textarea class="form__field form__field_textarea" placeholder="Текст сообщения" name="message"></textarea>
+                </label>
+              </div>
+              <button class="form__btn btn" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup_right" data-popup-key="products" role="dialog">
+        <div class="popup__wrap-content">
+          <div class="popup__content">
+            <div class="cart"><img class="cart__icon" src="img/cart.png" alt=""><span class="cart__count">5</span></div>
+            <button class="popup__close" aria-label="Закрыть модальное окно"></button>
+            <div class="titles"><span class="form__title">Тип каркаса</span></div>
+            <ul class="popup__tabs block-tabs">
+              <div class="popup__tabs-btns">
+                <button class="tab-btn tab-btn_cur" data-tab-key="Снежок">Снежок</button>
+                <button class="tab-btn" data-tab-key="Ромашка">Ромашка</button>
+                <button class="tab-btn" data-tab-key="Облако">Облако</button>
+                <button class="tab-btn" data-tab-key="Чайка">Чайка</button>
+                <button class="tab-btn" data-tab-key="Апельсин">Апельсин</button>
+                <button class="tab-btn" data-tab-key="Черника">Черника</button>
+                <button class="tab-btn" data-tab-key="Бирюза">Бирюза</button>
+              </div>
+              <div class="popup__tabs-contents">
+                <div class="tab-content tab-content_cur" data-tab-key="Снежок">
+                  <div class="tab-content__inner">
+                    <div class="left">
+                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                      <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      <ul class="product__info">
+                        <li class="product__info-item"><strong class="product__info-item-label">Материал каркаса:</strong><span class="product__info-item-value">Металл</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Размер (В*Ш*Г),мм:</strong><span class="product__info-item-value">1660*790*1700</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Размер спального места, см:</strong><span class="product__info-item-value">70х160</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Доп. информация:</strong><span class="product__info-item-value">Реечное основание под матрас, дымоход (труба), защитные съемные бортики. Выдерживает до 150-180кг веса на основание и до 80 кг на перекладинах и бортиках</span></li>
+                      </ul>
+                    </div>
+                    <div class="right"><img src="img/prod_1.png" alt=""></div>
+                  </div>
+                </div>
+                <div class="tab-content" data-tab-key="Ромашка">
+                  <div class="tab-content__inner">
+                    <div class="left">
+                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                      <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      <ul class="product__info">
+                        <li class="product__info-item"><strong class="product__info-item-label">Размер (В*Ш*Г),мм:</strong><span class="product__info-item-value">1660*790*1700</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Материал каркаса:</strong><span class="product__info-item-value">Металл</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Размер (В*Ш*Г),мм:</strong><span class="product__info-item-value">1660*790*1700</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Размер спального места, см:</strong><span class="product__info-item-value">70х160</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Доп. информация:</strong><span class="product__info-item-value">Реечное основание под матрас, дымоход (труба), защитные съемные бортики. Выдерживает до 150-180кг веса на основание и до 80 кг на перекладинах и бортиках</span></li>
+                      </ul>
+                    </div>
+                    <div class="right"><img src="img/prod_2.png" alt=""></div>
+                  </div>
+                </div>
+                <div class="tab-content" data-tab-key="Облако">
+                  <div class="tab-content__inner">
+                    <div class="left">
+                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                      <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      <ul class="product__info">
+                        <li class="product__info-item"><strong class="product__info-item-label">Материал каркаса:</strong><span class="product__info-item-value">Металл</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Размер (В*Ш*Г),мм:</strong><span class="product__info-item-value">1660*790*1700</span></li>
+                      </ul>
+                    </div>
+                    <div class="right"><img src="img/prod_3.png" alt=""></div>
+                  </div>
+                </div>
+                <div class="tab-content" data-tab-key="Чайка">
+                  <div class="tab-content__inner">
+                    <div class="left">
+                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                      <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      <ul class="product__info">
+                        <li class="product__info-item"><strong class="product__info-item-label">Материал каркаса:</strong><span class="product__info-item-value">Металл</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Размер спального места, см:</strong><span class="product__info-item-value">70х160</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Доп. информация:</strong><span class="product__info-item-value">Реечное основание под матрас, дымоход (труба), защитные съемные бортики. Выдерживает до 150-180кг веса на основание и до 80 кг на перекладинах и бортиках</span></li>
+                      </ul>
+                    </div>
+                    <div class="right"><img src="img/prod_4.png" alt=""></div>
+                  </div>
+                </div>
+                <div class="tab-content" data-tab-key="Апельсин">
+                  <div class="tab-content__inner">
+                    <div class="left">
+                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                      <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      <ul class="product__info">
+                        <li class="product__info-item"><strong class="product__info-item-label">Материал каркаса:</strong><span class="product__info-item-value">Металл</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Доп. информация:</strong><span class="product__info-item-value">Реечное основание под матрас, дымоход (труба), защитные съемные бортики. Выдерживает до 150-180кг веса на основание и до 80 кг на перекладинах и бортиках</span></li>
+                      </ul>
+                    </div>
+                    <div class="right"><img src="img/prod_5.png" alt=""></div>
+                  </div>
+                </div>
+                <div class="tab-content" data-tab-key="Черника">
+                  <div class="tab-content__inner">
+                    <div class="left">
+                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                      <button class="products__list-item-cart disabled"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      <ul class="product__info">
+                        <li class="product__info-item"><strong class="product__info-item-label">Материал каркаса:</strong><span class="product__info-item-value">Металл</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Размер (В*Ш*Г),мм:</strong><span class="product__info-item-value">1660*790*1700</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Размер спального места, см:</strong><span class="product__info-item-value">70х160</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Доп. информация:</strong><span class="product__info-item-value">Реечное основание под матрас, дымоход (труба), защитные съемные бортики. Выдерживает до 150-180кг веса на основание и до 80 кг на перекладинах и бортиках</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Размер спального места, см:</strong><span class="product__info-item-value">70х160</span></li>
+                      </ul>
+                    </div>
+                    <div class="right"><img src="img/prod_6.png" alt=""></div>
+                  </div>
+                </div>
+                <div class="tab-content" data-tab-key="Бирюза">
+                  <div class="tab-content__inner">
+                    <div class="left">
+                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                      <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                      <ul class="product__info">
+                        <li class="product__info-item"><strong class="product__info-item-label">Размер (В*Ш*Г),мм:</strong><span class="product__info-item-value">1660*790*1700</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Размер спального места, см:</strong><span class="product__info-item-value">70х160</span></li>
+                        <li class="product__info-item"><strong class="product__info-item-label">Доп. информация:</strong><span class="product__info-item-value">Реечное основание под матрас, дымоход (труба), защитные съемные бортики. Выдерживает до 150-180кг веса на основание и до 80 кг на перекладинах и бортиках</span></li>
+                      </ul>
+                    </div>
+                    <div class="right"><img src="img/prod_7.png" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+            <div class="popup__other"><span class="popup__other-title">Вам нужен чехол для домика?</span>
+              <ul class="products__list">
+                <li class="products__list-item">
+                  <div class="products__list-item-content" style="background-color: #71E6EB;"><span class="products__list-item-title"><span>Комплект с окном</span></span><img class="products__list-item-img" src="img/case_4.png" alt="">
+                    <div class="products__list-item-bottom">
+                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                      <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="products__list-item">
+                  <div class="products__list-item-content" style="background-color: #71E6EB;"><span class="products__list-item-title"><span>Комплект без окна</span></span><img class="products__list-item-img" src="img/case_5.png" alt="">
+                    <div class="products__list-item-bottom">
+                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                      <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="popup__other"><span class="popup__other-title">Полезные дополнения</span>
+              <ul class="products__list">
+                <li class="products__list-item">
+                  <div class="products__list-item-content" style="background-color: #8798F5;"><span class="products__list-item-title">Занавеска с окном</span><img class="products__list-item-img" src="img/case_1.png" alt="">
+                    <div class="products__list-item-bottom">
+                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                      <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="products__list-item">
+                  <div class="products__list-item-content" style="background-color: #8798F5;"><span class="products__list-item-title">Занавеска без окна</span><img class="products__list-item-img" src="img/case_2.png" alt="">
+                    <div class="products__list-item-bottom">
+                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                      <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="products__list-item products__list-item_small-img">
+                  <div class="products__list-item-content" style="background-color: #FFC300;"><span class="products__list-item-title">Карман (1 шт.)</span><img class="products__list-item-img" src="img/case_3.png" alt="">
+                    <div class="products__list-item-bottom">
+                      <div class="products__list-item-price"><span class="products__list-item-price_first">от</span><span class="products__list-item-price_second">220 руб</span></div>
+                      <button class="products__list-item-cart"><img class="products__list-item-cart-icon" src="img/cart.png" alt=""></button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <form class="form form_questions" data-form-type="question">
+              <div class="titles"><span class="form__title">Задавайте вопросы!</span></div>
+              <div class="form__wrap-fields"><span class="form__label">Ваше имя <span>*</span></span>
+                <label class="form__wrap-field">
+                  <input class="form__field" type="text" placeholder="Дмитрий Александров" name="name">
+                </label><span class="form__label">Ваш E-mail <span>*</span></span>
+                <label class="form__wrap-field">
+                  <input class="form__field" type="text" placeholder="example@gmail.com" name="mail">
+                </label><span class="form__label">Ваш телефон <span>*</span></span>
+                <label class="form__wrap-field">
+                  <input class="form__field" type="tel" placeholder="+375 99 999-99-99" name="phone">
+                </label><span class="form__label">Ваше сообщение</span>
+                <label class="form__wrap-field">
+                  <textarea class="form__field form__field_textarea" placeholder="Текст сообщения" name="message"></textarea>
+                </label>
+              </div>
+              <button class="form__btn btn" type="submit">Отправить</button>
+            </form>
+            <div class="popup__other">
+              <div class="titles"><span class="form__title">Звоните и приезжайте</span></div>
+              <ul class="contacts-list">
+                <li class="contacts-list__item"><img class="contacts-list__item-icon" src="img/address.png" alt=""><span class="contacts-list__item-title">Наш адрес</span>
+                  <p class="contacts-list__item-text">г. Минск, ул. Машиностроителей 29А, пом. 33</p>
+                </li>
+                <li class="contacts-list__item"><img class="contacts-list__item-icon" src="img/msg.png" alt=""><span class="contacts-list__item-title">Телефоны / почта</span><span class="contacts-list__item-text">+375 (29) 388-66-96</span><span class="contacts-list__item-text">+375 (17) 388-66-30</span><a class="contacts-list__item-text" href="mailto:roznica@elporta.by">roznica@elporta.by</a></li>
+                <li class="contacts-list__item"><img class="contacts-list__item-icon" src="img/weather.png" alt=""><span class="contacts-list__item-title">Режим работы</span><span class="contacts-list__item-text"><small>пн.-сб.:</small><span>09:00 - 17:00</span></span><span class="contacts-list__item-text"><small>вс.:</small><span>выходной</span></span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup_right" data-popup-key="pay" role="dialog">
+        <div class="popup__wrap-content">
+          <div class="popup__content">
+            <button class="popup__close" aria-label="Закрыть модальное окно"></button>
+            <div class="titles"><span class="form__title">Способы оплаты</span></div>
+            <div class="pay__content"><span class="pay__title">Подзаголовок, например</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+              <ul>
+                <li>Какой-то список</li>
+                <li>Какой-то еще один</li>
+                <li>Какой-то список</li>
+                <li>Какой-то еще один</li>
+                <li>Какой-то список</li>
+              </ul>
+            </div>
+            <form class="form form_questions" data-form-type="question">
+              <div class="titles"><span class="form__title">Задавайте вопросы!</span></div>
+              <div class="form__wrap-fields"><span class="form__label">Ваше имя <span>*</span></span>
+                <label class="form__wrap-field">
+                  <input class="form__field" type="text" placeholder="Дмитрий Александров" name="name">
+                </label><span class="form__label">Ваш E-mail <span>*</span></span>
+                <label class="form__wrap-field">
+                  <input class="form__field" type="text" placeholder="example@gmail.com" name="mail">
+                </label><span class="form__label">Ваш телефон <span>*</span></span>
+                <label class="form__wrap-field">
+                  <input class="form__field" type="tel" placeholder="+375 99 999-99-99" name="phone">
+                </label><span class="form__label">Ваше сообщение</span>
+                <label class="form__wrap-field">
+                  <textarea class="form__field form__field_textarea" placeholder="Текст сообщения" name="message"></textarea>
+                </label>
+              </div>
+              <button class="form__btn btn" type="submit">Отправить</button>
+            </form>
+            <div class="popup__other">
+              <div class="titles"><span class="form__title">Звоните и приезжайте</span></div>
+              <ul class="contacts-list">
+                <li class="contacts-list__item"><img class="contacts-list__item-icon" src="img/address.png" alt=""><span class="contacts-list__item-title">Наш адрес</span>
+                  <p class="contacts-list__item-text">г. Минск, ул. Машиностроителей 29А, пом. 33</p>
+                </li>
+                <li class="contacts-list__item"><img class="contacts-list__item-icon" src="img/msg.png" alt=""><span class="contacts-list__item-title">Телефоны / почта</span><span class="contacts-list__item-text">+375 (29) 388-66-96</span><span class="contacts-list__item-text">+375 (17) 388-66-30</span><a class="contacts-list__item-text" href="mailto:roznica@elporta.by">roznica@elporta.by</a></li>
+                <li class="contacts-list__item"><img class="contacts-list__item-icon" src="img/weather.png" alt=""><span class="contacts-list__item-title">Режим работы</span><span class="contacts-list__item-text"><small>пн.-сб.:</small><span>09:00 - 17:00</span></span><span class="contacts-list__item-text"><small>вс.:</small><span>выходной</span></span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--Main BEGIN-->
+    <!--Footer BEGIN-->
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__inner"><span class="footer__copyright">© Кроватки-домики, 2019</span>
+          <ul class="footer__nav header__nav">
+            <li class="header__nav-item">
+              <button class="header__nav-link modal-btn" data-popup-key="message">Написать письмо</button>
+            </li>
+            <li class="header__nav-item">
+              <button class="header__nav-link modal-btn" data-popup-key="callback">Заказать звонок</button>
+            </li>
+            <li class="header__nav-item">
+              <button class="header__nav-link modal-btn" data-popup-key="pay">Способы оплаты</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!--Footer END-->
+    <script src="js/bundle.min.js"></script>
+  </body>
+</html>
