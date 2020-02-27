@@ -1,0 +1,18 @@
+// -- Helpers BEGIN
+@import "../../../styles/helpers/variables";
+@import "../../../styles/helpers/mixins-include";
+@import "../../../styles/helpers/functions-include";
+// -- Helpers END
+
+
+// -- Components BEGIN
+@import "components/components";
+// -- Components END
+
+.video-grinding {
+  @include media(md) {
+    .video__inner {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.banner-plywood {
+  position: relative;
+  margin-bottom: px-to-rem(50, 18);
+
+  @include media(md) {
+    padding-top: 0;
+  }
+
+  @include media(480px) {
+    padding-top: 45px;
+    min-height: 354px;
+  }
+
+  .banner__wrap-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}

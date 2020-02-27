@@ -1,0 +1,55 @@
+.group-cards {
+	margin-top: px-to-rem(45, 24);
+
+	&.page__text-group {
+		padding-bottom: px-to-rem(40, 24);
+
+		@include media (md) {
+			padding-bottom: 0;
+		}
+	}
+
+	&_has-title {
+		.group-cards {
+			&__inner {
+				padding-top: px-to-rem(65, 24);
+			}
+		}
+	}
+
+	&_has-subtext {
+		&.page__text-group {
+			padding-bottom: px-to-rem(70, 24);
+
+			@include media (md) {
+				padding-bottom: px-to-rem(45, 22);
+			}
+		}
+
+		.group-cards {
+			&__inner {
+				padding-bottom: px-to-rem(40, 24);
+
+				@include media (md) {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&__inner {
+		margin: 0 -10px;
+		position: relative;
+
+		@include media (md) {
+			margin: 0;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+	}
+
+}

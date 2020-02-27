@@ -1,0 +1,278 @@
+.price {
+  padding-top: 0;
+  margin-top: 0 !important;
+
+  &__top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: px-to-em(40, 18);
+
+    @include media(xl) {
+      font-size: 16px;
+    }
+
+    @include media(md) {
+      display: block;
+    }
+
+    @include media(sm) {
+      margin-bottom: 20px;
+    }
+
+    &-text {
+      display: block;
+      margin-bottom: px-to-em(12, 18);
+      padding-right: px-to-em(15, 18);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &_small {
+        @include M-Medium;
+        font-size: px-to-em(16, 18);
+        line-height: px-to-em(20, 16);
+      }
+
+      em {
+        @include M-SemiBold;
+        color: $default-text;
+      }
+
+    }
+
+    &-wrap-img {
+      width: 100%;
+      max-width: px-to-em(512, 18);
+
+      @include media(md) {
+        margin-top: px-to-rem(40, 14);
+        max-width: none;
+      }
+
+      @include media(sm) {
+        margin-top: px-to-rem(20, 14);
+      }
+    }
+
+    &-img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+  }
+
+  &__currency {
+    position: relative;
+    font-size: 18px;
+    margin-bottom: px-to-em(30, 18);
+
+    @include media(xl) {
+      font-size: 16px;
+    }
+
+    @include media(md) {
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    &-cur {
+      font-size: px-to-em(30, 18);
+      line-height: px-to-em(37, 30);
+      @include M-Medium;
+      text-transform: uppercase;
+      cursor: pointer;
+      position: relative;
+      padding-right: px-to-em(35, 30);
+      padding-left: 0;
+
+      @include media(md) {
+        font-size: 15px;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, calc(-50% + 5px)) scale(.75, 1);
+        border: 13px solid transparent;
+        border-top-color: #696969;
+
+        @include media(md) {
+          border-top-width: 7px;
+          right: -10px;
+          transform: translate(0, calc(-50% + 6px)) scale(.5, 1);
+        }
+      }
+    }
+
+    &-list {
+      position: absolute;
+      top: 105%;
+      left: 0;
+      min-width: px-to-em(120, 18);
+      max-width: px-to-em(180, 18);
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.18);
+      padding: px-to-em(10, 18) 0;
+      transition: .4s all ease;
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(0, 10px);
+
+      &_visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0);
+      }
+    }
+
+    &-item {
+      font-size: 1em;
+      line-height: px-to-em(26, 18);
+      padding: px-to-em(4, 18) px-to-em(12, 18);
+      transition: .4s all ease;
+      @include M-Medium;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #EEEEEE;
+      }
+
+      &_current {
+        background-color: #DCDCDC;
+      }
+    }
+
+  }
+
+  &__wrap-tables {
+
+  }
+
+  &__wrap-table {
+    display: none;
+
+    @include media(sm) {
+      margin: 0 -15px;
+    }
+
+    &_current {
+      display: block;
+    }
+
+  }
+
+  &__table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    font-size: 22px;
+    margin-bottom: px-to-em(48, 22);
+
+    @include media(xl) {
+      font-size: 18px;
+    }
+
+    @include media(lg) {
+      overflow-y: auto;
+    }
+
+    @include media(md) {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    tr {
+      background-color: #fff;
+
+      &:nth-child(even) {
+        background-color: #EEEEEE;
+      }
+
+      &:first-child {
+        background-color: #C4C4C4;
+
+        td {
+          @include M-Medium;
+
+          @include media(md) {
+            height: 25px;
+          }
+        }
+      }
+    }
+
+    td {
+      height: 50px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #DADADA;
+      width: px-to-em(130, 22);
+      white-space: nowrap;
+
+      @include media(xxl) {
+        min-width: px-to-em(70, 18);
+        white-space: normal;
+      }
+
+      @include media(xl) {
+        min-width: px-to-em(70, 18);
+      }
+
+      @include media(md) {
+        border: none;
+        height: 46px;
+        line-height: 17px;
+        padding: 4px 0;
+        border-bottom: 1px solid #DADADA;
+      }
+
+      @include media(md) {
+        min-width: 53px;
+        text-align: left;
+      }
+
+      &:first-child {
+        padding-left: px-to-em(30, 22);
+        padding-right: px-to-em(15, 22);
+        text-align: left;
+        width: px-to-em(390, 22);
+        @include M-Medium;
+
+        @include media(xl) {
+          width: px-to-em(260, 18);
+        }
+
+        @include media(md) {
+          padding-left: 18px;
+          margin-right: 4px;
+        }
+      }
+    }
+
+    &-info {
+      font-size: 22px;
+      line-height: px-to-em(27, 22);
+
+      @include media(xl) {
+        font-size: 18px;
+      }
+
+      @include media(md) {
+        font-size: 15px;
+        padding: 0 15px;
+      }
+
+      em {
+        @include M-SemiBold;
+      }
+    }
+  }
+
+}

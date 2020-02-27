@@ -1,0 +1,501 @@
+@import "components/components";
+
+
+.home {
+	position: relative;
+	min-height: auto;
+
+	&__bg {
+		background-image: url("../img/background-pages/background-home-page.png");
+	}
+
+	.header {
+		@include media (md) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__wrap-slider-content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		height: 70vmin;
+		width: 51vmin;
+
+		&_text {
+			z-index: 2;
+		}
+
+		@media (orientation: landscape) and (max-width: 1360px) {
+			width: 38vmin;
+			height: 50vmin;
+		}
+
+		@media (orientation: portrait) and (min-width: 768px) {
+			transform: translate(-50%, -60%);
+			width: 38vmin;
+			height: 50vmin;
+		}
+
+		@include media (md) {
+			position: relative;
+			top: 0;
+			left: 0;
+			transform: translate(0);
+			height: auto;
+			width: 100%;
+		}
+	}
+
+	&__slider-content {
+		position: inherit;
+		top: inherit;
+		left: inherit;
+		transform: inherit;
+		width: 100%;
+		height: 100%;
+
+		@include media (md) {
+			display: none;
+		}
+
+		&_active {
+			.home__slider-content-wrap-text {
+				opacity: 1;
+			}
+
+			.home__slider-content-wrap-img {
+				width: 100%;
+				transition: 0s width ease, 1s opacity ease;
+				opacity: 1;
+			}
+
+			.home__slider-content-img {
+				transition: 0s all ease;
+				transform: translate(0);
+			}
+
+			&_z-index {
+				z-index: 9;
+			}
+		}
+
+		&-wrap-img {
+			width: 0;
+			height: inherit;
+			overflow: hidden;
+			display: block;
+			opacity: 0;
+			transition: 1.7s width ease, 1.7s opacity ease;
+			font-size: 0;
+		}
+
+		&-img {
+			position: inherit;
+			top: 0;
+			left: 0;
+			width: 51vmin;
+			height: inherit;
+			transition: 1.7s all ease;
+			transform: translate(-50%, 0);
+			display: block;
+			object-fit: cover;
+
+			@media (orientation: landscape) and (max-width: 1360px) {
+				width: 38vmin;
+			}
+
+			@media (orientation: portrait) and (min-width: 768px) {
+				transform: translate(-50%, 0);
+				width: 38vmin;
+			}
+		}
+
+		&-wrap-text {
+			position: inherit;
+			bottom: 2.77vmin;
+			left: calc(100% + 40px);
+			width: px-to-rem(440, 24);
+			min-height: px-to-rem(190, 24);
+			display: flex;
+			flex-direction: column;
+			opacity: 0;
+			transition: 1s all ease;
+
+			@media (max-width: 1360px) and (orientation: landscape) {
+				left: calc(100% + 2.5vmin);
+				min-height: 13vmin;
+				top: 66%;
+				bottom: auto;
+			}
+
+			@media (orientation: portrait) and (min-width: 768px) {
+				left: 50%;
+				bottom: auto;
+				transform: translate(-50%, 0);
+				top: calc(100% + 2.7vmin);
+				width: 60vmin;
+				min-height: auto;
+			}
+		}
+
+		&-text {
+			margin-bottom: px-to-rem(20, 24);
+
+			@include media (xl) {
+				font-size: .8rem;
+				line-height: 28px;
+			}
+		}
+
+		&-wrap-link {
+			margin-top: auto;
+		}
+
+		&-link {
+			color: $accent;
+			display: inline-block;
+			position: relative;
+			@include PD-B;
+			transition: .4s all ease;
+
+			&:hover {
+				color: $default-text;
+
+				&:before {
+					background-color: $default-text;
+				}
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				bottom: 2px;
+				left: 50%;
+				transform: translate(-50%, 0);
+				width: 100%;
+				height: 1px;
+				transition: inherit;
+				background-color: $accent;
+			}
+		}
+	}
+
+	&__slider {
+		overflow: visible;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		min-height: 100vh;
+
+		@include media (md) {
+			position: relative;
+			top: 0;
+			left: 0;
+			min-height: auto;
+			overflow: hidden;
+		}
+
+		&-item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 55%;
+			height: 100%;
+			min-height: 53.7vmin;
+
+			@include media (md) {
+				position: relative;
+				top: 0;
+				left: 0;
+				min-height: auto;
+				display: block;
+				width: auto;
+				padding: 0 px-to-rem(45, 18) px-to-rem(65, 18);
+			}
+
+			@include media (xs) {
+				padding: 0 20px 50px;
+			}
+
+			&-wrap-img,
+			&-text,
+			&-link {
+				display: none;
+			}
+
+			&-wrap-img,
+			&-text {
+				@include media (md) {
+					display: block;
+				}
+			}
+
+			&-link {
+				@include media (md) {
+					display: inline-block;
+				}
+			}
+
+			&-wrap-img {
+				position: relative;
+				width: 100%;
+				background-color: $dark-bg;
+
+				&:before {
+					@include stretchHeight(138.5%)
+				}
+
+				@include media (md) {
+					margin-bottom: px-to-rem(25, 18);
+				}
+			}
+
+			&-img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: .6s all ease;
+
+				&-preloader {
+
+				}
+			}
+
+			&-title {
+				position: relative;
+				top: -30px;
+				transition: 1s all ease;
+				opacity: 0.14;
+
+				&-text {
+					display: none;
+					color: $default-text;
+					font-size: px-to-rem(48, 18);
+					line-height: px-to-rem(52, 18);
+					text-align: left;
+					margin-bottom: px-to-rem(12, 18);
+					text-transform: uppercase;
+					@include PD-R;
+
+					@include media (md) {
+						display: block;
+					}
+
+					@include media (xs) {
+						font-size: px-to-rem(38, 18);
+						line-height: px-to-rem(46, 18);
+					}
+				}
+
+				&-img {
+					width: 77.31vh;
+					height: 11.57vh;
+
+					@media (orientation: landscape) and (max-width: 1360px) {
+						width: 65.31vh;
+						height: 8.57vh;
+					}
+
+					@media (orientation: portrait) and (min-width: 768px) {
+						width: 47.31vw;
+						height: 5.57vw;
+					}
+
+					@include media (md) {
+						display: none;
+					}
+				}
+
+				@media (orientation: portrait) and (min-width: 768px) {
+					top: -90px;
+				}
+
+				@include media (md) {
+					position: static;
+					opacity: 1;
+				}
+			}
+
+			&-text {
+				font-size: 14px;
+				line-height: 28px;
+				margin-bottom: 18px;
+			}
+
+			&-link {
+				color: $accent;
+				position: relative;
+				@include PD-B;
+				font-size: 18px;
+				line-height: 26px;
+
+				&:hover {
+					color: $default-text;
+
+					&:before {
+						background-color: $default-text;
+					}
+				}
+
+				&:before {
+					content: "";
+					position: absolute;
+					bottom: 2px;
+					left: 50%;
+					transform: translate(-50%, 0);
+					width: 100%;
+					height: 1px;
+					transition: inherit;
+					background-color: $accent;
+				}
+			}
+
+			&.swiper-slide-active {
+				.home__slider-item-title {
+					opacity: 1;
+					transform: scale(1.2);
+
+					@media (orientation: portrait) and (min-width: 768px) {
+						transform: scale(1.4);
+					}
+
+					@include media (md) {
+						transform: none;
+					}
+				}
+			}
+		}
+
+		&-arrows {
+			@include media (md) {
+				position: absolute;
+				bottom: 30px;
+				right:  45px;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+			}
+
+			@include media (xs) {
+				bottom: 20px;
+				right:  20px;
+			}
+
+			.slider-arrows {
+
+				&__arrow {
+					top: calc(50% - 35px);
+					background-color: transparent;
+
+					@include media (md) {
+						position: static;
+						transform: translate(0);
+						margin-left: 20px;
+						background-color: $accent;
+
+						&.swiper-button-disabled {
+							background-color: transparent;
+						}
+
+						&:first-child {
+							margin-left: 0;
+						}
+					}
+
+					@include media (xs) {
+						margin-left: 15px;
+					}
+
+					&:hover {
+						background-color: $accent;
+					}
+
+					&_prev {
+						left: 50%;
+						transform: translate(-57vmin, -50%);
+					}
+
+					&_next {
+						right: 50%;
+						transform: translate(57vmin, -50%);
+					}
+				}
+
+			}
+		}
+
+		&-pagination {
+			position: absolute;
+			bottom: 4.6vmin;
+			left: 50%;
+			transform: translate(-50%, 0);
+			border-bottom: 1px solid rgba($pearl-bush, .3);
+			padding-bottom: px-to-rem(16, 24);
+			z-index: 2;
+
+			@media (orientation: portrait) and (min-width: 768px) {
+				bottom: 3vmin;
+			}
+
+			@include media (md) {
+				display: none;
+			}
+
+			&-list {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			&-item {
+				font-size: px-to-rem(20, 24);
+				margin-right: px-to-rem(33, 24);
+				padding: 0 3px;
+				transition: .6s all ease;
+				@include PD-R;
+				cursor: pointer;
+				white-space: nowrap;
+
+				&_active {
+					color: $accent;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			&-cursor {
+				display: block;
+				position: absolute;
+				bottom: -1px;
+				left: 0;
+				height: 1px;
+				background-color: $accent;
+				z-index: 1;
+				transition: 1.7s all ease;
+
+				&:after {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					transform: translate(-50%, 0);
+					height: px-to-rem(18, 24);
+					width: 1px;
+					background-color: $accent;
+				}
+			}
+		}
+	}
+
+
+}

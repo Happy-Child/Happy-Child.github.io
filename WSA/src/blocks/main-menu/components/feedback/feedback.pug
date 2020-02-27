@@ -1,0 +1,7 @@
+include ../../../field-send/field-send
+
+mixin feedback(blockName)
+	div(class=blockName + "__feedback")
+		div(class=blockName + "__feedback-text") Want to translate your design ideas? Leave your<br> contacts and we will discuss your project together.
+
+		+field-send(blockName + "__feedback-")

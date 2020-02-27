@@ -1,0 +1,95 @@
+.our-plus {
+  padding-bottom: 25px;
+
+  @include media(sm) {
+    padding-bottom: 10px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+
+    @include media(sm) {
+      margin-top: 30px;
+    }
+  }
+
+  &__item {
+    width: calc(100% / 3);
+    margin-bottom: px-to-em(80, 18);
+    text-align: center;
+    font-size: 18px;
+    padding: 0 12px;
+
+    @include media(xl) {
+      font-size: 16px;
+    }
+
+    @include media(lg) {
+      width: 50%;
+    }
+
+    @include media(md) {
+      font-size: 14px;
+    }
+
+    @include media(sm) {
+      padding: 0 22px;
+      margin-bottom: px-to-em(30, 14);
+    }
+
+    @include media(xs) {
+      font-size: 12px;
+      padding: 0 8px;
+    }
+
+    &-wrap-icon {
+      width: px-to-em(90, 18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto px-to-em(12, 18);
+      position: relative;
+
+      &:after {
+        @include stretchHeight(100%)
+      }
+
+      @include media(sm) {
+        width: px-to-em(50, 14);
+        margin: 0 auto 14px;
+      }
+    }
+
+    &-icon {
+      max-width: 100%;
+      max-height: 100%;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &-text {
+      font-size: px-to-em(22, 18);
+      line-height: px-to-em(25, 18);
+      @include M-Medium;
+
+      @include media(sm) {
+        font-size: px-to-em(15, 14);
+        line-height: px-to-em(18, 14);
+      }
+
+      em {
+        color: $blue;
+        @include M-SemiBold;
+      }
+
+    }
+
+  }
+
+}

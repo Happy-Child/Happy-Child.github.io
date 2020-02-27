@@ -1,0 +1,77 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+.title-1,
+.title-2,
+.title-3,
+.title-4,
+.title-5 {
+	@include PD-R;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+
+}
+
+
+.title-1,
+.title-2,
+.title-3,
+.title-4,
+.title-5 {
+
+}
+
+
+h1,
+.title-1 {
+	font-size: px-to-rem(64, 24);
+	line-height: px-to-rem(72, 24);
+
+	@include media (xxl) {
+		font-size: px-to-rem(55, 22);
+		line-height: px-to-rem(62, 22);
+	}
+
+	@include media (sm) {
+		font-size: px-to-rem(36, 18);
+	}
+
+}
+
+h2,
+.title-2 {
+	font-size: px-to-rem(36, 24);
+	line-height: px-to-rem(46, 24);
+
+	@include media (xxl) {
+		font-size: px-to-rem(30, 22);
+		line-height: px-to-rem(38, 22);
+	}
+}
+
+h3,
+.title-3 {
+	font-size: 1rem;
+	line-height: px-to-rem(36, 24);
+}
+
+h4,
+.title-4 {
+	font-size: px-to-rem(20, 24);
+	line-height: px-to-rem(32, 24);
+}
+
+h5,
+.title-5 {
+	font-size: px-to-rem(18, 24);
+	line-height: px-to-rem(30, 24);
+}
+

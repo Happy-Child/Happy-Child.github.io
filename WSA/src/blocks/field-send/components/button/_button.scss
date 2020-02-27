@@ -1,0 +1,33 @@
+.field-send {
+
+	&__button {
+		color: $accent;
+		font-family: inherit;
+		font-size: inherit;
+		position: relative;
+		line-height: 24px;
+		cursor: pointer;
+		transition: .4s all ease;
+
+		@include media (1700px) {
+			line-height: 16px;
+		}
+
+		@include media (xxl) {
+			line-height: 18px;
+		}
+
+		&:hover {
+			color: $default-text;
+
+			&:after {
+				background-color: $default-text;
+			}
+		}
+
+		&:after {
+			@include underline($accent, 100%);
+		}
+	}
+
+}

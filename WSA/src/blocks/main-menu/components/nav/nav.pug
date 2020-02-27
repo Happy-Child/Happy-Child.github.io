@@ -1,0 +1,101 @@
+mixin nav(blockName)
+
+	mixin menu-group(dataArr)
+		if(typeof(dataArr) !== 'undefined')
+
+			.main-menu__nav-wrap-list
+				ul.main-menu__nav-list
+
+					each data in dataArr
+						li(class=blockName + "__nav-item")
+							a(class=blockName + "__nav-link", href= data.url, target="_blank" rel="noreferrer")= data.name
+					
+
+	nav(class=blockName + "__nav")
+		+menu-group(
+			[
+				{
+					name: "Products",
+					url: "product.html"
+				},
+				{
+					name: "Factory",
+					url: "factory.html"
+				},
+				{
+					name: "Ordering & Delivery",
+					url: "order-delivery.html"
+				}
+			]
+		)
+
+
+		+menu-group(
+			[
+				{
+					name: "About Us",
+					url: "about-us.html"
+				},
+				{
+					name: "Why Us",
+					url: "#"
+				},
+				{
+					name: "Corporate Structure",
+					url: "#"
+				}
+			]
+		)
+
+		+menu-group(
+			[
+				{
+					name: "Quality",
+					url: "quality.html"
+				},
+				{
+					name: "Services",
+					url: "#"
+				},
+				{
+					name: "Warranty",
+					url: "#"
+				}
+			]
+		)
+
+
+		+menu-group(
+			[
+				{
+					name: "Values/Mission",
+					url: "#"
+				},
+				{
+					name: "Environment",
+					url: "#"
+				},
+				{
+					name: "Corporate Social Resposibility",
+					url: "#"
+				}
+			]
+		)
+
+
+		+menu-group(
+			[
+				{
+					name: "Contact",
+					url: "#"
+				},
+				{
+					name: "Login",
+					url: "#"
+				},
+				{
+					name: "Feed Back",
+					url: "#"
+				}
+			]
+		)

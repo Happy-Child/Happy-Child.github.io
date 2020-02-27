@@ -1,0 +1,72 @@
+.user-data-info
+	.wrap-groups-fields.wrap-form
+
+		span.form-title Личные данные
+		.last-activity
+			span Дата обновления: 07.12.2017 14:15:45
+			span Последняя авторизация: 07.12.2017 14:24:54
+
+		.error-msg
+			span Пользователь с таким логином уже существует
+
+		form.form.form-about-field
+			span.label Логин (мин. 3 символа) *
+			.wrap-field
+				input.field.field-login(type="text", value="Superman").error-invalid
+				span.about-field Является логином для входа на сайт.
+				span.text-error-empty Поле обязательно для заполнения
+				span.text-error-invalid Минимальная длина - 3 символа
+
+			span.label Фамилия Имя Отчество *
+			.wrap-field
+				input.field.field-name(type="text", value="Константиновский Константин Константинович")
+				span.about-field Ваше имя необходимо для того, чтобы мы знали<br>с кем имеем дело
+				span.text-error-empty Поле обязательно для заполнения
+
+			span.label Компания
+			.wrap-field
+				input.field(type="text",  value="Adena")
+				a(href="#").in-company Стать представителем компании
+
+			span.label Номер телефона *
+			.wrap-field
+				input.field.field-tel(type="tel", placeholder="+375 (__) ___-__-__", value="+375 (29) 000 00 00")
+				span.about-field Контактный телефон нужен для уточнения деталей заказа
+				span.text-error-empty Поле обязательно для заполнения
+				span.text-error-invalid Неверный формат
+
+			span.label E-mail *
+			.wrap-field
+				input.field.field-email(type="text", value="pochta@gmail.com")
+				span.about-field На него будут приходить уведомления о статусах заказа
+				span.text-error-empty Поле обязательно для заполнения
+				span.text-error-invalid Неверный формат
+
+			button(type="submit").form-btn.btn-blue
+				span.text Сохранить изменения
+
+	.wrap-groups-fields.wrap-form
+		span.form-title Сменить пароль
+
+		form.form.form-about-field
+			span.label Пароль *
+			.wrap-field
+				input.field.field-password(type="password").error-invalid
+				span.about-field Длина пароля не менее 6 символов
+				span.text-error-empty Поле обязательно для заполнения
+				span.text-error-invalid Минимальная длина - 6 символа
+
+			span.label Подтверждение пароля *
+			.wrap-field
+				input.field.field-password-second(type="password")
+				span.text-error-empty Поле обязательно для заполнения
+				span.text-error-invalid Пароли не совпадают
+
+
+			button(type="submit").form-btn.btn-blue
+				span.text Сохранить изменения
+
+	a(href="#").account-out
+		.wrap-icon.wrap-img
+			img(src="img/arrow-dropdown-menu-hover.svg", alt="")
+		| Выйти из кабинета

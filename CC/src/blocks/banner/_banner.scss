@@ -1,0 +1,191 @@
+.banner {
+  min-height: 650px;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: px-to-rem(60, 18);
+
+  @include media(xxl) {
+    min-height: 580px;
+  }
+
+  @include media(xl) {
+    min-height: 480px;
+  }
+
+  @include media(md) {
+    padding-top: px-to-rem(50, 14);
+  }
+
+  @include media(md) {
+    min-height: 420px;
+  }
+
+  @include media(sm) {
+    min-height: 300px;
+    padding-top: 42px;
+  }
+
+  @include media(480px) {
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background: url("../img/laser-mobile.png") center/contain no-repeat;
+    }
+
+  }
+
+  .breadcrumbs {
+    color: #fff;
+
+    &__item {
+      &:after {
+        background-color: #fff;
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__inner {
+
+  }
+
+  &__wrap-cards {
+
+  }
+
+  .wrap-card {
+    padding: 0 px-to-em(15, 18);
+    margin-bottom: px-to-em(35, 18);
+    width: calc(100% / 3);
+
+    &:nth-child(1) {
+
+      .card {
+        clip-path: polygon(0 0, 100% 0, 91% 100%, 0 79%);
+      }
+
+    }
+
+    &:nth-child(2) {
+      @include media (lg) {
+
+        .card {
+          clip-path: polygon(0 0, 100% 0, 100% 79%, 9% 100%);
+        }
+
+      }
+
+      @include media(480px) {
+
+        .card {
+          clip-path: none;
+        }
+
+      }
+
+    }
+
+    &:nth-child(3) {
+
+      .card {
+        clip-path: polygon(0 0, 100% 0, 100% 79%, 9% 100%);
+
+        @include media (lg) {
+          clip-path: none;
+        }
+
+        @include media(480px) {
+          clip-path: polygon(0 0, 100% 0, 100% 79%, 9% 100%);
+        }
+
+      }
+
+    }
+
+    @include media (lg) {
+      width: 50%;
+    }
+
+    @include media (md) {
+      width: 100%;
+      max-width: 345px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
+
+  .card {
+
+    &__title {
+      @include media(sm) {
+        margin-bottom: px-to-em(12, 18);
+      }
+    }
+
+  }
+
+  &__wrap-text {
+    text-align: center;
+    color: #fff;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    @include M-SemiBold;
+    margin-bottom: px-to-em(28, 36);
+
+    @include media(sm) {
+      &.title-1 {
+        font-size: px-to-rem(26, 14);
+        line-height: px-to-rem(32, 14);
+        text-align: center;
+
+        em {
+          display: block;
+        }
+      }
+    }
+
+    em {
+      color: $red
+    }
+  }
+
+  &__subtitle {
+    @include media(sm) {
+      display: none;
+    }
+  }
+
+  &__wrap-form {
+    max-width: px-to-em(745, 18);
+    margin: px-to-em(45, 18) auto 0;
+
+    @include media(sm) {
+      margin-top: px-to-rem(32, 14);
+
+      .form__wrap-field {
+        display: none;
+      }
+
+      .form__btn {
+        margin-top: 0;
+      }
+    }
+  }
+
+}

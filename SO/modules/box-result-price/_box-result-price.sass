@@ -1,0 +1,64 @@
+.box-result-price
+	.item-price
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+
+	.text-red
+		color: $red
+
+	.wrap-action-prices
+		margin: 15px 0 40px
+		.item-price
+			margin-bottom: 15px
+			span
+				line-height: 16px
+				&:last-child
+					white-space: nowrap
+			&:last-child
+				margin-bottom: 0
+
+
+	.result-price
+		align-items: flex-end
+		span
+			line-height: 19px
+		em
+			font-size: 1.5rem
+	
+	.btn
+		margin-top: 20px
+		max-width: none
+
+
+
++media-breakpoint-down(lg)
+	.box-result-price
+		.wrap-action-prices
+			margin-bottom: 30px
+			.item-price
+				margin-bottom: 10px
+
+		.result-price
+			em
+				font-size: 1.2rem
+
+
++media-breakpoint-down(md)
+
++media-breakpoint-down(sm)
+
++media-breakpoint-down(xs)
+	.box-result-price
+		.wrap-action-prices
+			margin: 15px 0 40px
+		
+		.result-price
+			em
+				font-size: 24px
+

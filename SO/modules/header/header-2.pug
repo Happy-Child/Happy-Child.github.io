@@ -1,0 +1,687 @@
+header.header
+
+	.header-top-line.wrap-our-plus-item
+		.container
+			.row.no-gutters.justify-content-between.align-items-center
+
+				.header-top-line_item.our-plus-item
+					.wrap-icon.responsive-img
+						img(src="img/014-box.svg", alt="")
+					span.text-medium Бесплатная доставка
+
+				.header-top-line_item.our-plus-item
+					.wrap-icon.responsive-img
+						img(src="img/020-hanger.svg", alt="")
+
+					span.text-medium Примерка перед покупкой
+
+				.header-top-line_item.our-plus-item
+					.wrap-icon.responsive-img
+						img(src="img/019-transfer.svg", alt="")
+						
+					span.text-medium Возврат товара за полную сумму
+
+				.header-top-line_item.our-plus-item
+					.wrap-icon.responsive-img
+						img(src="img/017-files-and-folders.svg", alt="")
+						
+					span.text-medium Рассрочка
+
+				.header-top-line_item.our-plus-item
+					.wrap-icon.responsive-img
+						img(src="img/018-watch.svg", alt="")
+
+					span.text-medium Гарантия 30 дней
+
+				.header-top-line_item.our-plus-item
+					.wrap-icon.responsive-img
+						img(src="img/016-sale-1.svg", alt="")
+					span.text-medium Программа лояльности
+
+
+	.header-center-line
+		.container
+			.row.no-gutters.align-items-center
+				.wrap-menu-btn
+					button.icon.hamburger.hamburger--squeeze(type="button")
+						span.hamburger-box
+							span.hamburger-inner
+
+				a(href="index.html").wrap-logo.responsive-img
+					img(src="img/logo.png", alt="")
+
+				form
+					.wrap-field.wrap-field-search
+						input.text-gray.text-medium(type="text", placeholder="Поиск по сайту")
+						button(type="submit").btn-search
+
+				a.text-fw-bold.header-center-line_phone(href="tel:375291906669") +375 (29) 190-66-69
+
+
+				.user(data-izimodal-open=".modal-sing-in")
+					.user-content
+						.wrap-icon.responsive-img
+							img(src="img/icon_user.svg", alt="")
+						span Войти
+
+				.shop-state
+					.shop-state_item
+						a(href="#").wrap-icon.responsive-img
+							img(src="img/006-heart.svg", alt="")
+							span.count.text-fw-black 12
+					
+					.shop-state_item.el-show-dropdown
+						.wrap-icon.responsive-img
+							img(src="img/package.svg", alt="")
+							span.count.text-fw-black 9
+						
+						.dropdown-cart.wrap-dropdown-label
+							.dropdown-label
+								
+								ul.wrap-product-card.selected-products-list
+
+									li.wrap-product-card.selected-product
+										a(href="#").wrap-img.product-img.product-img-border
+											img(src="img/form-img-2.png", alt="")
+
+										.wrap-product-data
+											span.brand.text-gray.text-fw-bold.text-small #Reebok Sport
+											a(href="#").product-name.text-medium.text-fw-bold Спортивная футболка Activchil Graphic Move
+											.wrap-price
+												span.cur-price.text-fw-bold 172.90 руб.
+
+									li.wrap-product-card.selected-product
+										a(href="#").wrap-img.product-img.product-img-border
+											img(src="img/form-img-2.png", alt="")
+
+										.wrap-product-data
+											span.brand.text-gray.text-fw-bold.text-small #Reebok Sport
+											a(href="#").product-name.text-medium.text-fw-bold Спортивная футболка Activchil Graphic Move
+											.wrap-price
+												span.cur-price.text-fw-bold 172.90 руб.
+
+									li.wrap-product-card.selected-product
+										a(href="#").wrap-img.product-img.product-img-border
+											img(src="img/form-img-2.png", alt="")
+
+										.wrap-product-data
+											span.brand.text-gray.text-fw-bold.text-small #Reebok Sport
+											a(href="#").product-name.text-medium.text-fw-bold Спортивная футболка Activchil Graphic Move
+											.wrap-price
+												span.cur-price.text-fw-bold 172.90 руб.
+
+									li.wrap-product-card.selected-product
+										a(href="#").wrap-img.product-img.product-img-border
+											img(src="img/form-img-2.png", alt="")
+
+										.wrap-product-data
+											span.brand.text-gray.text-fw-bold.text-small #Reebok Sport
+											a(href="#").product-name.text-medium.text-fw-bold Спортивная футболка Activchil Graphic Move
+											.wrap-price
+												span.cur-price.text-fw-bold 172.90 руб.
+
+								.bottom-line
+									.wrap-price
+										span.text-medium Итого
+										span.price.text-fw-bold 12 200.20 руб.
+									a(href="#").btn.btn-dark перейти в корзину
+
+
+	.header-menu
+		.container
+			.row.no-gutters
+				nav
+					ul.nav-list
+						li
+							a(href="#").dropdown-link мужчины
+
+							.dropdown-menu
+								.container
+									.row
+
+										.col-2
+											.dropdown-menu_img
+												img(src="img/sub-nav-img-1.png", alt="")
+
+											span.dropdown-menu_title Модальные окна
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#", data-izimodal-open=".modal-simple-recovery-password") Простое восст. пароля
+												li
+													a(href="#", data-izimodal-open=".modal-email-recovery-password") Email восст. пароля
+												li
+													a(href="#", data-izimodal-open=".modal-success-recovery-password") Успешное восст. пароля
+												li
+													a(href="#", data-izimodal-open=".modal-registration") Регистрация
+												li
+													a(href="#", data-izimodal-open=".modal-sing-in") Авторизация
+
+												li
+													a(href="#", data-izimodal-open=".modal-thanks") Спасибо
+												li
+													a(href="#", data-izimodal-open=".modal-remove-address-question") Удалить адрес?
+
+										.col-2
+											.dropdown-menu_img
+												img(src="img/sub-nav-img-2.png", alt="")
+
+											span.dropdown-menu_title Модальные окна
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#", data-izimodal-open=".modal-testimonial") Оставить отзыв
+												li
+													a(href="#", data-izimodal-open=".modal-add-address") Добавить адресс
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+												li
+													a(href="#") Людям
+
+
+										.col-2
+											.dropdown-menu_img
+												img(src="img/sub-nav-img-1.png", alt="")
+
+											span.dropdown-menu_title Йога
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+												li
+													a(href="#") Женщинам скорее всего в две строки
+
+
+										.col-2
+											.dropdown-menu_img
+												img(src="img/sub-nav-img-2.png", alt="")
+
+											span.dropdown-menu_title Футбол
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+
+										.col-4
+											.responsive-img
+												img(src="img/photo-banner-menu.png", alt="")
+
+
+						li
+							a(href="#").dropdown-link женщины
+							.dropdown-menu
+								.container
+									.row
+
+										.col-2
+											.dropdown-menu_img
+												img(src="img/sub-nav-img-1.png", alt="")
+
+											span.dropdown-menu_title Бег
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+
+										.col-2
+											.dropdown-menu_img
+												img(src="img/sub-nav-img-2.png", alt="")
+
+											span.dropdown-menu_title Тренировки
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+
+										.col-2
+											.dropdown-menu_img
+												img(src="img/sub-nav-img-2.png", alt="")
+
+											span.dropdown-menu_title Йога
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+
+										.col-2
+											.dropdown-menu_img
+												img(src="img/sub-nav-img-1.png", alt="")
+
+											span.dropdown-menu_title Футбол
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+                         		
+										.col-2
+											.dropdown-menu_img
+												img(src="img/sub-nav-img-2.png", alt="")
+
+											span.dropdown-menu_title Йога
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+
+										.col-2
+											.dropdown-menu_img
+												img(src="img/sub-nav-img-2.png", alt="")
+
+											span.dropdown-menu_title Футбол
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам						
+
+
+						li
+							a(href="#").dropdown-link дети
+							.dropdown-menu
+								.container
+									.row
+
+										.col-2
+											span.dropdown-menu_title Бег
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+
+										.col-2
+											span.dropdown-menu_title Тренировки
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+												li
+													a(href="#") Людям
+
+
+										.col-2
+											span.dropdown-menu_title Йога
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+												li
+													a(href="#") Женщинам скорее всего в две строки
+
+
+										.col-2
+											span.dropdown-menu_title Футбол
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+
+										.col-4
+											.responsive-img
+												img(src="img/photo-banner-menu.png", alt="")
+								
+
+						li
+							a(href="#").dropdown-link % sale
+							.dropdown-menu
+								.container
+									.row
+
+										.col-2
+											span.dropdown-menu_title Бег
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+
+										.col-2
+											span.dropdown-menu_title Тренировки
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+												li
+													a(href="#") Людям
+
+
+										.col-2
+											span.dropdown-menu_title Йога
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+												li
+													a(href="#") Женщинам скорее всего в две строки
+
+
+										.col-2
+											span.dropdown-menu_title Футбол
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+
+										.col-4
+											.responsive-img
+												img(src="img/photo-banner-menu.png", alt="")
+								
+
+						li
+							a(href="#").dropdown-link бренды
+							.dropdown-menu
+								.container
+									.row
+
+										.col-2
+											.dropdown-menu_img
+												img(src="img/sub-nav-img-1.png", alt="")
+
+											span.dropdown-menu_title Бег
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+
+										.col-2
+											.dropdown-menu_img
+												img(src="img/sub-nav-img-2.png", alt="")
+
+											span.dropdown-menu_title Тренировки
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+
+										.col-2
+											.dropdown-menu_img
+												img(src="img/sub-nav-img-2.png", alt="")
+
+											span.dropdown-menu_title Йога
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+
+										.col-2
+											.dropdown-menu_img
+												img(src="img/sub-nav-img-1.png", alt="")
+
+											span.dropdown-menu_title Футбол
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+                         		
+										.col-2
+											.dropdown-menu_img
+												img(src="img/sub-nav-img-2.png", alt="")
+
+											span.dropdown-menu_title Йога
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+
+										.col-2
+											.dropdown-menu_img
+												img(src="img/sub-nav-img-2.png", alt="")
+
+											span.dropdown-menu_title Футбол
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам						
+
+
+						li
+							a(href="#").dropdown-link виды спорта
+							.dropdown-menu
+								.container
+									.row
+
+										.col-2
+											span.dropdown-menu_title Бег
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+
+										.col-2
+											span.dropdown-menu_title Тренировки
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+												li
+													a(href="#") Людям
+
+
+										.col-2
+											span.dropdown-menu_title Йога
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+												li
+													a(href="#") Женщинам скорее всего в две строки
+
+
+										.col-2
+											span.dropdown-menu_title Футбол
+
+											ul.dropdown-sub-nav
+												li
+													a(href="#") Обувь
+												li
+													a(href="#") Одежда
+												li
+													a(href="#") Аксессуары
+												li
+													a(href="#") Мужчинам
+												li
+													a(href="#") Женщинам
+
+										.col-4
+											.responsive-img
+												img(src="img/photo-banner-menu.png", alt="")
+

@@ -1,0 +1,43 @@
+extends ../pug/layouts/default
+include ../pug/helpers/mixins
+
+
+block variables
+	- const title = "Breeding page";
+
+block content
+	
+	style.
+		ul {
+			padding: 40px;
+		}
+
+		li {
+			margin-bottom: 20px;
+		}
+		
+		a {
+			display: block;
+			color: #fff;
+			font-size: 20px;
+		}
+
+
+	ul
+		li
+			a(href="home.html", target="_blank") Home
+
+		li
+			a(href="about-us.html", target="_blank") About us
+
+		li
+			a(href="product.html", target="_blank") Product
+
+		li
+			a(href="factory.html", target="_blank") Factory
+
+		li
+			a(href="order-delivery.html", target="_blank") Order & delivery
+
+		li
+			a(href="quality.html", target="_blank") Quality

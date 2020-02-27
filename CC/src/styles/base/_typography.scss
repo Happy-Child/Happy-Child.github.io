@@ -1,0 +1,65 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+.title-1,
+.title-2,
+.title-3,
+.title-4,
+.title-5 {
+
+  em {
+    color: $red;
+  }
+
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+
+}
+
+
+.title-1,
+.title-2,
+.title-3,
+.title-4,
+.title-5 {
+
+}
+
+
+.title-1 {
+  font-size: px-to-rem(36, 18);
+  line-height: px-to-rem(44, 18);
+
+  @include media(sm) {
+    font-size: px-to-rem(16, 14);
+    line-height: px-to-rem(24, 14);
+  }
+
+}
+
+.title-2 {
+  font-size: px-to-rem(24, 18);
+  line-height: px-to-rem(29, 18);
+}
+
+
+.title-3 {
+  font-size: px-to-rem(22, 18);
+  line-height: px-to-rem(27, 18);
+
+  @include media(sm) {
+    font-size: px-to-rem(13, 14);
+    line-height: px-to-rem(16, 14);
+  }
+
+}
+
+

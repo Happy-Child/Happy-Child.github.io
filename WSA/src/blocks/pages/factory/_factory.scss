@@ -1,0 +1,32 @@
+@import "components/components";
+
+.factory {
+	padding-bottom: px-to-rem(120, 24);
+	
+	.page__bg {
+		height: 100vh;
+	}
+
+	&__bg {
+		background-image: url("../img/background-pages/background-factory-page.webp");
+	}
+
+	&__main {
+		padding-top: px-to-rem(10, 24);
+
+		> .wrapper {
+			position: relative;
+			padding: 0;
+		}
+	}
+
+}
+
+
+html.no-webp {
+
+	.factory__bg {
+		background-image: url("../img/background-pages/background-factory-page.png");
+	}
+
+}

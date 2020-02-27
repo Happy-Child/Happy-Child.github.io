@@ -1,0 +1,166 @@
+.main-menu {
+
+	&__nav {
+		max-width: 40.1vw;
+		margin: 0 auto;
+		position: relative;
+		top: 1.9vw;
+		left:	px-to-rem(160, 24);
+		opacity: 0;
+		transform: translate(0, 40px);
+
+		@include media (xl) {
+			left: px-to-rem(80, 24);
+			max-width: 500px;
+		}
+
+		@include media (lg) {
+			left: 0;
+		}
+
+		@include media (md) {
+			padding: 0 30px;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		&-wrap-list {
+			float: left;
+			width: 100%;
+			max-width: 50%;
+			margin-bottom: 2.86vw;
+
+			@include media (xl) {
+				margin-bottom: px-to-rem(30, 20);
+			}
+
+			@include media (sm) {
+				float: none;
+				margin-bottom: 40px;
+				max-width: none;
+			}
+		}
+
+		&-item {
+			margin-bottom: 7px;
+			line-height: 1.875vw;
+
+			@include media (1700px) {
+				line-height: 1.7vw;
+			}
+
+			@include media (xl) {
+				line-height: px-to-rem(22, 20);
+			}
+
+			&:first-child {
+				display: block;
+				margin-bottom: 1.04vw;
+				line-height: 2.7vw;
+
+				@include media (1700px) {
+					line-height: 2.5vw;
+				}
+
+				@include media (xl) {
+					line-height: px-to-rem(28, 20);
+					margin-bottom: px-to-rem(12, 20);
+				}
+
+				@include media (sm) {
+				margin-bottom: 15px;
+				}
+
+				.main-menu__nav-link {
+					font-size: 2.5vw;
+					color: $pearl-bush;
+					@include PD-B;
+					opacity: 1;
+
+					@include media (xl) {
+						font-size: px-to-rem(32, 20);
+						line-height: px-to-rem(34, 20);
+					}
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&-link {
+			color: rgba($pearl-bush, .7);
+			opacity: .7;
+			font-size: 1.25vw;
+			line-height: inherit;
+			@include PD-R;
+			transition: .3s all ease;
+			display: inline-block;
+
+			@include media (xl) {
+				font-size: px-to-rem(15, 20);
+			}
+
+			@include media (sm) {
+				font-size: 16px;
+				line-height: 24px;
+			}
+
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+
+}
+
+
+
+// -- Animation BEGIN
+.main-menu {
+	.main-menu__nav {
+		animation: nav-hide .8s ease alternate forwards;
+	}
+}
+
+.main-menu_visible {
+	.main-menu__nav {
+		animation: nav-show .8s .8s ease alternate forwards;
+
+		@include media (lg) {
+			animation: nav-show .8s .2s ease alternate forwards;
+		}
+	}
+}
+// -- Animation END
+
+
+
+// -- Keyframes BEGIN
+@keyframes nav-show {
+	0% {
+		transform: translate(0, 40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+@keyframes nav-hide {
+	0% {
+		transform: translate(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(0, -40px);
+		opacity: 0;
+	}
+}
+// -- Keyframes END

@@ -1,0 +1,36 @@
+extends ../pug/layouts/default
+include ../pug/helpers/mixins
+
+
+block variables
+	- const title = "Product";
+	- const bodyClass = "product";
+
+block content
+	
+	//Page background BEGIN
+	.product__bg.page__bg(aria-hidden="true")
+	//Page background END
+	
+	//Main menu BEGIN
+	include ../blocks/main-menu/main-menu
+	//Main menu END
+
+
+	//Header BEGIN
+	include ../blocks/header/header
+	//Header END
+	
+	//Page content BEGIN
+	include ../blocks/pages/product/product
+	//Page content END
+
+	//Footer BEGIN
+	include ../blocks/footer/footer
+	//Footer END
+
+
+
+block append scripts
+	script(src="js/common.js")
+	script(src="js/product.js")

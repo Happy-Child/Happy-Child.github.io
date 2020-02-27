@@ -1,0 +1,380 @@
+.header {
+
+  @include media(lg) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 1px 8px -2px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+
+  &__top {
+    background-color: #fff;
+    font-size: 18px;
+
+    @include media(xxl) {
+      font-size: 15px;
+    }
+
+    @include media(xl) {
+      font-size: 12px;
+    }
+
+    &-inner {
+      min-height: 120px;
+
+      @include media(xxl) {
+        min-height: 100px;
+      }
+
+      @include media(xl) {
+        min-height: 90px;
+      }
+
+      @include media(lg) {
+        min-height: 70px;
+        justify-content: space-between;
+      }
+
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-right: px-to-em(66, 18);
+
+      @include media(lg) {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &_phones,
+      &_mail {
+
+        @include media (lg) {
+          display: none;
+        }
+
+      }
+
+      &_phones {
+
+        .header__top-item-text {
+
+          span {
+            color: $red;
+          }
+
+        }
+
+      }
+
+      &_mail {
+        margin-right: px-to-em(110, 18);
+      }
+
+      &_callback {
+
+        @include media (lg) {
+          position: relative;
+          top: 4px;
+
+          .header__top-item-wrap-icon {
+            display: none;
+          }
+
+          em {
+            position: relative;
+
+            &:after {
+              content: "";
+              position: absolute;
+              top: calc(100% - 2px);
+              left: 0;
+              height: 1px;
+              width: 100%;
+              color: $red;
+              background-color: $red;
+            }
+
+            &:first-child {
+
+              &:after {
+                width: 105%;
+              }
+
+            }
+
+            &:last-child {
+              color: $default-text;
+              z-index: 1;
+
+              &:after {
+                background-color: $default-text;
+              }
+            }
+
+          }
+
+        }
+
+        .header__top-item-text {
+          @include M-SemiBold;
+          text-transform: uppercase;
+          color: $red;
+
+          @include media (sm) {
+            font-size: 11px;
+            line-height: 16px;
+          }
+
+        }
+
+      }
+
+      &-wrap-icon {
+        margin-right: px-to-em(28, 18);
+        width: px-to-em(40, 18);
+        height: px-to-em(40, 18);
+      }
+
+      &-icon {
+        max-width: 100%;
+        max-height: 100%;
+        height: 100%;
+        width: 100%;
+
+        path {
+          fill: $blue;
+        }
+      }
+
+      &-text {
+        font-size: 1em;
+        line-height: px-to-em(22, 18);
+        margin-left: px-to-em(26, 18);
+        @include M-Medium;
+        color: $default-text;
+        position: relative;
+        top: 2px;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+      }
+
+    }
+  }
+
+  &__bottom {
+    background-color: #222526;
+    font-size: 18px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(0, -65px);
+      font-size: 18px;
+      width: px-to-em(1300, 18);
+      height: px-to-em(320, 18);
+      background: url("../img/laser.png") center/contain no-repeat;
+      pointer-events: none;
+
+      @media (max-width: 1750px) {
+        font-size: 12px;
+        top: 4.5em;
+      }
+
+      @include media(xxl) {
+        top: 2.2em;
+      }
+
+      @media (max-width: 1450px) {
+        font-size: 8px;
+        top: 7.5em;
+      }
+    }
+
+    @include media(xxl) {
+      font-size: 15px;
+    }
+
+    @include media(xl) {
+      font-size: 12px;
+    }
+
+    @include media (lg) {
+      display: none;
+    }
+
+    &-inner {
+      min-height: 100px;
+      justify-content: center;
+
+      @include media(xxl) {
+        min-height: 80px;
+      }
+
+      @include media(xxl) {
+        min-height: 70px;
+      }
+
+    }
+
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+
+    @include media(lg) {
+      padding: 6px 0;
+    }
+
+  }
+
+  &__wrap-logo {
+    height: 96px;
+    margin-right: px-to-em(96, 18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media(xl) {
+      height: 70px;
+    }
+
+    @include media(lg) {
+      height: 52px;
+      margin-right: 0;
+    }
+
+  }
+
+  &__logo-img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__nav {
+
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: px-to-em(-10, 18);
+    }
+
+    &-item {
+      margin-right: px-to-em(44, 18);
+      margin-bottom: px-to-em(10, 18);
+      transition: .3s opacity ease;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover:not(.header__nav-item_current) {
+        opacity: .7;
+      }
+
+      &_current {
+
+        .header__nav-link {
+          color: $red;
+        }
+
+      }
+
+    }
+
+    &-link {
+      color: #fff;
+      font-size: px-to-em(16, 18);
+      line-height: px-to-em(24, 18);
+      text-transform: uppercase;
+      @include M-Medium;
+    }
+
+  }
+
+  &__btn {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 18px;
+    position: relative;
+    top: 8px;
+
+    @include media (lg) {
+      display: flex;
+    }
+
+    &_active {
+
+      .header__btn {
+
+        &-line {
+          background-color: $blue;
+
+          &:nth-child(1) {
+            margin-bottom: -2px;
+            transform: rotate(45deg);
+          }
+
+          &:nth-child(2) {
+            margin: 0;
+            transform: translate(-100%, 0);
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            margin-top: -2px;
+            transform: rotate(-45deg);
+            width: 100%;
+          }
+
+        }
+
+      }
+
+    }
+
+    &-line {
+      position: relative;
+      height: 2px;
+      width: inherit;
+      transition: .4s all ease;
+      background-color: #000;
+      border-radius: 4px;
+
+      &:nth-child(1) {
+
+      }
+
+      &:nth-child(2) {
+        margin: 6px 0;
+      }
+
+      &:nth-child(3) {
+        width: 66.6%;
+        align-self: flex-end;
+      }
+
+    }
+
+  }
+
+}
+

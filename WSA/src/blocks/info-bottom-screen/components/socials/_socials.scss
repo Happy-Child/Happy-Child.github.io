@@ -1,0 +1,44 @@
+.info-bottom-screen {
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 5.55vmin;
+		right: 0;
+
+		@media (orientation: portrait) {
+			display: block;
+		}
+
+		&-item {
+			margin-right: 3.7vmin;
+
+			@media (orientation: portrait) {
+				margin: 3.7vmin 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&-link {
+			padding: 0.92vmin;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:hover {
+				.info-bottom-screen__socials-icon {
+					opacity: .6;
+				}
+			}
+		}
+
+		&-icon {
+
+		}
+	}
+
+}

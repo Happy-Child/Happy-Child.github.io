@@ -1,0 +1,47 @@
+.order-delivery {
+
+	&__main-content {
+		margin-bottom: px-to-rem(78, 24);
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		.title-1,
+		.title-2,
+		.title-3,
+		.title-4,
+		.title-5 {
+			margin-bottom: px-to-rem(40, 24);
+
+			@include media (xl) {
+				margin-bottom: px-to-rem(30, 22);
+			}
+		}
+
+		p {
+			margin-bottom: px-to-rem(32, 24);
+
+			@include media (xl) {
+				margin-bottom: px-to-rem(30, 22);
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
+			margin: px-to-rem(75, 24) 0;
+
+			@include media (xl) {
+				margin: px-to-rem(65, 22) 0;
+			}
+		}
+	}
+
+}

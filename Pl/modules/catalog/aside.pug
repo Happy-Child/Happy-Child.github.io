@@ -1,0 +1,344 @@
+.wrap-aside
+	.btn-close
+	aside
+		form
+			span.aside-title Фильтр по параметрам
+
+			.filter-param
+				.head
+					span.title Цена
+					.btn-control 
+						<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.09267 9.90012L5.89687 5.23037C5.96559 5.16366 6 5.0869 6 5.00007C6 4.91324 5.96559 4.83634 5.89687 4.76959L1.09267 0.100236C1.02385 0.0333418 0.944879 0 0.855507 0C0.766172 0 0.687092 0.033447 0.618412 0.100236L0.103092 0.601134C0.0343757 0.667923 3.52859e-05 0.744785 3.52859e-05 0.831614C3.52859e-05 0.918443 0.0343757 0.995304 0.103092 1.06209L4.15466 5.00007L0.102839 8.93819C0.0341229 9.00494 -4.76837e-07 9.08184 -4.76837e-07 9.16853C-4.76837e-07 9.2555 0.0343394 9.33236 0.102839 9.39911L0.618376 9.90008C0.687056 9.96683 0.766172 10 0.855471 10C0.944878 10 1.02396 9.96687 1.09267 9.90012Z" fill="#292929"/>
+						</svg>
+				
+				.wrap-fields
+					.fields-price
+						.field.field-min
+							span от
+							input(type="text", placeholder="0", value="0" maxlength="5")
+							
+						.field.field-max
+							span до
+							input(type="text", placeholder="50,000", value="50,000" maxlength="5")
+							
+					.range(data-max-value="50000")
+
+			.filter-param
+				.head
+					span.title Бренд
+					.btn-control 
+						<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.09267 9.90012L5.89687 5.23037C5.96559 5.16366 6 5.0869 6 5.00007C6 4.91324 5.96559 4.83634 5.89687 4.76959L1.09267 0.100236C1.02385 0.0333418 0.944879 0 0.855507 0C0.766172 0 0.687092 0.033447 0.618412 0.100236L0.103092 0.601134C0.0343757 0.667923 3.52859e-05 0.744785 3.52859e-05 0.831614C3.52859e-05 0.918443 0.0343757 0.995304 0.103092 1.06209L4.15466 5.00007L0.102839 8.93819C0.0341229 9.00494 -4.76837e-07 9.08184 -4.76837e-07 9.16853C-4.76837e-07 9.2555 0.0343394 9.33236 0.102839 9.39911L0.618376 9.90008C0.687056 9.96683 0.766172 10 0.855471 10C0.944878 10 1.02396 9.96687 1.09267 9.90012Z" fill="#292929"/>
+						</svg>
+				
+				.wrap-fields
+					ul
+						li
+							label.field.field-check(for="ch1")
+								input(type="checkbox", id="ch1")
+								.box
+								span.field-text Acoustic Energy
+
+						li
+							label.field.field-check(for="ch2")
+								input(type="checkbox", id="ch2")
+								.box
+								span.field-text Audio Physic
+
+						li
+							label.field.field-check(for="ch3")
+								input(type="checkbox", id="ch3")
+								.box
+								span.field-text Bose
+
+						li
+							label.field-disabled.field.field-check(for="ch6")
+								input(type="checkbox", id="ch6", disabled="disabled")
+								.box
+								span.field-text Infinity
+
+						li
+							label.field.field-check(for="ch4")
+								input(type="checkbox", id="ch4")
+								.box
+								span.field-text Acoustic Energy очень длинное название в две строки
+
+						li
+							label.field.field-check(for="ch21")
+								input(type="checkbox", id="ch21")
+								.box
+								span.field-text Infinity
+
+						li
+							label.field.field-check(for="chf2")
+								input(type="checkbox", id="chf2")
+								.box
+								span.field-text Audio Physic
+
+						li
+							label.field.field-check(for="chf3")
+								input(type="checkbox", id="chf3")
+								.box
+								span.field-text Bose
+
+						li
+							label.field-disabled.field.field-check(for="chff6")
+								input(type="checkbox", id="chff6", disabled="disabled")
+								.box
+								span.field-text Infinity
+
+						li
+							label.field.field-check(for="chff4")
+								input(type="checkbox", id="chff4")
+								.box
+								span.field-text Acoustic Energy очень длинное название в две строки
+
+
+			.filter-param.filter-param-simple
+				.head
+					label.field.field-check(for="ch11")
+						input(type="checkbox", id="ch11")
+						.box
+						span.field-text В наличии
+
+
+			.filter-param
+				.head.has-label
+					span.title Тип
+						.wrap-label
+							.icon 
+								span ?
+							.label-text Равным образом рамки и место обучения кадров<br>играет важную роль в формировании
+
+
+					.btn-control 
+						<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.09267 9.90012L5.89687 5.23037C5.96559 5.16366 6 5.0869 6 5.00007C6 4.91324 5.96559 4.83634 5.89687 4.76959L1.09267 0.100236C1.02385 0.0333418 0.944879 0 0.855507 0C0.766172 0 0.687092 0.033447 0.618412 0.100236L0.103092 0.601134C0.0343757 0.667923 3.52859e-05 0.744785 3.52859e-05 0.831614C3.52859e-05 0.918443 0.0343757 0.995304 0.103092 1.06209L4.15466 5.00007L0.102839 8.93819C0.0341229 9.00494 -4.76837e-07 9.08184 -4.76837e-07 9.16853C-4.76837e-07 9.2555 0.0343394 9.33236 0.102839 9.39911L0.618376 9.90008C0.687056 9.96683 0.766172 10 0.855471 10C0.944878 10 1.02396 9.96687 1.09267 9.90012Z" fill="#292929"/>
+						</svg>
+				
+				.wrap-fields
+					ul
+						li
+							label.field.field-radio(for="rd1")
+								input(type="radio", name="customRadio", id="rd1")
+								.box
+								span.field-text 1 DIN
+
+						li
+							label.field.field-radio(for="rd2")
+								input(type="radio", name="customRadio", id="rd2")
+								.box
+								span.field-text 2 DIN
+
+						li
+							label.field-disabled.field.field-radio(for="rd3")
+								input(type="radio", name="customRadio", disabled="disabled", id="rd3")
+								.box
+								span.field-text 3 DIN
+						li
+							label.field.field-radio(for="rd4")
+								input(type="radio", name="customRadio", id="rd4")
+								.box
+								span.field-text 1 DIN
+
+						li
+							label.field.field-radio(for="rd5")
+								input(type="radio", name="customRadio", id="rd5")
+								.box
+								span.field-text 2 DIN
+
+						li
+							label.field-disabled.field.field-radio(for="rd6")
+								input(type="radio", name="customRadio", disabled="disabled", id="rd6")
+								.box
+								span.field-text 3 DIN
+
+						li
+							label.field.field-radio(for="rd7")
+								input(type="radio", name="customRadio", id="rd7")
+								.box
+								span.field-text 1 DIN
+
+						li
+							label.field.field-radio(for="rd8")
+								input(type="radio", name="customRadio", id="rd8")
+								.box
+								span.field-text 2 DIN
+
+						li
+							label.field-disabled.field.field-radio(for="rd9")
+								input(type="radio", name="customRadio", disabled="disabled", id="rd9")
+								.box
+								span.field-text 3 DIN
+						li
+							label.field.field-radio(for="rd10")
+								input(type="radio", name="customRadio", id="rd10")
+								.box
+								span.field-text 1 DIN
+
+						li
+							label.field.field-radio(for="rd11")
+								input(type="radio", name="customRadio", id="rd11")
+								.box
+								span.field-text 2 DIN
+
+						li
+							label.field-disabled.field.field-radio(for="rd12")
+								input(type="radio", name="customRadio", disabled="disabled", id="rd12")
+								.box
+								span.field-text 3 DIN
+
+
+
+			.filter-param
+				.head.has-label
+					span.title Мощность
+						.wrap-label
+							.icon
+								span ?
+							.label-text Равным образом рамки и место обучения кадров<br>играет важную роль в формировании существенных<br>финансовых и административных условий
+
+
+					.btn-control 
+						<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.09267 9.90012L5.89687 5.23037C5.96559 5.16366 6 5.0869 6 5.00007C6 4.91324 5.96559 4.83634 5.89687 4.76959L1.09267 0.100236C1.02385 0.0333418 0.944879 0 0.855507 0C0.766172 0 0.687092 0.033447 0.618412 0.100236L0.103092 0.601134C0.0343757 0.667923 3.52859e-05 0.744785 3.52859e-05 0.831614C3.52859e-05 0.918443 0.0343757 0.995304 0.103092 1.06209L4.15466 5.00007L0.102839 8.93819C0.0341229 9.00494 -4.76837e-07 9.08184 -4.76837e-07 9.16853C-4.76837e-07 9.2555 0.0343394 9.33236 0.102839 9.39911L0.618376 9.90008C0.687056 9.96683 0.766172 10 0.855471 10C0.944878 10 1.02396 9.96687 1.09267 9.90012Z" fill="#292929"/>
+						</svg>
+				
+				.wrap-fields
+					ul
+						li
+							label.field.field-check(for="chh9")
+								input(type="checkbox", id="chh9")
+								.box
+								span.field-text 100 H
+
+						li
+							label.field.field-check(for="chh8")
+								input(type="checkbox", id="chh8")
+								.box
+								span.field-text 200 H
+
+						li
+							label.field.field-check(for="chh7")
+								input(type="checkbox", id="chh7")
+								.box
+								span.field-text 300 H
+
+						li
+							label.field-disabled.field.field-check(for="chh6")
+								input(type="checkbox", id="chh6", disabled="disabled")
+								.box
+								span.field-text 400 H
+
+						li
+							label.field.field-check(for="chh5")
+								input(type="checkbox", id="chh5")
+								.box
+								span.field-text 500 H
+
+						li
+							label.field.field-check(for="chh4")
+								input(type="checkbox", id="chh4")
+								.box
+								span.field-text 600 H
+
+						li
+							label.field-disabled.field.field-check(for="chh3")
+								input(type="checkbox", id="chh3", disabled="disabled")
+								.box
+								span.field-text 700 H
+
+						li
+							label.field.field-check(for="chh2")
+								input(type="checkbox", id="chh2")
+								.box
+								span.field-text 800 H
+
+						li
+							label.field.field-check(for="chh123")
+								input(type="checkbox", id="chh123")
+								.box
+								span.field-text 900 H
+
+						li
+							label.field.field-check(for="chh322")
+								input(type="checkbox", id="chh322")
+								.box
+								span.field-text 1000 H
+
+						li
+							label.field.field-check(for="chh1")
+								input(type="checkbox", id="chh1")
+								.box
+								span.field-text 1100 H
+
+
+			.filter-param
+				.head
+					span.title Цвет
+
+					.btn-control 
+						<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.09267 9.90012L5.89687 5.23037C5.96559 5.16366 6 5.0869 6 5.00007C6 4.91324 5.96559 4.83634 5.89687 4.76959L1.09267 0.100236C1.02385 0.0333418 0.944879 0 0.855507 0C0.766172 0 0.687092 0.033447 0.618412 0.100236L0.103092 0.601134C0.0343757 0.667923 3.52859e-05 0.744785 3.52859e-05 0.831614C3.52859e-05 0.918443 0.0343757 0.995304 0.103092 1.06209L4.15466 5.00007L0.102839 8.93819C0.0341229 9.00494 -4.76837e-07 9.08184 -4.76837e-07 9.16853C-4.76837e-07 9.2555 0.0343394 9.33236 0.102839 9.39911L0.618376 9.90008C0.687056 9.96683 0.766172 10 0.855471 10C0.944878 10 1.02396 9.96687 1.09267 9.90012Z" fill="#292929"/>
+						</svg>
+				
+				.wrap-fields
+					ul.list-color
+						li
+							span.color-box(style="background-color: #000000;")
+								span.label-text Чёрный
+
+						li
+							span.color-box.box-white(style="background-color: #fff;")
+								span.label-text Белый
+
+						li
+							span.color-none.color-box(style="background-color: #FFD700;")
+								span.label-text Жёлтый
+
+						li
+							span.color-box(style="background-color: #808080;")
+								span.label-text Чёрный
+
+						li
+							span.color-box(style="background-color: #C0C0C0;")
+								span.label-text Серебряный
+
+						li
+							span.color-box(style="background-color: #FF0000;")
+								span.label-text Серый
+
+						li
+							span.color-box(style="background-color: #FC0FC0;")
+								span.label-text Фиолетовый
+
+						li
+							span.color-box(style="background-color: #008000;")
+								span.label-text Зелёный
+
+						li
+							span.color-box(style="background-color: #42AAFF;")
+								span.label-text Голубой
+
+						li
+							span.color-none.color-box(style="background-color: #0000FF;")
+								span.label-text Синий
+
+						li
+							span.color-box(style="background-color: #8B00FF;")
+								span.label-text Аквамарин
+
+						li
+							span.color-box(style="background-color: #964B00;")
+								span.label-text Коричневый
+
+						li
+							span.color-none.color-box(style="background-color: #FFFF00;")
+								span.label-text Ярко-жёлтый
+
+
+			.wrap-btn-reset
+				button.btn-gray.filter-reset
+					span.text Сбросить фильтр
+

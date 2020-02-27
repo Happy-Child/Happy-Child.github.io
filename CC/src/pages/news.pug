@@ -1,0 +1,21 @@
+extends ../pug/layouts/default
+include ../pug/helpers/mixins
+
+
+block variables
+	- const title = "News";
+	- const bodyClass = "news";
+
+
+block append styles
+	link(rel="stylesheet" href="styles/common.css")
+	link(rel="stylesheet" href="styles/news.css")
+
+
+block content
+	include ../blocks/pages/news/news
+
+
+block append scripts
+	script(src="js/common.js")
+	script(src="js/news.js")

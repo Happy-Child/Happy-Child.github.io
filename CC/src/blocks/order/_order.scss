@@ -1,0 +1,81 @@
+.order {
+  position: relative;
+  text-align: center;
+  padding: px-to-rem(140, 18) 0;
+  min-height: 655px;
+  color: #fff;
+
+  @include media(xl) {
+    min-height: 525px;
+  }
+
+  @include media(sm) {
+    min-height: 350px;
+    padding: 40px 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    margin-top: px-to-rem(80, 18);
+
+    @include media(lg) {
+      display: block;
+      margin-top: 40px;
+    }
+
+    @include media(sm) {
+      margin-top: 20px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 50%;
+
+    @include media(xl) {
+      br {
+        display: none;
+      }
+    }
+
+    @include media(lg) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 40px;
+    }
+
+    @include media(sm) {
+      max-width: none;
+
+      br {
+        display: none;
+      }
+    }
+
+    &-text {
+      margin-bottom: px-to-rem(50, 18);
+
+      em {
+        font-size: 22px;
+
+        @include media(sm) {
+          font-size: 14px;
+        }
+      }
+
+      @include media(lg) {
+        margin-bottom: 20px;
+      }
+
+      em {
+        @include M-SemiBold;
+        text-transform: uppercase;
+        color: $red;
+      }
+    }
+  }
+
+}

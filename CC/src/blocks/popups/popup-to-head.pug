@@ -1,0 +1,26 @@
+//Popup to the head BEGIN
+.popup.popup-to-head(data-popup-key="popup-to-head" role="dialog")
+  .popup__inner
+    .popup__content
+      .popup__content-inner
+
+        button.popup__close(aria-label="Close popup")
+
+        span.popup__title Заполните <em>форму</em>
+        p.popup__subtitle Наш менеджер вам перезвонит
+
+        form.form-feedback
+          label.form-feedback__wrap-field
+            input.form-feedback__field(type="text" name="name" placeholder="Имя" aria-label="Имя")
+
+          label.form-feedback__wrap-field
+            input.form-feedback__field(type="tel" name="phone" placeholder="Телефон" aria-label="Телефон")
+
+          label.form-feedback__wrap-field
+            textarea.form-feedback__field(type="text" name="message" placeholder="Сообщение" aria-label="Сообщение")
+
+          button.btn.form-feedback__btn
+            img.card__btn-img(src="img/bg-btn.png" alt="" aria-hidden="true")
+            img.card__btn-img.card__btn-img_hover(src="img/bg-btn-hover.png" alt="" aria-hidden="true")
+            span.btn__text Отправить
+//Popup to the head END

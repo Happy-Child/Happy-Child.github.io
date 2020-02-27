@@ -1,0 +1,15 @@
+.order-delivery {
+
+	&__preview-page {
+		margin-bottom: px-to-rem(50, 24);
+
+		.preview-page__text-title {
+			display: block;
+		}
+
+		p {
+			@include C-B;
+		}
+	}
+
+}

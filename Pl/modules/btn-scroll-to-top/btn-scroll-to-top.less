@@ -1,0 +1,75 @@
+@import "../../less/common/vars";
+
+.wrap-btn-to-top{
+	.btn-to-top{
+		margin-left: auto;
+		border-radius: 50%;
+		cursor: pointer;
+		width: 52px;
+		height: 52px;
+		background: rgba(248, 52, 83, 0.55);
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-ms-align-items: center;
+		align-items: center;
+		justify-content: center;
+		-webkit-transform: translate(0, 50%);
+		-moz-transform: translate(0, 50%);
+		-ms-transform: translate(0, 50%);
+		-o-transform: translate(0, 50%);
+		transform: translate(0, 50%);
+		opacity: 0;
+		position: absolute;
+		right: 8.6%;
+		transition: .05s all ease;
+		z-index: -1;
+
+		svg{
+			-webkit-transform: rotate(-270deg);
+			-moz-transform: rotate(-270deg);
+			-ms-transform: rotate(-270deg);
+			-o-transform: rotate(-270deg);
+			transform: rotate(-270deg);
+			
+			path{
+				fill: #fff;
+			}
+		}
+
+		&:hover{
+			background: rgba(248, 52, 83, 1);
+		}
+	}
+
+	.btn-visible{
+		opacity: 1;
+		z-index: 3;
+		transition: .3s all ease;
+	}
+}
+
+
+@media (max-width: 767px) {
+	.wrap-btn-to-top{
+		.btn-to-top{
+			width: 36px;
+			height: 36px;
+
+			svg{
+				height: auto;
+				width: 13px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 575px) {
+
+}
+
+
+

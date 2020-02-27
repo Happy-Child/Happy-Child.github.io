@@ -1,0 +1,36 @@
+extends ../pug/layouts/default
+include ../pug/helpers/mixins
+
+
+block variables
+	- const title = "Main page";
+	- const bodyClass = "home page__screen";
+
+block content
+	
+	//Page background BEGIN
+	.home__bg.page__bg(aria-hidden="true")
+	//Page background END
+	
+	//Main menu BEGIN
+	include ../blocks/main-menu/main-menu
+	//Main menu END
+	
+	//Info bottom screen BEGIN
+	include ../blocks/info-bottom-screen/info-bottom-screen
+	//Info bottom screen END
+
+
+	//Header BEGIN
+	include ../blocks/header/header
+	//Header END
+
+	//Page content BEGIN
+	include ../blocks/pages/home/home
+	//Page content END
+
+
+
+block append scripts
+	script(src="js/common.js")
+	script(src="js/home.js")

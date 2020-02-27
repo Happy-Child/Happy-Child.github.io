@@ -1,0 +1,12 @@
+.banner-grinding {
+  position: relative;
+  margin-bottom: px-to-rem(50, 18);
+
+  .banner__wrap-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}

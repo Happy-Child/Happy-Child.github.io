@@ -1,0 +1,12 @@
+mixin socials(blockName)
+
+	mixin social-item(src, link="#")
+		li(class=blockName + "__socials-item")
+			a(href= link target="_blank" class=blockName + "__socials-link")
+				img(src= src alt="" class=blockName + "__icon " + blockName + "__socials-icon")
+
+
+	ul(class=blockName + "__item " + blockName + "__socials " + blockName + "__el-border")
+		+social-item("img/icons/icon-twitter.svg")
+		+social-item("img/icons/icon-instagram.svg")
+		+social-item("img/icons/icon-facebook.svg")

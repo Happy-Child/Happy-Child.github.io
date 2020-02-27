@@ -1,0 +1,471 @@
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+textarea
+	resize: none
+	min-height: 100px
+
+
+.wrap-select .select2-selection--single
+	height: 100%
+
+
+.wrap-field input, textarea, .wrap-select .select2-selection--single
+	border: 1px solid #BDBDBD
+	display: block
+	width: 100%
+	background-color: #fff
+	font-size: 0.875rem
+	color: $text-gray
+	padding: 13px 16px
+	&::placeholder
+		color: $text-gray
+		font-size: inherit
+
+.wrap-select
+	position: relative
+	display: flex
+	flex-direction: column
+
+	select
+		order: 1
+
+	.select2
+		width: 100% !important
+		order: 2
+
+	.error:not(select)
+		order: 3
+
+	.select2-selection--single
+		position: relative
+		border-radius: 0
+
+
+		.select2-selection__rendered
+			line-height: 18px
+			padding-left: 0
+			background-color: #fff
+			color: $text-gray
+			
+			.select2-selection__placeholder
+				color: inherit
+				font-size: inherit
+
+		.select2-selection__arrow
+			position: absolute
+			top: 50%
+			right: 10px
+			transform: translate(0, -50%)
+
+			&::before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				background: url("../img/icon-down.svg") no-repeat center
+				background-size: 25%
+				height: 40px
+				width: 40px
+				transition: .4s all ease
+				cursor: pointer
+
+			b
+				display: none
+
+	.select2-container--open
+		.select2-selection__arrow
+			&::before
+				transform: translate(-50%, -50%) rotate(180deg)
+
+	.select2-container:not(.select2)
+		top: 45px !important
+		left: 0 !important
+		display: block !important
+
+	.select2-container--default .select2-results>.select2-results__options
+		max-height: none
+
+	.select2-dropdown
+		margin-top: 8px
+		border-radius: 0
+		border: none
+		overflow-y: auto
+		max-height: 177px
+		background-color: #fff
+		padding: 18px 20px
+		box-shadow: 0px 0px 43px 0px rgba(39, 39, 39, 0.12)
+		-ms-overflow-style: none
+		overflow: -moz-scrollbars-none
+		&::-webkit-scrollbar
+			width: 0
+
+
+		.select2-search--dropdown
+			display: none
+
+	.select2-container--default
+		.select2-results__option--highlighted[aria-selected]
+			background-color: transparent
+			color: $text
+
+		.select2-results__option[aria-selected=true]
+			background-color: transparent
+			font-weight: bold
+			color: $text
+			&::after
+				opacity: 1
+
+		.select2-results__option
+			font-size: 14px
+			line-height: 20px
+			padding: 5px 0
+			position: relative
+			&::after
+				content: ""
+				position: absolute
+				top: 50%
+				left: calc(100% + 8px)
+				-webkit-transform: translateY(-50%)
+				-ms-transform: translateY(-50%)
+				transform: translateY(-50%)
+				background: url(../img/icon-check.svg) no-repeat 50%
+				background-size: contain
+				height: 12px
+				width: 15px
+				-webkit-transition: all .2s ease
+				transition: all .2s ease
+				opacity: 0
+
+		.select2-results > .select2-results__options
+			-ms-overflow-style: none
+			overflow: -moz-scrollbars-none
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			&::-webkit-scrollbar
+				width: 0
+
+//Error START
+.wrap-field, .wrap-checkbox, .wrap-radio, .wrap-select
+	position: relative
+	.error-icon
+		width: 17px
+		right: 20px
+		top: 15px
+		position: absolute
+		display: none
+		img, svg
+			width: 100%
+			height: auto
+			display: block
+			background-color: #fff
+
+	.error:not(input):not(textarea)
+		font-size: 11px
+		line-height: 13px
+		display: block
+
+
+.wrap-select
+	select.error
+		& ~ .select2
+			.select2-selection--single
+				border-color: #F45056 !important
+		& + .error
+			display: none
+
+
+.wrap-field
+	input.error, textarea.error
+		border-color: #F45056
+		& ~ .error-icon
+			display: block
+
+.wrap-checkbox, .wrap-radio
+	input.error ~ .box
+		border-color: #F45056
+//Error END
+
+label
+	cursor: pointer
+
+.wrap-checkbox, .wrap-radio
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	.box
+		margin-right: 14px
+		border: 1px solid #BDBDBD
+		position: relative
+		min-width: 24px
+		height: 24px
+		cursor: pointer
+		&::after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			-webkit-transform: translate(-50%, -50%)
+			-moz-transform: translate(-50%, -50%)
+			-ms-transform: translate(-50%, -50%)
+			-o-transform: translate(-50%, -50%)
+			transform: translate(-50%, -50%)
+			opacity: 0
+			transition: .4s all ease
+
+	input
+		width: 0
+		visibility: hidden
+		margin: 0
+
+	input:checked ~ .box
+		&::after
+			opacity: 1
+
+	.text
+		line-height: 24px
+		width: calc(100% - 45px)
+		em
+			color: $hover-btns-links
+
+	.error:not(input)
+		order: 4
+		margin-top: 3px
+
+
+
+.wrap-radio
+	align-items: flex-start
+	.box
+		border-radius: 50%
+		&::after
+			width: 8px
+			height: 8px
+			border-radius: inherit
+			background-color: $dark-blue
+
+.wrap-checkbox
+	.box
+		&::after
+			width: 10px
+			height: 10px
+			background: url("../img/icon-check.svg") no-repeat center
+			background-size: contain
+
+
+.wrap-field-search
+	.btn-search
+		position: absolute
+		top: 50%
+		transform: translate(0, -50%)
+		width: 40px
+		height: 100%
+		background: url("../img/013-search.svg") no-repeat center
+		background-size: 18px
+		opacity: .2
+		cursor: pointer
+		transition: .3s all ease
+		right: 0
+		&:hover
+			opacity: .5
+	input
+		padding: 10px 40px 11px 14px
+
+
+.wrap-field-clear
+	.btn-clear-field
+		position: absolute
+		top: 50%
+		right: 10px
+		transform: translate(0, -50%)
+		width: 12px
+		height: 12px
+		cursor: pointer
+		&::before, &::after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			background-color: $gray-dark-icons
+			transition: .4s all ease
+			width: 100%
+			height: 2px
+		&:hover
+			&::before, &::after
+				background-color: $dark-blue
+		&::before
+			transform: translate(-50%, -50%) rotate(-45deg)
+		&::after
+			transform: translate(-50%, -50%) rotate(45deg)
+
+
+
+.wrap-field-date
+	&::before
+		content: ""
+		position: absolute
+		top: 13px
+		right: 25px
+		background: url("../img/calendar.svg") no-repeat center
+		background-size: contain
+		width: 19px
+		height: 19px
+		opacity: .3
+	input
+		padding-right: 40px
+
+
+.datepicker-dropdown
+	border-color: $border-gray
+	box-shadow: 0px 0px 43px 0px rgba(39, 39, 39, 0.12)
+
+
+.datepicker-top-left:before,
+.datepicker-top-right:before
+	border-bottom-color: $border-gray
+
+.datepicker-top-left, .datepicker-top-right
+	&:after, &:before
+		top: -6px
+
+.datepicker-panel
+	> ul
+		> li
+			&[data-view="month next"],
+			&[data-view="month prev"],
+			&[data-view="year next"],
+			&[data-view="year prev"],
+			&[data-view="years next"],
+			&[data-view="years prev"],
+			&[data-view=next]
+				line-height: 26px
+
+.datepicker-panel
+	> ul:first-child
+		font-weight: bold
+		letter-spacing: 0.02em
+		text-transform: uppercase
+	
+	ul:not(.week)
+		li
+			&:hover
+				background-color: $ocean
+				color: #fff
+			&.picked, &.picked:hover
+				background-color: $dark-blue
+				color: #fff
+
+
+.wrap-range
+	.range
+		height: 4px
+		background-color: #F0F0F0
+		border-radius: 2px
+		border: none
+		left: 2px
+		width: calc(100% - 17px)
+		position: relative
+		margin: 30px auto 15px
+		
+		&::before
+			content: ""
+			position: absolute
+			top: 0
+			left: -8.5px
+			height: 100%
+			width: calc(100% + 17px)
+			background-color: inherit
+			border-radius: inherit
+		
+		.ui-widget-header
+			height: 100%
+			background-color: $gray-dark-icons
+			cursor: pointer
+		
+		.ui-state-default
+			border-radius: 50%
+			background-color: $text
+			border: none
+			width: 17px
+			height: 17px
+			outline: none
+			top: 50%
+			cursor: pointer
+			-webkit-transform: translate(0, -50%)
+			-moz-transform: translate(0, -50%)
+			-ms-transform: translate(0, -50%)
+			-o-transform: translate(0, -50%)
+			transform: translate(0, -50%)
+
+
+
+.form-el-2
+	max-width: 50%
+.form-el-3
+	max-width: calc(100% / 3)
+.form-el-4
+	max-width: 25%
+.form-el-6
+	max-width: calc(100% / 6)
+
+
+input, textarea
+	&:focus
+		color: $text
+		border-color: $dark-blue
+
+
+
++media-breakpoint-down(lg)
+
++media-breakpoint-down(md)
+
++media-breakpoint-down(sm)
+
+
++media-breakpoint-down(xs)
+	.wrap-field input,
+	.wrap-select .select2-selection--single,
+	textarea
+		padding: 12px 15px
+		transition: .3s border-color ease
+		font-size: 12px
+
+	.wrap-field-search
+		.btn-search
+			background-size: 15px
+
+	.wrap-field
+		.error-icon
+			width: 16px
+			svg, img
+				width: 100%
+				height: auto
+
+		.error-text
+			font-size: 10px
+			left: 7px
+			line-height: 12px
+
+	.wrap-field-date
+		&:before
+			right: 15px
+
+	.wrap-select
+		.select2-container--default
+			.select2-results__option
+				font-size: 13px
+				line-height: 19px
+				padding: 4px 0
+
+		.select2-selection--single
+			.select2-selection__rendered
+				line-height: 16px
+
+	

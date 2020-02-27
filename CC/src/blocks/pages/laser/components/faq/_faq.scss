@@ -1,0 +1,127 @@
+.faq {
+  padding: px-to-rem(130, 18) 0;
+  position: relative;
+  margin-top: 0 !important;
+
+  @include media(lg) {
+    padding: px-to-rem(60, 14) 0;
+  }
+
+  @include media(sm) {
+    padding: px-to-rem(40, 14) 0;
+  }
+
+  .sec__bg {
+    height: px-to-rem(655, 18);
+
+    @include media(xl) {
+      height: 100%;
+    }
+  }
+
+  &__wrap-titles {
+    color: #fff;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include media(lg) {
+      display: block;
+    }
+  }
+
+  &__list {
+    font-size: 18px;
+    max-width: calc(50% - 15px);
+    width: 100%;
+
+    @include media(lg) {
+      max-width: none;
+    }
+
+    @include media(md) {
+      font-size: 16px;
+    }
+
+    @include media(sm) {
+      font-size: 14px;
+    }
+
+  }
+
+  &__item {
+    background-color: #EEEEEE;
+    margin-bottom: px-to-em(20, 18);
+
+    &-top {
+      padding: px-to-em(16, 18) px-to-em(30, 18);
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &_active {
+        .faq__item-icon {
+          &:after {
+            transform: translate(-50%, -50%) rotate(0);
+          }
+        }
+      }
+    }
+
+    &-icon {
+      width: px-to-em(25, 18);
+      height: px-to-em(25, 18);
+      position: relative;
+      margin-right: px-to-em(20, 18);
+      flex-shrink: 0;
+
+      &:after,
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 1px;
+        background-color: $default-text;
+        transition: .4s all ease;
+      }
+
+      &:after {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+
+    }
+
+    &-title {
+      @include M-Medium;
+      font-size: 1em;
+      line-height: px-to-em(24, 18);
+    }
+
+    &-wrap-text {
+      margin-top: px-to-em(8, 18);
+      padding: 0 px-to-em(30, 18) px-to-em(15, 18);
+      display: none;
+
+      a {
+        position: relative;
+        color: $default-text;
+
+        &:after {
+          @include underline($default-text, 90%);
+        }
+      }
+
+      p {
+        font-size: px-to-em(16, 18);
+        line-height: px-to-em(21, 18);
+      }
+    }
+
+  }
+
+}

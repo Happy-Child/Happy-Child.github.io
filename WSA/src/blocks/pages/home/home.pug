@@ -1,0 +1,118 @@
+include ../../slider-arrows/slider-arrows
+
+//- Mixins BEGIN
+mixin slide-item(titleImgSrc, title, imgSrc, text)
+	.home__slider-item.swiper-slide
+		.home__slider-item-wrap-img
+			img.home__slider-item-img(src="." data-src=imgSrc + ".png" alt="")
+			img(class=blockClass + "-slide-item-img-preloader image-preloader" src="img/preloader.svg" alt="")
+
+
+		span.home__slider-item-title
+			img.home__slider-item-title-img(src= titleImgSrc alt="")
+			span.home__slider-item-title-text= title
+
+		p.home__slider-item-text= text
+
+		a(href="#" target="_blank" rel="noreferrer").home__slider-item-link View more
+
+
+mixin slide-content-image(imgSrc, text)
+	.home__slider-content&attributes(attributes)
+		picture.home__slider-content-wrap-img
+			source(srcset=imgSrc + ".webp", type="image/webp")
+			source(srcset=imgSrc + ".png", type="image/png")
+			img.home__slider-content-img(src=imgSrc + ".png" alt="")
+
+
+mixin slide-content-text(text)
+	.home__slider-content&attributes(attributes)
+		.home__slider-content-wrap-text
+			p.home__slider-content-text= text
+			.home__slider-content-wrap-link
+				a(href="#" target="_blank" rel="noreferrer").home__slider-content-link View more
+//- Mixins END
+
+
+.home__wrap-slider-content.home__wrap-slider-content_images
+	+slide-content-image(
+		"img/home-slider-1"
+	)(class="home__slider-content_active home__slider-content_active_z-index")
+	+slide-content-image(
+		"img/home-slider-2"
+	)
+	+slide-content-image(
+		"img/home-slider-3"
+	)
+	+slide-content-image(
+		"img/home-slider-2"
+	)
+	+slide-content-image(
+		"img/home-slider-1"
+	)
+
+
+.home__slider.swiper-container
+	.swiper-wrapper
+		+slide-item(
+			"img/slider-img-1.svg",
+			"Doors",
+			"img/home-slider-1",
+			"The first-class kitchen designs by SieMatic are created with German precision. Their kitchens are made of high-quality materials and have timeless design."
+		)
+		+slide-item(
+			"img/slider-img-2.svg",
+			"Kitchen",
+			"img/home-slider-2",
+			"The first-class kitchen designs by SieMatic are created with German precision. Their kitchens are made of high-quality"
+		)
+		+slide-item(
+			"img/slider-img-3.svg",
+			"Vianiti",
+			"img/home-slider-3",
+			"The first-class kitchen designs by SieMatic are created with German precision. Their kitchens are made of high-quality materials and have timeless design materials and have timeless design."
+		)
+		+slide-item(
+			"img/slider-img-4.svg",
+			"Wardrobe",
+			"img/home-slider-2",
+			"The first-class kitchen designs by SieMatic are created with German precision. Their kitchens are made of high-quality materials and have timeless design."
+		)
+		+slide-item(
+			"img/slider-img-5.svg",
+			"Mill Works",
+			"img/home-slider-1",
+			"The first-class kitchen designs by SieMatic are created with German precision."
+		)
+
+
+.home__wrap-slider-content.home__wrap-slider-content_text
+	+slide-content-text(
+		"The first-class kitchen designs by SieMatic are created with German precision. Their kitchens are made of high-quality materials and have timeless design."
+	)(class="home__slider-content_active home__slider-content_active_z-index")
+	+slide-content-text(
+		"The first-class kitchen designs by SieMatic are created with German precision. Their kitchens are made of high-quality"
+	)
+	+slide-content-text(
+		"The first-class kitchen designs by SieMatic are created with German precision. Their kitchens are made of high-quality materials."
+	)
+	+slide-content-text(
+		"The first-class kitchen designs by SieMatic are created with German precision. Their kitchens are made of high-quality materials and have timeless design."
+	)
+	+slide-content-text(
+		"The first-class kitchen designs by SieMatic are created with German precision."
+	)
+
+
++slider-arrows("home")
+
+
+.home__slider-pagination
+	ul.home__slider-pagination-list
+		li.home__slider-pagination-item.home__slider-pagination-item_active Doors
+		li.home__slider-pagination-item Kitchen
+		li.home__slider-pagination-item Vianiti
+		li.home__slider-pagination-item Wardrobe
+		li.home__slider-pagination-item Mill Works
+	
+	span.home__slider-pagination-cursor

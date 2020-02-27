@@ -1,0 +1,93 @@
+mixin slides(blockClass)
+
+	mixin slide(title, location, textsArr, images)
+		div(class=blockClass + "-slide swiper-slide")
+			div(class=blockClass + "-slide-content")
+
+				div(class=blockClass + "-slide-text")
+					if(typeof(title) !== 'undefined')
+						span(class=blockClass + "-slide-title")= title
+
+					if(typeof(location) !== 'undefined')
+						div(class=blockClass + "-slide-wrap-location")
+							img(src="img/icons/icon-location.svg" alt="" class=blockClass + "-slide-location-icon")
+							address(class=blockClass + "-slide-location")= location
+					
+					if(typeof(textsArr) !== 'undefined' && textsArr.length)
+						each text in textsArr
+							p!= text
+
+				div(class=blockClass + "-slide-images")
+					if(typeof(images) !== 'undefined' && images.length)
+						each image in images
+							div(class=blockClass + "-slide-wrap-image")
+								img(class=blockClass + "-slide-image" src="." data-src=image + ".png" alt="")
+								img(class=blockClass + "-slide-image-preloader image-preloader" src="img/preloader.svg" alt="")
+
+
+
+	+slide(
+		"The Board Factory",
+		"The Board Factory CO., LTD. | Khao Lak | Thailand",
+		[
+			"The Board Factory Co., Ltd. is what it's says. The factory that makes our boards. Perfect. We created it to set up one of, if<br class='d-none-less-1600'> not the best board factories in the industry. Based on the<br class='d-none-less-1600'> Toyota Production System (TPS) or LEAN, the principles we<br class='d-none-less-1600'> use here come straight from automotive manufacturing.",
+			"This factory is situated app. 80km north of Phuket Island in Phang-Nga province. It's absolutely stunning setting<br class='d-none-less-1600'> between the mountains and some of Thailand's crazy<br class='d-none-less-1600'> beautiful beaches gives us the the power we need to<br class='d-none-less-1600'> constantly make the best boards.",
+			"And YES there are waves. We are able to test and have right within walking distance of The Board Factory and that's as<br class='d-none-less-1600'> much as you can ask for... . See you over here, some day.",
+		],
+		["img/factory-image-1", "img/factory-image-2"]
+	)
+
+
+
+	+slide(
+		"The Board Factory",
+		"The Board Factory CO., LTD. | Khao Lak | Thailand",
+		[
+			"The Board Factory Co., Ltd. is what it's says. The factory that makes our boards. Perfect. We created it to set up one of, if<br class='d-none-less-1600'> not the best board factories in the industry. Based on the<br class='d-none-less-1600'> Toyota Production System (TPS) or LEAN, the principles we<br class='d-none-less-1600'> use here come straight from automotive manufacturing.",
+			"This factory is situated app. 80km north of Phuket Island in Phang-Nga province. It's absolutely stunning setting<br class='d-none-less-1600'> between the mountains and some of Thailand's crazy<br class='d-none-less-1600'> beautiful beaches gives us the the power we need to<br class='d-none-less-1600'> constantly make the best boards.",
+			"And YES there are waves. We are able to test and have right within walking distance of The Board Factory and that's as<br class='d-none-less-1600'> much as you can ask for... . See you over here, some day.",
+		],
+		["img/factory-image-1", "img/factory-image-2"]
+	)
+
+
+	+slide(
+		"The Board Factory",
+		"The Board Factory CO., LTD. | Khao Lak | Thailand",
+		[
+			"The Board Factory Co., Ltd. is what it's says. The factory that makes our boards. Perfect. We created it to set up one of, if<br class='d-none-less-1600'> not the best board factories in the industry. Based on the<br class='d-none-less-1600'> Toyota Production System (TPS) or LEAN, the principles we<br class='d-none-less-1600'> use here come straight from automotive manufacturing.",
+			"This factory is situated app. 80km north of Phuket Island in Phang-Nga province. It's absolutely stunning setting<br class='d-none-less-1600'> between the mountains and some of Thailand's crazy<br class='d-none-less-1600'> beautiful beaches gives us the the power we need to<br class='d-none-less-1600'> constantly make the best boards.",
+			"And YES there are waves. We are able to test and have right within walking distance of The Board Factory and that's as<br class='d-none-less-1600'> much as you can ask for... . See you over here, some day.",
+			"This factory is situated app. 80km north of Phuket Island in Phang-Nga province. It's absolutely stunning setting<br class='d-none-less-1600'> between the mountains and some of Thailand's crazy<br class='d-none-less-1600'> beautiful beaches gives us the the power we need to<br class='d-none-less-1600'> constantly make the best boards.",
+			"And YES there are waves. We are able to test and have right within walking distance of The Board Factory and that's as<br class='d-none-less-1600'> much as you can ask for... . See you over here, some day.",
+			"This factory is situated app. 80km north of Phuket Island in Phang-Nga province. It's absolutely stunning setting<br class='d-none-less-1600'> between the mountains and some of Thailand's crazy<br class='d-none-less-1600'> beautiful beaches gives us the the power we need to<br class='d-none-less-1600'> constantly make the best boards.",
+			"And YES there are waves. We are able to test and have right within walking distance of The Board Factory and that's as<br class='d-none-less-1600'> much as you can ask for... . See you over here, some day.",
+		],
+		["img/factory-image-1", "img/factory-image-2"]
+	)
+
+	+slide(
+		"The Board Factory",
+		"The Board Factory CO., LTD. | Khao Lak | Thailand",
+		[
+			"The Board Factory Co., Ltd. is what it's says. The factory that makes our boards. Perfect. We created it to set up one of, if<br class='d-none-less-1600'> not the best board factories in the industry. Based on the<br class='d-none-less-1600'> Toyota Production System (TPS) or LEAN, the principles we<br class='d-none-less-1600'> use here come straight from automotive manufacturing.",
+			"This factory is situated app. 80km north of Phuket Island in Phang-Nga province. It's absolutely stunning setting<br class='d-none-less-1600'> between the mountains and some of Thailand's crazy<br class='d-none-less-1600'> beautiful beaches gives us the the power we need to<br class='d-none-less-1600'> constantly make the best boards.",
+			"And YES there are waves. We are able to test and have right within walking distance of The Board Factory and that's as<br class='d-none-less-1600'> much as you can ask for... . See you over here, some day.",
+			"This factory is situated app. 80km north of Phuket Island in Phang-Nga province. It's absolutely stunning setting<br class='d-none-less-1600'> between the mountains and some of Thailand's crazy<br class='d-none-less-1600'> beautiful beaches gives us the the power we need to<br class='d-none-less-1600'> constantly make the best boards.",
+			"And YES there are waves. We are able to test and have right within walking distance of The Board Factory and that's as<br class='d-none-less-1600'> much as you can ask for... . See you over here, some day.",
+		],
+		["img/factory-image-1", "img/factory-image-2"]
+	)
+
+
+	+slide(
+		"The Board Factory",
+		"The Board Factory CO., LTD. | Khao Lak | Thailand",
+		[
+			"The Board Factory Co., Ltd. is what it's says. The factory that makes our boards. Perfect. We created it to set up one of, if<br class='d-none-less-1600'> not the best board factories in the industry. Based on the<br class='d-none-less-1600'> Toyota Production System (TPS) or LEAN, the principles we<br class='d-none-less-1600'> use here come straight from automotive manufacturing.",
+			"This factory is situated app. 80km north of Phuket Island in Phang-Nga province. It's absolutely stunning setting<br class='d-none-less-1600'> between the mountains and some of Thailand's crazy<br class='d-none-less-1600'> beautiful beaches gives us the the power we need to<br class='d-none-less-1600'> constantly make the best boards.",
+			"And YES there are waves. We are able to test and have right within walking distance of The Board Factory and that's as<br class='d-none-less-1600'> much as you can ask for... . See you over here, some day.",
+		],
+		["img/factory-image-1", "img/factory-image-2"]
+	)
+

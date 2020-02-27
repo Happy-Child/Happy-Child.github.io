@@ -1,0 +1,21 @@
+extends ../pug/layouts/default
+include ../pug/helpers/mixins
+
+
+block variables
+  - const title = "Grinding";
+  - const bodyClass = "grinding";
+
+
+block append styles
+  link(rel="stylesheet" href="styles/common.css")
+  link(rel="stylesheet" href="styles/grinding.css")
+
+
+block content
+  include ../blocks/pages/grinding/grinding
+
+
+block append scripts
+  script(src="js/common.js")
+  script(src="js/grinding.js")

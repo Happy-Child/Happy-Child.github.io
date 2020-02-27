@@ -1,0 +1,55 @@
+.breadcrumbs {
+  font-size: 18px;
+  margin: px-to-em(55, 18) 0;
+  color: $default-text;
+
+  @include media(xl) {
+    font-size: 16px;
+  }
+
+  @include media(md) {
+    margin: 25px 0 22px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: px-to-em(14, 18);
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: px-to-em(-6, 18);
+      background-color: $default-text;
+      width: 1px;
+      height: px-to-em(13, 18);
+      transform: rotate(18deg) translate(0, -50%);
+    }
+
+    &:last-child {
+      pointer-events: none;
+      margin-right: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: px-to-em(14, 18);
+    line-height: px-to-em(17, 14);
+    color: inherit;
+
+    @include media(md) {
+      font-size: 9px;
+    }
+
+  }
+
+}

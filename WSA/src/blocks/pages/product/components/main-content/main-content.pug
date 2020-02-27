@@ -1,0 +1,121 @@
+include ../../../../card/card
+
+mixin main-content-item( blockName, id, title, subtext, tags, cards)
+
+	li(class=blockName + "-item" id= id)
+		if(typeof(title) !== 'undefined')
+			span(class=blockName + "-item-title")= title
+
+		if(typeof(subtext) !== 'undefined')
+			p(class=blockName + "-item-subtext")= subtext
+		
+		if(typeof(tags) !== 'undefined')
+			ul(class=blockName + "-item-tags")
+				each tag in tags
+					li(class=blockName + "-item-tag")
+						a(href="#" target="_blank" rel="noreferrer" class=blockName + "-item-tag-link")= tag
+
+		if(typeof(cards) !== 'undefined')
+			div(class=blockName + "-item-cards group-cards")
+				.group-cards__inner
+					each cardOne in cards
+						+card(cardOne.src, [...cardOne.arrText])
+
+
+
+ul.product__main-content
+	
+	+main-content-item(
+		"product__main-content",
+		"doors",
+		"Doors",
+		"Here is where you’ll find serious savings on a collection of doors for your entire home. These doors are priced to move and your chance to add a luxurious touch for less.",
+		["Flash Doors", "Panel Doors", "Acoustic Doors", "Fire Rated", "LEED Rated", "Thermal Rated"],
+		[
+			{
+				src: "img/product-1",
+				arrText: ["Flush Doors"]
+			}, 
+			{
+				src: "img/product-2",
+				arrText: ["Panel Doors"]
+			}
+		]
+	)
+
+
+	+main-content-item(
+		"product__main-content",
+		"kitchen",
+		"Doors",
+		"Here is where you’ll find serious savings on a collection of doors for your entire home. These doors are priced to move and your chance to add a luxurious touch for less.",
+		["Lacquer", "Solid Wood", "Veneer", "HPL", "Melamine", "PVC"],
+		[
+			{
+				src: "img/product-3",
+				arrText: ["PVC"]
+			}, 
+			{
+				src: "img/product-4",
+				arrText: ["Melamine"]
+			}
+		]
+	)
+
+
+	+main-content-item(
+		"product__main-content",
+		"vianiti",
+		"Doors",
+		"Here is where you’ll find serious savings on a collection of doors for your entire home. These doors are priced to move and your chance to add a luxurious touch for less.",
+		["Solid", "Wood", "Veneer", "HPL", "Lacquer", "PVC", "Melamine"],
+		[
+			{
+				src: "img/product-5",
+				arrText: ["Solid"]
+			}, 
+			{
+				src: "img/product-6",
+				arrText: ["Wood"]
+			}
+		]
+	)
+
+
+	+main-content-item(
+		"product__main-content",
+		"wardrobe",
+		"Doors",
+		"Here is where you’ll find serious savings on a collection of doors for your entire home. These doors are priced to move and your chance to add a luxurious touch for less.",
+		["PVC", "Melamine", "Wood", "Veneer", "HPL", "Solid Wood"],
+		[
+			{
+				src: "img/product-7",
+				arrText: ["PVC"]
+			}, 
+			{
+				src: "img/product-8",
+				arrText: ["Melamine"]
+			}
+		]
+	)
+
+
+	+main-content-item(
+		"product__main-content",
+		"mill-works",
+		"Doors",
+		"Here is where you’ll find serious savings on a collection of doors for your entire home. These doors are priced to move and your chance to add a luxurious touch for less.",
+		["Skriting", "Molding"],
+		[
+			{
+				src: "img/product-9",
+				arrText: ["Skirting"]
+			}, 
+			{
+				src: "img/product-10",
+				arrText: ["Molding"]
+			}
+		]
+	)
+

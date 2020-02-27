@@ -1,0 +1,21 @@
+extends ../pug/layouts/default
+include ../pug/helpers/mixins
+
+
+block variables
+  - const title = "Delivery & payment";
+  - const bodyClass = "delivery-payment";
+
+
+block append styles
+  link(rel="stylesheet" href="styles/common.css")
+  link(rel="stylesheet" href="styles/delivery-payment.css")
+
+
+block content
+  include ../blocks/pages/delivery-payment/delivery-payment
+
+
+block append scripts
+  script(src="js/common.js")
+  script(src="js/delivery-payment.js")

@@ -1,0 +1,15 @@
+mixin slider-arrows(blockClass)
+	div(class=blockClass + "__slider-arrows slider-arrows")
+
+		span(class="slider-arrows__arrow slider-arrows__arrow_prev" role="button")
+			svg(class="slider-arrows__arrow-icon" width='8', height='10', viewBox='0 0 8 10', fill='none', xmlns='http://www.w3.org/2000/svg')
+				path(d='M7 9L2 5L7 1', stroke='white', stroke-width='2')
+
+			span(class="slider-arrows__arrow-text") Prev
+
+
+		span(class="slider-arrows__arrow slider-arrows__arrow_next" role="button")
+			svg(class="slider-arrows__arrow-icon" width='8', height='10', viewBox='0 0 8 10', fill='none', xmlns='http://www.w3.org/2000/svg')
+				path(d='M1 1L6 5L1 9', stroke='white', stroke-width='2')
+
+			span(class="slider-arrows__arrow-text") Next

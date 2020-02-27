@@ -1,0 +1,74 @@
+.cutting-process {
+  padding-bottom: px-to-rem(80, 18);
+
+  @include media(sm) {
+    padding-bottom: 60px;
+  }
+
+
+  .slider__pagination {
+    @include media(md) {
+      display: none;
+    }
+  }
+
+  .slider__wrap-nav_other {
+    display: none;
+  }
+
+  .slider__wrap-nav_other {
+    @include media(md) {
+      display: flex;
+    }
+  }
+
+  .slider__controls {
+    @include media(md) {
+      margin-top: 20px;
+    }
+  }
+
+  .slider__wrap-nav_other .slider__arrow {
+    @include media(md) {
+      display: flex;
+      position: relative;
+      top: 0;
+      left: 0;
+      right: auto;
+      bottom: auto;
+      transform: translate(0);
+    }
+  }
+
+  .video {
+    &-container {
+      position: relative;
+      padding-bottom: 67%;
+    }
+
+    &-placeholder {
+      z-index: -1;
+      object-fit: cover;
+      border: 1px solid rgba(0, 0, 0, .05);
+    }
+
+    &-play {
+      display: none;
+    }
+
+    &-iframe,
+    &-play,
+    &-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-iframe {
+
+    }
+  }
+
+}

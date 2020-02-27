@@ -1,0 +1,93 @@
+* {
+	box-sizing: border-box
+}
+
+html {
+	font-size: 24px;
+
+	&.page-fixed {
+		overflow: hidden;
+	}
+
+	@include media (1600px) {
+		font-size: 20px;
+	}
+
+	@include media (md) {
+		font-size: 18px;
+	}
+}
+
+.html-scroll {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+body {
+	min-width: 320px;
+	position: relative;
+	line-height: 36px;
+	color: $default-text;
+	font-kerning: normal;
+	transition: .4s opacity ease;
+	@include C-R;
+	background: $body-bg-gradient;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+
+	@include media (1600px) {
+		line-height: 30px;
+	}
+
+	&.page-fixed {
+		overflow-y: scroll;
+	}
+
+	&.visible {
+		opacity: 1;
+	}
+}
+
+img.lazy {
+	transition: .6s all ease;
+	opacity: 0;
+
+	&.loaded,
+	&.loading {
+		opacity: 1;
+	}
+}
+
+.el-disabled {
+	pointer-events: none;
+}
+
+.image-preloader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: .3s all ease;
+	width: 90px;
+	height: auto;
+}
+
+.image-load {
+	opacity: 1;
+
+	+ .image-preloader {
+		opacity: 0;
+	}
+}
+
+.d-none-less-1600 {
+	@include media (1600px) {
+		display: none;
+	}
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}

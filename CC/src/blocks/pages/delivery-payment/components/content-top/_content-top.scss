@@ -1,0 +1,98 @@
+.delivery-payment {
+
+  &__content {
+
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: px-to-rem(80, 18);
+
+      @include media(lg) {
+        display: block;
+      }
+
+      @include media(sm) {
+        margin-bottom: 40px;
+      }
+
+      a {
+        position: relative;
+        color: inherit;
+        transition: .2s all ease;
+
+        &:after {
+          @include underline($default-text, 100%);
+        }
+
+        &:hover {
+          color: $red;
+
+          &:after {
+            background-color: $red;
+          }
+        }
+      }
+
+      &-timework {
+        em {
+          font-size: px-to-rem(22, 18);
+          @include M-SemiBold;
+        }
+      }
+
+      &-delivery {
+        width: 100%;
+        max-width: px-to-rem(1000, 18);
+        background-color: #EEEEEE;
+        padding: px-to-rem(50, 18) px-to-rem(50, 18) px-to-rem(70, 18);
+
+        @include media(xl) {
+          max-width: 65%;
+        }
+
+        @include media(lg) {
+          max-width: none;
+          margin-top: 50px;
+        }
+
+        @include media(sm) {
+          padding: 25px 15px;
+        }
+
+        em {
+          @include M-SemiBold;
+          font-size: 1rem;
+          display: block;
+
+          &:first-of-type {
+            font-size: px-to-rem(22, 18);
+
+            @include media(sm) {
+              font-size: 16px;
+            }
+          }
+        }
+
+        h2,
+        .title-2 {
+          display: block;
+          text-align: center;
+          width: 100%;
+          margin-bottom: px-to-rem(55, 18);
+
+          @include media(sm) {
+            margin-bottom: 20px;
+          }
+
+          em {
+            display: inline-block;
+            font-size: inherit;
+            font-family: inherit;
+          }
+        }
+      }
+    }
+
+  }
+
+}

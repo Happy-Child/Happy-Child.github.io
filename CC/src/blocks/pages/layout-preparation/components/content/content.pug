@@ -1,0 +1,26 @@
+.layout-preparation__tabs
+  button.btn.delivery-payment__btn.tab.tab_active
+    img.card__btn-img(src="img/bg-btn.png" alt="" aria-hidden="true")
+    img.card__btn-img.card__btn-img_hover(src="img/bg-btn-hover.png" alt="" aria-hidden="true")
+    span.btn__text Общая информация
+
+  button.btn.delivery-payment__btn.tab
+    img.card__btn-img(src="img/bg-btn.png" alt="" aria-hidden="true")
+    img.card__btn-img.card__btn-img_hover(src="img/bg-btn-hover.png" alt="" aria-hidden="true")
+    span.btn__text Для лазерной резки
+
+  button.btn.delivery-payment__btn.tab
+    img.card__btn-img(src="img/bg-btn.png" alt="" aria-hidden="true")
+    img.card__btn-img.card__btn-img_hover(src="img/bg-btn-hover.png" alt="" aria-hidden="true")
+    span.btn__text Для фрезерной резки
+
+
+.layout-preparation__tabs-contents
+  .tab-content.tab-content_active
+    include ../common/common
+
+  .tab-content
+    include ../laser-cutting/laser-cutting
+
+  .tab-content
+    include ../milling-cutting/milling-cutting

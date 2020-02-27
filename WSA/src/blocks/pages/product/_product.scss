@@ -1,0 +1,25 @@
+@import "components/components";
+
+
+.product {
+
+	&__bg {
+		background-image: url("../img/background-pages/background-product-page.webp");
+	}
+
+	&__main {
+		> .wrapper {
+			position: relative;
+		}
+	}
+
+}
+
+
+html.no-webp {
+
+	.product__bg {
+		background-image: url("../img/background-pages/background-product-page.png");
+	}
+
+}

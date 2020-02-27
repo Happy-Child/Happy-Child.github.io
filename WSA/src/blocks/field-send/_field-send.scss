@@ -1,0 +1,26 @@
+@import "components/components";
+
+.field-send {
+	display: block;
+	
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid rgba($gray, 0.35);
+		@include PD-R;
+		font-size: 1rem;
+		line-height: 60px;
+
+		@include media (xxl) {
+			font-size: .8rem;
+			line-height: 50px;
+		}
+
+		@include media (md) {
+			font-size: 16px;
+			line-height: 42px;
+		}
+	}
+
+}

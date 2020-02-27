@@ -1,0 +1,56 @@
+.grinding__text-content {
+
+  .wrap-cards {
+    margin: px-to-rem(76, 18) -15px;
+
+    @include media(md) {
+      margin: 25px 0;
+    }
+  }
+
+  p {
+    @include media(md) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .wrap-card {
+    width: 100%;
+    max-width: calc(100% / 3);
+    padding: 0 15px;
+
+    @include media(lg) {
+      max-width: 50%;
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .card {
+        clip-path: none;
+
+        @include media(sm) {
+          min-width: 100vw;
+          max-width: none;
+          margin-left: -30px;
+        }
+      }
+    }
+
+    @include media(md) {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    @include media(sm) {
+      display: none;
+
+      &:first-of-type {
+        display: block;
+      }
+    }
+  }
+
+}

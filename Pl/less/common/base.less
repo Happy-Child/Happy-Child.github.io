@@ -1,0 +1,174 @@
+@import "vars";
+
+*{
+	box-sizing: border-box;
+	outline: none;
+}
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: @blue;
+	color: #fff;
+}
+
+[disabled] {
+	cursor: not-allowed;
+}
+
+html{
+	overflow-x: hidden;
+}
+
+body{
+	font-size: 14px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.5;
+	font-family: @default-font;
+	overflow-x: hidden;
+	color: @textDark;
+	padding-top: 120px;
+
+	input, textarea{
+		&:focus{
+			outline: none;
+		}
+		&:focus:required:invalid{
+			border-color: red;
+		}
+		&:required:valid{
+			border-color: green;
+		}
+	}
+}
+
+.page{
+	min-height: 100vh;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+
+	&-content{
+		margin-bottom: auto;
+		min-height: 475px;
+	}
+}
+
+.wrap-img{
+	img{
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+}
+
+.page-fixed{
+	overflow: hidden;
+
+	body{
+		overflow-y: scroll;
+	}
+}
+
+
+textarea{
+	font-family: "RobReg";
+}
+
+input{
+	border: none;
+	background-color: transparent;
+}
+
+a{
+	transition: .3s color ease;
+	outline: none;
+}
+
+
+
+@media (max-width: 991px) {
+	body{
+		padding-top: 108px;
+	}
+}
+
+
+@media (max-width: 767px) {
+	body{
+		padding-top: 96px;
+	}
+
+	.page{
+		&-content{
+			min-height: auto;
+		}
+	}
+}
+
+
+.my-list {
+	padding: 30px;
+
+	li {
+		margin-bottom: 4px;
+	}
+
+	a {
+		display: block;
+		color: #000;
+		font-size: 18px;
+	}
+}
+
+
+/*Grid system*/
+.container{
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 0px) {
+  .container{
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .container{
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container{
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container{
+    width: 970px;
+  }
+}
+
+@media (min-width: 1260px) {
+	.container{
+		width: 1220px;
+	}
+}
+/*Grid system END*/
+
+
+

@@ -1,0 +1,32 @@
+article {
+
+	ol {
+		counter-reset: li;
+		margin-bottom: px-to-rem(75, 24);
+
+		@include media (xxl) {
+			br {
+				display: none;
+			}
+		}
+		
+		li {
+			margin-bottom: px-to-rem(36, 24);
+			
+			@include media (xl) {
+				margin-bottom: px-to-rem(30, 22);
+			}
+
+			&:before {
+				counter-increment: li;
+				content: counter(li)".";
+				color: $accent;
+				font-size: inherit;
+				line-height: inherit;
+				margin-right: 5px;
+				@include C-B;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,70 @@
+.banner-contacts {
+  padding-bottom: px-to-rem(115, 18);
+
+  @include media (lg) {
+    padding-bottom: px-to-em(40, 18);
+  }
+
+  @include media(md) {
+    background: url("../img/contact-bg-mobile.png") no-repeat top center;
+    background-size: cover;
+    padding-top: px-to-em(40, 18);
+  }
+
+  .banner__bg {
+    @include media(sm) {
+      display: none;
+    }
+  }
+
+  .banner__title {
+    color: #fff;
+    @include M-Medium;
+
+    @include media(md) {
+      text-align: center;
+      display: block;
+    }
+
+    @include media (480px) {
+      margin-top: 40px;
+    }
+  }
+
+  .banner__wrap-cards {
+    margin-top: px-to-rem(62, 18);
+  }
+
+  .card {
+    @include media(lg) {
+      padding: px-to-rem(60, 14) 0;
+    }
+
+    &__title {
+      margin-top: -1em;
+    }
+
+    &__text {
+      display: block;
+      text-align: center;
+      color: #fff;
+      @include M-Medium;
+      margin-bottom: 1em;
+
+      @include media(xl) {
+        margin-bottom: 0.6em;
+      }
+    }
+
+    &__btn {
+      margin-top: px-to-em(14, 18);
+
+      .btn__text {
+        @include media(480px) {
+          font-size: .8em;
+        }
+      }
+    }
+  }
+
+}

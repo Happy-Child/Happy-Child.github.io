@@ -1,0 +1,32 @@
+@import "components/components";
+
+
+.order-delivery {
+
+	&__bg {
+		background-image: url("../img/background-pages/background-order-delivery-page.webp");
+	}
+
+	article {
+		h2, 
+		.title-2 {
+			font-size: px-to-rem(48, 24);
+			line-height: px-to-rem(52, 24);
+			color: $accent;
+
+			@include media (xl) {
+				font-size: px-to-rem(35, 22);
+				line-height: px-to-rem(45, 22);
+			}
+		}
+	}
+
+}
+
+html.no-webp {
+
+	.order-delivery__bg {
+		background-image: url("../img/background-pages/background-order-delivery-page.png");
+	}
+
+}

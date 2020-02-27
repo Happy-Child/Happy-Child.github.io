@@ -1,0 +1,91 @@
+.form-feedback {
+  width: 100%;
+  display: block;
+  max-width: 745px;
+  margin: 0 auto;
+  font-size: 18px;
+
+  @include media(xl) {
+    font-size: 16px;
+  }
+
+  @include media(sm) {
+    max-width: 202px;
+  }
+
+  &__wrap-field,
+  &__field {
+    display: block;
+  }
+
+  &__wrap-field {
+    display: block;
+    margin-bottom: px-to-em(30, 18);
+
+    @include media(sm) {
+      margin-bottom: px-to-em(10, 16);
+    }
+  }
+
+  &__field {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    height: px-to-em(60, 18);
+    font-size: px-to-em(22, 18);
+    line-height: px-to-em(27, 22);
+    padding: px-to-em(16, 18) 0 px-to-em(16, 18) px-to-em(76, 18);
+
+    @include media(md) {
+      padding: 1em 0 px-to-em(16, 16) px-to-em(30, 16);
+    }
+
+    @include media(sm) {
+      height: px-to-em(30, 13);
+      font-size: px-to-em(13, 16);
+      line-height: px-to-em(18, 13);
+      padding: px-to-em(6, 13) 0;
+    }
+
+    &::placeholder {
+      font-family: inherit;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    margin-top: px-to-rem(40, 18);
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    &-icon {
+      margin-right: px-to-em(30, 16);
+      width: 100%;
+      max-width: px-to-rem(40, 18);
+      height: auto;
+    }
+
+    &-text {
+      position: relative;
+
+      &:after {
+        @include underline($default-text, 100%);
+      }
+    }
+
+  }
+
+  &__btn {
+    margin: 80px auto 0;
+    display: block;
+
+    @include media(sm) {
+      margin: 40px auto 0;
+    }
+  }
+
+}

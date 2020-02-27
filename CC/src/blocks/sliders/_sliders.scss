@@ -1,0 +1,297 @@
+.slider {
+  margin-bottom: px-to-rem(75, 18);
+
+  @include media(md) {
+    margin-bottom: 30px;
+  }
+
+  @include media(480px) {
+    margin-bottom: 15px;
+  }
+
+  &-main {
+    margin-bottom: px-to-em(60, 18);
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .swiper-pagination-bullet {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      transition: .4s all ease;
+      cursor: pointer;
+      background-color: $blue;
+      margin: 0 3.5px;
+
+      &-active {
+        background-color: $red;
+      }
+    }
+
+  }
+
+  &__wrap-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+
+    @include media(lg) {
+      margin-top: px-to-rem(45, 14);
+    }
+
+    @include media(sm) {
+      margin-top: px-to-rem(30, 14);
+    }
+
+    @include media(480px) {
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      margin-top: 25px;
+
+      .slider__arrow-icon path {
+        fill: $blue;
+      }
+
+      .swiper-button-disabled {
+        path {
+          fill: #23262A !important;
+        }
+      }
+    }
+
+  }
+
+  &__arrow {
+    width: 32px;
+    height: auto;
+    cursor: pointer;
+
+    @include media(sm) {
+      width: 30px;
+    }
+
+    &.swiper-button-disabled {
+      path {
+        fill: #1E201D;
+
+        @include media(480px) {
+          fill: #fff;
+          opacity: .6;
+        }
+
+      }
+    }
+
+    &:hover:not(.swiper-button-disabled) {
+      @media (min-width: 992px) {
+        path {
+          fill: $red;
+        }
+      }
+    }
+
+    path {
+      transition: .4s all ease;
+      fill: $blue;
+
+      @include media(480px) {
+        fill: #fff;
+      }
+
+    }
+
+    &_prev {
+
+    }
+
+    &_next {
+      margin-left: 44px;
+
+      @include media(sm) {
+        margin-left: 38px;
+      }
+
+    }
+
+  }
+
+  .swiper-slide .card {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .swiper-slide-active .card {
+    clip-path: polygon(0 0, 100% 0, 91% 100%, 0 79%);
+
+    @include media(sm) {
+      clip-path: none;
+    }
+  }
+
+  .swiper-slide-next .card {
+    @include media(lg) {
+      clip-path: polygon(0 0, 100% 0, 100% 79%, 9% 100%);
+    }
+
+    @include media(sm) {
+      clip-path: none;
+    }
+  }
+
+  .swiper-slide-next + .swiper-slide .card {
+    clip-path: polygon(0 0, 100% 0, 100% 79%, 9% 100%);
+
+    @include media(lg) {
+      clip-path: none;
+    }
+  }
+
+}
+
+.wrap-slider {
+
+  &-rows {
+    @include media(480px) {
+      .wrapper {
+        padding: 0;
+      }
+    }
+  }
+
+  &-simple {
+
+    @include media(480px) {
+      position: relative;
+
+      .wrapper {
+        padding: 0;
+      }
+    }
+
+  }
+
+  &-video {
+    .slider {
+      max-width: px-to-rem(810, 18);
+      margin: 0 auto;
+    }
+  }
+
+  &-arrow {
+
+    .wrapper {
+      position: relative;
+    }
+
+    .slider__controls {
+      margin: px-to-rem(50, 18) 0 0;
+      position: static;
+    }
+
+    .slider__pagination {
+      position: static;
+      transform: none;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .slider__arrow {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, calc(-50% - 40px));
+
+      @include media(md) {
+        display: none;
+      }
+
+      &-icon {
+        width: 36px;
+
+        @include media(md) {
+          width: 28px;
+        }
+      }
+
+      &_prev {
+        left: 0;
+      }
+
+      &_next {
+        right: 0;
+      }
+
+    }
+  }
+
+  &-reviews {
+
+    .slider {
+      margin-bottom: px-to-rem(50, 18);
+    }
+
+    .slider__pagination {
+      position: static;
+      transform: none;
+    }
+  }
+
+  &-partners {
+    .slider {
+      margin: 0 auto;
+      max-width: calc(100% - 260px);
+
+      @include media(md) {
+        max-width: none;
+      }
+
+    }
+  }
+
+}
+
+.slider__controls {
+  @include media(480px) {
+    margin-top: px-to-rem(30, 14);
+  }
+
+  .slider__wrap-nav {
+    margin-top: 0 !important;
+
+    @include media(md) {
+      display: none;
+    }
+  }
+}
+
+@keyframes polygon-left {
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 91% 100%, 0 79%);
+  }
+}
+
+@keyframes polygon-right{
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 91% 100%, 0 79%);
+  }
+}

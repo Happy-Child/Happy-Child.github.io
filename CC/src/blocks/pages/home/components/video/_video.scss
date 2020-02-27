@@ -1,0 +1,16 @@
+.video-home {
+
+  .video__text {
+    color: #fff;
+  }
+
+  .video__inner {
+    margin: 0 !important;
+    padding: px-to-em(95, 18) 0 px-to-em(80, 18);
+
+    @include media(sm) {
+      padding: px-to-em(40, 12) 0;
+    }
+  }
+
+}

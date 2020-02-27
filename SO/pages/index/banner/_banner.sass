@@ -1,0 +1,172 @@
+.banner
+	background-color: $light-blue
+	position: relative
+
+	&-slider
+		.slick-track
+			display: flex
+			align-items: stretch
+
+		.slick-slide
+			height: auto
+
+		&_item
+			display: flex
+			align-items: stretch
+			justify-content: space-between
+			min-height: 500px
+			height: 100%
+
+		&_item_bottom
+			margin-top: auto
+			
+		&_item_top
+			margin-bottom: auto
+
+		&_item_center
+			margin-top: auto
+			margin-bottom: 0
+
+		.wrap-text
+			padding: 75px 0
+			max-width: 44%
+			> span
+				display: block
+			.title
+				font-size: 4.125rem
+				line-height: 63px
+				margin: 12px 0 30px -3px
+			.subtext
+				font-size: 1.25rem
+				line-height: 26px
+				margin-bottom: 40px
+
+		.wrap-img
+			display: flex
+			height: 100%
+			width: 100%
+			max-width: 56%
+			flex-shrink: 0
+			margin-top: auto
+			img
+				max-width: 100%
+				height: auto
+
+		&-controls
+			.container
+				position: relative
+			.wrap-slider-dots
+				position: absolute
+				bottom: 35px
+				left: 10px
+
+			.wrap-slider-arrows
+				display: none
+				position: absolute
+				right: 0
+				bottom: 0
+				.arrow-next
+					margin-left: 6px
+
+				.slick-arrow
+					flex-shrink: 0
+					width: 44px
+					height: 44px
+					display: flex
+					align-items: center
+					justify-content: center
+					border: none
+					text-align: center
+					transition: .4s all ease
+					cursor: pointer
+					background-color: #fff
+
+					svg
+						width: 14px
+						height: auto
+						position: relative
+						top: 1px
+						path
+							transition: .4s all ease
+							fill: $dark
+
+					&:hover
+						background-color: rgba(255,255,255,.8)
+						svg
+							path
+								fill: $dark-blue
+
+
++media-breakpoint-down(lg)
+	.banner
+		&-slider
+
+			&_item
+				min-height: 460px
+				.wrap-img
+					max-width: 52%
+
+		.wrap-text
+			padding-top: 50px
+
+
+
++media-breakpoint-down(md)
+	.banner
+		&-slider
+			&_item
+				min-height: 370px
+
+		.wrap-text
+			max-width: 41%
+
+			.title
+				font-size: 3rem
+				line-height: 42px
+				margin: 12px 0 25px -3px
+
+			.subtext
+				margin-bottom: 30px
+
+		.wrap-img
+			max-width: 57%
+
+
++media-breakpoint-down(sm)
+	.banner
+		&-slider
+			&_item
+				flex-direction: column
+				justify-content: space-between
+
+			&-controls
+				.wrap-slider-dots
+					bottom: 16px
+
+				.wrap-slider-arrows
+					display: flex
+
+		.wrap-text, .wrap-img
+			height: auto
+			min-height: auto
+
+		.wrap-text
+			max-width: 100%
+			padding: 50px 0
+
+		.wrap-img
+			max-width: 80%
+			margin: 0 auto
+
+
++media-breakpoint-down(xs)
+	.banner
+		.wrap-img
+			max-width: 100%
+
+		.wrap-text
+			padding: 60px 0 50px
+			.title
+				font-size: 2.7rem
+
+

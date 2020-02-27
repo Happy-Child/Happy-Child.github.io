@@ -1,0 +1,135 @@
+.main-menu {
+
+	&__feedback {
+		border-radius: 10px;
+		width: 100%;
+		max-width: 685px; 
+		padding: px-to-rem(56, 24) px-to-rem(60, 24) px-to-rem(56, 24) px-to-rem(45, 24);
+		margin-left: auto;
+		align-self: flex-end;
+
+		@include media (1800px) {
+			max-width: 620px;
+		}
+
+		@include media (1700px) {
+			max-width: 550px;
+			padding: px-to-rem(35, 24) px-to-rem(50, 24) px-to-rem(35, 24) px-to-rem(45, 24);
+		}
+
+		@include media (xxl) {
+			max-width: 450px;
+			padding: px-to-rem(30, 24) px-to-rem(40, 24) px-to-rem(30, 24) px-to-rem(40, 24);
+		}
+
+		@include media (xl) {
+			max-width: 380px;
+		}
+
+		@include media (lg) {
+			margin: 50px auto;
+		}
+
+		@include media (md) {
+			margin: 50px auto 0;
+		}
+
+		@include media (sm) {
+			padding-bottom: 40px;
+			max-width: none;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100%;
+			background-color: #353435;
+			z-index: -1;
+		}
+
+		&-text {
+			@include PD-R-I;
+			color: $gray;
+			margin-bottom: px-to-rem(32, 24);
+
+			@include media (1700px) {
+				margin-bottom: 20px;
+
+				br {
+					display: none;
+				}
+			}
+
+			@include media (1640px) {
+				font-size: .9rem;
+				line-height: 32px;
+			}
+
+			@include media (xxl) {
+				font-size: .8rem;
+				line-height: 30px;
+				margin-bottom: 15px;
+			}
+
+			@include media (xl) {
+				line-height: 24px;
+				margin-bottom: 10px;
+			}
+		}
+
+		&-field-send {
+			.field-send__inner {
+				@include media (1700px) {
+					font-size: .8rem;
+					line-height: 48px;
+				}
+
+				@include media (md) {
+					font-size: 15px;
+					line-height: 35px;
+				}
+			}
+		}
+	}
+
+}
+
+
+
+// -- Animation BEGIN
+.main-menu {
+	.main-menu__feedback {
+		transform: translate(40px, 0);
+		opacity: 0;
+		transition: .8s all ease;
+
+		&:after {
+			width: 0;
+			transition: .8s all ease;
+		}
+	}
+}
+
+.main-menu_visible {
+	.main-menu__feedback {
+		transform: translate(0);
+		opacity: 1;
+		transition: .8s all ease .8s;
+
+		@include media (lg) {
+			transition: .8s all ease .2s;
+		}
+
+		&:after {
+			width: 100%;
+			transition: .8s all ease .8s;
+
+			@include media (lg) {
+				transition: .8s all ease .2s;
+			}
+		}
+	}
+}
+// -- Animation END

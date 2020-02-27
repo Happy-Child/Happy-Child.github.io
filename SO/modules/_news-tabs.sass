@@ -1,0 +1,38 @@
+.wrap-news-tabs-btns
+	margin-bottom: 25px
+	
+	.tab-btn
+		margin: 0 10px
+
+.wrap-news-tabs-content
+	.cur-tab-content
+		display: flex
+
+
++media-breakpoint-down(xs)
+	.wrap-news-tabs-btns
+		overflow-x: auto
+		justify-content: flex-start
+		margin-left: auto
+		margin-right: auto
+		
+		.tab-btn
+			white-space: nowrap
+			font-size: 12px
+			line-height: 14px
+			&:first-child
+				margin-left: 0
+			&:last-child
+				margin-right: 0
+
+	.wrap-news-tabs-content
+		.tab-content
+			margin-left: 0
+			margin-right: 0
+			> div
+				padding-left: 0
+				padding-right: 0
+				margin-bottom: 15px
+				
+
+

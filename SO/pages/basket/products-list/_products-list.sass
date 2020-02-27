@@ -1,0 +1,35 @@
+.wrap-basket-product-list
+	ul
+		padding: 20px 50px
+
+
++media-breakpoint-down(lg)
+	.wrap-basket-product-list
+		ul
+			padding: 15px 40px
+
+			
+
++media-breakpoint-down(md)
+
++media-breakpoint-down(sm)
+
++media-breakpoint-down(xs)
+	.wrap-basket-product-list
+		> ul
+			box-shadow: none
+			padding: 0
+
+			.wrap-product-card-large
+				.product-card
+					padding: 30px 15px
+
+				&:last-child
+					.product-card
+						border-bottom: 1px solid $border-gray
+
+				&:first-child
+					.product-card
+						padding-top: 0
+
+

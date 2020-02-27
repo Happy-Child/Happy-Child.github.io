@@ -1,0 +1,103 @@
+.video {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 18px;
+
+  @include media(xxl) {
+    font-size: 16px;
+  }
+
+  @include media(xl) {
+    font-size: 12px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin: px-to-rem(50, 18) 0;
+
+    @include media(lg) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__player {
+    position: relative;
+    width: 100%;
+    max-width: px-to-em(875, 18);
+
+    @include media(sm) {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    &:after {
+      @include stretchHeight(56%);
+    }
+  }
+
+  iframe {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    transition: .4s all ease;
+    box-shadow: 0px 4px 60px rgba(255, 255, 255, 0.3);
+  }
+
+  &__wrap-text {
+    position: relative;
+    max-width: 550px;
+    margin: 0 auto;
+    transform: translate(-15px, 0);
+
+    @include media(lg) {
+      margin-bottom: px-to-rem(32, 12);
+      transform: none;
+    }
+
+    @include media(sm) {
+      margin-bottom: px-to-rem(18, 12);
+    }
+
+  }
+
+  &__text {
+    text-align: center;
+    color: $default-text;
+    position: relative;
+    z-index: 1;
+    display: block;
+
+    @include media(sm) {
+      font-size: px-to-em(18, 12);
+      line-height: px-to-em(22, 18);
+    }
+
+    em {
+      color: $red;
+      @include M-Medium;
+      text-transform: uppercase;
+    }
+
+    &-decor {
+      width: px-to-em(406, 18);
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -75%);
+
+      @include media(lg) {
+        display: none;
+      }
+
+    }
+
+  }
+
+}

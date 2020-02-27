@@ -1,0 +1,11 @@
+@mixin underline ($color, $top) {
+  content: "";
+  position: absolute;
+  top: $top;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  height: 1px;
+  background-color: $color;
+  transition: inherit;
+}

@@ -1,0 +1,34 @@
+.banner-home {
+  padding-top: px-to-em(56, 18);
+
+  @include media (lg) {
+    padding-bottom: px-to-em(40, 18);
+  }
+
+  @include media(sm) {
+    background: url("../img/bg-banner-home-mobile.png") no-repeat top center;
+    background-size: cover;
+    padding-top: px-to-em(40, 18);
+  }
+
+  @include media(480px) {
+    background: url("../img/bg-banner-home-mobile.png") repeat-y top center;
+    background-size: 121%;
+
+    &:after {
+      top: 4px;
+    }
+  }
+
+  .banner__bg {
+    @include media(sm) {
+      display: none;
+    }
+  }
+
+  .card__title,
+  .card__btn {
+    transform: translate(0, -25px);
+  }
+
+}

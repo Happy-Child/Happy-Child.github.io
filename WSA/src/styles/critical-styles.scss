@@ -1,0 +1,7 @@
+@import "helpers/variables";
+@import "helpers/mixins-include";
+@import "helpers/functions-include";
+
+
+@media(min-width: 768px){body{opacity:0;}}
+@import "../blocks/header/header";

@@ -1,0 +1,12 @@
+extends ../pug/template/page.pug
+
+block title 
+	| Статья
+
+block content
+	main.main.page-article
+		include ../modules/breadcrumbs/breadcrumbs
+
+		include article/content/content
+
+		include article/row-other-news/row-other-news

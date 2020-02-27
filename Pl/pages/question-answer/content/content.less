@@ -1,0 +1,159 @@
+@import "../../../less/common/vars";
+
+.question-answer{
+	.dropdown-list{
+
+		li{
+			padding: 25px 0;
+			border-bottom: 1px solid #EFEFEF;
+
+			&:first-child{
+				padding-top: 5px;
+			}
+		}
+
+		.dropdown-title{
+			font-size: 18px;
+			line-height: 24px;
+			font-family: "RobMed";
+			color: @blue;
+			transition: .3s all ease;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			-ms-align-items: flex-start;
+			align-items: flex-start;
+			cursor: pointer;
+
+			&:hover{
+				color: @pink;
+
+				.wrap-icon{
+					background-color: @pink;
+				}
+			}
+		}
+
+		.dropdown-title-active{
+			.wrap-icon{
+				img{
+					margin-top: -2px;
+					-webkit-transform: rotate(0deg);
+					-moz-transform: rotate(0deg);
+					-ms-transform: rotate(0deg);
+					-o-transform: rotate(0deg);
+					transform: rotate(0deg);
+				}
+			}
+		}
+
+		.wrap-icon{
+			margin-right: 15px;
+			width: 100%;
+			max-width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			-ms-align-items: center;
+			align-items: center;
+			justify-content: center;
+			background-color: @blue;
+			transition: .3s all ease;
+			margin-top: 2px;
+
+			img{
+				margin-top: 3px;
+				-webkit-transform: rotate(180deg);
+				-moz-transform: rotate(180deg);
+				-ms-transform: rotate(180deg);
+				-o-transform: rotate(180deg);
+				transform: rotate(180deg);
+				
+				width: 10px;
+				height: auto;
+				transition: .3s all ease;
+			}
+		}
+
+		p{
+			padding: 14px 0 0 35px;
+			display: none;
+		}
+
+	}
+}
+
+@media (min-width: 1260px) {
+
+}
+
+@media (max-width: 1259px) {
+
+}
+
+@media (max-width: 991px) {
+	.question-answer{
+		.dropdown-list{
+			.dropdown-title{
+				&:hover{
+					color: @blue;
+
+					.wrap-icon{
+						background-color: @blue;
+					}
+				}
+			}
+
+			.dropdown-title-active{
+				color: @pink;
+				
+				.wrap-icon{
+					background-color: @pink;
+				}
+
+				&:hover{
+					color: @pink;
+					.wrap-icon{
+						background-color: @pink;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.question-answer{
+		.dropdown-list{
+			li{
+				padding: 20px 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.question-answer{
+		.dropdown-list{
+			.dropdown-title{
+				font-size: 16px;
+				line-height: 21px;
+			}
+
+			p{
+				padding: 10px 0 0;
+			}
+
+			.wrap-icon{
+				margin-right: 10px;
+			}
+		}
+	}
+}
+

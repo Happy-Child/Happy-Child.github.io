@@ -1,0 +1,26 @@
+// -- Helpers BEGIN
+@import "../../../styles/helpers/variables";
+@import "../../../styles/helpers/mixins-include";
+@import "../../../styles/helpers/functions-include";
+// -- Helpers END
+
+
+// -- Components BEGIN
+@import "components/components";
+// -- Components END
+
+.home {
+
+  .header {
+
+    &__bottom{
+
+      &:after {
+        display: none;
+      }
+
+    }
+
+  }
+
+}

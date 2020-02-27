@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'RobReg';
+	src: url('RobotoRegular/RobotoRegular.eot');
+	src: local('☺'), url('RobotoRegular/RobotoRegular.woff') format('woff'), url('RobotoRegular/RobotoRegular.ttf') format('truetype'), url('RobotoRegular/RobotoRegular.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'RobMed';
+	src: url('RobotoMedium/RobotoMedium.eot');
+	src: local('☺'), url('RobotoMedium/RobotoMedium.woff') format('woff'), url('RobotoMedium/RobotoMedium.ttf') format('truetype'), url('RobotoMedium/RobotoMedium.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'RobBold';
+	src: url('RobotoBold/RobotoBold.eot');
+	src: local('☺'), url('RobotoBold/RobotoBold.woff') format('woff'), url('RobotoBold/RobotoBold.ttf') format('truetype'), url('RobotoBold/RobotoBold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}

@@ -1,0 +1,20 @@
+.portfolio {
+  padding-bottom: px-to-rem(65, 18);
+
+  @include media(sm) {
+    padding-bottom: 60px;
+  }
+
+  .slider__wrap-nav {
+    @include media(480px) {
+      display: none;
+    }
+  }
+
+  .slider__pagination {
+    @include media(480px) {
+      margin-top: 10px;
+    }
+  }
+
+}

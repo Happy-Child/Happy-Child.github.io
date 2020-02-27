@@ -1,0 +1,31 @@
+//Popup leave BEGIN
+.popup.popup-leave(data-popup-key="popup-leave" role="dialog")
+  .popup__inner
+    .popup__content
+      .popup__content-inner
+
+        button.popup__close(aria-label="Close popup")
+
+        span.popup__title Заполните <em>форму</em>
+        p.popup__subtitle Наш менеджер вам перезвонит
+
+        form.form-feedback
+          label.form-feedback__wrap-field
+            input.form-feedback__field(type="text" name="name" placeholder="Имя" aria-label="Имя")
+
+          label.form-feedback__wrap-field
+            input.form-feedback__field(type="text" name="social-link" placeholder="Ссылка на социальную сеть" aria-label="Ссылка на социальную сеть")
+
+          label.form-feedback__wrap-field.form-feedback__wrap-textarea
+            textarea.form-feedback__field(type="text" name="social-link" placeholder="Отзыв" aria-label="Отзыв")
+
+          label.form-feedback__picture
+            input(type="file" name="picture" aria-label="Прикрепить изображение")
+            span.replace-svg.form-feedback__picture-icon(data-src="img/icon-feedback-picture.svg")
+            span.form-feedback__picture-text.filename Прикрепить изображение
+
+          button.btn.form-feedback__btn
+            img.card__btn-img(src="img/bg-btn.png" alt="" aria-hidden="true")
+            img.card__btn-img.card__btn-img_hover(src="img/bg-btn-hover.png" alt="" aria-hidden="true")
+            span.btn__text Отправить
+//Popup leave END

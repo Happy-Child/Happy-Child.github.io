@@ -1,0 +1,252 @@
+.wrap-fixed-bar
+
+	.wrap-btns
+		.wrap-btn
+			.btn(data-show-key="show-basket")
+				.wrap-icon.img-resp
+					img(src="img/icon-shopping-cart.svg", alt="")
+				span.count 10
+			.btn-label В корзине товаров<br>на сумму:
+				span.total-price  50 000.00
+				|  руб.
+
+		.wrap-btn
+			.btn(data-show-key="show-deferred")
+				.wrap-icon.img-resp
+					img(src="img/icon-heart.svg", alt="")
+				span.count 2
+			.btn-label Отложенных товаров<br>на сумму:
+				span.total-price  2.00
+				|  руб.
+
+		.wrap-btn
+			a(href="#").btn.btn-compare
+				.wrap-icon.img-resp
+					img(src="img/icon-diagram.svg", alt="")
+				span.count 10
+			.btn-label Сравнение товаров
+
+
+	.wrap-content
+		.content.content-cart(data-show-key="show-basket")
+			.top-line
+				span.title Корзина
+				span.btn-gray.btn-clear-basket
+					span.text Очистить
+
+			.info
+				table.table-products.table-products-fix-bar
+					tr.row-title
+						td
+						td Название
+						td Цена
+						td Кол-во
+						td Сумма
+						td
+					tr
+						td
+							.wrap-img-product
+								img(src="img/product-3.png", alt="")
+						td
+							.wrap-product-info
+								.wrap-text
+									span.title Смартфон Samsung<br>Galaxy S8 (мистический аметист)
+									span.subtext Артикуль:
+										em  3356528
+						td
+							span.cur-price.price 1 100,00 руб.
+						td
+							.wrap-product-counter
+								.icon-counter.less
+									img(src="img/icon-minus.svg", alt="")
+								input(type="text", value="1", maxlength="3").cur-counter
+								.icon-counter.plus
+									img(src="img/icon-plus.svg", alt="")
+						td
+							span.price 1 100,00 руб.
+						td
+							.remove-product.wrap-img
+								img(src="img/icon-cross.svg", alt="")
+					tr
+						td
+							.wrap-img-product
+								img(src="img/product-1.png", alt="")
+						td
+							.wrap-product-info
+								.wrap-text
+									span.title Смартфон Samsung<br>Galaxy S8 (мистический аметист)
+									span.subtext Артикуль:
+										em  3356528
+						td
+							span.old-price 110,99 руб.
+							span.cur-price.price 1 100,00 руб.
+						td
+							.wrap-product-counter
+								.icon-counter.less
+									img(src="img/icon-minus.svg", alt="")
+								input(type="text", value="1", maxlength="3").cur-counter
+								.icon-counter.plus
+									img(src="img/icon-plus.svg", alt="")
+						td
+							span.price 1 100,00 руб.
+						td
+							.remove-product.wrap-img
+								img(src="img/icon-cross.svg", alt="")
+					tr
+						td
+							.wrap-img-product
+								img(src="img/product-2.png", alt="")
+						td
+							.wrap-product-info
+								.wrap-text
+									span.title Смартфон Samsung<br>Galaxy S8 (мистический аметист)
+									span.subtext Артикуль:
+										em  3356528
+						td
+							span.old-price 110,99 руб.
+							span.cur-price.price 1 100,00 руб.
+						td
+							.wrap-product-counter
+								.icon-counter.less
+									img(src="img/icon-minus.svg", alt="")
+								input(type="text", value="1", maxlength="3").cur-counter
+								.icon-counter.plus
+									img(src="img/icon-plus.svg", alt="")
+						td
+							span.price 1 100,00 руб.
+						td
+							.remove-product.wrap-img
+								img(src="img/icon-cross.svg", alt="")
+				.bottom-line
+					.total-price
+						span.text Итого:
+						span.price 2 200, 00 руб.
+					.btns-row
+						span.btn-hide-bar 
+							.icon
+								<svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M4.08944 8.9101L0.0859408 4.70734C0.0286771 4.64729 -3.39776e-08 4.57821 -3.39776e-08 4.50006C-3.39776e-08 4.42192 0.0286771 4.35271 0.0859408 4.29263L4.08944 0.0902123C4.14679 0.0300076 4.2126 0 4.28708 0C4.36152 0 4.42742 0.0301023 4.48466 0.0902123L4.91409 0.541021C4.97135 0.601131 4.99997 0.670306 4.99997 0.748452C4.99997 0.826598 4.97135 0.895774 4.91409 0.955884L1.53779 4.50006L4.9143 8.04437C4.97156 8.10445 5 8.17365 5 8.25167C5 8.32995 4.97138 8.39912 4.9143 8.4592L4.48469 8.91007C4.42745 8.97015 4.36152 9 4.28711 9C4.2126 9.00003 4.1467 8.97018 4.08944 8.9101Z" fill="#292929"/>
+								</svg>
+							| Вернуться к покупкам
+						.btn-group
+							a(href="#").btn-white 
+								span.text Перейти в корзину
+							a(href="#").btn-blue 
+								span.text Оформить заказ
+
+		.content.content-deferred(data-show-key="show-deferred")
+			.top-line
+				span.title Отложенные товары
+				span.btn-gray.btn-clear-basket
+					span.text Очистить
+
+			.info
+				table.table-products.table-products-fix-bar
+					tr.row-title
+						td
+						td Название
+						td Цена
+						td Кол-во
+						td Сумма
+						td
+					tr
+						td
+							.wrap-img-product
+								img(src="img/product-3.png", alt="")
+						td
+							.wrap-product-info
+								.wrap-text
+									span.title Смартфон Samsung<br>Galaxy S8 (мистический аметист в длинную стоку)
+									span.subtext Артикуль:
+										em  3356528
+						td
+							span.old-price 110,99 руб.
+							span.cur-price.price 1 100,00 руб.
+						td
+							.wrap-product-counter
+								.icon-counter.less
+									img(src="img/icon-minus.svg", alt="")
+								input(type="text", value="1", maxlength="3").cur-counter
+								.icon-counter.plus
+									img(src="img/icon-plus.svg", alt="")
+						td
+							span.price 1 100,00 руб.
+						td
+							.remove-product.wrap-img
+								img(src="img/icon-cross.svg", alt="")
+					tr
+						td
+							.wrap-img-product
+								img(src="img/product-1.png", alt="")
+						td
+							.wrap-product-info
+								.wrap-text
+									span.title Смартфон Samsung<br>Galaxy S8 (мистический аметист)
+									span.subtext Артикуль:
+										em  3356528
+						td
+							span.old-price 110,99 руб.
+							span.cur-price.price 1 100,00 руб.
+						td
+							.wrap-product-counter
+								.icon-counter.less
+									img(src="img/icon-minus.svg", alt="")
+								input(type="text", value="1", maxlength="3").cur-counter
+								.icon-counter.plus
+									img(src="img/icon-plus.svg", alt="")
+						td
+							span.price 1 100,00 руб.
+						td
+							.remove-product.wrap-img
+								img(src="img/icon-cross.svg", alt="")
+					tr
+						td
+							.wrap-img-product
+								img(src="img/product-2.png", alt="")
+						td
+							.wrap-product-info
+								.wrap-text
+									span.title Смартфон Samsung<br>Galaxy S8 (мистический аметист)
+									span.subtext Артикуль:
+										em  3356528
+						td
+							span.old-price 110,99 руб.
+							span.cur-price.price 1 100,00 руб.
+						td
+							.wrap-product-counter
+								.icon-counter.less
+									img(src="img/icon-minus.svg", alt="")
+								input(type="text", value="1", maxlength="3").cur-counter
+								.icon-counter.plus
+									img(src="img/icon-plus.svg", alt="")
+						td
+							span.price 1 100,00 руб.
+						td
+							.remove-product.wrap-img
+								img(src="img/icon-cross.svg", alt="")
+				.bottom-line
+					.btns-row
+						span.btn-hide-bar 
+							.icon
+								<svg width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M4.08944 8.9101L0.0859408 4.70734C0.0286771 4.64729 -3.39776e-08 4.57821 -3.39776e-08 4.50006C-3.39776e-08 4.42192 0.0286771 4.35271 0.0859408 4.29263L4.08944 0.0902123C4.14679 0.0300076 4.2126 0 4.28708 0C4.36152 0 4.42742 0.0301023 4.48466 0.0902123L4.91409 0.541021C4.97135 0.601131 4.99997 0.670306 4.99997 0.748452C4.99997 0.826598 4.97135 0.895774 4.91409 0.955884L1.53779 4.50006L4.9143 8.04437C4.97156 8.10445 5 8.17365 5 8.25167C5 8.32995 4.97138 8.39912 4.9143 8.4592L4.48469 8.91007C4.42745 8.97015 4.36152 9 4.28711 9C4.2126 9.00003 4.1467 8.97018 4.08944 8.9101Z" fill="#292929"/>
+								</svg>
+							| Вернуться к покупкам
+						.btn-group
+							a(href="#").btn-white 
+								span.text Перейти в корзину
+
+		.content.content-cart-empty.content-cur
+			.top-line
+				span.title Корзина
+			.info
+				.wrap-icon.img-resp
+					<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M15.8375 13.8229C14.4624 13.8229 13.3437 14.9841 13.3437 16.4114C13.3437 17.8387 14.4625 19 15.8375 19C17.2126 19 18.3313 17.8387 18.3313 16.4114C18.3313 14.9841 17.2126 13.8229 15.8375 13.8229ZM15.8375 17.4468C15.2874 17.4468 14.84 16.9825 14.84 16.4114C14.84 15.8404 15.2874 15.376 15.8375 15.376C16.3876 15.376 16.835 15.8404 16.835 16.4114C16.835 16.9825 16.3876 17.4468 15.8375 17.4468Z" fill="white"/>
+					<path d="M19.841 3.81835C19.6994 3.63017 19.4822 3.52041 19.252 3.52041H4.618L3.94467 0.596128C3.86413 0.246691 3.56311 4.52952e-10 3.21697 4.52952e-10H0.74813C0.334924 -4.0547e-05 0 0.347613 0 0.776524C0 1.20543 0.334924 1.55309 0.74813 1.55309H2.62646L5.05788 12.1134C5.13843 12.4631 5.43945 12.7095 5.78558 12.7095H17.4316C17.7755 12.7095 18.0752 12.4662 18.1577 12.1198L19.9782 4.48357C20.0333 4.25168 19.9827 4.00653 19.841 3.81835ZM16.8462 11.1564H6.37609L4.97558 5.07354H18.2961L16.8462 11.1564Z" fill="white"/>
+					<path d="M6.78283 13.8229C5.40774 13.8229 4.28906 14.9841 4.28906 16.4114C4.28906 17.8387 5.40778 19 6.78283 19C8.15787 19 9.27659 17.8387 9.27659 16.4114C9.27659 14.9841 8.15787 13.8229 6.78283 13.8229ZM6.78283 17.4468C6.23271 17.4468 5.78532 16.9825 5.78532 16.4114C5.78532 15.8404 6.23271 15.376 6.78283 15.376C7.33295 15.376 7.78033 15.8404 7.78033 16.4114C7.78033 16.9825 7.33295 17.4468 6.78283 17.4468Z" fill="white"/>
+					</svg>
+
+				span.main-text Ваша корзина пуста
+				span.subtext Выберите в каталоге интересующий товар и нажмите кнопку “В корзину”
+				a(href="#").btn.btn-blue В каталог

@@ -1,0 +1,67 @@
+.quality {
+	&__main-content {
+		> * {
+			margin-bottom: px-to-rem(50, 24);
+		}
+
+		table {
+			width: 100%;
+
+			@include media (sm) {
+				display: block;
+			}
+
+			em {
+				@include C-B;
+			}
+
+			tr {
+				@include media (sm) {
+					display: block;
+					padding-bottom: 12px;
+				}
+			}
+
+			td {
+				margin-right: px-to-rem(60, 24);
+
+				@include media (sm) {
+					display: block;
+					line-height: 27px;
+				}
+
+				&:first-child {
+					@include media (lg) {
+						width: 185px;
+					}
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+
+		ul {
+			em {
+				color: #B6B2AC;
+				@include C-R;
+			}
+
+			li {
+				@include C-B;
+
+				@include media (md) {
+					margin-bottom: 8px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+
+	}
+}

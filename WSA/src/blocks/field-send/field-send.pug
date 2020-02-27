@@ -1,0 +1,10 @@
+include components/input/input
+include components/button/button
+
+
+mixin field-send(className)
+	form.field-send(class= className + "field-send")
+		.field-send__inner
+			+input("field-send")
+			+button("field-send")
+			

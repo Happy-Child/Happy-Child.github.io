@@ -1,0 +1,207 @@
+@import "../../less/common/vars";
+
+.viewed-products{
+	padding: 45px 0 50px;
+	margin-top: auto;
+
+	.viewed-products-slider{
+		flex-wrap: nowrap;
+		position: relative;
+		padding: 0 0 0 2px;
+	}
+
+	.top-line{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-ms-align-items: center;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 24px;
+
+		.title{
+			font-size: 22px;
+			line-height: 26px;
+			font-family: "RobMed";
+		}
+
+		.wrap-slider-nav{
+			> span{
+				cursor: pointer;
+
+				&:last-child{
+					margin-left: 15px;
+					svg{
+						-webkit-transform: rotate(180deg);
+						-ms-transform: rotate(180deg);
+						-o-transform: rotate(180deg);
+						transform: rotate(180deg);		
+					}
+				}
+			}
+		}
+	}
+
+
+
+	.wrap-products-cards-index{
+		-ms-align-items: stretch;
+		margin: 0;
+		align-items: stretch;
+
+		.wrap-card{
+			min-height: 352px;
+			outline: none;
+
+			.card{
+				padding: 25px 18px;
+				background-color: #fff;
+				min-height: inherit;
+				-webkit-box-shadow: none;
+				border-top: 1px solid #EEEEEE;
+				border-bottom: 1px solid #EEEEEE;
+				border-right: 1px solid #EEEEEE;
+				box-shadow: none;
+				border-radius: 0;
+			}
+		}
+		
+	}
+}
+
+.viewed-products-gray{
+	background-color: @bgF7;
+}
+
+
+@media (max-width: 1259px) {
+	.viewed-products{
+		.wrap-products-cards-index .wrap-card{
+			.wrap-cur-price .save-prise{
+				margin-left: 11px;
+			}
+
+			.btn-product{
+				margin-left: auto;
+			}
+
+			.wrap-actions{
+				.action{
+					margin: 0 7px 0 0;
+
+					.icon{
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 991px) {
+	.viewed-products{
+		padding: 35px 0 40px;
+
+		.viewed-products-slider{
+			padding: 0 1px;
+		}
+		
+		.wrap-products-cards-index .wrap-card{
+			.btn-product{
+				max-width: 116px;
+			}
+
+			.wrap-cur-price .save-prise{
+				margin-left: 10px;
+			}
+		}
+
+	}
+}
+
+
+@media (max-width: 767px) {
+	.viewed-products{
+		.viewed-products-slider{
+			padding: 0 1px;
+		}
+
+		.wrap-products-cards-index .wrap-card{
+			.btn-product{
+				max-width: 127px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 575px) {
+	.viewed-products{
+
+		.top-line{
+			.title{
+				font-size: 18px;
+				line-height: 24px;
+			}
+
+			.wrap-slider-nav{
+				display: none;
+			}
+		}
+
+		.slick-list{
+			background-color: transparent;
+		}
+
+		.wrap-products-cards-index{
+			margin: 0 -15px;
+
+			.wrap-card{
+				width: 238px;
+
+				.btn-product{
+					max-width: 107px;
+				}
+
+				&:first-child{
+					margin-left: 15px;
+				}
+
+				&:last-child{
+					margin-right: 15px;
+				}
+
+				.wrap-actions{
+					.action{
+						&:first-child{
+							margin-right: 12px;
+							padding-right: 4px;
+							border-right: 1px solid rgba(0,0,0,.1);
+						}
+
+						.icon{
+							max-width: 19px;
+						}
+					}
+				}
+
+				.card{
+					border: 1px solid #eee;
+					margin: 0 -1px 0 0;
+				}
+
+				.wrap-cur-price{
+					.save-prise{
+						margin-left: 9px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+

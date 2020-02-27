@@ -1,0 +1,38 @@
+@import "components/components";
+
+
+.about-us {
+
+	&__bg {
+		background-image: url("../img/background-pages/background-about-us-page.webp");
+	}
+
+	&__group-cards {
+		margin-bottom: px-to-rem(78, 24);
+
+		@include media (md) {
+			margin-bottom: px-to-rem(45, 22);
+		}
+
+		&_second {
+			.card__description-text_second {
+				color: $accent;
+			}
+		}
+	}
+
+	&__main {
+		p {
+			color: $gray;
+		}
+	}
+
+}
+
+html.no-webp {
+
+	.about-us__bg {
+		background-image: url("../img/background-pages/background-about-us-page.png");
+	}
+
+}

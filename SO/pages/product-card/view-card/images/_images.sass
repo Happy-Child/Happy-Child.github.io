@@ -1,0 +1,102 @@
+.product-card-images
+	display: flex
+	align-items: stretch
+
+	.wrap-img
+		transition: .6s all ease
+
+	.thumbnails-images
+		flex-shrink: 0
+		.wrap-img
+			width: 100%
+			max-width: 120px
+			height: 120px
+			margin-bottom: 20px
+			cursor: pointer
+
+			&:hover
+				border-color: #D3D3D3
+				
+			&:last-child
+				margin-bottom: 0
+
+		.cur-image
+			border-color: #D3D3D3
+
+	.main-image
+		width: 100%
+		margin-left: 20px
+		position: relative
+		.wrap-img
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+			width: 100%
+			visibility: hidden
+			opacity: 0
+			padding: 20px
+
+		.cur-image
+			visibility: visible
+			opacity: 1
+			
+
+
++media-breakpoint-down(lg)
+	.product-card-images
+		.thumbnails-images
+			.wrap-img
+				height: 90px
+
+
++media-breakpoint-down(md)
+	.product-card-images
+		flex-direction: column
+		.thumbnails-images
+			order: 2
+			display: flex
+			align-items: stretch
+			.wrap-img
+				height: auto
+				margin-bottom: 0
+				margin-right: 15px
+				position: relative
+				&::before
+					content: ""
+					width: 100%
+					padding-top: 100%
+					display: block
+				img
+					position: absolute
+				&:last-child
+					margin-right: 0
+
+		.main-image
+			order: 1
+			margin-left: 0
+			margin-bottom: 15px
+			position: relative
+			&::before
+				content: ""
+				width: 100%
+				padding-top: 100%
+				display: block
+			.wrap-img
+				position: absolute
+
+
++media-breakpoint-down(sm)
+	.product-card-images
+		margin-bottom: 35px
+
+		.thumbnails-images
+			.wrap-img
+				margin-right: 10px
+
+		.main-image
+			margin-bottom: 10px
+
+
+
++media-breakpoint-down(xs)

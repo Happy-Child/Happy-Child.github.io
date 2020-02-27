@@ -1,0 +1,226 @@
+.charecteristics {
+  font-size: 18px;
+  padding: px-to-em(80, 18) 0;
+  height: 1035px;
+  color: #fff;
+  overflow: hidden;
+
+  @include media(xxl) {
+    font-size: 12px;
+    height: 850px;
+  }
+
+  @include media(lg) {
+    height: auto;
+    background-image: none !important;
+    background-color: #000000;
+  }
+
+  @include media(md) {
+    font-size: 10px;
+  }
+
+  &__wrap-titles {
+    .sec__title {
+      @include media(sm) {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+
+  &__wrap-product {
+    margin: 0 auto;
+    width: 100%;
+    max-width: px-to-em(495, 18);
+    position: relative;
+    transform: translate(0, px-to-em(35, 18));
+
+    @include media(lg) {
+      max-width: none;
+      transform: translate(0, -90px);
+      text-align: center;
+      margin-bottom: -90px;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &:after {
+      @include stretchHeight(100%)
+    }
+  }
+
+  &__product {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include media(xxl) {
+      transform: translate(0, px-to-em(125, 18));
+    }
+
+    @include media(lg) {
+      position: static;
+      margin-bottom: 90px;
+      max-width: 400px;
+    }
+
+    @include media(md) {
+      max-width: 300px;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__item {
+    position: absolute;
+    top: px-to-em(70, 18);
+    right: calc(100% + 74px);
+    font-size: 22px;
+
+    @include media(xl) {
+      right: calc(100% + 20px);
+    }
+
+    @include media(lg) {
+      position: static;
+      margin-bottom: 30px;
+      transform: none !important;
+
+      br {
+        display: none;
+      }
+    }
+
+    @include media(sm) {
+      margin-bottom: 18px;
+    }
+
+
+    &:nth-child(even) {
+      left: 100%;
+
+      @include media(xl) {
+        left: 100%;
+      }
+
+      .charecteristics__item-text {
+        transform: translate(17%, 0);
+      }
+    }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      transform: translate(0, 100%);
+      top: px-to-em(274, 22);
+    }
+
+    &:nth-child(5),
+    &:nth-child(6) {
+      transform: translate(0, 135%);
+      top: px-to-em(274, 22);
+      right: auto;
+      left: 40%;
+    }
+
+    &-img {
+      @include media(xxl) {
+        width: 150px;
+      }
+
+      @include media(lg) {
+        display: none;
+      }
+    }
+
+    @include media(lg) {
+      padding-left: 45px;
+    }
+
+
+    @include media(sm) {
+      text-align: left;
+    }
+
+    &-text {
+      font-size: 1em;
+      line-height: px-to-em(29, 22);
+      white-space: nowrap;
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 0;
+      transform: translate(-43%, 0);
+
+      @include media(xxl) {
+        font-size: 16px;
+      }
+
+      @include media(lg) {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: auto;
+        bottom: auto;
+        white-space: normal;
+
+        &:after {
+          content: '';
+          background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7' cy='7' r='7' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='7' y1='5.38462' x2='7' y2='14' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23053365'/%3E%3Cstop offset='1' stop-color='%23144E8C'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 14px;
+          height: 14px;
+          position: absolute;
+          top: 1px;
+          left: -45px;
+        }
+      }
+
+      @include media(md) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      em {
+        @include M-SemiBold;
+        color: $red;
+      }
+    }
+  }
+
+  &__graving {
+    height: 1135px;
+
+    .charecteristics {
+      &__item {
+
+        &:nth-child(5),
+        &:nth-child(6) {
+          transform: translate(0, 155%);
+
+          @include media(xxl) {
+            transform: translate(0, 125%);
+          }
+        }
+
+        &:nth-child(5) {
+          left: -10%;
+        }
+
+        &:nth-child(6) {
+          left: 55%;
+        }
+
+      }
+    }
+  }
+
+}

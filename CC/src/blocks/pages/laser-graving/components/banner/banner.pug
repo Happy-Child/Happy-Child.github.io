@@ -1,0 +1,28 @@
+section.banner-laser.banner
+	picture
+		source(media="(min-width: 576px)" srcset="img/bg-laser-engraving.png")
+		source(media="(max-width: 576px)" srcset="img/laser-bg-mobile.png")
+		img.banner__bg(src="img/bg-laser-engraving.png" alt="" aria-hidden="true")
+
+	.wrapper
+		.banner__inner
+
+			+breadcrumbs([
+				"Главная",
+				"Услуги",
+				"Лазерная резка"
+			])
+
+			.banner__wrap-text
+				h1.banner__title.title-1 <em>лазерная</em> гравировка
+				p.banner__subtitle.title-3 Точно и быстро рассчитаем стоимость — качественно и в срок выполним заказ
+
+			.banner__wrap-form
+				form.form
+					label.form__wrap-field
+						input.form__field(type="tel" name="phone" placeholder="Ваш номер" aria-label="Ваш номер")
+
+					button.btn.form__btn
+						img.card__btn-img(src="img/bg-btn.png" alt="" aria-hidden="true")
+						img.card__btn-img.card__btn-img_hover(src="img/bg-btn-hover.png" alt="" aria-hidden="true")
+						span.btn__text Отправить

@@ -1,0 +1,38 @@
+.breadcrumbs
+	display: flex
+	align-items: center
+	margin: 15px 0 55px
+	width: 100%
+	li
+		margin-right: 14px
+		&:last-child
+			a::after
+				display: none
+	a
+		display: block
+		font-size: 0.75rem
+		line-height: 14px
+		color: $gray-dark-icons
+		position: relative
+		&::after
+			content: ">"
+			position: absolute
+			top: 50%
+			left: calc(100% + 4px)
+			transform: translate(0, -50%)
+			color: inherit
+			font-size: inherit
+			line-height: inherit
+	.active
+		a
+			font-weight: bold
+			pointer-events: none
+
+
++media-breakpoint-down(lg)
+
++media-breakpoint-down(md)
+	.breadcrumbs
+		margin: 10px 0 40px
+		white-space: nowrap
+		overflow-x: auto

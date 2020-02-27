@@ -1,0 +1,69 @@
+.wrap-subscribe-banner
+	.container
+		.subscribe-banner(style="background-image: url(img/bg-subscribe-banner.jpg)")
+
+			.row.justify-content-center.align-items-stretch.subscribe-banner-content
+
+				.col-12.col-sm-9.col-md-10.col-lg-4
+					.wrap-text
+						span.subtitle.text-fw-medium Подпишись на новости и получи
+						span.title.text-fw-bold скидку 5%
+
+				.w-100.d-block.d-sm-none
+
+				.col-12.col-sm-9.col-md-10.col-lg-6
+					form.form-validate
+						.wrap-field
+							input(required, type="text", name="email", placeholder="E-mail", data-msg-email="Неверный формат")
+							.error-icon
+								img(src="img/icon-error.svg", alt="")
+
+						button(type="submit").btn.btn-dark подписаться
+
+						label(for="tdbanner").wrap-checkbox
+							input(required, type="checkbox", id="tdbanner", name="agree")
+							.box
+							span.text.text-medium Согласен с обработкой 
+								em персональных данных
+
+	.container
+		.wrap-our-plus-items.element-shadow-static.row.no-gutters.justify-content-center.align-items-center
+			.our-plus-item
+				.wrap-icon.responsive-img
+					img(src="img/014-box.svg", alt="")
+
+				span.text-medium Бесплатная доставка
+
+			.our-plus-item
+				.wrap-icon.responsive-img
+					img(src="img/020-hanger.svg", alt="")
+
+				span.text-medium Примерка перед покупкой
+
+			.our-plus-item
+				.wrap-icon.responsive-img
+					img(src="img/019-transfer.svg", alt="")
+
+				span.text-medium Возврат товара за полную сумму
+
+			.our-plus-item
+				.wrap-icon.responsive-img
+					img(src="img/017-files-and-folders.svg", alt="")
+
+				span.text-medium Рассрочка
+
+			.our-plus-item
+				.wrap-icon.responsive-img
+					img(src="img/018-watch.svg", alt="")
+
+				span.text-medium Гарантия 30 дней
+
+			.our-plus-item
+				.wrap-icon.responsive-img
+
+					img(src="img/016-sale-1.svg", alt="")
+
+				span.text-medium Программа лояльности
+
+
+

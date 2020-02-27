@@ -1,0 +1,15 @@
+.field-send {
+
+	&__input {
+		color: $gray;
+		flex: 1 1 auto;
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
+
+		&::placeholder {
+			color: rgba($gray, 0.5);
+		}
+	}
+	
+}

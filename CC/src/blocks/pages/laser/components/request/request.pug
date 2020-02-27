@@ -1,0 +1,35 @@
+.request.sec(role="region")
+	.sec__bg.lazy(data-bg="url(img/bg-request.png)")
+	.sec__bg.sec__bg_mobile.lazy(data-bg="url(img/bg-request-mobile.png)")
+
+	.request__wrap-titles.sec__wrap-titles
+		span.sec__title.title-1 <em>Оставьте заявку</em> на расчет
+		p.sec__subtitle.title-3 Рассчитаем Вашу заявку<br> и обязательно свяжемся с Вами в ближайшее время
+
+	.wrapper
+		.request__inner
+			form.request__form.form
+				label.form__wrap-field
+					input.form__field(type="text" name="name" placeholder="Имя" aria-label="Имя")
+
+				label.form__wrap-field
+					input.form__field(type="tel" name="phone" placeholder="Телефон" aria-label="Телефон")
+
+				label.form__wrap-field
+					input.form__field(type="text" name="email" placeholder="Email" aria-label="Email")
+
+				small.form__info Загрузка файла формата .png, .jpeg, .pdf .eps, .ai, .dwg, .dxf, .stl, .max
+
+				label.form__wrap-field.form__wrap-field_file
+					input.form__field(type="file" name="file" aria-label="Выберите файл")
+					span.form__field-placeholder.filename Выберите файл
+
+				label.form__wrap-field
+					textarea.form__field(name="email" placeholder="Комментарий к заявке" aria-label="Комментарий к заявке")
+
+				button.btn.form__btn
+					img.card__btn-img(src="img/bg-btn.png" alt="" aria-hidden="true")
+					img.card__btn-img.card__btn-img_hover(src="img/bg-btn-hover.png" alt="" aria-hidden="true")
+					span.btn__text Отправить
+
+

@@ -1,0 +1,73 @@
+.wrap-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 px-to-em(-15, 18) px-to-em(-35, 18);
+  font-size: 18px;
+
+  @include media (md) {
+    display: block;
+  }
+
+}
+
+.wrap-card {
+
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 468px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+
+
+  @include media(xxl) {
+    min-height: 400px;
+  }
+
+  @include media(xl) {
+    min-height: 340px;
+  }
+
+  @include media(lg) {
+    min-height: 300px;
+  }
+
+  &_left {
+    clip-path: polygon(0 0, 100% 0, 91% 100%, 0 79%);
+  }
+
+  &_right {
+    clip-path: polygon(0 0, 100% 0, 100% 79%, 9% 100%);
+  }
+
+  &__title {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: px-to-em(20, 18);
+
+    @include media(sm) {
+      font-size: px-to-rem(26, 14) !important;
+      line-height: px-to-rem(32, 14) !important;
+    }
+
+    span {
+      color: $red;
+      @include M-Medium;
+      display: block;
+    }
+
+  }
+
+  &__btn {
+
+  }
+
+}

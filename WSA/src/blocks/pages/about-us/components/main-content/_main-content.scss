@@ -1,0 +1,11 @@
+.about-us {
+
+	&__main-content {
+		margin-bottom: px-to-rem(78, 24);
+
+		@include media (md) {
+			margin-bottom: px-to-rem(45, 22);
+		}
+	}
+
+}

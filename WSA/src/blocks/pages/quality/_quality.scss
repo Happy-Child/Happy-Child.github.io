@@ -1,0 +1,27 @@
+@import "components/components";
+
+
+.quality {
+
+	&__bg {
+		height: 1285px;
+		background-image: url("../img/background-pages/background-quality-page.webp");
+
+		@include media (xxl) {
+			height: 45rem;
+		}
+
+		@include media (sm) {
+			height: 30rem;
+		}
+	}
+
+}
+
+html.no-webp {
+
+	.quality__bg {
+		background-image: url("../img/background-pages/background-quality-page.png");
+	}
+
+}

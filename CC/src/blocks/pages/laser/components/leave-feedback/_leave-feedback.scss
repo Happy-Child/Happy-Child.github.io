@@ -1,0 +1,42 @@
+.leave-feedback {
+  padding-bottom: px-to-rem(10, 18);
+  margin-bottom: 0 !important;
+
+  &__wrap-titles {
+    .sec__title {
+      margin-bottom: px-to-rem(70, 18);
+
+      @include media(sm) {
+        margin-bottom: px-to-rem(40, 14);
+      }
+    }
+  }
+
+  &__inner {
+    text-align: center;
+
+    @include media(sm) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: -20px;
+    }
+  }
+
+  &__btn {
+    &:first-child {
+      margin-right: px-to-rem(290, 18);
+
+      @include media(md) {
+        margin-right: px-to-rem(40, 14);
+      }
+
+      @include media(sm) {
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+
+    }
+  }
+
+}

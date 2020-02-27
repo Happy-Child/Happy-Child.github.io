@@ -1,0 +1,64 @@
+.card {
+	float: left;
+	padding: 0 10px;
+	margin-bottom: 30px;
+	width: 100%;
+	max-width: 50%;
+
+	@include media (md) {
+		float: none;
+		max-width: 100%;
+		padding: 0;
+	}
+
+	&__inner {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__picture {
+		position: relative;
+		margin-bottom: auto;
+
+		&:before {
+			@include stretchHeight(114%);
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		max-height: 100%;
+		box-shadow: 0px 28px 40px rgba(17, 16, 16, 0.25);
+	}
+
+	&__description {
+		padding: 10px 10px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.card__description-text_second {
+			color: $default-text;
+		}
+
+		&-text {
+			font-size: px-to-rem(20, 24);
+
+			&_first {
+				@include PD-R;
+			}
+
+			&_second {
+				@include PD-B;
+			}
+
+		}
+	}
+
+}

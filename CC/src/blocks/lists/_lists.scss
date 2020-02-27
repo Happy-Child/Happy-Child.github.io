@@ -1,0 +1,14 @@
+ol {
+  counter-reset: li;
+  margin-bottom: px-to-rem(75, 24);
+
+  li {
+
+    &:before {
+      counter-increment: li;
+      content: counter(li) ".";
+    }
+
+  }
+
+}

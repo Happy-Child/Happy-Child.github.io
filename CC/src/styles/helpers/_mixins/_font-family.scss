@@ -1,0 +1,35 @@
+@mixin M-Black () {
+  font-family: "Montserrat-Black", serif;
+}
+
+@mixin M-ExtraBold () {
+  font-family: "Montserrat-ExtraBold", serif;
+}
+
+@mixin M-Bold () {
+  font-family: "Montserrat-Bold", serif;
+}
+
+@mixin M-SemiBold () {
+  font-family: "Montserrat-SemiBold", serif;
+}
+
+@mixin M-Medium () {
+  font-family: "Montserrat-Medium", serif;
+}
+
+@mixin M-Regular () {
+  font-family: "Montserrat-Regular", serif;
+}
+
+@mixin M-Light () {
+  font-family: "Montserrat-Light", serif;
+}
+
+@mixin M-ExtraLight () {
+  font-family: "Montserrat-ExtraLight", serif;
+}
+
+@mixin M-Thin () {
+  font-family: "Montserrat-Thin", serif;
+}

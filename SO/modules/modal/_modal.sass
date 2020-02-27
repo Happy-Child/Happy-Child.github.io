@@ -1,0 +1,536 @@
+.window-modal
+	width: 100%
+	max-width: 100% !important
+	z-index: 999999
+	background-color: transparent
+	height: 100vh !important
+	position: fixed
+	top: 0
+	left: 0
+
+
+.iziModal
+	.iziModal-wrap
+		height: 100%
+	.iziModal-content
+		overflow-y: auto
+		padding: 40px 0 !important
+		height: 100vh
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: pointer
+
+.iziModal.hasShadow::after
+	display: none
+
+
+.window-modal
+	transition: .2s all ease
+	.modal-content
+		padding: 60px 60px 70px
+		background-color: #fff
+		width: 100%
+		margin: auto
+		max-width: 610px
+		position: relative
+		cursor: default
+
+	.modal-text
+		text-align: center
+		margin-bottom: 13px
+		> *
+			display: block
+
+	.modal-title
+		line-height: 36px
+
+	.modal-subtitle
+		margin-top: 13px
+	
+	.wrap-icon
+		margin: 0 auto 25px
+		width: 100%
+		border-radius: 50%
+		max-width: 100px
+		height: 100px
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: $bg-gray
+		position: relative
+		img, svg
+			width: 40px
+			height: auto
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+
+	.form
+		margin-top: 32px
+
+		.wrap-field
+			margin-bottom: 20px
+
+		.wrap-checkbox
+			margin-bottom: 30px
+
+	.btn
+		max-width: none
+		margin-left: auto
+		margin-right: auto
+
+	.bottom-line-btns
+		margin-top: 10px
+
+
+
+
+.modal-testimonial
+	.wrap-icon
+		img, svg
+			top: 53%
+
+	.wrap-rating 
+		display: flex
+		align-items: center
+		justify-content: center
+
+		.rating-item
+			width: 28px
+			height: 28px
+			padding: 0
+			margin: 0 2px
+
+
+	.rating-item 
+		width: 25px
+		height: 25px
+		cursor: pointer
+		position: relative
+		&:before, &:after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 100%
+			height: 100%
+			transition: .2s all ease
+			background-position: center
+			background-repeat: no-repeat
+			background-size: contain
+			cursor: pointer
+		&:before
+			background-image: url("../img/star-none.svg")
+			z-index: 1
+		&:after
+			background-image: url("../img/star-full.svg")
+			opacity: 0
+			z-index: 2
+
+	.rating-item.active
+		&:after
+			opacity: 1
+
+
+.modal-sing-in
+
+	.modal-text
+		margin-bottom: 33px
+
+	.wrap-social-circle
+		text-align: center
+
+		> span
+			display: block
+			margin: 0 auto
+
+		.social-circle-row
+			margin: 15px 0 25px
+			justify-content: center
+			@media(max-width: 475px)
+				margin-bottom: 10px
+		
+		.social-circle-bottom-text
+			position: relative
+			@media(max-width: 475px)
+				font-size: 12px
+
+			&::before, &::after
+				content: ""
+				position: absolute
+				top: 50%
+				transform: translate(0, -50%)
+				height: 1px
+				background-color: $border-gray
+				width: 42%
+			
+			&::before
+				left: 0
+
+			&::after
+				right: 0
+
+.modal-add-address
+	.form
+		.wrap-fields
+			margin-left: -10px
+			margin-right: -10px
+		.wrap-field
+			padding-left: 10px
+			padding-right: 10px
+			width: 100%
+			.error-icon
+				right: 20px
+
+.modal-success-recovery-password,
+.modal-thanks,
+	.btn
+		max-width: 180px
+
+.modal-success-recovery-password,
+.modal-thanks,
+	.btn
+		margin-top: 40px
+
+.modal-remove-address-question
+	.btn
+		margin: 30px 7px 0
+		max-width: 145px
+
+// .modal-program-info
+// 	.modal-content
+// 		padding: 90px 90px 120px
+// 		max-width: 1180px
+
+// 	.modal-text
+// 		.modal-title
+// 			padding-bottom: 30px
+// 			margin-bottom: 30px
+// 			position: relative
+// 			&::after
+// 				content: ""
+// 				top: 100%
+// 				position: absolute
+// 				left: 50%
+// 				transform: translate(-50%, 0)
+// 				width: 50px
+// 				height: 6px
+// 				background-color: $dark
+
+// 	&_content
+
+// 	&_title
+// 		display: block
+// 		margin: 60px 0 30px
+
+// 	p
+// 		margin-bottom: 35px
+// 		&:last-child
+// 			margin-bottom: 0
+
+// 	.row-benefit
+// 		margin-left: -28px
+// 		margin-right: -28px
+
+// 		.benefit-item
+// 			width: 50%
+// 			padding: 0 28px
+
+// 		.wrap-precent-icon
+// 			border-radius: 0px
+// 			background-color: transparent
+// 			width: 100%
+// 			max-width: 60px
+// 			flex-shrink: 0
+// 			margin-right: 30px
+// 			align-items: flex-start
+// 			img
+// 				width: 100%
+
+// 		.wrap-text
+// 			> *
+// 				display: block
+// 				line-height: 34px
+
+
+@media (max-width: 1600px)
+	.window-modal
+		.modal-content
+			padding: 45px
+			max-width: 580px
+
+		.modal-text
+			margin-bottom: 10px
+
+		.modal-title
+			line-height: 34px
+			font-size: 1.67rem
+
+		.modal-subtitle
+			margin-top: 10px
+			font-size: 0.8rem
+			line-height: 18px
+		
+		.wrap-icon
+			margin: 0 auto 10px
+			max-width: 80px
+			height: 80px
+			img, svg
+				width: 35px
+
+
+		.form
+			margin-top: 20px
+
+			.wrap-field
+				margin-bottom: 15px
+
+			.wrap-checkbox
+				margin-bottom: 20px
+
+		.bottom-line-btns
+			margin-top: 8px
+
+	.modal-testimonial
+		.wrap-rating
+			img
+				max-width: 35px
+
+	.modal-add-address
+		.form
+			.wrap-fields
+				margin: 0 -8px
+			.wrap-field
+				padding-left: 8px
+				padding-right: 8px
+
+	.modal-success-recovery-password,
+	.modal-thanks,
+		.btn
+			margin-top: 30px
+
+	.modal-remove-address-question
+		.btn
+			margin: 25px 7px 0
+
+	.iziModal
+		.iziModal-content
+			padding: 20px 0 !important
+
+
++media-breakpoint-down(md)
+	.window-modal
+		.modal-content
+			padding: 40px 50px
+			max-width: 500px
+
+		.wrap-icon
+			margin: 0 auto 10px
+			max-width: 70px
+			height: 70px
+			img, svg
+				width: 30px
+
+
+		.form
+			margin-top: 25px
+
+			.wrap-field
+				margin-bottom: 15px
+
+			.wrap-checkbox
+				margin-bottom: 25px
+
+		.bottom-line-btns
+			margin-top: 5px
+
+	.modal-testimonial
+		.wrap-rating
+			img
+				max-width: 30px
+
+	// .modal-program-info
+	// 	.modal-content
+	// 		padding: 50px 50px 70px
+	// 		max-width: 700px
+
+	// 	.modal-text
+	// 		.modal-title
+	// 			padding-bottom: 25px
+	// 			margin-bottom: 25px
+	// 			line-height: 37px
+
+	// 	.modal-subtitle
+	// 		br
+	// 			display: none
+
+	// 	&_title
+	// 		margin: 35px 0 10px
+	// 		font-size: 1.675rem
+	// 		line-height: 27px
+
+	// 	p
+	// 		margin-bottom: 20px
+
+	// 	.row-benefit
+	// 		margin-left: -20px
+	// 		margin-right: -20px
+
+	// 		.benefit-item
+	// 			width: 50%
+	// 			padding: 0 20px
+
+	// 		.wrap-precent-icon
+	// 			max-width: 50px
+	// 			margin-right: 15px
+
+	// 		.wrap-text
+	// 			> *
+	// 				line-height: 24px
+	// 				&:first-child
+	// 					margin-bottom: 5px
+
+
+	.modal-success-recovery-password,
+	.modal-thanks,
+		.btn
+			margin-top: 25px
+
+	.modal-remove-address-question
+		.btn
+			margin: 20px 5px 0
+
+
++media-breakpoint-down(sm)
+	// .modal-program-info
+	// 	.modal-content
+	// 		padding: 30px 30px 50px
+	// 		max-width: 80%
+
+	// 	.modal-text
+	// 		.modal-title
+	// 			padding-bottom: 18px
+	// 			margin-bottom: 18px
+	// 			line-height: 30px
+
+	// 	&_title
+	// 		margin: 28px 0 10px
+	// 		font-size: 1.475rem
+	// 		line-height: 24px
+
+	// 	p
+	// 		margin-bottom: 18px
+
+	// 	.row-benefit
+	// 		margin-left: 0px
+	// 		margin-right: 0px
+	// 		margin-top: 30px
+
+	// 		.benefit-item
+	// 			width: 100%
+	// 			padding: 0
+	// 			margin-bottom: 15px
+	// 			&:last-child
+	// 				margin-bottom: 0
+
+	// 		.wrap-precent-icon
+	// 			max-width: 50px
+	// 			margin-right: 15px
+
+	// 		.wrap-text
+	// 			> *
+	// 				line-height: 24px
+
+
++media-breakpoint-down(xs)
+	.iziModal .iziModal-content
+		padding: 20px 15px !important
+
+	.window-modal
+		.modal-content
+			padding: 35px 30px
+			max-width: 480px
+		
+		.modal-text
+			br
+				display: none
+
+		.wrap-checkbox, .wrap-field, .wrap-radio 
+			.error-icon
+				top: 13px
+
+
+@media (max-width: 475px)
+	.iziModal .iziModal-content
+		padding: 10px !important
+
+	.window-modal
+		.modal-content
+			padding: 20px 15px
+
+		.wrap-icon
+			margin-bottom: 5px
+
+		.modal-text
+			padding: 0 10px
+
+		.modal-title
+			font-size: 22px
+			line-height: 26px
+
+		.modal-subtitle
+			line-height: 18px
+			font-size: 12px
+			margin-top: 5px
+
+		.form
+			margin-top: 10px
+			.wrap-checkbox
+				margin-bottom: 10px
+				.text
+					line-height: 15px
+					font-size: 12px
+			.wrap-field
+				margin-bottom: 10px
+
+
+		.bottom-line-btns
+			> *
+				font-size: 11px
+				line-height: 16px
+
+	.modal-testimonial
+		.wrap-rating
+			img
+				max-width: 25px
+
+	.modal-remove-address-question
+		.modal-title
+			font-size: 22px
+
+	// .modal-program-info
+	// 	.modal-text
+	// 		.modal-title
+	// 			font-size: 22px
+	// 			&::after
+	// 				height: 4px
+
+	// 	&_title
+	// 		margin: 25px 0 10px
+	// 		font-size: 18px
+	// 		line-height: 22px
+
+	// 	p
+	// 		margin-bottom: 15px
+	// 		font-size: 14px
+	// 		line-height: 22px
+
+	// 	.row-benefit
+	// 		.wrap-text
+	// 			> *
+	// 				&:first-child			
+	// 					font-size: 16px
+	// 					line-height: 22px

@@ -1,0 +1,108 @@
+.about-us {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  &__inner {
+    font-size: 18px;
+    padding: 0 0 px-to-em(15, 18) 20px;
+    display: flex;
+    align-items: center;
+    min-height: px-to-em(330, 18);
+    margin-top: -10px;
+
+    @include media(xxl) {
+      font-size: 14px;
+      margin-top: 0;
+    }
+
+    @include media(xl) {
+      display: block;
+      padding: px-to-em(20, 14) 0 px-to-em(50, 14);
+    }
+
+    @include media(md) {
+      padding: px-to-em(40, 14) 0;
+    }
+
+  }
+
+  &__wrap-logo {
+    max-width: px-to-em(320, 18);
+    width: 100%;
+    flex-shrink: 0;
+    margin-left: px-to-em(-45, 18);
+    margin-right: px-to-em(50, 18);
+    transform: translate(0, 25px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media(xl) {
+      margin: 0 auto px-to-em(-20, 14);
+      transform: none;
+    }
+
+    @include media(md) {
+      display: none;
+    }
+
+  }
+
+  &__logo-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__title {
+    color: #fff;
+    @include M-Medium;
+    text-transform: uppercase;
+    font-size: px-to-em(36, 18);
+
+    @include media(xl) {
+      display: block;
+      text-align: center;
+      margin: 0 auto px-to-em(20, 14);
+    }
+
+    @include media(md) {
+      font-size: px-to-em(16, 14);
+      line-height: px-to-em(20, 14);
+      margin-bottom: px-to-em(15, 14);
+    }
+
+  }
+
+  &__wrap-text {
+    margin-left: auto;
+    width: 100%;
+    max-width: 66%;
+    color: #fff;
+    transform: translate(-18px, 0);
+
+    @include media(xl) {
+      max-width: none;
+      transform: none;
+    }
+
+    p {
+      font-size: px-to-em(22, 18);
+      line-height: px-to-em(22, 18);
+
+      @include media(md) {
+        font-size: px-to-em(15, 14);
+        line-height: px-to-em(18, 14);
+      }
+
+    }
+
+    p em {
+      @include M-SemiBold;
+    }
+
+  }
+
+}

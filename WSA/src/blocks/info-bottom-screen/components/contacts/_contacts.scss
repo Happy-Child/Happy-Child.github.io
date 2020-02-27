@@ -1,0 +1,49 @@
+.info-bottom-screen {
+
+	&__contacts {
+		display: flex;
+		align-items: stretch;
+		left: 0;
+
+		@media (orientation: portrait) {
+			display: block;
+		}
+
+		&-item {
+			margin-right: -1px;
+			height: 100%;
+
+			@media (orientation: portrait) {
+				height: auto;
+				margin-right: 0;
+			}
+		}
+
+		&-link {
+			width: 13.7vmin;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			position: relative;
+
+			&:before {
+				@include stretchHeight(100%);
+			}
+
+			&:hover {
+				.info-bottom-screen__contacts-icon {
+					opacity: .6;
+				}
+			}
+		}
+
+		&-icon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+}

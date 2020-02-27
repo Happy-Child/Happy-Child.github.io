@@ -1,0 +1,21 @@
+.feedback {
+
+	&__text {
+		color: $gray;
+		margin-bottom: px-to-rem(50, 24);
+
+		@include media (xxl) {
+			margin-bottom: px-to-rem(30, 22);
+		}
+
+		@include media (lg) {
+			margin-bottom: px-to-rem(20, 22);
+		}
+
+		@include media (sm) {
+			font-size: px-to-rem(22, 18);
+			line-height: 34px;
+		}
+	}
+
+}

@@ -1,0 +1,21 @@
+extends ../pug/layouts/default
+include ../pug/helpers/mixins
+
+
+block variables
+  - const title = "Layout preparation";
+  - const bodyClass = "layout-preparation";
+
+
+block append styles
+  link(rel="stylesheet" href="styles/common.css")
+  link(rel="stylesheet" href="styles/layout-preparation.css")
+
+
+block content
+  include ../blocks/pages/layout-preparation/layout-preparation
+
+
+block append scripts
+  script(src="js/common.js")
+  script(src="js/layout-preparation.js")

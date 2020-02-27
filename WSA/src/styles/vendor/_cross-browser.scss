@@ -1,0 +1,23 @@
+html.edge {
+
+}
+
+html.chrome {
+
+}
+
+html.ie {
+	height: 100%;
+
+	body {
+		height: 100%;
+		opacity: 1;
+		transition: 0s ease all;
+	}
+
+	.screen-ie {
+		display: block;
+	}
+
+}
+

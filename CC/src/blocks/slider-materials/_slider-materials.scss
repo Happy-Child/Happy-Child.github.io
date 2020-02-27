@@ -1,0 +1,17 @@
+.sec-materials {
+
+  & + .sec-materials {
+    margin-bottom: 0;
+  }
+
+  &__slider {
+    @include media(480px) {
+      margin-bottom: 0;
+    }
+  }
+
+  .slider__wrap-nav {
+
+  }
+
+}

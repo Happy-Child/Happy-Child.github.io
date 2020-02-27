@@ -1,0 +1,112 @@
+.form {
+  font-size: 18px;
+  width: 100%;
+  display: block;
+
+  @include media(xl) {
+    font-size: 16px;
+  }
+
+  @include media(md) {
+    font-size: 12px;
+  }
+
+  &__wrap-field,
+  &__info {
+    display: block;
+    margin-bottom: px-to-em(30, 18);
+
+    @include media(md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info {
+    @include M-SemiBold;
+    font-size: 1em;
+    line-height: px-to-em(20, 1em);
+  }
+
+  &__wrap-field {
+
+    &_file {
+      input {
+        visibility: hidden;
+        position: absolute;
+        width: 0;
+        height: 0;
+
+        &.load + .form__field-placeholder:after {
+          display: none;
+        }
+      }
+
+      .form__field-placeholder {
+        font-size: px-to-em(22, 18);
+        line-height: px-to-em(27, 22);
+        @include M-Medium;
+        cursor: pointer;
+        position: relative;
+        padding-right: px-to-em(32, 18);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+
+        @include media(sm) {
+          font-size: 22px;
+        }
+
+        &:hover:after {
+          transform: translate(0, -50%) scale(1.15);
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(0, -50%);
+          transition: .4s all ease;
+          width: 1em;
+          height: 1em;
+          background: url("../img/input-plus.svg") center/contain no-repeat;
+        }
+      }
+
+    }
+
+  }
+
+  &__field {
+    display: block;
+    width: 100%;
+    font-size: px-to-em(22, 18);
+    padding: px-to-em(12, 22) px-to-em(48, 22);
+    height: px-to-em(60, 22);
+    background-color: #fff;
+
+    @include media(md) {
+      padding: 6px 10px;
+    }
+  }
+
+  textarea {
+    min-height: px-to-em(200, 22);
+    padding: px-to-em(20, 22) px-to-em(48, 22);
+
+    @include media(md) {
+      padding: 8px 10px;
+    }
+  }
+
+  &__btn {
+    margin: px-to-em(60, 18) auto 0;
+    display: block;
+
+    @include media(md) {
+      margin: px-to-em(35, 12) auto 0;
+    }
+  }
+
+}

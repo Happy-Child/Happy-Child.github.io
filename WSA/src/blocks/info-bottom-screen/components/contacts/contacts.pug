@@ -1,0 +1,11 @@
+mixin contacts(blockName)
+
+	mixin contact-item(src, link="#")
+		li(class=blockName + "__contacts-item " + blockName + "__el-border")
+			a(href= link target="_blank" class=blockName + "__contacts-link")
+				img(src= src alt="" class=blockName + "__icon " + blockName + "__contacts-icon")
+
+
+	ul(class=blockName + "__item " + blockName + "__contacts")
+		+contact-item("img/icons/icon-mail.svg")
+		+contact-item("img/icons/icon-phone.svg")

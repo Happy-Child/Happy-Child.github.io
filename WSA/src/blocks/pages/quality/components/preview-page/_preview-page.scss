@@ -1,0 +1,28 @@
+.quality {
+
+	.preview-page {
+		margin-bottom: px-to-rem(100, 24);
+
+		@include media (lg) {
+			margin-bottom: px-to-rem(80, 22);
+		}
+
+		@include media (xs) {
+			margin-bottom: px-to-rem(50, 18);
+		}
+
+		&__wrap-title {
+			margin-bottom: px-to-rem(62, 24);
+
+
+			@include media (xs) {
+				margin-bottom: px-to-rem(35, 18);
+			}
+		}
+		
+		&__text {
+			text-align: center;
+		}
+	}
+
+}

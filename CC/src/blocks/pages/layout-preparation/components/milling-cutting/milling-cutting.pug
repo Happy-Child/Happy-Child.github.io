@@ -1,0 +1,76 @@
+.layout-preparation__laser-cutting
+
+  ul.layout-preparation__lines
+    li.layout-preparation__line
+      img(src="img/laser-cutting-3.png" alt="").layout-preparation__line-img
+      .layout-preparation__line-bottom
+        span.replace-svg.layout-preparation__line-icon(data-src="img/line-green.svg")
+        span.layout-preparation__line-text Зеленый – цвет линии гравировки (сплошная)
+
+    li.layout-preparation__line
+      img(src="img/laser-cutting-4.png" alt="").layout-preparation__line-img
+      .layout-preparation__line-bottom
+        span.replace-svg.layout-preparation__line-icon(data-src="img/line-red.svg")
+        span.layout-preparation__line-text Красный – гравировка по контуру (тонкая линия)
+
+    li.layout-preparation__line
+      img(src="img/laser-cutting-5.png" alt="").layout-preparation__line-img
+      .layout-preparation__line-bottom
+        span.replace-svg.layout-preparation__line-icon(data-src="img/line-orange.svg")
+        span.layout-preparation__line-text Оранжевый – габариты заготовки (не обрабатывается)
+
+
+  .layout-preparation__format
+    h2.layout-preparation__format-title.title-2 ФОРМАТЫ ФАЙЛОВ <em>LAZER</em>:
+    ul.layout-preparation__format-list
+      li.layout-preparation__format-item
+        span.layout-preparation__format-item-icon.replace-svg(data-src="img/cdr-file.svg")
+        span.layout-preparation__format-item-name .CDR
+
+      li.layout-preparation__format-item
+        span.layout-preparation__format-item-icon.replace-svg(data-src="img/dfx-file.svg")
+        span.layout-preparation__format-item-name .DXF
+
+      li.layout-preparation__format-item
+        span.layout-preparation__format-item-icon.replace-svg(data-src="img/ai-file.svg")
+        span.layout-preparation__format-item-name .AI
+
+      li.layout-preparation__format-item
+        span.layout-preparation__format-item-icon.replace-svg(data-src="img/pdf-file.svg")
+        span.layout-preparation__format-item-name .PDF
+
+
+    h2 Смежные линии при резке <em>LAZER</em>
+    p Если вы используете в своем чертеже смежные линии, то нужно учитывать, что существует большая вероятность при вырезании получить зубец до 1мм по торцу детали.
+    p После резки первой, вторая смежная деталь может сдвинуться в материале и рез лазерным лучом уже будет проходить по смещенной относительно изначального положения заготовке.
+    p Смещение — это следствие напряжения в материале, смещения из-за прожига лазерным лучом, термического воздействия и изгибания материала.
+
+    br
+    br
+
+    h2 Как готовить макет для гравировки <em>LAZER</em>
+    p Для того чтобы верно подготовить макет для гравировки нужно исключить наложения и пересечения линий.
+    br
+    p Обязательно нужно: соединить незамкнутые узлы и линии, линии всех гравируемых элементов закрасить в зеленый, объединить гравируемый элемент. Для проверки готов ли ваш макет, выделите его и нажмите на любой из цветов, если макет заполнится цветом в тех местах, где должна быть гравировка то все «ок».
+
+
+    .video-preparation.video
+      .video__inner
+
+        .video__player
+          <iframe src="https://www.youtube.com/embed/6RZH6CHNgas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        .video__wrap-text
+          span.video__text.title-1 <em>Посмотрите</em>, как<br> готовить макет<br> для <em>гравировки Lazer</em>
+
+
+    h2 Толщина перемычек у деталей LAZER
+    p Лазерное оборудование может вырезать рисунок практически любой сложности. Вопрос заключается в том выдержит ли материал нагрузку своего веса и не сломается ли в тонких местах. Для разных материалов минимально допустимая толщина перемычек разная, не забывайте, что многое еще зависит от веса материала и нагрузки на элемент. В среднем от 1.5мм до 5 мм варьируются минимальная толщина.
+    br
+    p Для более точной оценки <a href="#">обращайтесь за советом к менеджеру</a>. (ссылка)
+
+    br
+    br
+
+    h2 Контурная гравировка LAZER
+    p При использовании контурной гравировки в своем задании учитывайте, что на маленьких элементах (при толщине фанеры от 3мм до 5мм) могут появляться сквозные отметки. Эти отметки можно увидеть с обратной стороны, чаще всего в виде точек. Чтобы такого не происходило нужно отказаться от использования тонких материалов. Либо уменьшить кол-во линий контурной гравировки на 1 см.кв, чтобы рисунок не был таким насыщенным.

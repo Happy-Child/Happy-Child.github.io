@@ -1,0 +1,21 @@
+extends ../pug/layouts/default
+include ../pug/helpers/mixins
+
+
+block variables
+	- const title = "Materials";
+	- const bodyClass = "materials";
+
+
+block append styles
+	link(rel="stylesheet" href="styles/common.css")
+	link(rel="stylesheet" href="styles/materials.css")
+
+
+block content
+	include ../blocks/pages/materials/materials
+
+
+block append scripts
+	script(src="js/common.js")
+	script(src="js/materials.js")

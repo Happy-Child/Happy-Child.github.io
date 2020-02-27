@@ -1,0 +1,1 @@
+import "%blocks%/pages/product/components/scroll-bar/scroll-bar";

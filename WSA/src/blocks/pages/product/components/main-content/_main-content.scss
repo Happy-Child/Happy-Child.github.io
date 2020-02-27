@@ -1,0 +1,72 @@
+.product {
+
+	&__main-content {
+		
+		&-item {
+			border-top: 1px solid rgba(#fff, .05);
+			padding: px-to-rem(60, 24) 0 px-to-rem(40, 24);
+
+			@include media (md) {
+				padding-bottom: 0;
+			}
+	
+			&:first-child {
+				margin-top: px-to-rem(38, 24);
+			}
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+
+			&-title {
+				color: $accent;
+				font-size: px-to-rem(48, 24);
+				line-height: px-to-rem(54, 24);
+				display: inline-block;
+				margin-bottom: 20px;
+				@include PD-R;
+
+				@include media (xl) {
+					font-size: px-to-rem(35, 22);
+					line-height: px-to-rem(45, 22);
+				}
+			}
+
+			&-subtext {
+				color: $gray;
+			}
+
+			&-tags {
+				margin-top: px-to-rem(46, 24);
+				margin-bottom: -6px;
+			}
+
+			&-tag {
+				display: inline-block;
+				margin-right: px-to-rem(40, 24);
+				margin-bottom: 6px;
+				@include C-B;
+
+				@include media (sm) {
+					margin-right: 9px;
+					margin-bottom: 4px;
+				}
+				
+				&-link {
+					display: block;
+					color: $default-text;
+					transition: .4s all ease;
+
+					&:hover {
+						color: $accent;
+					}
+				}
+			}
+		}
+
+	}
+
+}
+
+
+

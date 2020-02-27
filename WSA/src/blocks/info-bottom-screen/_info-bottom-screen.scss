@@ -1,0 +1,33 @@
+@import "components/components";
+
+
+.info-bottom-screen {
+
+	@include media (lg) {
+		display: none;
+	}
+
+	&__item {
+		position: fixed;
+		bottom: 0;
+		height: 13.7vh;
+		z-index: 10;
+
+		@media (orientation: portrait) {
+			height: auto;
+		}
+	}
+
+	&__el-border {
+		border: 1px solid rgba($gray, .08);
+	}
+
+	&__icon {
+		max-width: 100%;
+		max-height: 100%;
+		width: 1.85vh;
+		height: auto;
+		transition: .4s all ease;
+	}
+
+}

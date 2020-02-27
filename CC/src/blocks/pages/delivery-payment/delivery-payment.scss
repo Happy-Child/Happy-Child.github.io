@@ -1,0 +1,32 @@
+// -- Helpers BEGIN
+@import "../../../styles/helpers/variables";
+@import "../../../styles/helpers/mixins-include";
+@import "../../../styles/helpers/functions-include";
+// -- Helpers END
+
+
+// -- Components BEGIN
+@import "components/components";
+// -- Components END
+
+.delivery-payment {
+
+  h2,
+  .title-2 {
+    @include M-SemiBold;
+    text-transform: uppercase;
+    display: block;
+    margin-top: px-to-rem(50, 18);
+    margin-bottom: px-to-rem(44, 18);
+
+    @include media(sm) {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+}

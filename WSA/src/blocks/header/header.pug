@@ -1,0 +1,45 @@
+header.header
+	.header__inner
+
+		.header__item
+			.header__wrap-menu-btn
+				button.header__menu-btn.header__menu-btn_burger(aria-label="Button show menu")
+					span.header__menu-btn_line
+					span.header__menu-btn_line
+					span.header__menu-btn_line
+
+				button.header__menu-btn.header__menu-btn_cross(aria-label="Button hide menu")
+					span.header__menu-btn_line
+					span.header__menu-btn_line
+
+		
+		.header__item.header__item_w-auto
+			a(href="index.html" target="_blank" aria-label="Site logo" rel="noreferrer").header__wrap-logo
+				picture
+					source(srcset="img/logo.webp", type="image/webp")
+					source(srcset="img/logo.png", type="image/png")
+					img.header__logo-img(src="img/logo.png", alt="")
+
+		
+		.header__item.header__item_contacts
+			.header__contacts
+				a(href="mailto:info@gmail.com" aria-label="Mail us").header__contacts-item
+					img(src="img/icons/icon-mail.svg", alt="").header__contacts-item-img
+
+				a(href="tel:375000000000" aria-label="Call us").header__contacts-item
+					img(src="img/icons/icon-phone.svg", alt="").header__contacts-item-img
+
+
+		nav.header__nav.header__item
+			ul.header__nav-list
+				li.header__nav-item.header__nav-item_active
+					a.header__nav-link(href="#", target="_blank" rel="noreferrer") Why Wood
+
+				li.header__nav-item
+					a.header__nav-link(href="#", target="_blank" rel="noreferrer") Faq
+
+				li.header__nav-item
+					a.header__nav-link(href="#", target="_blank" rel="noreferrer") Site Map
+
+				li.header__nav-item
+					a.header__nav-link(href="#", target="_blank" rel="noreferrer") Jaha

@@ -1,0 +1,13 @@
+mixin list-item(scrollTo, text)
+	li.product__scroll-bar-item&attributes(attributes)
+		a(href= scrollTo).product__scroll-bar-link= text
+
+.product__wrap-scroll-bar
+	aside.product__scroll-bar
+		
+		ul.product__scroll-bar-list
+			+list-item("doors", "Doors")(class="product__scroll-bar-item_active")
+			+list-item("kitchen", "Kitchen")
+			+list-item("vianiti", "Vianiti")
+			+list-item("wardrobe", "Wardrobe")
+			+list-item("mill-works", "Mill Works")

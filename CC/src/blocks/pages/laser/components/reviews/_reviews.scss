@@ -1,0 +1,146 @@
+.reviews {
+
+  .slider__wrap-nav {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    z-index: 9;
+    transform: translate(-50%, 0);
+
+    @include media(md) {
+      display: flex;
+
+
+      .slider__arrow-icon {
+        path {
+          fill: $blue !important;
+        }
+      }
+
+      .swiper-button-disabled {
+        path {
+          fill: #fff !important;
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    position: relative;
+  }
+
+  &__slider {
+    @include media(md) {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .slider__pagination {
+    @include media(md) {
+      display: none;
+    }
+  }
+
+  .swiper-wrapper {
+
+    align-items: stretch;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  &__card {
+    font-size: 18px;
+    background-color: #000;
+    padding: px-to-em(35, 18) px-to-em(65, 18) px-to-em(50, 18);
+    position: relative;
+    color: #fff;
+    height: 100%;
+
+    @include media(md) {
+      padding-bottom: 60px;
+    }
+
+    @include media(sm) {
+      font-size: 14px;
+      padding: 30px 30px 60px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: px-to-em(70, 18);
+      background: linear-gradient(180deg, #053365 38.46%, #144E8C 100%);
+    }
+
+    &-wrap-img {
+      position: relative;
+      width: px-to-em(112, 18);
+      margin: 0 auto px-to-em(10, 18);
+      display: block;
+
+      &:after {
+        @include stretchHeight(100%)
+      }
+    }
+
+    &-img {
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      border: 5px solid #fff;
+    }
+
+    &-title {
+      display: block;
+      text-align: center;
+      margin: 0 auto px-to-em(14, 18);
+      @include M-SemiBold;
+      text-transform: capitalize;
+
+      em {
+        color: $red;
+      }
+    }
+
+    &-text {
+      position: relative;
+      padding-top: px-to-em(32, 18);
+      text-indent: px-to-em(45, 18);
+
+      &:after,
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+      }
+
+      &:before {
+        top: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #114986;
+      }
+
+      &:after {
+        top: px-to-em(28, 18);
+        width: px-to-em(30, 18);
+        height: px-to-em(25, 18);
+        background: url("../img/quote.svg") center/contain no-repeat;
+      }
+
+    }
+
+  }
+
+}

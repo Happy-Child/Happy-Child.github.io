@@ -1,0 +1,20 @@
+.tab {
+  @include media(sm) {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &_active {
+    .card__btn-img_hover {
+      opacity: 1;
+    }
+  }
+}
+
+.tab-content {
+  display: none;
+
+  &_active {
+    display: block;
+  }
+}

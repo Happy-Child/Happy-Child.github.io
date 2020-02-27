@@ -1,0 +1,28 @@
+// Common BEGIN
+@import "info-bottom-screen/info-bottom-screen";
+@import "preview-page/preview-page";
+@import "card/card";
+@import "card/group-card";
+@import "main-menu/main-menu";
+@import "field-send/field-send";
+@import "feedback/feedback";
+@import "lists/lists";
+@import "slider-arrows/slider-arrows";
+@import "screen-ie/screen-ie";
+// Common END
+
+
+// Pages BEGIN
+@import "pages/common/common";
+@import "pages/home/home";
+@import "pages/about-us/about-us";
+@import "pages/product/product";
+@import "pages/factory/factory";
+@import "pages/order-delivery/order-delivery";
+@import "pages/quality/quality";
+// Pages END
+
+
+// Footer BEGIN
+@import "footer/footer";
+// Footer END

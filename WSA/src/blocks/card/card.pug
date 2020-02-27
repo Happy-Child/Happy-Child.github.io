@@ -1,0 +1,16 @@
+mixin card(imgSrc, arrText)
+	.card
+		.card__inner
+
+			picture.card__picture
+				source(srcset=".", data-srcset=imgSrc + ".webp", type="image/webp")
+				source(srcset=".", data-srcset=imgSrc + ".png", type="image/png")
+				img.card__img.lazy(src="." data-src=imgSrc + ".png", alt="")
+
+			if (typeof(arrText) !== 'undefined' && arrText)
+				.card__description
+					if (typeof(arrText[0]) !== 'undefined' && arrText[0])
+						p.card__description-text.card__description-text_first= arrText[0]
+
+					if (typeof(arrText[1]) !== 'undefined' && arrText[1])
+						p.card__description-text.card__description-text_second= arrText[1]

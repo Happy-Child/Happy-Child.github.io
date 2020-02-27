@@ -1,0 +1,8 @@
+include components/text/text
+include ../field-send/field-send
+
+
+mixin feedback(className, text)
+	div(class= className + "feedback feedback")
+		+text("feedback", text)
+		+field-send("feedback")

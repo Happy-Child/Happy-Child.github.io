@@ -1,0 +1,7 @@
+@function px-to-rem ($px-target, $px-basic) {
+  @return $px-target / $px-basic + rem;
+}
+
+@function px-to-em ($px-target, $px-basic) {
+  @return $px-target / $px-basic + em;
+}
