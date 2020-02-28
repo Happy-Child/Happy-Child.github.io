@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Plywood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="description" content="Описание">
+    <!--Favicons BEGIN-->
+    <meta name="theme-color" content="#fff">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#17a5f4">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico">
+    <!--Favicons END-->
+    <meta property="og:title" content="Заголовок">
+    <meta property="og:site_name" content="Название сайта">
+    <meta property="og:url" content="https://site-url.com">
+    <meta property="og:description" content="Описание сайта">
+    <meta property="og:image" content="img/preview-social-link/preview-social-link.png">
+    <meta property="vk:image" content="img/preview-social-link/preview-vk-link.png">
+    <!--Critical styles BEGIN-->
+    <style>.header__top{background-color:#fff;font-size:18px}.header__top-inner{min-height:120px}.header__top-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;margin-right:3.66667em}.header__top-item:last-child{margin-right:0}.header__top-item_phones .header__top-item-text span{color:#e2001a}.header__top-item_mail{margin-right:6.11111em}.header__top-item_callback .header__top-item-text{font-family:Montserrat-SemiBold,serif;text-transform:uppercase;color:#e2001a}.header__top-item-wrap-icon{margin-right:1.55556em;width:2.22222em;height:2.22222em}.header__top-item-icon{max-width:100%;max-height:100%;height:100%;width:100%}.header__top-item-icon path{fill:#144e8c}.header__top-item-text{font-size:1em;line-height:1.22222em;margin-left:1.44444em;font-family:Montserrat-Medium,serif;color:#23262a;position:relative;top:2px}.header__top-item-text:first-of-type{margin-left:0}.header__bottom{background-color:#222526;font-size:18px;position:relative}.header__bottom:after{content:"";position:absolute;top:0;left:0;-webkit-transform:translate(0,-65px);-ms-transform:translate(0,-65px);transform:translate(0,-65px);font-size:18px;width:72.22222em;height:17.77778em;background:url(../img/laser.png) center/contain no-repeat;pointer-events:none}.header__bottom-inner{min-height:100px;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.header__inner,.header__wrap-logo{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.header__inner{padding:10px 0}.header__wrap-logo{height:96px;margin-right:5.33333em;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.header__logo-img{max-width:100%;max-height:100%}.header__nav-list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-bottom:-.55556em}.header__nav-item{margin-right:2.44444em;margin-bottom:.55556em;-webkit-transition:opacity .3s;-o-transition:opacity .3s;transition:opacity .3s}.header__nav-item:last-child{margin-right:0}.header__nav-item:hover:not(.header__nav-item_current){opacity:.7}.banner__title em,.header__nav-item_current .header__nav-link{color:#e2001a}.header__nav-link{color:#fff;font-size:.88889em;line-height:1.33333em;text-transform:uppercase;font-family:Montserrat-Medium,serif}.header__btn{display:none;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:36px;height:18px;position:relative;top:8px}.header__btn_active .header__btn-line{background-color:#144e8c}.header__btn_active .header__btn-line:nth-child(1){margin-bottom:-2px;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.header__btn_active .header__btn-line:nth-child(2){margin:0;-webkit-transform:translate(-100%,0);-ms-transform:translate(-100%,0);transform:translate(-100%,0);opacity:0}.header__btn_active .header__btn-line:nth-child(3){margin-top:-2px;-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);width:100%}.header__btn-line{position:relative;height:2px;width:inherit;-webkit-transition:.4s;-o-transition:.4s;transition:.4s;background-color:#000;border-radius:4px}.header__btn-line:nth-child(2){margin:6px 0}.header__btn-line:nth-child(3){width:66.6%;-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}.card,.wrap-cards{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.wrap-cards{-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 -.83333em -1.94444em;font-size:18px}.card{background-size:cover;background-position:center;background-repeat:no-repeat;min-height:468px;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;text-align:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative}.card_left{-webkit-clip-path:polygon(0 0,100% 0,91% 100%,0 79%);clip-path:polygon(0 0,100% 0,91% 100%,0 79%)}.card_right{-webkit-clip-path:polygon(0 0,100% 0,100% 79%,9% 100%);clip-path:polygon(0 0,100% 0,100% 79%,9% 100%)}.card__title{color:#fff;text-transform:uppercase;margin-bottom:1.11111em}.card__title span{color:#e2001a;font-family:Montserrat-Medium,serif;display:block}.banner{min-height:650px;font-size:18px;position:relative;padding-bottom:3.33333rem}.banner .breadcrumbs{color:#fff}.banner .breadcrumbs__item:after{background-color:#fff}.banner__bg{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}.banner .wrap-card{padding:0 .83333em;margin-bottom:1.94444em;width:-webkit-calc(100%/3);width:calc(100%/3)}.banner .wrap-card:nth-child(1) .card{-webkit-clip-path:polygon(0 0,100% 0,91% 100%,0 79%);clip-path:polygon(0 0,100% 0,91% 100%,0 79%)}.banner .wrap-card:nth-child(3) .card{-webkit-clip-path:polygon(0 0,100% 0,100% 79%,9% 100%);clip-path:polygon(0 0,100% 0,100% 79%,9% 100%)}.banner__wrap-text{text-align:center;color:#fff}.banner__title{text-transform:uppercase;font-family:Montserrat-SemiBold,serif;margin-bottom:.77778em}.banner__wrap-form{max-width:41.38889em;margin:2.5em auto 0}@media (min-width:768px){body{opacity:0}}@media (max-width:1750px){.header__bottom:after{font-size:12px;top:4.5em}}@media (max-width:1580px){.header__top{font-size:15px}.header__top-inner{min-height:100px}.header__bottom:after{top:2.2em}.header__bottom{font-size:15px}.header__bottom-inner{min-height:70px}.card{min-height:400px}.banner{min-height:580px}}@media (max-width:1450px){.header__bottom:after{font-size:8px;top:7.5em}}@media (max-width:1280px){.header__top{font-size:12px}.header__top-inner{min-height:90px}.header__bottom{font-size:12px}.header__wrap-logo{height:70px}.card{min-height:340px}.banner{min-height:480px}}@media (max-width:991px){.header{position:fixed;top:0;left:0;width:100%;-webkit-box-shadow:0 1px 8px -2px rgba(0,0,0,.2);box-shadow:0 1px 8px -2px rgba(0,0,0,.2);z-index:100}.header__top-inner{min-height:70px;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.header__top-item{margin-right:0}.header__top-item_callback .header__top-item-wrap-icon,.header__top-item_mail,.header__top-item_phones{display:none}.header__top-item_callback{position:relative;top:4px}.header__top-item_callback em{position:relative}.header__top-item_callback em:after{content:"";position:absolute;top:-webkit-calc(100% - 2px);top:calc(100% - 2px);left:0;height:1px;width:100%;color:#e2001a;background-color:#e2001a}.header__top-item_callback em:first-child:after{width:105%}.header__top-item_callback em:last-child{color:#23262a;z-index:1}.header__top-item_callback em:last-child:after{background-color:#23262a}.header__bottom{display:none}.header__inner{padding:6px 0}.header__wrap-logo{height:52px;margin-right:0}.header__btn{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.card{min-height:300px}.banner .wrap-card:nth-child(2) .card{-webkit-clip-path:polygon(0 0,100% 0,100% 79%,9% 100%);clip-path:polygon(0 0,100% 0,100% 79%,9% 100%)}.banner .wrap-card:nth-child(3) .card{-webkit-clip-path:none;clip-path:none}.banner .wrap-card{width:50%}}@media (max-width:767px){.wrap-cards{display:block}.banner{padding-top:3.57143rem;min-height:420px}.banner .wrap-card{width:100%;max-width:345px;margin-left:auto;margin-right:auto}}@media (max-width:575px){.header__top-item_callback .header__top-item-text{font-size:11px;line-height:16px}.card__title{font-size:1.85714rem!important;line-height:2.28571rem!important}.banner{min-height:300px;padding-top:42px}.banner .card__title{margin-bottom:.66667em}.banner__title.title-1{font-size:1.85714rem;line-height:2.28571rem;text-align:center}.banner__title.title-1 em{display:block}.banner__subtitle,.banner__wrap-form .form__wrap-field{display:none}.banner__wrap-form{margin-top:2.28571rem}.banner__wrap-form .form__btn{margin-top:0}}@media (max-width:480px){.banner:after{content:"";position:absolute;top:0;left:0;width:100%;height:70px;background:url(../img/laser-mobile.png) center/contain no-repeat}.banner .wrap-card:nth-child(2) .card{-webkit-clip-path:none;clip-path:none}.banner .wrap-card:nth-child(3) .card{-webkit-clip-path:polygon(0 0,100% 0,100% 79%,9% 100%);clip-path:polygon(0 0,100% 0,100% 79%,9% 100%)}}</style>
+    <!--Critical styles END-->
+    <!--Critical scripts BEGIN-->
+    <script>!function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="/",n(n.s=6)}({6:function(e,t,n){n(7)(function(){document.querySelector("body").classList.add("visible")})},7:function(e,t){e.exports=function(e){window.addEventListener("load",function(){e()})}}});</script>
+    <!--Critical scripts END-->
+    <!--Styles BEGIN-->
+    <link rel="stylesheet" href="styles/common.min.css">
+    <link rel="stylesheet" href="styles/plywood.min.css">
+    <!--Styles END-->
+  </head>
+  <body class="plywood page">
+    <!--Header BEGIN-->
+    <header class="header">
+      <div class="header__top">
+        <div class="wrapper">
+          <div class="header__top-inner header__inner"><a class="header__wrap-logo" href="/" target="_blank" rel="noreferrer"><img class="header__logo-img" src="img/logo.svg" alt=""></a>
+            <div class="header__top-item header__top-item_phones"><span class="header__top-item-wrap-icon"><span class="header__top-item-icon replace-svg" data-src="img/icon-mobile.svg"></span></span><a class="header__top-item-text" href="tel:+375000000000">+375 (33) <span>333-00-08</span></a><a class="header__top-item-text" href="tel:+375000000000">+375 (44) <span>575-50-00</span></a></div>
+            <div class="header__top-item header__top-item_mail"><span class="header__top-item-wrap-icon"><span class="header__top-item-icon replace-svg" data-src="img/icon-mail.svg"></span></span><a class="header__top-item-text" href="mailto:cuttingby@gmail.com">cuttingby@gmail.com</a></div>
+            <button class="header__top-item header__top-item_callback btn-popup" data-popup-key="popup-feedback"><span class="header__top-item-wrap-icon"><span class="header__top-item-icon replace-svg" data-src="img/icon-phone.svg"></span></span>
+              <p class="header__top-item-text"><em>Заказать</em> <em>звонок</em></p>
+            </button>
+            <button class="header__btn" aria-label="Кнопка выподающего мобильного меню"><span class="header__btn-line"></span><span class="header__btn-line"></span><span class="header__btn-line"></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="wrapper">
+          <div class="header__bottom-inner header__inner">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item header__nav-item_current"><a class="header__nav-link" href="#">Главная</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Услуги</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="services.html">Дополнительные  услуги</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Как подготовить макет</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Материалы</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Оплата и доставка</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Новости</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--Header END-->
+    <!--Mobile menu BEGIN-->
+    <div class="menu-mobile">
+      <div class="menu-mobile__inner">
+        <div class="wrapper">
+          <nav class="menu-mobile__nav">
+            <ul class="menu-mobile__nav-list">
+              <li class="menu-mobile__nav-item menu-mobile__nav-item_current"><a class="menu-mobile__nav-link" href="#">Главная</a></li>
+              <li class="menu-mobile__nav-item"><a class="menu-mobile__nav-link" href="#">Услуги</a></li>
+              <li class="menu-mobile__nav-item"><a class="menu-mobile__nav-link" href="#">Дополнительные  услуги</a></li>
+              <li class="menu-mobile__nav-item"><a class="menu-mobile__nav-link" href="#">Как подготовить макет</a></li>
+              <li class="menu-mobile__nav-item"><a class="menu-mobile__nav-link" href="#">Материалы</a></li>
+              <li class="menu-mobile__nav-item"><a class="menu-mobile__nav-link" href="#">Оплата и доставка</a></li>
+              <li class="menu-mobile__nav-item"><a class="menu-mobile__nav-link" href="#">Новости</a></li>
+              <li class="menu-mobile__nav-item"><a class="menu-mobile__nav-link" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="menu-mobile__list-items">
+            <li class="menu-mobile__item"><a class="menu-mobile__item-link" href="tel:+375000000000">+375 (33) <span>333-00-08</span></a></li>
+            <li class="menu-mobile__item"><a class="menu-mobile__item-link" href="tel:+375000000000">+375 (44) <span>575-50-00</span></a></li>
+            <li class="menu-mobile__item"><a class="menu-mobile__item-link" href="mailto:cuttingby@gmail.com">cuttingby@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--Mobile menu END-->
+    <!--Main content BEGIN-->
+    <!--Banner BEGIN-->
+    <section class="banner-plywood banner">
+      <picture>
+        <source media="(min-width: 576px)" srcset="img/bg-plywood-cutting.png">
+        <source media="(max-width: 576px)" srcset="img/plywood-bg-mobile.png"><img class="banner__bg" src="img/bg-plywood-cutting.png" alt="" aria-hidden="true">
+      </picture>
+      <div class="wrapper">
+        <div class="banner__inner">
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Материалы</a></li>
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Фанера ФК</a></li>
+            </ul>
+          </div>
+          <div class="banner__wrap-text">
+            <h1 class="banner__title title-1">Фанера ФК</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Banner END-->
+    <!--Content BEGIN-->
+    <div class="text-content">
+      <div class="plywood-group">
+        <div class="wrapper">
+          <div class="plywood-group__title"><span class="plywood-group__title-icon replace-svg" data-src="img/plywood-icon-1.svg"></span>
+            <h2 class="plywood-group__title-text title-2"><em>ЛАЗЕРНАЯ РЕЗКА ФАНЕРЫ</em> В МИНСКЕ</h2>
+          </div>
+        </div>
+        <div class="plywood-group__img lazy" data-bg="url(img/plywood-1.png)"></div>
+        <div class="wrapper">
+          <p>Фанера – листовой, слоистый материал, произведённый из дерева. Слои – это шпон- тонкий срез дерева, который склеен формальдегидными клеями.</p>
+          <p>Фанера-это дешёвый, при этом передающий структуру дерева, материал, который легко поддаётся обработке.</p>
+          <p>Виды Фанеры: ФК, ФСФ, ФОФ.</p><br>
+          <p>Фанера ФК. Произведена из берёзы, ольхи, сосны и используется преимущественно внутри помещений, т.е. не для Улицы.</p>
+          <p>Толщиной 3/4/5/6/8/9/10/12/15/16/18/21/25/27/30/32/36 мм и др.</p>
+          <p>Формат листов, как правило, 1525*1525мм</p><br>
+          <p><em>Важно знать</em>: белорусские и российские заводы не поставляют фанеру идеальной толщины. Если вы заказываете фанеру 3 мм, то завод изготовит 2,8-3,3мм или 3,5мм толщиной. По толщине лист может отличаться даже внутри своей площади, т.е. вы меряете толщину листа с края, а в центре он толще на 0,3-0,5мм либо тоньше.</p>
+          <p>Производители об этом пишут на своих официальных сайтах и не несут ответственность за неидеальную толщину материала, по ГОСТу такие неточности допустимы.</p>
+          <p>Мы в свою очередь предупреждаем Вас о том, что от нас толщина фанеры никак не зависит, её производит завод. Вы можете в заказе указать о необходимости подобрать максимально близкую к идеалу толщину. Мы в свою очередь постараемся подобрать материал максимально точно.</p><br>
+          <p><em>Сортность фанеры.</em> Фанера имеет классификацию по сортности, 1/2, 2/2, 2/3, 2/4, 3/3, 3/4, 4/4 . От 1 до 4сорта. 1-ый сорт самый высокий, 4-ый — самый низкий. Чем выше сорт фанеры, тем лучше качество её поверхности и само наполнение. Эти цифры влияют на несколько показателей: на качество и на цену за лист. В первом сорте может встретится 1-3 маленьких сучков около 6мм в диаметре на 1 м.кв. материала, а на втором сорте их уже может быть 6шт на 1 м.кв. Листы сорта 1/1 в РБ не производят.</p>
+        </div>
+      </div>
+      <div class="plywood-group">
+        <div class="wrapper">
+          <div class="plywood-group__title"><span class="plywood-group__title-icon replace-svg" data-src="img/plywood-icon-2.svg"></span>
+            <h2 class="plywood-group__title-text title-2"><em>КРИВИЗНА</em> ФАНЕРЫ</h2>
+          </div>
+        </div>
+        <div class="plywood-group__img lazy" data-bg="url(img/plywood-2.png)"></div>
+        <div class="wrapper">
+          <p>Фанера делается из слоёв шпона, а дерево растёт кругами (ствол дерева), поэтому шпон хочет вернутся в обратное привычное для себя скрученное состояние. Фанеру на заводе склеивают слой к слою в перпендикулярной очередности, чтобы добиться более ровной поверхности. При этом лист фанеры все равно не идеально ровный: углы в листе могут быть задраны или лист может быть волнообразной формы. С этим ничего не сделать: чем тоньше лист, тем неровностей больше, чем лист толще, тем он ровнее.</p>
+        </div>
+      </div>
+      <div class="plywood-group">
+        <div class="wrapper">
+          <div class="plywood-group__title"><span class="plywood-group__title-icon replace-svg" data-src="img/plywood-icon-3.svg"></span>
+            <h2 class="plywood-group__title-text title-2"><em>ОБРАБОТКА</em> ФАНЕРЫ</h2>
+          </div>
+        </div>
+        <div class="plywood-group__img lazy" data-bg="url(img/plywood-3.png)"></div>
+        <div class="wrapper">
+          <p>Фанера делается из слоёв шпона, а дерево растёт кругами (ствол дерева), поэтому шпон хочет вернутся в обратное привычное для себя скрученное состояние. Фанеру на заводе склеивают слой к слою в перпендикулярной очередности, чтобы добиться более ровной поверхности. При этом лист фанеры все равно не идеально ровный: углы в листе могут быть задраны или лист может быть волнообразной формы. С этим ничего не сделать: чем тоньше лист, тем неровностей больше, чем лист толще, тем он ровнее.</p>
+        </div>
+      </div>
+      <div class="plywood-group">
+        <div class="wrapper">
+          <div class="plywood-group__title"><span class="plywood-group__title-icon replace-svg" data-src="img/plywood-icon-4.svg"></span>
+            <h2 class="plywood-group__title-text title-2"><em>ЛАЗЕРНАЯ РЕЗКА</em> ФАНЕРЫ</h2>
+          </div>
+        </div>
+        <div class="wrapper">
+          <p>Наш лазерный станок может резать фанеру класса ФК толщиной 3-15мм, остальные виды фанеры(ФСФ и ФОФ) лазерное оборудование не может прорезать из-за клеевого состава или из-за ламинации. Фанеру большей толщины мы можем резать на фрезерном станке. При лазерной резке фанеры ФСФ или ФОФ луч просто жжет материал, фанера чернеет, но на сквозь луч не проходит, а только портит фанеру.</p><br>
+          <p>Ламинированную, ФСФ фанеру на лазере обрабатывать нельзя, она доступна к обработке только на фрезерном станке.</p><br>
+          <p>У нас есть своя фанера в наличии, но если Вы хотите привезти свою фанеру нам на лазерную резку, то привозите фанеру хорошего сорта, не хуже сортности 2/2 вида ФК.</p><br>
+          <p>При резке фанеры плохого качества, плохого сорта, лазер может не прорезать на сквозь материал и из-за этого на выходе получается изделие плохого качества. Оператору, работающему на лазере, нужно будет руками ломать, подрезать сучки и дорезать фанеру. В местах пересечения с сучками обязательно появятся сколы. Все эти факторы влияют на скорость работы, качество выполненной работы и на выработку в час. Поэтому при использовании плохой фанеры, мы не гарантируем качественную работу. Помимо этого, цена на рез фанеры низких сортов, вероятнее всего, будет стоить дороже, нежели рез первосортной фанеры!</p>
+        </div>
+        <div class="plywood-group__img lazy" data-bg="url(img/plywood-4.png)"></div>
+        <div class="wrapper">
+          <p>Лазерный луч при резке фанеры имеет свойство рассеиваться и преломляться. Тем самым после себя оставляя С-образного вида торец. Такой торец становится заметен только на больших толщинах материала. В случае с фанерой начиная от толщины в 10 мм.</p>
+        </div>
+      </div>
+      <div class="plywood-group">
+        <div class="wrapper">
+          <div class="plywood-group__title"><span class="plywood-group__title-icon replace-svg" data-src="img/plywood-icon-5.svg"></span>
+            <h2 class="plywood-group__title-text title-2"><em>ЛАЗЕРНАЯ ГРАВИРОВКА</em> ФАНЕРЫ</h2>
+          </div>
+        </div>
+        <div class="plywood-group__img lazy" data-bg="url(img/plywood-5.png)"></div>
+        <div class="wrapper">
+          <p>Гравировка – это выжигание верхнего слоя материала. Этот процесс происходит из-за часто повторяющихся линий, которые рисует лазер. Линии эти находятся на очень близком расстоянии друг от друга, это расстояние незаметно человеческому глазу. При этом, обычно каждая линия смещается одна от одной на 0.1мм. Таким путем получается цельно загравированная поверхность материала. Так, двигаясь слева направо или сверху вниз, получается гравировка или, другими словами, это заполнение какого-либо пространства путём выжигания. После гравировки на древесных материалах остаётся темная отгравированная поверхность, имеющая некоторое углубление. Как правило, углубление от 0.2 до 1.5 мм глубиной.</p>
+          <p>Гравировка сложных символов меньше 0,2мм на лазерно-гравировальном станке трудновыполнима. Толщина линии для гравировки, желательно, не должна быть менее 0,5мм. За консультацией по услуге гравировки лучше всего обращаться к нашим специалистам.</p>
+          <p>Гравировка считается недешевым способом нанесения логотипов, в нашей компании расчет производится по времени. Зато гравировку можно наносить поштучно и нет привязанности к большим тиражам.</p>
+          <p>После гравировки фанеры, вокруг гравируемых элементов, проступает легкий коричневый опыл/гарь, его можно легко отшлифовать, а если материал предварительно был залакирован, то желтизна отмывается водой.</p>
+          <div class="video">
+            <div class="video__inner">
+              <div class="video__player"><iframe src="https://www.youtube.com/embed/6RZH6CHNgas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+              <div class="video__wrap-text">
+                <p class="video__text title-1"><em>Посмотрите</em>,<br> как выполняется<br> лазерная<br> <em>гравировка фанеры</em></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="plywood-group">
+        <div class="wrapper">
+          <div class="plywood-group__title"><span class="plywood-group__title-icon replace-svg" data-src="img/plywood-icon-6.svg"></span>
+            <h2 class="plywood-group__title-text title-2"><em>ЛАЗЕРНАЯ ГРАВИРОВКА ФАНЕРЫ</em> ОПРЕДЕЛЕННОЙ ГЛУБИНЫ</h2>
+          </div>
+        </div>
+        <div class="wrapper">
+          <p>Когда нужно сделать гравировку глубиной более 1мм, мы делаем лазером несколько проходов по одному и тому же месту. В этом случае первым делом мы должны оценить возможность какого вида исполнения: можно ли выполнить гравировку несколько раз и добиться нужного результата-зависит от сложности макета. Если очень маленький шрифт (буквы 3-5мм высотой) либо очень большая детализация в макете (много мелких деталей), то при гравировке сгорят все перемычки букв, либо детализация этих элементов ухудшится. Дерево — это не тот материал, на котором стоит делать большую глубину при маленьком рисунке. Также стоит учитывать, что глубину гравировки можно выдержать только условно. Оборудование не делает точное углубление. Расхождения в глубине на несколько десятых миллиметра являются естественными. Древесный материал имеет воздушные поры, и он подгорает при гравировке, а на процесс горения мы повлиять не можем. Погрешность глубины до 0,3мм.</p>
+          <p>Чаще всего глубокую гравировку мы делаем на коробках типа пенал. Когда нужна коробка из фанеры с крышкой, закрывающейся как шуфлядка. Мы делаем двойную гравировку по одному и тому же месту 2 раза и углубляемся на 1,5мм-2,5мм.</p>
+          <p>Гравировка считается по времени, гравировку можно наносить поштучно, нет привязанности к тиражам, невозможно стереть, контрастирует с цветом фанеры, можно наносить на большинство известных материалов.</p>
+        </div>
+      </div>
+      <div class="plywood-group">
+        <div class="wrapper">
+          <div class="plywood-group__title"><span class="plywood-group__title-icon replace-svg" data-src="img/plywood-icon-7.svg"></span>
+            <h2 class="plywood-group__title-text title-2"><em>КОНТУРНАЯ РЕЗКА</em> ЛАЗЕРОМ ПО ФАНЕРЕ</h2>
+          </div>
+        </div>
+        <div class="plywood-group__img lazy" data-bg="url(img/plywood-6.png)"></div>
+        <div class="wrapper">
+          <p>Контурная резка проводится лазером на маленькой мощности и большой скорости. Луч не проходит сквозь материал, а оставляет тоненький след на поверхности материала, толщина линии около 0,1мм.Контурную резку можно сравнить с раскраской- это линии определенного контура, но линии только на поверхности материала (не сквозные). Это экономный способ нанесения изображений, в сравнении с гравировкой, он позволяет нанести разметку, логотип или выделить определённое место.</p>
+          <p>Контурная резка на фанере хорошо видна. Фанера-светлый материал, а после контурной резки на фанере остаётся тонкий коричневый/темный след от лазерного луча.</p>
+          <p>Если контурная резка выполняется на маленьком изделии и линии контурной резки располагаются вплотную и пересекают одна другую, то возможны сквозные отметки (при толщине материала меньше 5мм). Данные отметки появляются из-за того, что лазерное оборудование проходит несколько раз по одной и той же точке, либо замедляется в углах (на резких поворотах). Следствием становятся прожиги, которые появляются с обратной стороны в виде точек.</p>
+          <div class="video">
+            <div class="video__inner">
+              <div class="video__player"><iframe src="https://www.youtube.com/embed/6RZH6CHNgas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+              <div class="video__wrap-text">
+                <p class="video__text title-1"><em>Посмотрите</em>,<br> как выполняется<br> <em>контурная резка</em><br> лазером по фанере</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="plywood-group">
+        <div class="wrapper">
+          <div class="plywood-group__title"><span class="plywood-group__title-icon replace-svg" data-src="img/plywood-icon-8.svg"></span>
+            <h2 class="plywood-group__title-text title-2"><em>ФРЕЗЕРНАЯ РЕЗКА</em> ФАНЕРЫ</h2>
+          </div>
+        </div>
+        <div class="wrapper">
+          <p>Фрезер режет/фрезерует фанеру любой толщины, любого сорта и любого класса: ФК, ФСФ, ФОФ. При фрезерной резке фанеры плохого сорта могут вываливаться сучки, может получаться лохматый край/торец, лицевой шпон может трескаться и рассыпаться.</p>
+          <p>Наша организация при фрезеровке фанеры использует профессиональный режущий инструмент, за счёт которого качество резки на порядок выше чем у конкурентов, минимальное количество ворса и сколов.</p>
+          <p>Резать/фрезеровать фанеру можно на разные глубины и разными фрезами, фанера самый твёрдый материал в сравнении с алюминием, поэтому фрез по обработке дерева, в том числе и фанеры, очень-очень много, разной формы и типов обработки.</p>
+          <p>После фрезерной резки фанеры торец заготовки будет иметь ворс. Если ворс Вас не устраивает, то Вы можете заказать шлифовку ваших заготовок. На ворс в торцах есть одно объяснение: дерево/фанера-материал живой и имеет волокна, при фрезеровки волокна подымаются и торчат. От сортности материала зависит количество волокон ворса и время обработки/шлифовки. Чем лучше сорт, тем лучше обрабатывается материал.</p>
+        </div>
+      </div>
+      <div class="plywood-group">
+        <div class="wrapper">
+          <div class="plywood-group__title"><span class="plywood-group__title-icon replace-svg" data-src="img/plywood-icon-9.svg"></span>
+            <h2 class="plywood-group__title-text title-2"><em>ВЫБОРКА ФАНЕРЫ</em> ФРЕЗЕРОМ</h2>
+          </div>
+        </div>
+        <div class="plywood-group__img lazy" data-bg="url(img/plywood-7.png)"></div>
+        <div class="wrapper">
+          <p>Выборка фанеры — углубление на определённую глубину. Выборка может, чаще всего, осуществляться концевыми или пазовыми фрезами, которые удаляют материал согласно заданных координат и на заданную глубину. Фрезы оставляют за собой небольшие полоски, едва заметные, на месте выборки. Эти полоски можно убрать при шлифовке материала.</p><br>
+          <p>Что нужно учитывать при выборке:<br></p>
+          <p>-Изогнут или нет материал: при гнутом материале глубина выборки будет отличаться от заданной (из-за перепада высоты материала)</p>
+          <p>-Если в толстом материале сделать глубокую выборку, материал может выгнуть, из-за потери плотности и целостности (дерево начнёт возвращаться в исходное, скрученное состояние)</p>
+          <p>-Если в фанере делать выборку, а это слоистый материал и иногда фанера во внутренних слоях имеет коричневый, похожий на кору цвет, то цвет места, где пройдёт выборка, может отличаться от желаемого (цвета лицевого шпона). Вывод: выбирайте фанеру высокого сорта, без коричневых внутренних слоёв.</p><br>
+          <p>— Минимальный перепад по высоте при выборке-это 0,5мм, но если материал кривой, то перепад может достигать и 1,5мм.</p>
+        </div>
+      </div>
+      <div class="plywood-group">
+        <div class="wrapper">
+          <div class="plywood-group__title"><span class="plywood-group__title-icon replace-svg" data-src="img/plywood-icon-10.svg"></span>
+            <h2 class="plywood-group__title-text title-2">3D фрезеровка фанеры</h2>
+          </div>
+        </div>
+        <div class="wrapper">
+          <p>3D фрезеровка — это процесс обработки материала в нескольких плоскостях, для получения сложных объёмных фигур с различным рельефом.</p>
+          <p>Фанера — это не самый лучший материал для такой обработки как 3D, потому как это слоистый материал, и при фрезеровании рельефа все слои фанеры видны, они отличаются по цвету, по направлению волокон, по структуре, так же внутри листа фанеры, очень часто, попадаются сучки, либо кора дерева, либо пустоты и щели, а все эти факторы влияют на внешний вид изделия.</p>
+          <p>К задумке 3D фрезеровки на фанере нужно подходить осознано, представляя как будет выглядеть конечное изделие.</p><br>
+          <p>3D фрезеровка — просчитывается по времени и, именно поэтому, при выборе материала из фанеры такую обработку делают реже всего. Так же не стоит забывать, что описанные выше причины потом нужно исправлять, дорабатывать, дошлифовывать вручную, а от некоторых из них и вовсе избавиться нельзя.</p>
+          <p>Для 3D обработки чаще используют МДФ, мебельный щит или массив (дуб,ясень,береза). Фанеру или пластики используют крайне редко.</p>
+        </div>
+      </div>
+    </div>
+    <!--Content END-->
+    <!--Order BEGIN-->
+    <div class="order sec" role="region">
+      <div class="sec__bg lazy" data-bg="url(img/bg-order.png)"></div>
+      <div class="sec__bg sec__bg_mobile lazy" data-bg="url(img/bg-request-mobile.png)"></div>
+      <div class="order__wrap-titles sec__wrap-titles"><span class="sec__title title-1"><em>Закажите</em> сейчас!</span></div>
+      <div class="wrapper">
+        <div class="order__inner">
+          <div class="order__item">
+            <p class="order__item-text">Переходите на страницу с ценами и дополнительными условиями<br> для размещения заказа на <em>лазерную резку</em></p><a class="btn order__btn" href="laser.html"><img class="card__btn-img" src="img/bg-btn.png" alt="" aria-hidden="true"><img class="card__btn-img card__btn-img_hover" src="img/bg-btn-hover.png" alt="" aria-hidden="true"><span class="btn__text">Перейти</span></a>
+          </div>
+          <div class="order__item">
+            <p class="order__item-text">Переходите на страницу с ценами и дополнительными условиями<br> для размещения заказа на <em>фрезеровку</em></p><a class="btn order__btn" href="laser-graving.html"><img class="card__btn-img" src="img/bg-btn.png" alt="" aria-hidden="true"><img class="card__btn-img card__btn-img_hover" src="img/bg-btn-hover.png" alt="" aria-hidden="true"><span class="btn__text">Перейти</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Order END-->
+    <!--Feedback BEGIN-->
+    <div class="sec feedback" role="region">
+      <div class="feedback__wrap-titles sec__wrap-titles"><span class="sec__title title-1">Остались <em>вопросы?</em></span>
+        <p class="sec__subtitle title-3">Напишите нам!</p>
+      </div>
+      <div class="wrapper">
+        <div class="feedback__inner">
+          <form class="form-feedback">
+            <label class="form-feedback__wrap-field">
+              <input class="form-feedback__field" type="text" name="name" placeholder="Имя" aria-label="Имя">
+            </label>
+            <label class="form-feedback__wrap-field">
+              <input class="form-feedback__field" type="tel" name="phone" placeholder="Телефон" aria-label="Телефон">
+            </label>
+            <button class="btn form-feedback__btn"><img class="card__btn-img" src="img/bg-btn.png" alt="" aria-hidden="true"><img class="card__btn-img card__btn-img_hover" src="img/bg-btn-hover.png" alt="" aria-hidden="true"><span class="btn__text">Отправить</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--Feedback END-->
+    <!--Main content BEGIN-->
+    <!--Popup feedback BEGIN-->
+    <div class="popup popup-feedback" data-popup-key="popup-feedback" role="dialog">
+      <div class="popup__inner">
+        <div class="popup__content">
+          <div class="popup__content-inner">
+            <button class="popup__close" aria-label="Close popup"></button><span class="popup__title">Заполните <em>форму</em></span>
+            <p class="popup__subtitle">Наш менеджер вам перезвонит</p>
+            <form class="form-feedback">
+              <label class="form-feedback__wrap-field">
+                <input class="form-feedback__field" type="text" name="name" placeholder="Имя" aria-label="Имя">
+              </label>
+              <label class="form-feedback__wrap-field">
+                <input class="form-feedback__field" type="tel" name="phone" placeholder="Телефон" aria-label="Телефон">
+              </label>
+              <button class="btn form-feedback__btn"><img class="card__btn-img" src="img/bg-btn.png" alt="" aria-hidden="true"><img class="card__btn-img card__btn-img_hover" src="img/bg-btn-hover.png" alt="" aria-hidden="true"><span class="btn__text">Отправить</span></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Popup feedback END-->
+    <!--Footer BEGIN-->
+    <footer class="footer">
+      <picture>
+        <source media="(min-width: 1280px)" srcset="" data-srcset="img/footer-bg.png">
+        <source media="(max-width: 1280px)" srcset="" data-srcset="img/bg-fast.png"><img class="footer__bg lazy" src="" data-src="img/footer-bg.png" alt="" aria-hidden="true">
+      </picture>
+      <div class="footer__top">
+        <div class="wrapper">
+          <div class="footer__top-inner footer__inner"><a class="footer__wrap-logo" href="/" target="_blank" rel="noreferrer"><img class="footer__logo-img" src="img/footer-logo.png" alt=""><span class="logo-upn">УНП 192969658</span></a>
+            <div class="footer__top-right">
+              <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item footer__nav-item_current"><a class="footer__nav-link" href="/">Главная</a></li>
+                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Услуги</a></li>
+                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Дополнительные  услуги</a></li>
+                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Как подготовить макет</a></li>
+                  <li class="footer__nav-item"><a class="footer__nav-link" href="materials.html">Материалы</a></li>
+                  <li class="footer__nav-item"><a class="footer__nav-link" href="#">Оплата и доставка</a></li>
+                  <li class="footer__nav-item"><a class="footer__nav-link" href="news.html">Новости</a></li>
+                  <li class="footer__nav-item"><a class="footer__nav-link" href="contacts.html">Контакты</a></li>
+                </ul>
+              </nav>
+              <ul class="footer__contact-list">
+                <li class="footer__contact-item">
+                  <div class="footer__contact-item-wrap-icon"><span class="footer__contact-item-icon replace-svg" data-src="img/icon-mobile.svg"></span></div>
+                  <div class="footer__contact-item-wrap-text"><a class="footer__contact-item-text" href="tel:+375000000000">+375 (33) 333-00-08</a><a class="footer__contact-item-text" href="tel:+375000000000">+375 (44) 575-50-00</a></div>
+                </li>
+                <li class="footer__contact-item">
+                  <div class="footer__contact-item-wrap-icon"><span class="footer__contact-item-icon replace-svg" data-src="img/icon-mail.svg"></span></div>
+                  <div class="footer__contact-item-wrap-text"><a class="footer__contact-item-text" href="mailto:cuttingby@gmail.com">cuttingby@gmail.com</a></div>
+                </li>
+                <li class="footer__contact-item">
+                  <div class="footer__contact-item-wrap-icon"><span class="footer__contact-item-icon replace-svg" data-src="img/icon-location.svg"></span></div>
+                  <address class="footer__contact-item-text">Боровляны, п. Опытный, <br> Центральная, 2А</address>
+                </li>
+                <li class="footer__contact-item footer__contact-item_accent"><span class="footer__contact-item-text">Ищите нас<br> в социальных сетях:</span><a class="footer__contact-item-wrap-icon" href="#" target="_blank"><span class="footer__contact-item-icon replace-svg" data-src="img/icon-instagram.svg"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="wrapper">
+          <div class="footer__bottom-inner footer__inner">
+            <ul class="footer__contact-mobile">
+              <div class="footer__contact-mobile-wrap-text"><a class="footer__contact-mobile-text" href="tel:+375000000000">+375 (33) 333-00-08</a><a class="footer__contact-mobile-text" href="tel:+375000000000">+375 (44) 575-50-00</a></div><a class="footer__contact-mobile-text" href="mailto:cuttingby@gmail.com">cuttingby@gmail.com</a>
+              <address class="footer__contact-mobile-text footer__contact-mobile-text_full-width">Боровляны, п. Опытный, Центральная, 2А</address>
+            </ul>
+            <div class="footer__bottom-timework"><span class="footer__bottom-timework-text footer__bottom-timework-text_upn">УНП 192969658</span><span class="footer__bottom-timework-title">График работы:</span>
+              <p class="footer__bottom-timework-text footer__bottom-timework-text_time">Пн. – Пт.: с 9:00 до 18:00 <em>производство</em><br> Пн. – Вс.: с 9:00 до 21:00 <em>прием заказов</em></p>
+            </div>
+            <div class="footer__copyright-dev">
+              <p class="footer__copyright-dev-text footer__copyright">Copyright 2019</p>
+              <p class="footer__copyright-dev-text footer__dev">Разработано <a href="#">Good technologies</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Footer END-->
+    <script src="js/common.min.js"></script>
+    <script src="js/plywood.min.js"></script>
+  </body>
+</html>
