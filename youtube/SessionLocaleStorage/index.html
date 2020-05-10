@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Locale Storage</title>
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name=viewport>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/index.css">
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <div class="content">
+        <span class="content__title">LocaleStorage</span>
+
+        <div class="content__row">
+
+          <div class="content__col">
+            <div class="content__field">
+              <span class="content__field-title">Цвет фона:</span>
+
+              <label class="content__field-wrap-input">
+                <input
+                  type="color"
+                  name="backgroundColor"
+                  data-el="body"
+                  value="#ffc34d"
+                  class="content__field-input"
+                >
+              </label>
+            </div>
+
+            <div class="content__field">
+              <span class="content__field-title">Цвет рамки:</span>
+
+              <label class="content__field-wrap-input">
+                <input
+                  type="color"
+                  name="borderColor"
+                  data-el=".content"
+                  value="#262626"
+                  class="content__field-input"
+                >
+              </label>
+            </div>
+          </div>
+
+          <div class="content__col">
+            <div class="content__field">
+              <span class="content__field-title">Любимая еда:</span>
+
+              <select
+                name="src"
+                data-el=".content__img"
+                class="content__field-input content__field-select"
+              >
+                <option selected value="assets/images/apple.svg">Яблоко</option>
+                <option value="assets/images/broccoli.svg">Брокколи</option>
+                <option value="assets/images/cherries.svg">Вишня</option>
+                <option value="assets/images/grapes.svg">Виноград</option>
+                <option value="assets/images/strawberry.svg">Клубника</option>
+              </select>
+
+              <img class="content__img" src="assets/images/apple.svg" alt="">
+            </div> <!-- .content__field -->
+          </div> <!-- .content__col -->
+
+        </div> <!-- .content__row -->
+      </div> <!-- .content -->
+    </div> <!-- .wrapper -->
+
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
