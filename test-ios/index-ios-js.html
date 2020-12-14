@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    html {
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      min-height: 100vh;
+      min-height: calc(var(--vh, 1vh) * 100);
+    }
+
+    header {
+      background-color: red;
+    }
+
+    main {
+      flex: 1;
+      background-color: gold;
+    }
+
+    footer {
+      background-color: lime;
+    }
+  </style>
+</head>
+<body>
+
+  <header>HEADER GOES HERE</header>
+  <main>MAIN GOES HERE</main>
+  <footer>FOOTER GOES HERE</footer>
+
+  <script>
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  </script>
+</body>
+</html>
